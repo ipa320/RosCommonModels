@@ -1,0 +1,16 @@
+PackageSet { 
+  CatkinPackage ur_modern_driver {
+    Artifact ur_driver {
+      Node { name ur_driver
+        ServiceServers {
+          ServiceServer { name 'ur_driver/set_io' service 'ur_msgs.SetIO'},
+          ServiceServer { name 'ur_driver/set_payload' service 'ur_msgs.SetPayload'}}
+        Publishers {
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'},
+          Publisher { name 'wrench' message 'geometry_msgs.WrenchStamped'},
+          Publisher { name 'tool_velocity' message 'geometry_msgs.TwistStamped'},
+          Publisher { name 'ur_driver/io_states' message 'ur_msgs.IOStates'}}
+        Subscribers {
+          Subscriber { name 'ur_driver/joint_speed' message 'trajectory_msgs.JointTrajectory'},
+          Subscriber { name 'ur_driver/URScript' message 'std_msgs.String'}}
+}}}}

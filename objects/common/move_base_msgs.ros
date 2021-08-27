@@ -1,0 +1,12 @@
+PackageSet{
+    Package move_base_msgs { Specs { 
+      TopicSpec MoveBaseAction{},
+      TopicSpec MoveBaseActionFeedback{},
+      TopicSpec MoveBaseActionGoal{},
+      TopicSpec MoveBaseActionResult{},
+      TopicSpec MoveBaseFeedback{},
+      TopicSpec MoveBaseGoal{},
+      TopicSpec MoveBaseResult{},
+      ActionSpec MoveBase{}
+    }}
+}
