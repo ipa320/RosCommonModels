@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage cob_scan_unifier {
+    Artifact scan_unifier_node {
+      Node { name scan_unifier_node
+        Publishers {
+          Publisher { name 'scan_unified' message 'sensor_msgs.LaserScan'}}
+}}}}

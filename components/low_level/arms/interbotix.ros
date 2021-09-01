@@ -1,0 +1,35 @@
+PackageSet {
+  CatkinPackage interbotix_sdk {
+    FromGitRepo "https://github.com/Interbotix/interbotix_ros_arms" 
+    Artifact arm_node {
+      Node { name arm_node
+        ServiceServers {
+          ServiceServer { name 'torque_joints_on' service 'std_srvs.Empty'},
+          ServiceServer { name 'set_operating_modes' service 'interbotix_sdk.OperatingModes'},
+          ServiceServer { name 'get_motor_register_values' service 'interbotix_sdk.RegisterValues'},
+          ServiceServer { name 'torque_joints_off' service 'std_srvs.Empty'},
+          ServiceServer { name 'set_firmware_pid_gains' service 'interbotix_sdk.FirmwareGains'},
+          ServiceServer { name 'set_motor_register_values' service 'interbotix_sdk.RegisterValues'},
+          ServiceServer { name 'get_robot_info' service 'interbotix_sdk.RobotInfo'}}
+        Publishers {
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'}}
+        Subscribers {
+          Subscriber { name 'single_joint/command' message 'interbotix_sdk.SingleCommand'},
+          Subscriber { name 'gripper/command' message 'std_msgs.Float64'},
+          Subscriber { name 'gripper_controller/gripper_trajectory' message 'trajectory_msgs.JointTrajectory'},
+          Subscriber { name 'joint/commands' message 'interbotix_sdk.JointCommands'},
+          Subscriber { name 'arm_controller/joint_trajectory' message 'trajectory_msgs.JointTrajectory'}}
+        Parameters {
+          Parameter { name '~arm_profile_velocity' type Integer },
+          Parameter { name '~gripper_profile_acceleration' type Integer },
+          Parameter { name '~arm_profile_acceleration' type Integer },
+          Parameter { name '~gripper_operating_mode' type String value 'none'},
+          Parameter { name '~use_default_gripper_bar' type Boolean },
+          Parameter { name '~use_default_gripper_fingers' type Boolean },
+          Parameter { name '~use_moveit' type Boolean },
+          Parameter { name '~arm_operating_mode' type String value 'none'},
+          Parameter { name '~use_moveit' type Boolean },
+          Parameter { name '~port' type String value '/dev/ttyDXL'},
+          Parameter { name '~use_pid_cntlrs' type Boolean },
+          Parameter { name '~gripper_profile_velocity' type Integer }}}
+}}}

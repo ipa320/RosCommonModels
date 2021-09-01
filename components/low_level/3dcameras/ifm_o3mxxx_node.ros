@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage ifm_o3mxxx {
+    FromGitRepo "https://github.com/takiaine/ifm_o3mxxx" 
+    Artifact ifm_o3mxxx_node {
+      Node { name ifm_o3mxxx_node
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.PointCloud2'},
+          Publisher { name '?' message 'sensor_msgs.Image'},
+          Publisher { name '?' message 'ifm_o3mxxx.IFMO3mxxx'}}
+        Parameters {
+          Parameter { name 'OutDepthImageTopic' type String value 'ifm_o3mxxx_depth_image'},
+          Parameter { name 'IP' type String value '255.255.255.255'},
+          Parameter { name 'RawTopic' type String value 'ifm_o3mxxx_raw'},
+          Parameter { name 'PointCloudTopic' type String value 'ifm_o3mxxx_pc'},
+          Parameter { name 'FrameID' type String value 'ifm'},
+          Parameter { name 'Port' type Integer value 4599}}}
+}}}

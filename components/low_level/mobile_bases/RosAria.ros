@@ -1,0 +1,33 @@
+PackageSet {
+  CatkinPackage rosaria {
+    FromGitRepo "https://github.com/amor-ros-pkg/rosaria" 
+    Artifact RosAria {
+      Node { name RosAria
+        ServiceServers {
+          ServiceServer { name 'disable_motors' service 'std_srvs.Empty'},
+          ServiceServer { name 'enable_motors' service 'std_srvs.Empty'}}
+        Publishers {
+          Publisher { name 'battery_state_of_charge' message 'std_msgs.Float32'},
+          Publisher { name 'motors_state' message 'std_msgs.Bool'},
+          Publisher { name 'bumper_state' message 'rosaria.BumperState'},
+          Publisher { name '?' message 'sensor_msgs.LaserScan'},
+          Publisher { name 'sonar' message 'sensor_msgs.PointCloud'},
+          Publisher { name 'pose' message 'nav_msgs.Odometry'},
+          Publisher { name 'sonar_pointcloud2' message 'sensor_msgs.PointCloud2'},
+          Publisher { name '?' message 'sensor_msgs.PointCloud'},
+          Publisher { name 'battery_voltage' message 'std_msgs.Float64'},
+          Publisher { name 'battery_recharge_state' message 'std_msgs.Int8'}}
+        Subscribers {
+          Subscriber { name 'cmd_vel' message '?'}}
+        Parameters {
+          Parameter { name 'publish_aria_lasers' type Boolean },
+          Parameter { name 'bumpers_frame' type String value 'bumpers'},
+          Parameter { name 'odom_frame' type String value 'odom'},
+          Parameter { name 'debug_aria' type Boolean },
+          Parameter { name 'base_link_frame' type String value 'base_link'},
+          Parameter { name 'port' type String value '/dev/ttyUSB0'},
+          Parameter { name 'sonar_frame' type String value 'sonar'},
+          Parameter { name 'aria_log_filename' type String value 'Aria.log'},
+          Parameter { name 'cmd_vel_timeout' type Double value 0.6},
+          Parameter { name 'baud' type Integer }}}
+}}}

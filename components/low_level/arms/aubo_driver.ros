@@ -1,0 +1,27 @@
+PackageSet {
+  CatkinPackage aubo_driver {
+    Artifact aubo_driver {
+      Node { name aubo_driver
+        ServiceServers {
+          ServiceServer { name '/aubo_driver/get_ik' service 'aubo_msgs.GetIK'},
+          ServiceServer { name '/aubo_driver/set_io' service 'aubo_msgs.SetIO'},
+          ServiceServer { name '/aubo_driver/get_fk' service 'aubo_msgs.GetFK'}}
+        Publishers {
+          Publisher { name '/aubo_driver/io_states' message 'aubo_msgs.IOState'},
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'},
+          Publisher { name '/aubo_driver/real_pose' message 'std_msgs.Float32MultiArray'},
+          Publisher { name 'feedback_states' message 'control_msgs.FollowJointTrajectoryFeedback'},
+          Publisher { name '/aubo_driver/rib_status' message 'std_msgs.Int32MultiArray'},
+          Publisher { name 'robot_status' message 'industrial_msgs.RobotStatus'},
+          Publisher { name 'aubo_driver/cancel_trajectory' message 'std_msgs.UInt8'}}
+        Subscribers {
+          Subscriber { name 'moveAPI_cmd' message 'std_msgs.Float32MultiArray'},
+          Subscriber { name 'robot_control' message 'std_msgs.String'},
+          Subscriber { name '/aubo_driver/controller_switch' message 'std_msgs.Int32'},
+          Subscriber { name 'teach_cmd' message 'std_msgs.Float32MultiArray'},
+          Subscriber { name 'moveItController_cmd' message 'trajectory_msgs.JointTrajectoryPoint'},
+          Subscriber { name 'trajectory_execution_event' message 'std_msgs.String'}}
+        Parameters {
+          Parameter { name 'initial_joint_state' type Boolean },
+          Parameter { name '/aubo_driver/robot_connected' type String }}}
+}}}

@@ -1,0 +1,25 @@
+PackageSet {
+  CatkinPackage micro_epsilon_scancontrol_driver {
+    FromGitRepo "https://github.com/sam-xl/scancontrol" 
+    Artifact driver_node {
+      Node { name driver_node
+        ServiceServers {
+          ServiceServer { name 'invert_x' service 'std_srvs.SetBool'},
+          ServiceServer { name 'get_resolution' service 'micro_epsilon_scancontrol_msgs.GetResolution'},
+          ServiceServer { name 'invert_z' service 'std_srvs.SetBool'},
+          ServiceServer { name 'get_feature' service 'micro_epsilon_scancontrol_msgs.GetFeature'},
+          ServiceServer { name 'set_feature' service 'micro_epsilon_scancontrol_msgs.SetFeature'},
+          ServiceServer { name 'set_resolution' service 'micro_epsilon_scancontrol_msgs.SetResolution'},
+          ServiceServer { name 'get_available_resolutions' service 'micro_epsilon_scancontrol_msgs.GetAvailableResolutions'}}
+        Publishers {
+          Publisher { name '?' message 'point_cloud_t'}}
+        Parameters {
+          Parameter { name 'frame_id' type String value 'scancontrol'},
+          Parameter { name 'partial_profile_start_point_data' type Integer value 4},
+          Parameter { name 'partial_profile_data_width' type Integer value 4},
+          Parameter { name 'serial' type String },
+          Parameter { name 'partial_profile_point_count' type Integer value -1},
+          Parameter { name 'resolution' type Integer value -1},
+          Parameter { name 'partial_profile_start_point' type Integer },
+          Parameter { name 'topic_name' type String value 'scancontrol_pointcloud'}}}
+}}}

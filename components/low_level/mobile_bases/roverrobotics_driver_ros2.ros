@@ -1,0 +1,32 @@
+PackageSet {
+  CatkinPackage roverrobotics_driver {
+    Artifact roverrobotics_driver {
+      Node { name roverrobotics_driver
+        Publishers {
+          Publisher { name '?' message 'std_msgs.Float32MultiArray'},
+          Publisher { name '?' message 'nav_msgs.Odometry'},
+          Publisher { name '?' message 'std_msgs.Float32MultiArray'}}
+        Subscribers {
+          Subscriber { name '?' message 'geometry_msgs.Twist'},
+          Subscriber { name '?' message 'std_msgs.Bool'},
+          Subscriber { name '?' message 'std_msgs.Bool'},
+          Subscriber { name '?' message 'std_msgs.Bool'},
+          Subscriber { name '?' message 'std_msgs.Float32'}}
+        Parameters {
+          Parameter { name 'odom_frame_id' type String value 'odom'},
+          Parameter { name 'robot_status_topic' type String value '/robot_status'},
+          Parameter { name 'motor_control_d_gain' type <class 'float },
+          Parameter { name 'motor_control_p_gain' type <class 'float value 0.4},
+          Parameter { name 'robot_type' type String value 'pro'},
+          Parameter { name 'motor_control_i_gain' type <class 'float value 0.7},
+          Parameter { name 'odom_topic' type String value '/odom_raw'},
+          Parameter { name 'robot_info_topic' type String value '/robot_info'},
+          Parameter { name 'estop_trigger_topic' type String value '/soft_estop/trigger'},
+          Parameter { name 'estop_reset_topic' type String value '/soft_estop/reset'},
+          Parameter { name 'robot_info_request_topic' type String value '/robot_info/request'},
+          Parameter { name 'speed_topic' type String value '/cmd_vel/managed'},
+          Parameter { name 'trim_topic' type String value '/trim_event'},
+          Parameter { name 'device_port' type String value '/dev/rover'},
+          Parameter { name 'odom_child_frame_id' type String value 'base_footprint'},
+          Parameter { name 'comm_type' type String value 'serial'}}}
+}}}

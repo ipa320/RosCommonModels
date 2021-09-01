@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage motoman_driver {
+    FromGitRepo "https://github.com/ros-industrial/motoman" 
+    Artifact motoman_driver_joint_trajectory_action {
+      Node { name motoman_driver_joint_trajectory_action
+        Publishers {
+          Publisher { name '?' message 'motoman_msgs.DynamicJointTrajectory'},
+          Publisher { name 'joint_path_command' message 'motoman_msgs.DynamicJointTrajectory'}}
+        Subscribers {
+          Subscriber { name '?' message 'control_msgs.FollowJointTrajectoryFeedback'},
+          Subscriber { name 'robot_status' message 'industrial_msgs.RobotStatus'}}
+        Parameters {
+          Parameter { name 'constraints/goal_threshold' type Double }}}
+}}}

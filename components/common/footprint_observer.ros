@@ -1,0 +1,19 @@
+PackageSet {
+  CatkinPackage cob_footprint_observer {
+    FromGitRepo "https://github.com/ipa320/cob_control" 
+    Artifact footprint_observer {
+      Node { name footprint_observer
+        ServiceServers {
+          ServiceServer { name '/get_footprint' service 'cob_footprint_observer.GetFootprint'}}
+        Publishers {
+          Publisher { name 'adjusted_footprint' message 'geometry_msgs.PolygonStamped'}}
+        Parameters {
+          Parameter { name 'footprint_source' type String value '/local_costmap_node/costmap'},
+          Parameter { name 'epsilon' type Double value 0.01},
+          Parameter { name 'robot_base_frame' type String value '/base_link'},
+          Parameter { name '?' type Double value 0.01},
+          Parameter { name 'frames_to_check' type String },
+          Parameter { name 'footprint' type String },
+          Parameter { name '?' type String },
+          Parameter { name 'footprint' type String }}}
+}}}

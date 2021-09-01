@@ -1,0 +1,21 @@
+PackageSet {
+  CatkinPackage wiimote {
+    FromGitRepo "https://github.com/ros-drivers/joystick_drivers" 
+    Artifact wiimote_node {
+      Node { name wiimote_node
+        ServiceServers {
+          ServiceServer { name '/imu/calibrate' service 'std_srvs.Empty'}}
+        Publishers {
+          Publisher { name '/joy' message 'sensor_msgs.Joy'},
+          Publisher { name '/wiimote/classic' message 'sensor_msgs.Joy'},
+          Publisher { name '/imu/is_calibrated' message 'std_msgs.Bool'},
+          Publisher { name '/wiimote/nunchuk' message 'sensor_msgs.Joy'},
+          Publisher { name '/wiimote/state' message 'wiimote.State'},
+          Publisher { name '/imu/data' message 'sensor_msgs.Imu'}}
+        Subscribers {
+          Subscriber { name '/joy/set_feedback' message 'sensor_msgs.JoyFeedbackArray'}}
+        Parameters {
+          Parameter { name '~pair_timeout' type Integer value 5},
+          Parameter { name '~check_connection_interval' type Double }}}
+}}}
+

@@ -1,0 +1,45 @@
+PackageSet {
+  CatkinPackage p2os_driver {
+    FromGitRepo "https://github.com/allenh1/p2os" 
+    Artifact p2os_driver {
+      Node { name p2os_driver
+        Publishers {
+          Publisher { name 'dio' message 'p2os_msgs.DIO'},
+          Publisher { name 'ptz_state' message 'p2os_msgs.PTZState'},
+          Publisher { name 'gripper_state' message 'p2os_msgs.GripperState'},
+          Publisher { name 'motor_state' message 'p2os_msgs.MotorState'},
+          Publisher { name 'battery_state' message 'p2os_msgs.BatteryState'},
+          Publisher { name 'sonar' message 'p2os_msgs.SonarArray'},
+          Publisher { name 'pose' message 'nav_msgs.Odometry'},
+          Publisher { name 'aio' message 'p2os_msgs.AIO'}}
+        Subscribers {
+          Subscriber { name 'ptz_control' message 'p2os_msgs.PTZState'},
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'},
+          Subscriber { name 'cmd_motor_state' message 'p2os_msgs.MotorState'},
+          Subscriber { name 'gripper_control' message 'p2os_msgs.GripperState'}}
+        Parameters {
+          Parameter { name 'odom_frame_id' type String value 'odom'},
+          Parameter { name 'use_sonar' type Boolean },
+          Parameter { name 'base_link_frame_id' type String value 'base_link'},
+          Parameter { name 'rot_kp' type Integer value -1},
+          Parameter { name 'port' type String value '/dev/ttyS0'},
+          Parameter { name 'trans_kv' type Integer value -1},
+          Parameter { name 'max_xdecel' type Double },
+          Parameter { name 'tcp_remote_port' type Integer },
+          Parameter { name 'use_tcp' type Boolean },
+          Parameter { name 'trans_ki' type Integer value -1},
+          Parameter { name 'pulse' type Double value -1.0},
+          Parameter { name 'bumpstall' type Integer value -1},
+          Parameter { name 'rot_ki' type Integer value -1},
+          Parameter { name 'joystick' type Integer },
+          Parameter { name 'radio' type Integer },
+          Parameter { name 'max_xspeed' type Double },
+          Parameter { name 'max_yawaccel' type Double },
+          Parameter { name 'max_yawdecel' type Double },
+          Parameter { name 'max_xaccel' type Double },
+          Parameter { name 'direct_wheel_vel_control' type Integer },
+          Parameter { name 'max_yawspeed' type Double },
+          Parameter { name 'trans_kp' type Integer value -1},
+          Parameter { name 'tcp_remote_host' type String value 'localhost'},
+          Parameter { name 'rot_kv' type Integer value -1}}}
+}}}

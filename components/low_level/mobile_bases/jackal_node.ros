@@ -1,0 +1,19 @@
+PackageSet {
+  CatkinPackage jackal_base {
+    FromGitRepo "https://github.com/jackal/jackal_robot" 
+    Artifact jackal_node {
+      Node { name jackal_node
+        Publishers {
+          Publisher { name 'wifi_connected' message 'std_msgs.Bool'}}
+        Subscribers {
+          Subscriber { name 'feedback' message 'jackal_msgs.Feedback'},
+          Subscriber { name '/navsat/nmea_sentence' message 'nmea_msgs.Sentence'},
+          Subscriber { name 'status' message 'jackal_msgs.Status'},
+          Subscriber { name '/imu/data_raw' message 'sensor_msgs.Imu'}}
+        Parameters {
+          Parameter { name '~expected_navsat_frequency' type Double value 10.0},
+          Parameter { name '~wireless_interface' type String value 'wlp2s0'},
+          Parameter { name '~port' type String value '/dev/jackal'},
+          Parameter { name '~navsat_frequency_sentence' type String value '$GPRMC'},
+          Parameter { name '~expected_imu_frequency' type Double value 50.0}}}
+}}}

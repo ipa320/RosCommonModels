@@ -1,0 +1,223 @@
+PackageSet {
+  CatkinPackage controller_manager {
+    Artifact spawner {
+      Node { name ros_control_controller_spawner
+      	Parameters {
+      	  Parameter { name '/hardware_control_loop/loop_hz' type Integer },
+          Parameter { name '/ur_hardware_interface/joints' type List {String,String,String,String,String,String}},
+          Parameter { name '/joint_state_controller/type' type String },
+          Parameter { name '/joint_state_controller/publish_rate' type Integer },
+          Parameter { name '/force_torque_sensor_controller/type' type String },
+          Parameter { name '/force_torque_sensor_controller/publish_rate' type Integer },
+          Parameter { name '/speed_scaling_state_controller/type' type String },
+          Parameter { name '/speed_scaling_state_controller/publish_rate' type Integer },
+          Parameter { name 'scaled_pos_joint_traj_controller' type Struct
+			{'type' String,
+			joints List {String,String,String,String,String,String},
+			constraints Struct {
+			goal_time Double,
+			stopped_velocity_tolerance Double,
+			shoulder_pan_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			shoulder_pan_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			shoulder_lift_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			elbow_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			wrist_1_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			wrist_2_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			wrist_3_joint Struct {
+			trajectory Double,
+			'goal' Double}},
+			stop_trajectory_duration Double,
+			state_publish_rate Double,
+			action_monitor_rate Integer
+		  }},
+          Parameter { name 'pos_joint_traj_controller' type Struct
+			{'type' String,
+			joints List {String,String,String,String,String,String},
+			constraints Struct {
+			goal_time Double,
+			stopped_velocity_tolerance Double,
+			shoulder_pan_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			shoulder_pan_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			shoulder_lift_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			elbow_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			wrist_1_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			wrist_2_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			wrist_3_joint Struct {
+			trajectory Double,
+			'goal' Double}},
+			stop_trajectory_duration Double,
+			state_publish_rate Double,
+			action_monitor_rate Integer
+		  }},
+          Parameter { name 'scaled_vel_joint_traj_controller' type Struct
+			{'type' String,
+			joints List {String,String,String,String,String,String},
+			constraints Struct {
+			goal_time Double,
+			stopped_velocity_tolerance Double,
+			shoulder_pan_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			shoulder_pan_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			shoulder_lift_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			elbow_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			wrist_1_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			wrist_2_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			wrist_3_joint Struct {
+			trajectory Double,
+			'goal' Double}},
+			gains Struct {
+			shoulder_pan_joint Struct {
+			p Double,
+			i Double,
+			d Double,
+			i_clamp Integer},
+			shoulder_pan_joint Struct {
+			p Double,
+			i Double,
+			d Double,
+			i_clamp Integer},
+			shoulder_lift_joint Struct {
+			p Double,
+			i Double,
+			d Double,
+			i_clamp Integer},
+			elbow_joint Struct {
+			p Double,
+			i Double,
+			d Double,
+			i_clamp Integer},
+			wrist_1_joint Struct {
+			p Double,
+			i Double,
+			d Double,
+			i_clamp Integer},
+			wrist_2_joint Struct {
+			p Double,
+			i Double,
+			d Double,
+			i_clamp Integer},
+			wrist_3_joint Struct {
+			p Double,
+			i Double,
+			d Double,
+			i_clamp Integer}},
+			stop_trajectory_duration Double,
+			state_publish_rate Double,
+			action_monitor_rate Integer
+	  }},
+          Parameter { name 'vel_joint_traj_controller' type Struct
+			{'type' String,
+			joints List {String,String,String,String,String,String},
+			constraints Struct {
+			goal_time Double,
+			stopped_velocity_tolerance Double,
+			shoulder_pan_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			shoulder_pan_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			shoulder_lift_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			elbow_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			wrist_1_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			wrist_2_joint Struct {
+			trajectory Double,
+			'goal' Double},
+			wrist_3_joint Struct {
+			trajectory Double,
+			'goal' Double}},
+			gains Struct {
+			shoulder_pan_joint Struct {
+			p Double,
+			i Double,
+			d Double,
+			i_clamp Integer},
+			shoulder_pan_joint Struct {
+			p Double,
+			i Double,
+			d Double,
+			i_clamp Integer},
+			shoulder_lift_joint Struct {
+			p Double,
+			i Double,
+			d Double,
+			i_clamp Integer},
+			elbow_joint Struct {
+			p Double,
+			i Double,
+			d Double,
+			i_clamp Integer},
+			wrist_1_joint Struct {
+			p Double,
+			i Double,
+			d Double,
+			i_clamp Integer},
+			wrist_2_joint Struct {
+			p Double,
+			i Double,
+			d Double,
+			i_clamp Integer},
+			wrist_3_joint Struct {
+			p Double,
+			i Double,
+			d Double,
+			i_clamp Integer}},
+			velocity_ff Struct {
+			shoulder_pan_joint Double,
+			shoulder_lift_joint Double,
+			elbow_joint Double,
+			wrist_1_joint Double,
+			wrist_2_joint Double,
+			wrist_3_joint Double},
+			stop_trajectory_duration Double,
+			state_publish_rate Double,
+			action_monitor_rate Integer
+		  }},
+          Parameter { name '/joint_group_vel_controller/joints' type List {String,String,String,String,String,String}},
+          Parameter { name '/joint_group_vel_controller/type' type String },
+          Parameter { name '/robot_status_controller/type' type String },
+          Parameter { name '/robot_status_controller/publish_rate' type Integer },
+          Parameter { name '/robot_status_controller/handle_name' type String },
+          Parameter { name 'stopped_controllers' type String }
+}}}}}

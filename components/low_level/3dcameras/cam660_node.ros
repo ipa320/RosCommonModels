@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage espros_cam660 {
+    FromGitRepo "https://github.com/espros/cam660_driver" 
+    Artifact cam660_node {
+      Node { name cam660_node
+        Publishers {
+          Publisher { name 'image_raw2' message 'sensor_msgs.Image'},
+          Publisher { name 'temperature' message 'sensor_msgs.Temperature'},
+          Publisher { name 'image_raw1' message 'sensor_msgs.Image'},
+          Publisher { name 'points' message 'pcl.PointCloud<pcl.PointXYZI>'}}
+        Parameters {
+          Parameter { name 'port_name' type String value '/dev/ttyACM0'},
+          Parameter { name 'frame_rate' type Double value 30.0}}}
+}}}

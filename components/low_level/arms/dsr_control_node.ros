@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage dsr_control {
+    FromGitRepo "https://github.com/doosan-robotics/doosan-robot" 
+    Artifact dsr_control_node {
+      Node { name dsr_control_node
+        Publishers {
+          Publisher { name '/serial_read' message 'std_msgs.String'}}
+        Subscribers {
+          Subscriber { name '/serial_write' message 'std_msgs.String'}}}
+}}}

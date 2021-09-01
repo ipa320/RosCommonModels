@@ -1,0 +1,11 @@
+PackageSet {
+	CatkinPackage joy {
+		Artifact joy_node { Node { name joy_node
+			Publishers {
+			Publisher { name "joy" message "sensor_msgs.Joy" },
+			Publisher { name "diagnostics" message "diagnostic_msgs.DiagnosticArray" }
+			}
+			Subscribers {
+			Subscriber { name "joy/set_feedback" message "sensor_msgs.JoyFeedbackArray"}
+			}}
+}}}

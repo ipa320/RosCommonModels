@@ -1,0 +1,26 @@
+PackageSet {
+  CatkinPackage ridgeback_base {
+    Artifact ridgeback_node {
+      Node { name ridgeback_node
+        Publishers {
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'},
+          Publisher { name 'mcu/cmd_lights' message 'ridgeback_msgs.Lights'},
+          Publisher { name 'wifi_connected' message 'std_msgs.Bool'},
+          Publisher { name 'mcu/cmd_fans' message 'ridgeback_msgs.Fans'}}
+        Subscribers {
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'},
+          Subscriber { name '/imu/data_raw' message 'sensor_msgs.Imu'},
+          Subscriber { name 'status' message 'puma_motor_msgs.MultiStatus'},
+          Subscriber { name 'mcu/status' message 'ridgeback_msgs.Status'},
+          Subscriber { name 'cmd_lights' message 'ridgeback_msgs.Lights'},
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'},
+          Subscriber { name 'mcu/status' message 'ridgeback_msgs.Status'},
+          Subscriber { name 'mcu/status' message 'ridgeback_msgs.Status'}}
+        Parameters {
+          Parameter { name '~expected_imu_frequency' type Double value 50.0},
+          Parameter { name 'use_mcu' type Boolean value true},
+          Parameter { name 'gear_ratio' type Double value 34.97},
+          Parameter { name 'encoder_cpr' type Integer value 1024},
+          Parameter { name '~wireless_interface' type String value 'wlan0'},
+          Parameter { name 'canbus_dev' type String value 'can0'}}}
+}}}

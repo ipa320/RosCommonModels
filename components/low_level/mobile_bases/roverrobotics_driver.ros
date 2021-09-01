@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage roverrobotics_driver {
+    Artifact roverrobotics_driver_node {
+      Node { name roverrobotics_driver_node
+        Publishers {
+          Publisher { name '?' message 'std_msgs.Float32MultiArray'},
+          Publisher { name '?' message 'std_msgs.Float32MultiArray'},
+          Publisher { name 'odom' message 'nav_msgs.Odometry'}}
+        Subscribers {
+          Subscriber { name '?' message 'std_msgs.Bool'},
+          Subscriber { name '?' message 'geometry_msgs.Twist'},
+          Subscriber { name '?' message 'std_msgs.Bool'},
+          Subscriber { name '?' message 'std_msgs.Bool'},
+          Subscriber { name '?' message 'std_msgs.Float32'},
+          Subscriber { name '?' message 'std_msgs.Bool'}}}
+}}}
+

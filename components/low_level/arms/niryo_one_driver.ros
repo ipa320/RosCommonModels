@@ -1,0 +1,38 @@
+PackageSet {
+  CatkinPackage niryo_one_driver {
+    FromGitRepo "https://github.com/NiryoRobotics/niryo_one_ros" 
+    Artifact niryo_one_driver {
+      Node { name niryo_one_driver
+        ServiceServers {
+          ServiceServer { name 'niryo_one/calibrate_motors' service 'niryo_one_msgs.SetInt'},
+          ServiceServer { name 'niryo_one/request_new_calibration' service 'niryo_one_msgs.SetInt'},
+          ServiceServer { name 'niryo_one/reboot_motors' service 'niryo_one_msgs.SetInt'},
+          ServiceServer { name 'niryo_one/tools/open_gripper' service 'niryo_one_msgs.OpenGripper'},
+          ServiceServer { name 'niryo_one/kits/control_conveyor' service 'niryo_one_msgs.ControlConveyor'},
+          ServiceServer { name 'niryo_one/tools/push_air_vacuum_pump' service 'niryo_one_msgs.PushAirVacuumPump'},
+          ServiceServer { name 'niryo_one/tools/close_gripper' service 'niryo_one_msgs.CloseGripper'},
+          ServiceServer { name 'niryo_one/kits/update_conveyor_id' service 'niryo_one_msgs.UpdateConveyorId'},
+          ServiceServer { name 'niryo_one/send_custom_dxl_value' service 'niryo_one_msgs.SendCustomDxlValue'},
+          ServiceServer { name 'niryo_one/tools/ping_and_set_dxl_tool' service 'niryo_one_msgs.PingDxlTool'},
+          ServiceServer { name 'niryo_one/activate_learning_mode' service 'niryo_one_msgs.SetInt'},
+          ServiceServer { name 'niryo_one/change_hardware_version' service 'niryo_one_msgs.ChangeHardwareVersion'},
+          ServiceServer { name 'niryo_one/tools/pull_air_vacuum_pump' service 'niryo_one_msgs.PullAirVacuumPump'},
+          ServiceServer { name 'niryo_one/set_dxl_leds' service 'niryo_one_msgs.SetLeds'},
+          ServiceServer { name 'niryo_one/test_motors' service 'niryo_one_msgs.SetInt'},
+          ServiceServer { name 'niryo_one/kits/ping_and_set_conveyor' service 'niryo_one_msgs.SetConveyor'}}
+        ServiceClients {
+          ServiceClient { name '/niryo_one/calibrate_motors' service 'niryo_one_msgs.SetInt'}}
+        Publishers {
+          Publisher { name 'niryo_one/hardware_status' message 'niryo_one_msgs.HardwareStatus'},
+          Publisher { name 'niryo_one/learning_mode' message 'std_msgs.Bool'},
+          Publisher { name 'niryo_one/kits/conveyor_1_feedback' message 'niryo_one_msgs.ConveyorFeedback'},
+          Publisher { name '/niryo_one/steppers_reset_controller' message 'std_msgs.Empty'},
+          Publisher { name 'niryo_one/software_version' message 'niryo_one_msgs.SoftwareVersion'},
+          Publisher { name 'niryo_one/kits/conveyor_2_feedback' message 'niryo_one_msgs.ConveyorFeedback'}}
+        Subscribers {
+          Subscriber { name '/niryo_one_follow_joint_trajectory_controller/follow_joint_trajectory/result' message 'control_msgs.FollowJointTrajectoryActionResult'},
+          Subscriber { name '/joint_states' message 'sensor_msgs.JointState'},
+          Subscriber { name '/niryo_one/steppers_reset_controller' message 'std_msgs.Empty'}}
+        Parameters {
+          Parameter { name 'robot_description' type String }}}
+}}}

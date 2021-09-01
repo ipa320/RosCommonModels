@@ -1,0 +1,10 @@
+PackageSet { 
+  CatkinPackage map_server {
+    Artifact map_server {
+      Node { name map_server
+        ServiceServers {
+          ServiceServer { name 'static_map' service 'nav_msgs.GetMap'}}
+        Publishers {
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'},
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'}}
+}}}}
