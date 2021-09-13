@@ -1,0 +1,24 @@
+// https://www.ros.org/reps/rep-0138.html
+PackageSet {
+  CatkinPackage laserscan_pkg {
+    Artifact laserscanner {
+      Node { name laserscanner 
+        Publishers {
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Parameters {
+        	Parameter { name 'ip_address' type String},
+        	Parameter { name 'ip_port' type Integer},
+        	Parameter { name 'serial_port' type String},
+        	Parameter { name 'serial_baud' type Integer},
+        	Parameter { name 'serial_baud' type Integer},
+        	Parameter { name 'frame_id' type String},
+        	Parameter { name 'calibrate_time' type Boolean},
+        	Parameter { name 'time_offset' type Double},
+        	Parameter { name 'publish_intensity' type Boolean},
+        	Parameter { name 'publish_multiecho' type Boolean},
+        	Parameter { name 'angle_min' type Double},
+        	Parameter { name 'angle_max' type Double},
+        	Parameter { name 'cluster' type Integer},
+        	Parameter { name 'skip' type Integer}}}
+}}}
