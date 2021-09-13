@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage laser_assembler {
+    FromGitRepo "https://github.com/ros-perception/laser_assembler.git" 
+    Artifact point_cloud_assembler {
+      Node { name point_cloud_assembler
+        Parameters {
+          Parameter { name 'downsample_factor' type Integer value 1},
+          Parameter { name '?' type Integer value 400},
+          Parameter { name 'tf_cache_time_secs' type Double value 10.0},
+          Parameter { name 'fixed_frame' type String value 'ERROR_NO_NAME'}}}
+}}}

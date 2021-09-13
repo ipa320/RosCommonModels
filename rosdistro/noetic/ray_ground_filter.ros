@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage points_preprocessor {
+    FromGitRepo "https://github.com/nobleo/core_perception.git" 
+    Artifact ray_ground_filter {
+      Node { name ray_ground_filter}
+}}}

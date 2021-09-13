@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage kobuki_driver {
+    FromGitRepo "https://github.com/yujinrobot/kobuki_core.git" 
+    Artifact simple_keyop {
+      Node { name simple_keyop}
+}}}

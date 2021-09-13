@@ -1,0 +1,50 @@
+PackageSet {
+  CatkinPackage bosch_locator_bridge {
+    FromGitRepo "https://github.com/boschglobal/locator_ros_bridge.git" 
+    Artifact node {
+      Node { name node
+        ServiceServers {
+          ServiceServer { name 'start_visual_recording' service 'bosch_locator_bridge.StartRecording'},
+          ServiceServer { name 'list_client_maps' service 'bosch_locator_bridge.ClientMapList'},
+          ServiceServer { name 'stop_visual_recording' service 'std_srvs.Empty'},
+          ServiceServer { name 'stop_localization' service 'std_srvs.Empty'},
+          ServiceServer { name 'set_map' service 'bosch_locator_bridge.ClientMapSet'},
+          ServiceServer { name 'stop_map' service 'std_srvs.Empty'},
+          ServiceServer { name 'start_map' service 'bosch_locator_bridge.ClientMapStart'},
+          ServiceServer { name 'send_map' service 'bosch_locator_bridge.ClientMapSend'},
+          ServiceServer { name 'start_localization' service 'std_srvs.Empty'}}
+        Publishers {
+          Publisher { name 'client_map_map' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'client_localization_map' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'client_localization_visualization/scan' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'client_map_visualization' message 'bosch_locator_bridge.ClientMapVisualization'},
+          Publisher { name 'client_recording_visualization' message 'bosch_locator_bridge.ClientRecordingVisualization'},
+          Publisher { name 'client_global_align_visualization' message 'bosch_locator_bridge.ClientGlobalAlignVisualization'},
+          Publisher { name 'client_localization_pose/lidar_odo_pose' message 'geometry_msgs.PoseStamped'},
+          Publisher { name 'client_recording_visualization/path_poses' message 'geometry_msgs.PoseArray'},
+          Publisher { name 'client_recording_visualization/scan' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'client_localization_pose/pose' message 'geometry_msgs.PoseWithCovarianceStamped'},
+          Publisher { name 'client_map_visualization/path_poses' message 'geometry_msgs.PoseArray'},
+          Publisher { name 'client_map_visualization/pose' message 'geometry_msgs.PoseStamped'},
+          Publisher { name 'client_global_align_visualization/poses' message 'geometry_msgs.PoseArray'},
+          Publisher { name 'client_localization_pose' message 'bosch_locator_bridge.ClientLocalizationPose'},
+          Publisher { name 'client_global_align_visualization/landmarks/poses' message 'geometry_msgs.PoseArray'},
+          Publisher { name 'client_recording_visualization/pose' message 'geometry_msgs.PoseStamped'},
+          Publisher { name 'client_map_visualization/scan' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'client_recording_map' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'client_control_mode' message 'bosch_locator_bridge.ClientControlMode'},
+          Publisher { name 'client_localization_visualization' message 'bosch_locator_bridge.ClientLocalizationVisualization'},
+          Publisher { name 'client_localization_visualization/pose' message 'geometry_msgs.PoseStamped'}}
+        Subscribers {
+          Subscriber { name '/odom' message 'nav_msgs.Odometry'},
+          Subscriber { name '?' message 'sensor_msgs.LaserScan'},
+          Subscriber { name '/initialpose' message 'geometry_msgs.PoseWithCovarianceStamped'}}
+        Parameters {
+          Parameter { name 'scan_topic' type String },
+          Parameter { name 'odom_datagram_port' type Integer },
+          Parameter { name 'odom_topic' type String },
+          Parameter { name 'password' type String },
+          Parameter { name 'user_name' type String },
+          Parameter { name 'locator_host' type String },
+          Parameter { name 'laser_datagram_port' type Integer }}}
+}}}

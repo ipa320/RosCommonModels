@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage kobuki_ftdi {
+    FromGitRepo "https://github.com/yujinrobot/kobuki_core.git" 
+    Artifact ftdi_read_eeprom {
+      Node { name ftdi_read_eeprom}
+}}}

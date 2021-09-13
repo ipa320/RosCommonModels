@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cnpy {
+    FromGitRepo "https://github.com/PeterMitrano/cnpy.git" 
+    Artifact example1 {
+      Node { name example1}
+}}}
