@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage fmi_adapter {
+    FromGitRepo "https://github.com/boschresearch/fmi_adapter.git" 
+    Artifact node {
+      Node { name node
+        Parameters {
+          Parameter { name 'update_period' type Double },
+          Parameter { name 'step_size' type Double },
+          Parameter { name 'fmu_path' type String }}}
+}}}

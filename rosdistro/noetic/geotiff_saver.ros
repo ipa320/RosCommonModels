@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage hector_geotiff {
+    FromGitRepo "https://github.com/tu-darmstadt-ros-pkg/hector_slam.git" 
+    Artifact geotiff_saver {
+      Node { name geotiff_saver
+        Subscribers {
+          Subscriber { name 'map' message 'nav_msgs.OccupancyGrid'}}}
+}}}

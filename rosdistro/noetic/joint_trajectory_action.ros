@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage industrial_robot_client {
+    FromGitRepo "https://github.com/ros-industrial/industrial_core.git" 
+    Artifact joint_trajectory_action {
+      Node { name joint_trajectory_action
+        Publishers {
+          Publisher { name 'joint_path_command' message 'trajectory_msgs.JointTrajectory'}}
+        Subscribers {
+          Subscriber { name 'robot_status' message 'industrial_msgs.RobotStatus'},
+          Subscriber { name 'feedback_states' message 'control_msgs.FollowJointTrajectoryFeedback'}}
+        Parameters {
+          Parameter { name 'constraints/goal_threshold' type Double value 0.01}}}
+}}}

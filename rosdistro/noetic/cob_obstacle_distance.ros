@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_obstacle_distance {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact cob_obstacle_distance {
+      Node { name cob_obstacle_distance}
+}}}

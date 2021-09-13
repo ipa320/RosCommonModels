@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage self_test {
+    FromGitRepo "https://github.com/ros/diagnostics.git" 
+    Artifact selftest_example {
+      Node { name selftest_example
+        Publishers {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Parameters {
+          Parameter { name 'diagnostic_period' type Double }}}
+}}}

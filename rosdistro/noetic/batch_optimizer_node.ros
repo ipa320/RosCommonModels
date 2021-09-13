@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage fuse_optimizers {
+    FromGitRepo "https://github.com/locusrobotics/fuse.git" 
+    Artifact batch_optimizer_node {
+      Node { name batch_optimizer_node}
+}}}

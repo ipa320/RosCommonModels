@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage audio_play {
+    FromGitRepo "https://github.com/ros-drivers/audio_common.git" 
+    Artifact audio_play {
+      Node { name audio_play
+        Subscribers {
+          Subscriber { name 'audio' message 'audio_common_msgs.AudioData'}}
+        Parameters {
+          Parameter { name '~device' type String },
+          Parameter { name '~do_timestamp' type Boolean value true},
+          Parameter { name '~dst' type String value 'alsasink'},
+          Parameter { name '~channels' type Integer value 1},
+          Parameter { name '~format' type String value 'mp3'},
+          Parameter { name '~depth' type Integer value 16},
+          Parameter { name '~sample_format' type String value 'S16LE'},
+          Parameter { name '~sample_rate' type Integer value 16000}}}
+}}}

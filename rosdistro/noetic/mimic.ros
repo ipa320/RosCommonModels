@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage cob_mimic {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact mimic {
+      Node { name mimic
+        ServiceServers {
+          ServiceServer { name 'set_mimic' service 'cob_mimic.SetMimic'}}
+        ActionClients {
+          ActionClient { name '?' action 'cob_mimic.SetMimicAction'}}
+        Parameters {
+          Parameter { name 'default_mimic' type String value 'default'}}}
+}}}

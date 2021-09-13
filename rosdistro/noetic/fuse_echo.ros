@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage fuse_core {
+    FromGitRepo "https://github.com/locusrobotics/fuse.git" 
+    Artifact fuse_echo {
+      Node { name fuse_echo}
+}}}

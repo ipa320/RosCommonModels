@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage hector_geotiff {
+    FromGitRepo "https://github.com/tu-darmstadt-ros-pkg/hector_slam.git" 
+    Artifact geotiff_node {
+      Node { name geotiff_node
+        ServiceClients {
+          ServiceClient { name 'map' service 'nav_msgs.GetMap'},
+          ServiceClient { name 'trajectory' service 'hector_nav_msgs.GetRobotTrajectory'}}
+        Subscribers {
+          Subscriber { name 'syscommand' message 'std_msgs.String'}}
+        Parameters {
+          Parameter { name 'draw_background_checkerboard' type Boolean value true},
+          Parameter { name 'map_file_base_name' type String },
+          Parameter { name 'geotiff_save_period' type Double },
+          Parameter { name 'draw_free_space_grid' type Boolean value true},
+          Parameter { name 'map_file_path' type String value '.'},
+          Parameter { name 'plugins' type String }}}
+}}}

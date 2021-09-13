@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rokubimini_serial {
+    FromGitRepo "https://gitlab.com/botasys/bota_driver.git" 
+    Artifact rokubimini_serial_bus_manager_node {
+      Node { name rokubimini_serial_bus_manager_node}
+}}}

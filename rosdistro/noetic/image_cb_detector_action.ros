@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage image_cb_detector {
+    FromGitRepo "https://github.com/ros-perception/calibration.git" 
+    Artifact image_cb_detector_action {
+      Node { name image_cb_detector_action
+        Publishers {
+          Publisher { name 'features' message 'calibration_msgs.CalibrationPattern'}}
+        ActionClients {
+          ActionClient { name '?' action 'image_cb_detector.ConfigAction'}}}
+}}}

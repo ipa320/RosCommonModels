@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage avt_vimba_camera {
+    FromGitRepo "https://github.com/astuff/avt_vimba_camera.git" 
+    Artifact sync_node {
+      Node { name sync_node
+        Publishers {
+          Publisher { name 'info' message 'std_msgs.String'}}
+        Parameters {
+          Parameter { name 'camera' type String value '/stereo_down'},
+          Parameter { name 'timer_period' type Double value 10.0},
+          Parameter { name 'max_unsync_time' type Double value 5.0}}}
+}}}

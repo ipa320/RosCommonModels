@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_base_controller_utils {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact cob_stuck_detector {
+      Node { name cob_stuck_detector}
+}}}

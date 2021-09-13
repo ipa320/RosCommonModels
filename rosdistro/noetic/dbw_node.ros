@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage dbw_polaris_can {
+    FromGitRepo "https://bitbucket.org/DataspeedInc/dbw_polaris_ros.git" 
+    Artifact dbw_node {
+      Node { name dbw_node}
+}}}

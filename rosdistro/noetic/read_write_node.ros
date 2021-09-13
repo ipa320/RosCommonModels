@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage dynamixel_sdk_examples {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/DynamixelSDK.git" 
+    Artifact read_write_node {
+      Node { name read_write_node
+        ServiceServers {
+          ServiceServer { name '/get_position' service 'dynamixel_sdk_examples.GetPosition'}}
+        Subscribers {
+          Subscriber { name '/set_position' message 'dynamixel_sdk_examples.SetPosition'}}}
+}}}

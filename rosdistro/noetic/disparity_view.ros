@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage image_view {
+    FromGitRepo "https://github.com/ros-perception/image_pipeline.git" 
+    Artifact disparity_view {
+      Node { name disparity_view}
+}}}

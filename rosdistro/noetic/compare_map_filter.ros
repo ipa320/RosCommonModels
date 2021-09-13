@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage points_preprocessor {
+    FromGitRepo "https://github.com/nobleo/core_perception.git" 
+    Artifact compare_map_filter {
+      Node { name compare_map_filter
+        Publishers {
+          Publisher { name '/points_ground' message 'sensor_msgs.PointCloud2'},
+          Publisher { name '/points_no_ground' message 'sensor_msgs.PointCloud2'}}
+        Subscribers {
+          Subscriber { name '/points_raw' message 'sensor_msgs.PointCloud2'},
+          Subscriber { name '/config/compare_map_filter' message 'autoware_config_msgs.ConfigCompareMapFilter'},
+          Subscriber { name '/points_map' message 'sensor_msgs.PointCloud2'}}
+        Parameters {
+          Parameter { name 'min_clipping_height' type Double value -2.0},
+          Parameter { name 'max_clipping_height' type Double value 0.5},
+          Parameter { name 'distance_threshold' type Double value 0.3}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_footprint_observer {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact footprint_observer {
+      Node { name footprint_observer}
+}}}

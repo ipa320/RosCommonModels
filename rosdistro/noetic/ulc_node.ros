@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage dataspeed_ulc_can {
+    FromGitRepo "https://bitbucket.org/DataspeedInc/dataspeed_ulc_ros.git" 
+    Artifact ulc_node {
+      Node { name ulc_node}
+}}}

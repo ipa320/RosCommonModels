@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage monocam_settler {
+    FromGitRepo "https://github.com/ros-perception/calibration.git" 
+    Artifact monocam_settler_action {
+      Node { name monocam_settler_action
+        Publishers {
+          Publisher { name 'settled_interval' message 'calibration_msgs.Interval'}}
+        Subscribers {
+          Subscriber { name 'features' message 'calibration_msgs.CalibrationPattern'}}
+        ActionClients {
+          ActionClient { name '?' action 'monocam_settler.ConfigAction'}}}
+}}}

@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage graft {
+    FromGitRepo "https://github.com/ros-perception/graft.git" 
+    Artifact graft_ukf_velocity {
+      Node { name graft_ukf_velocity
+        Publishers {
+          Publisher { name 'odom_combined' message 'nav_msgs.Odometry'},
+          Publisher { name 'state' message 'graft.GraftState'}}}
+}}}

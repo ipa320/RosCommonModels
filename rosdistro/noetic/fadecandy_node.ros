@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage fadecandy_driver {
+    FromGitRepo "https://github.com/iron-ox/fadecandy_ros.git" 
+    Artifact fadecandy_node {
+      Node { name fadecandy_node
+        Parameters {
+          Parameter { name 'restart_patience' type Double value 1.0}}}
+}}}

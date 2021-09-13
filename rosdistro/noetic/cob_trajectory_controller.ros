@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_trajectory_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact cob_trajectory_controller {
+      Node { name cob_trajectory_controller}
+}}}

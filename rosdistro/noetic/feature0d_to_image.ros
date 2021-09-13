@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage posedetection_msgs {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common_msgs.git" 
+    Artifact feature0d_to_image {
+      Node { name feature0d_to_image
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.Image'}}
+        Subscribers {
+          Subscriber { name 'ImageFeature0D' message 'posedetection_msgs.ImageFeature0D'}}}
+}}}

@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage imu_processors {
+    FromGitRepo "https://github.com/ros-perception/imu_pipeline.git" 
+    Artifact imu_integrator {
+      Node { name imu_integrator
+        Publishers {
+          Publisher { name 'imu_integrated' message 'sensor_msgs.Imu'}}
+        Subscribers {
+          Subscriber { name 'imu' message 'sensor_msgs.Imu'}}
+        Parameters {
+          Parameter { name 'min_angular_velocity' type Double },
+          Parameter { name 'static_dt' type Double }}}
+}}}
