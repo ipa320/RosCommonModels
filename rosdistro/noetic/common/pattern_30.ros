@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage pattern_30 {
+    Artifact pattern_30 {
+      Node { name pattern_30
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.PointCloud2'}}
+        Subscribers {
+          Subscriber { name '?' message '?'}}}
+}}}

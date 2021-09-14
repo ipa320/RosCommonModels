@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_51 {
+    Artifact pattern_51 {
+      Node { name pattern_51
+        Publishers {
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'}}}
+}}}

@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage pattern_15 {
+    Artifact pattern_15 {
+      Node { name pattern_15
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}}
+}}}

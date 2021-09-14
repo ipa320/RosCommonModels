@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage pattern_35 {
+    Artifact pattern_35 {
+      Node { name pattern_35
+        Publishers {
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
+}}}
