@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage octomap {
+    FromGitRepo "https://github.com/OctoMap/octomap.git" 
+    Artifact eval_octree_accuracy {
+      Node { name eval_octree_accuracy}
+}}}

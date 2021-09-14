@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage turtlebot3_fake {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git" 
+    Artifact turtlebot3_fake_node {
+      Node { name turtlebot3_fake_node
+        Publishers {
+          Publisher { name 'odom' message 'nav_msgs.Odometry'},
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'}}
+        Subscribers {
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'wheel_left_joint_name' type String value 'wheel_left_joint'},
+          Parameter { name 'base_frame' type <class 'str value base_footprint},
+          Parameter { name 'odom_frame' type <class 'str value odom},
+          Parameter { name 'tb3_model' type String },
+          Parameter { name 'joint_states_frame' type <class 'str value base_footprint},
+          Parameter { name 'wheel_right_joint_name' type String value 'wheel_right_joint'}}}
+}}}

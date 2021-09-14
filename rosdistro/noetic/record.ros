@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rosbag {
+    FromGitRepo "https://github.com/ros/ros_comm.git" 
+    Artifact record {
+      Node { name record}
+}}}

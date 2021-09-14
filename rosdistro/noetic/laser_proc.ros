@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage laser_proc {
+    FromGitRepo "https://github.com/ros-perception/laser_proc.git" 
+    Artifact laser_proc {
+      Node { name laser_proc}
+}}}

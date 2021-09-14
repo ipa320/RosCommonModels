@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage visp_camera_calibration {
+    FromGitRepo "https://github.com/lagadic/vision_visp.git" 
+    Artifact visp_camera_calibration_image_processing {
+      Node { name visp_camera_calibration_image_processing
+        ServiceServers {
+          ServiceServer { name '?' service '?'}}
+        ServiceClients {
+          ServiceClient { name '?' service 'visp_camera_calibration.calibrate'}}
+        Publishers {
+          Publisher { name '?' message 'visp_camera_calibration.CalibPointArray'}}
+        Subscribers {
+          Subscriber { name '?' message '?'}}}
+}}}

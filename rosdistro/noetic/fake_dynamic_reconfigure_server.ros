@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ddynamic_reconfigure {
+    FromGitRepo "https://github.com/pal-robotics/ddynamic_reconfigure.git" 
+    Artifact fake_dynamic_reconfigure_server {
+      Node { name fake_dynamic_reconfigure_server}
+}}}

@@ -1,0 +1,34 @@
+PackageSet {
+  CatkinPackage sick_safetyscanners {
+    FromGitRepo "https://github.com/SICKAG/sick_safetyscanners.git" 
+    Artifact sick_safetyscanners_node {
+      Node { name sick_safetyscanners_node
+        ServiceServers {
+          ServiceServer { name 'field_data' service 'sick_safetyscanners.FieldData'}}
+        Publishers {
+          Publisher { name 'raw_data' message 'sick_safetyscanners.RawMicroScanDataMsg'},
+          Publisher { name 'extended_laser_scan' message 'sick_safetyscanners.ExtendedLaserScanMsg'},
+          Publisher { name 'output_paths' message 'sick_safetyscanners.OutputPathsMsg'},
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}
+        Parameters {
+          Parameter { name 'general_system_state' type Boolean },
+          Parameter { name 'derived_settings' type Boolean },
+          Parameter { name 'application_io_data' type Boolean },
+          Parameter { name 'timestamp_max_acceptable' type Double },
+          Parameter { name 'host_ip' type String },
+          Parameter { name 'channel_enabled' type Boolean },
+          Parameter { name 'timestamp_min_acceptable' type Double },
+          Parameter { name 'channel' type Integer },
+          Parameter { name 'frame_id' type String },
+          Parameter { name 'sensor_ip' type String },
+          Parameter { name 'use_persistent_config' type Boolean },
+          Parameter { name 'time_offset' type Double },
+          Parameter { name 'min_intensities' type Double },
+          Parameter { name 'skip' type Integer },
+          Parameter { name 'intrusion_data' type Boolean },
+          Parameter { name 'expected_frequency' type Double },
+          Parameter { name 'measurement_data' type Boolean },
+          Parameter { name 'interface_ip' type String },
+          Parameter { name 'host_udp_port' type Integer },
+          Parameter { name 'frequency_tolerance' type Double }}}
+}}}

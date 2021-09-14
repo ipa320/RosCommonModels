@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage cob_interactive_teleop {
+    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
+    Artifact interactive_teleop {
+      Node { name interactive_teleop
+        Publishers {
+          Publisher { name '/base_controller/command' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'disable_driver' type Boolean },
+          Parameter { name 'z_pos' type Double value 0.15},
+          Parameter { name 'max_vel_th' type Double value 0.1},
+          Parameter { name 'max_vel_x' type Double value 0.1},
+          Parameter { name 'scale_angular' type Double value 0.1},
+          Parameter { name 'scale_linear' type Double value 0.1},
+          Parameter { name 'max_vel_y' type Double value 0.1}}}
+}}}

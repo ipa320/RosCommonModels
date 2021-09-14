@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage kdl_parser {
+    FromGitRepo "https://github.com/ros/kdl_parser.git" 
+    Artifact check_kdl_parser {
+      Node { name check_kdl_parser}
+}}}

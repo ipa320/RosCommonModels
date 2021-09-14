@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage virtual_force_publisher {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common.git" 
+    Artifact virtual_force_publisher {
+      Node { name virtual_force_publisher
+        Publishers {
+          Publisher { name 'wrench' message 'geometry_msgs.WrenchStamped'}}
+        Subscribers {
+          Subscriber { name 'joint_states' message '?'}}
+        Parameters {
+          Parameter { name 'time_constant' type Double value 0.3},
+          Parameter { name 'publish_frequency' type Double value 50.0},
+          Parameter { name 'root' type String value 'torso_lift_link'},
+          Parameter { name 'tip' type String value 'l_gripper_tool_frame'}}}
+}}}

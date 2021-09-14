@@ -1,0 +1,45 @@
+PackageSet {
+  CatkinPackage planner_cspace {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact planner_2dof_serial_joints {
+      Node { name planner_2dof_serial_joints
+        Publishers {
+          Publisher { name '?' message 'trajectory_msgs.JointTrajectory'},
+          Publisher { name 'status' message 'planner_cspace_msgs.PlannerStatus'}}
+        Subscribers {
+          Subscriber { name '?' message 'ros.NodeHandle'},
+          Subscriber { name '?' message 'ros.NodeHandle'}}
+        Parameters {
+          Parameter { name 'link0_y' type <class 'float },
+          Parameter { name 'link1_joint_radius' type Double value 0.07},
+          Parameter { name 'link0_vmax' type <class 'float value 0.5},
+          Parameter { name 'link1_coef' type <class 'float value 1.5},
+          Parameter { name 'link1_length' type <class 'float value 0.27},
+          Parameter { name '?' type String },
+          Parameter { name 'link0_x' type <class 'float value 0.22},
+          Parameter { name 'point_vel_mode' type String value 'prev'},
+          Parameter { name 'neonavigation_compatible' type Integer },
+          Parameter { name 'link1_name' type String value 'link1'},
+          Parameter { name 'link1_th' type <class 'float },
+          Parameter { name 'link1_y' type <class 'float },
+          Parameter { name 'link1_vmax' type <class 'float value 0.5},
+          Parameter { name 'link0_end_radius' type Double value 0.07},
+          Parameter { name 'num_groups' type Integer value 1},
+          Parameter { name 'link1_gain_th' type <class 'float value 1.0},
+          Parameter { name 'num_threads' type Integer value 1},
+          Parameter { name 'link0_joint_radius' type Double value 0.07},
+          Parameter { name 'replan_interval' type Double value 0.2},
+          Parameter { name 'link0_name' type String value 'link0'},
+          Parameter { name 'debug_aa' type Boolean },
+          Parameter { name 'link0_gain_th' type <class 'float value -1.0},
+          Parameter { name 'link0_th' type <class 'float },
+          Parameter { name 'resolution' type Integer value 128},
+          Parameter { name 'weight_cost' type <class 'float value 4.0},
+          Parameter { name 'link1_end_radius' type Double value 0.07},
+          Parameter { name 'expand' type <class 'float value 0.1},
+          Parameter { name 'link0_coef' type <class 'float value 1.0},
+          Parameter { name 'link0_length' type <class 'float value 0.135},
+          Parameter { name 'link1_x' type <class 'float value -0.22},
+          Parameter { name 'range' type Integer value 8},
+          Parameter { name 'queue_size_limit' type Integer }}}
+}}}

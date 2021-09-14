@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage velodyne_driver {
+    FromGitRepo "https://github.com/ros-drivers/velodyne.git" 
+    Artifact velodyne_node {
+      Node { name velodyne_node
+        Publishers {
+          Publisher { name 'velodyne_packets' message 'velodyne_msgs.VelodyneScan'}}
+        Parameters {
+          Parameter { name 'timestamp_first_packet' type Boolean },
+          Parameter { name 'model' type String value '64E'},
+          Parameter { name 'port' type Integer value 2368},
+          Parameter { name 'rpm' type Double value 600.0},
+          Parameter { name 'npackets' type Integer },
+          Parameter { name 'cut_angle' type Double value -0.01},
+          Parameter { name 'frame_id' type String value 'velodyne'},
+          Parameter { name 'pcap' type String }}}
+}}}

@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage hector_map_server {
+    FromGitRepo "https://github.com/tu-darmstadt-ros-pkg/hector_slam.git" 
+    Artifact hector_map_server {
+      Node { name hector_map_server
+        ServiceServers {
+          ServiceServer { name 'get_search_position' service 'hector_nav_msgs.GetSearchPosition'},
+          ServiceServer { name 'get_distance_to_obstacle' service 'hector_nav_msgs.GetDistanceToObstacle'},
+          ServiceServer { name 'map' service 'nav_msgs.GetMap'}}
+        Publishers {
+          Publisher { name 'visualization_marker_array' message 'visualization_msgs.MarkerArray'},
+          Publisher { name 'visualization_marker' message 'visualization_msgs.Marker'}}
+        Subscribers {
+          Subscriber { name 'map' message 'nav_msgs.OccupancyGrid'}}}
+}}}

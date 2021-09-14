@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage cob_relayboard {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact cob_relayboard_node {
+      Node { name cob_relayboard_node
+        Publishers {
+          Publisher { name 'emergency_stop_state' message 'cob_msgs.EmergencyStopState'},
+          Publisher { name 'voltage' message 'std_msgs.Float64'}}
+        Parameters {
+          Parameter { name 'protocol_version' type Integer value 1},
+          Parameter { name 'ComPort' type String },
+          Parameter { name 'relayboard_timeout' type Double value 2.0}}}
+}}}

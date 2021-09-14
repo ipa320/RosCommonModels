@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage avt_vimba_camera {
+    FromGitRepo "https://github.com/astuff/avt_vimba_camera.git" 
+    Artifact mono_camera_node {
+      Node { name mono_camera_node
+        Parameters {
+          Parameter { name 'frame_id' type String },
+          Parameter { name 'camera_info_url' type String },
+          Parameter { name 'show_debug_prints' type Boolean },
+          Parameter { name 'camera_info_url' type String },
+          Parameter { name 'guid' type String },
+          Parameter { name 'ip' type String }}}
+}}}

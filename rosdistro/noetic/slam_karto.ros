@@ -1,0 +1,51 @@
+PackageSet {
+  CatkinPackage slam_karto {
+    FromGitRepo "https://github.com/ros-perception/slam_karto.git" 
+    Artifact slam_karto {
+      Node { name slam_karto
+        ServiceServers {
+          ServiceServer { name 'dynamic_map' service 'nav_msgs.GetMap'}}
+        Publishers {
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'},
+          Publisher { name 'visualization_marker_array' message 'visualization_msgs.MarkerArray'}}
+        Parameters {
+          Parameter { name 'loop_search_maximum_distance' type Double },
+          Parameter { name 'do_loop_closing' type Boolean },
+          Parameter { name 'scan_buffer_maximum_scan_distance' type Double },
+          Parameter { name 'scan_buffer_size' type Integer },
+          Parameter { name 'minimum_distance_penalty' type Double },
+          Parameter { name 'transform_publish_period' type Double value 0.05},
+          Parameter { name 'link_match_minimum_response_fine' type Double },
+          Parameter { name 'minimum_travel_distance' type Double },
+          Parameter { name 'minimum_angle_penalty' type Double },
+          Parameter { name 'loop_match_minimum_response_fine' type Double },
+          Parameter { name 'loop_match_minimum_response_coarse' type Double },
+          Parameter { name 'use_scan_matching' type Boolean },
+          Parameter { name 'use_response_expansion' type Boolean },
+          Parameter { name 'minimum_travel_heading' type Double },
+          Parameter { name 'use_scan_barycenter' type Boolean },
+          Parameter { name 'link_scan_maximum_distance' type Double },
+          Parameter { name 'loop_match_maximum_variance_coarse' type Double },
+          Parameter { name 'coarse_angle_resolution' type Double },
+          Parameter { name 'minimum_time_interval' type Double },
+          Parameter { name 'loop_match_minimum_chain_size' type Integer },
+          Parameter { name 'angle_variance_penalty' type Double },
+          Parameter { name 'resolution' type Double },
+          Parameter { name 'correlation_search_space_resolution' type Double },
+          Parameter { name 'map_frame' type String },
+          Parameter { name 'map_update_interval' type Double },
+          Parameter { name 'loop_search_space_dimension' type Double },
+          Parameter { name 'loop_search_space_smear_deviation' type Double },
+          Parameter { name 'delta' type Double },
+          Parameter { name 'fine_search_angle_offset' type Double },
+          Parameter { name 'base_frame' type String },
+          Parameter { name 'correlation_search_space_smear_deviation' type Double },
+          Parameter { name 'loop_search_space_resolution' type Double },
+          Parameter { name 'coarse_search_angle_offset' type Double },
+          Parameter { name 'throttle_scans' type Integer },
+          Parameter { name 'distance_variance_penalty' type Double },
+          Parameter { name 'correlation_search_space_dimension' type Double },
+          Parameter { name 'odom_frame' type String },
+          Parameter { name 'transform_tolerance' type Double }}}
+}}}

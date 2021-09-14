@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ecl_sigslots {
+    FromGitRepo "https://github.com/stonier/ecl_core.git" 
+    Artifact demo_sigslots_manager {
+      Node { name demo_sigslots_manager}
+}}}

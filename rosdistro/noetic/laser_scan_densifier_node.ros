@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage laser_scan_densifier {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact laser_scan_densifier_node {
+      Node { name laser_scan_densifier_node}
+}}}

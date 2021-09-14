@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_frame_tracker {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact spacenav_commander {
+      Node { name spacenav_commander}
+}}}

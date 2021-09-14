@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage prbt_hardware_support {
+    FromGitRepo "https://github.com/PilzDE/pilz_robots.git" 
+    Artifact modbus_adapter_run_permitted_node {
+      Node { name modbus_adapter_run_permitted_node
+        ServiceClients {
+          ServiceClient { name 'run_permitted' service 'std_srvs.SetBool'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ypspur {
+    FromGitRepo "https://github.com/openspur/yp-spur.git" 
+    Artifact run-test {
+      Node { name run-test}
+}}}

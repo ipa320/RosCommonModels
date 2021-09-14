@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ros_control_boilerplate {
+    FromGitRepo "https://github.com/PickNikRobotics/ros_control_boilerplate.git" 
+    Artifact sim_hw_main {
+      Node { name sim_hw_main}
+}}}

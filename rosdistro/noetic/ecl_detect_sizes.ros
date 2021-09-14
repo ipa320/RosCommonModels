@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ecl_type_traits {
+    FromGitRepo "https://github.com/stonier/ecl_core.git" 
+    Artifact ecl_detect_sizes {
+      Node { name ecl_detect_sizes}
+}}}

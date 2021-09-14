@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage pr2_mechanism_diagnostics {
+    FromGitRepo "https://github.com/pr2/pr2_mechanism.git" 
+    Artifact pr2_mechanism_diagnostics {
+      Node { name pr2_mechanism_diagnostics
+        Publishers {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Subscribers {
+          Subscriber { name 'mechanism_statistics' message 'pr2_mechanism_msgs.MechanismStatistics'}}
+        Parameters {
+          Parameter { name '/use_sim_time' type Boolean },
+          Parameter { name 'disable_controller_warnings' type Boolean }}}
+}}}

@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage jsk_tilt_laser {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common.git" 
+    Artifact spin_laser_snapshotter {
+      Node { name spin_laser_snapshotter
+        Publishers {
+          Publisher { name 'full_cloud2' message 'sensor_msgs.PointCloud2'}}
+        Subscribers {
+          Subscriber { name 'joint_states' message 'sensor_msgs.JointState'}}
+        Parameters {
+          Parameter { name 'negative_direction' type Boolean },
+          Parameter { name 'motor_frame' type String value 'multisense/motor'},
+          Parameter { name 'spindle_frame' type String value 'multisense/spindle'},
+          Parameter { name 'use_tf' type Boolean },
+          Parameter { name 'num_skips' type Integer },
+          Parameter { name 'tf_polling_rate' type Double value 30.0}}}
+}}}

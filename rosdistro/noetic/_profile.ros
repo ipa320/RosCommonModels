@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage tesseract_collision {
+    FromGitRepo "https://github.com/ros-industrial-consortium/tesseract.git" 
+    Artifact _profile {
+      Node { name _profile}
+}}}

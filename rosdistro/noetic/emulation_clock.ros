@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_hardware_emulation {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact emulation_clock {
+      Node { name emulation_clock}
+}}}

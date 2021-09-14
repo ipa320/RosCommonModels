@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage imu_transformer {
+    FromGitRepo "https://github.com/ros-perception/imu_pipeline.git" 
+    Artifact imu_transformer_node {
+      Node { name imu_transformer_node}
+}}}

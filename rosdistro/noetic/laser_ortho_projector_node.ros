@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage laser_ortho_projector {
+    FromGitRepo "https://github.com/ccny-ros-pkg/scan_tools.git" 
+    Artifact laser_ortho_projector_node {
+      Node { name laser_ortho_projector_node}
+}}}

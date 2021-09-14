@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage topic_tools {
+    FromGitRepo "https://github.com/ros/ros_comm.git" 
+    Artifact switch_mux {
+      Node { name switch_mux
+        ServiceClients {
+          ServiceClient { name '?' service 'MuxSelect'}}}
+}}}

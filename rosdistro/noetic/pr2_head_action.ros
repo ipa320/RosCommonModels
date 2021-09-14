@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage pr2_head_action {
+    FromGitRepo "https://github.com/pr2/pr2_controllers.git" 
+    Artifact pr2_head_action {
+      Node { name pr2_head_action
+        ServiceClients {
+          ServiceClient { name '/head_traj_controller/query_state' service 'pr2_controllers_msgs.QueryTrajectoryState'}}
+        Publishers {
+          Publisher { name 'command' message 'trajectory_msgs.JointTrajectory'}}
+        Subscribers {
+          Subscriber { name 'state' message 'pr2_controllers_msgs.JointTrajectoryControllerState'}}
+        Parameters {
+          Parameter { name 'pan_link' type String value 'head_pan_link'},
+          Parameter { name 'success_angle_threshold' type Double value 0.1},
+          Parameter { name '/robot_description' type String },
+          Parameter { name 'default_pointing_frame' type String value 'head_tilt_link'}}}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage theora_image_transport {
+    FromGitRepo "https://github.com/ros-perception/image_transport_plugins.git" 
+    Artifact ogg_saver {
+      Node { name ogg_saver
+        Subscribers {
+          Subscriber { name 'stream' message 'theora_image_transport.Packet'}}}
+}}}

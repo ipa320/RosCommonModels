@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage xpp_examples {
+    FromGitRepo "https://github.com/leggedrobotics/xpp.git" 
+    Artifact monoped_publisher {
+      Node { name monoped_publisher
+        Publishers {
+          Publisher { name '/xpp/state_des' message 'xpp_msgs.RobotStateCartesian'}}}
+}}}

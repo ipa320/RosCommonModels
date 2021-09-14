@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage lms1xx {
+    FromGitRepo "https://github.com/clearpathrobotics/lms1xx.git" 
+    Artifact LMS1xx_node {
+      Node { name LMS1xx_node
+        Publishers {
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}
+        Parameters {
+          Parameter { name 'host' type String value '192.168.1.2'},
+          Parameter { name 'frame_id' type String value 'laser'},
+          Parameter { name 'publish_min_range_as_inf' type Boolean },
+          Parameter { name 'port' type Integer value 2111}}}
+}}}

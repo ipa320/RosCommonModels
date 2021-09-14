@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage ubiquity_motor {
+    FromGitRepo "https://github.com/UbiquityRobotics/ubiquity_motor.git" 
+    Artifact motor_node {
+      Node { name motor_node
+        Subscribers {
+          Subscriber { name 'system_control' message 'std_msgs.String'}}}
+}}}

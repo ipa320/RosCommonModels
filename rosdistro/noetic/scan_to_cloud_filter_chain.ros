@@ -1,0 +1,23 @@
+PackageSet {
+  CatkinPackage laser_filters {
+    FromGitRepo "https://github.com/ros-perception/laser_filters.git" 
+    Artifact scan_to_cloud_filter_chain {
+      Node { name scan_to_cloud_filter_chain
+        Publishers {
+          Publisher { name 'cloud_filtered' message 'sensor_msgs.PointCloud2'},
+          Publisher { name '?' message 'sensor_msgs.PointCloud2'}}
+        Parameters {
+          Parameter { name 'cloud_channel_intensity' type Boolean value true},
+          Parameter { name 'incident_angle_correction' type Boolean value true},
+          Parameter { name 'cloud_channel_distance' type Boolean value true},
+          Parameter { name 'notifier_tolerance' type Double value 0.03},
+          Parameter { name 'high_fidelity' type Boolean },
+          Parameter { name 'laser_max_range' type Double },
+          Parameter { name 'cloud_channel_viewpoint' type Boolean },
+          Parameter { name 'cloud_channel_timestamp' type Boolean value true},
+          Parameter { name 'scan_topic' type String value 'tilt_scan'},
+          Parameter { name 'cloud_topic' type String value 'tilt_laser_cloud_filtered'},
+          Parameter { name 'cloud_channel_index' type Boolean value true},
+          Parameter { name 'filter_window' type Integer value 2},
+          Parameter { name 'target_frame' type String value 'base_link'}}}
+}}}

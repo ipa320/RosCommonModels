@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage darknet_ros {
+    FromGitRepo "https://github.com/leggedrobotics/darknet_ros.git" 
+    Artifact darknet_ros {
+      Node { name darknet_ros}
+}}}
