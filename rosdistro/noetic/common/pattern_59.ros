@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_59 {
+    Artifact pattern_59 {
+      Node { name pattern_59
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.PoseWithCovarianceStamped'}}}
+}}}

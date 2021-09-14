@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage pattern_84 {
+    Artifact pattern_84 {
+      Node { name pattern_84
+        Publishers {
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'},
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name 'entropy' message 'std_msgs.Float64'}}}
+}}}

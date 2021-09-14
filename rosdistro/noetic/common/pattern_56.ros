@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_56 {
+    Artifact pattern_56 {
+      Node { name pattern_56
+        Publishers {
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
+}}}

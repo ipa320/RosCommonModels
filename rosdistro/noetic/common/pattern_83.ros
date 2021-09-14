@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_83 {
+    Artifact pattern_83 {
+      Node { name pattern_83
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.PoseStamped'}}}
+}}}

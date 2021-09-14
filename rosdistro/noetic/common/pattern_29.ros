@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage pattern_29 {
+    Artifact pattern_29 {
+      Node { name pattern_29
+        Publishers {
+          Publisher { name '?' message 'std_msgs.UInt32'},
+          Publisher { name 'test' message 'std_msgs.UInt32'}}}
+}}}

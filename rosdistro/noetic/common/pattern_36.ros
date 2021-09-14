@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage pattern_36 {
+    Artifact pattern_36 {
+      Node { name pattern_36
+        Publishers {
+          Publisher { name '?' message 'std_msgs.String'}}
+        Subscribers {
+          Subscriber { name '?' message 'nav_msgs.Odometry'}}}
+}}}

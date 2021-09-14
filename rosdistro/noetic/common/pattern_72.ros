@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_72 {
+    Artifact pattern_72 {
+      Node { name pattern_72
+        Publishers {
+          Publisher { name '/clock' message 'rosgraph_msgs.Clock'}}}
+}}}

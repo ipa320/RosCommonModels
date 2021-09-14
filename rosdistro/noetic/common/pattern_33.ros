@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage pattern_33 {
+    Artifact pattern_33 {
+      Node { name pattern_33
+        Publishers {
+          Publisher { name 'tactile_data' message 'schunk_sdh.TactileSensor'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
+}}}

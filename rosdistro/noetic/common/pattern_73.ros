@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_73 {
+    Artifact pattern_73 {
+      Node { name pattern_73
+        Subscribers {
+          Subscriber { name '?' message 'calibration_msgs.Interval'}}}
+}}}
