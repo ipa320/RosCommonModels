@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage self_test {
+    FromGitRepo "https://github.com/ros/diagnostics.git" 
+    Artifact selftest_rostest {
+      Node { name selftest_rostest
+        ServiceClients {
+          ServiceClient { name '?' service 'diagnostic_msgs.SelfTest'}}
+        Parameters {
+          Parameter { name 'max_delay' type Double value 60.0},
+          Parameter { name 'node_to_test' type String }}}
+}}}

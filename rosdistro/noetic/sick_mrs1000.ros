@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage sick_tim {
+    FromGitRepo "https://github.com/uos/sick_tim.git" 
+    Artifact sick_mrs1000 {
+      Node { name sick_mrs1000
+        Publishers {
+          Publisher { name 'cloud' message 'sensor_msgs.PointCloud2'}}
+        Parameters {
+          Parameter { name 'range_max' type Double },
+          Parameter { name 'timelimit' type Integer value 5},
+          Parameter { name 'time_increment' type Double },
+          Parameter { name 'hostname' type String },
+          Parameter { name 'range_min' type Double },
+          Parameter { name 'port' type String value '2112'}}}
+}}}

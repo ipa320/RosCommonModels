@@ -1,0 +1,22 @@
+PackageSet {
+  CatkinPackage webots_ros {
+    FromGitRepo "https://github.com/cyberbotics/webots_ros.git" 
+    Artifact panoramic_view_recorder {
+      Node { name panoramic_view_recorder
+        ServiceClients {
+          ServiceClient { name '?' service 'webots_ros.field_get_vec3f'},
+          ServiceClient { name '?' service 'webots_ros.node_get_field'},
+          ServiceClient { name '?' service 'webots_ros.field_set_rotation'},
+          ServiceClient { name '?' service 'webots_ros.set_int'},
+          ServiceClient { name '?' service 'webots_ros.supervisor_movie_start_recording'},
+          ServiceClient { name '?' service 'webots_ros.get_bool'},
+          ServiceClient { name '?' service 'webots_ros.field_set_vec3f'},
+          ServiceClient { name '?' service 'webots_ros.node_get_field'},
+          ServiceClient { name '?' service 'webots_ros.node_get_field'},
+          ServiceClient { name '?' service 'webots_ros.field_get_node'},
+          ServiceClient { name '?' service 'webots_ros.supervisor_set_label'},
+          ServiceClient { name '?' service 'webots_ros.get_uint64'},
+          ServiceClient { name '?' service 'webots_ros.field_get_rotation'}}
+        Subscribers {
+          Subscriber { name 'model_name' message 'std_msgs.String'}}}
+}}}

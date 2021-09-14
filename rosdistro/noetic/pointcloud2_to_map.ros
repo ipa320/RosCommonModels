@@ -1,0 +1,21 @@
+PackageSet {
+  CatkinPackage costmap_cspace {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact pointcloud2_to_map {
+      Node { name pointcloud2_to_map
+        Publishers {
+          Publisher { name '?' message 'nav_msgs.OccupancyGrid'}}
+        Subscribers {
+          Subscriber { name 'cloud_singleshot' message 'sensor_msgs.PointCloud2'},
+          Subscriber { name 'cloud' message 'sensor_msgs.PointCloud2'}}
+        Parameters {
+          Parameter { name 'neonavigation_compatible' type Integer },
+          Parameter { name 'z_min' type Double value 0.1},
+          Parameter { name 'accum_duration' type Double value 1.0},
+          Parameter { name 'robot_frame' type String value 'base_link'},
+          Parameter { name 'hz' type Double value 1.0},
+          Parameter { name 'resolution' type Double value 0.1},
+          Parameter { name 'z_max' type Double value 1.0},
+          Parameter { name 'width' type Integer value 30},
+          Parameter { name 'global_frame' type String value 'map'}}}
+}}}

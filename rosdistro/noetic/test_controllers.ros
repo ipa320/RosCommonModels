@@ -1,0 +1,20 @@
+PackageSet {
+  CatkinPackage pr2_controller_manager {
+    FromGitRepo "https://github.com/pr2/pr2_mechanism.git" 
+    Artifact test_controllers {
+      Node { name test_controllers
+        ServiceClients {
+          ServiceClient { name 'pr2_controller_manager/switch_controller' service 'pr2_mechanism_msgs.SwitchController'},
+          ServiceClient { name 'controller1/my_service' service 'pr2_mechanism_msgs.LoadController'},
+          ServiceClient { name 'pr2_controller_manager/load_controller' service 'pr2_mechanism_msgs.LoadController'},
+          ServiceClient { name 'pr2_controller_manager/list_controllers' service 'pr2_mechanism_msgs.ListControllers'},
+          ServiceClient { name 'pr2_controller_manager/unload_controller' service 'pr2_mechanism_msgs.UnloadController'},
+          ServiceClient { name 'controller1/my_service' service 'pr2_mechanism_msgs.LoadController'}}
+        Subscribers {
+          Subscriber { name 'controller1/my_topic' message 'sensor_msgs.JointState'},
+          Subscriber { name 'controller4/my_topic' message 'sensor_msgs.JointState'},
+          Subscriber { name 'joint_states' message 'sensor_msgs.JointState'},
+          Subscriber { name 'controller1/my_topic' message 'sensor_msgs.JointState'},
+          Subscriber { name 'mechanism_statistics' message 'pr2_mechanism_msgs.MechanismStatistics'},
+          Subscriber { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
+}}}

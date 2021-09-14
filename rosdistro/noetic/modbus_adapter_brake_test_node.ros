@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage prbt_hardware_support {
+    FromGitRepo "https://github.com/PilzDE/pilz_robots.git" 
+    Artifact modbus_adapter_brake_test_node {
+      Node { name modbus_adapter_brake_test_node
+        ServiceServers {
+          ServiceServer { name '/prbt/brake_test_required' service 'pilz_msgs.IsBrakeTestRequired'},
+          ServiceServer { name '/prbt/send_brake_test_result' service '?'}}
+        ServiceClients {
+          ServiceClient { name '/pilz_modbus_client_node/modbus_write' service 'WriteModbusRegister'}}}
+}}}

@@ -1,0 +1,31 @@
+PackageSet {
+  CatkinPackage message_to_tf {
+    FromGitRepo "https://github.com/tu-darmstadt-ros-pkg/hector_localization.git" 
+    Artifact message_to_tf {
+      Node { name message_to_tf
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.PoseStamped'},
+          Publisher { name 'pose' message 'geometry_msgs.PoseStamped'},
+          Publisher { name '?' message 'geometry_msgs.Vector3Stamped'},
+          Publisher { name 'euler' message 'geometry_msgs.Vector3Stamped'}}
+        Subscribers {
+          Subscriber { name '?' message 'topic_tools.ShapeShifter'},
+          Subscriber { name '?' message 'sensor_msgs.Imu'},
+          Subscriber { name '?' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name '?' message 'nav_msgs.Odometry'}}
+        Parameters {
+          Parameter { name 'imu_topic' type String },
+          Parameter { name 'topic' type String },
+          Parameter { name 'stabilized_frame_id' type String },
+          Parameter { name 'child_frame_id' type String },
+          Parameter { name 'publish_pose_topic' type String },
+          Parameter { name 'publish_roll_pitch' type Boolean },
+          Parameter { name 'publish_pose' type Boolean },
+          Parameter { name 'publish_euler' type Boolean },
+          Parameter { name 'publish_euler_topic' type String },
+          Parameter { name 'footprint_frame_id' type String },
+          Parameter { name 'pose_topic' type String },
+          Parameter { name 'position_frame_id' type String },
+          Parameter { name 'odometry_topic' type String },
+          Parameter { name 'frame_id' type String }}}
+}}}

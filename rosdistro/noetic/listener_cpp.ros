@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage microstrain_inertial_examples {
+    FromGitRepo "https://github.com/LORD-MicroStrain/microstrain_inertial.git" 
+    Artifact listener_cpp {
+      Node { name listener_cpp
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.Imu'}}
+        Parameters {
+          Parameter { name 'device' type String value 'gx5'},
+          Parameter { name 'device' type <class 'str value gx5}}}
+}}}

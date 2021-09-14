@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage ypspur_ros {
+    FromGitRepo "https://github.com/openspur/ypspur_ros.git" 
+    Artifact joint_position_to_joint_trajectory {
+      Node { name joint_position_to_joint_trajectory
+        Publishers {
+          Publisher { name '?' message 'trajectory_msgs.JointTrajectory'}}
+        Subscribers {
+          Subscriber { name '?' message 'ros.NodeHandle'},
+          Subscriber { name '?' message 'ros.NodeHandle'}}
+        Parameters {
+          Parameter { name 'compatible' type Integer },
+          Parameter { name 'skip_same' type Boolean value true},
+          Parameter { name 'accel' type Double value 0.3}}}
+}}}

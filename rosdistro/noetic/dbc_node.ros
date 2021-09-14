@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage dataspeed_can_tools {
+    FromGitRepo "https://bitbucket.org/dataspeedinc/dataspeed_can.git" 
+    Artifact dbc_node {
+      Node { name dbc_node
+        Subscribers {
+          Subscriber { name 'can_rx' message 'can_msgs.Frame'}}
+        Parameters {
+          Parameter { name 'unknown' type Boolean },
+          Parameter { name 'expand' type Boolean value true}}}
+}}}

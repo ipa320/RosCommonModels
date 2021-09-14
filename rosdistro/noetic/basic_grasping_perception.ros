@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage simple_grasping {
+    FromGitRepo "https://github.com/mikeferguson/simple_grasping.git" 
+    Artifact basic_grasping_perception {
+      Node { name basic_grasping_perception
+        Publishers {
+          Publisher { name 'object_cloud' message 'pcl.PointCloud<pcl.PointXYZRGB>'},
+          Publisher { name 'support_cloud' message 'pcl.PointCloud<pcl.PointXYZRGB>'}}
+        Subscribers {
+          Subscriber { name '/head_camera/depth_registered/points' message 'pcl.PointCloud<pcl.PointXYZRGB>'}}
+        ActionClients {
+          ActionClient { name 'find_objects' action 'grasping_msgs.FindGraspableObjectsAction'}}
+        Parameters {
+          Parameter { name 'use_debug' type Boolean },
+          Parameter { name 'frame_id' type String }}}
+}}}

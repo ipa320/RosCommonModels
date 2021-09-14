@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rm_common {
+    FromGitRepo "https://github.com/rm-controls/rm_control.git" 
+    Artifact test_kalman {
+      Node { name test_kalman
+        Publishers {
+          Publisher { name 'test_cmd' message 'geometry_msgs.Twist'}}}
+}}}

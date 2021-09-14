@@ -1,0 +1,20 @@
+PackageSet {
+  CatkinPackage cob_sick_s300 {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact cob_sick_s300 {
+      Node { name cob_sick_s300
+        Publishers {
+          Publisher { name 'scan_standby' message 'std_msgs.Bool'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}
+        Parameters {
+          Parameter { name 'frame_id' type String value 'base_laser_link'},
+          Parameter { name 'debug' type Boolean },
+          Parameter { name 'scan_cycle_time' type Double value 0.04},
+          Parameter { name 'communication_timeout' type Double value 0.2},
+          Parameter { name 'port' type String value '/dev/ttyUSB0'},
+          Parameter { name 'scan_duration' type Double value 0.025},
+          Parameter { name 'baud' type Integer value 500000},
+          Parameter { name 'inverted' type Boolean },
+          Parameter { name 'scan_id' type Integer value 7}}}
+}}}

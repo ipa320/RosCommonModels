@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage laser_cb_detector {
+    FromGitRepo "https://github.com/ros-perception/calibration.git" 
+    Artifact laser_interval_calc_node {
+      Node { name laser_interval_calc_node
+        Publishers {
+          Publisher { name 'laser_interval' message 'calibration_msgs.IntervalStamped'}}}
+}}}

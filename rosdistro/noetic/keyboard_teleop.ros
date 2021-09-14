@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage webots_ros {
+    FromGitRepo "https://github.com/cyberbotics/webots_ros.git" 
+    Artifact keyboard_teleop {
+      Node { name keyboard_teleop
+        ServiceClients {
+          ServiceClient { name '?' service 'webots_ros.set_float'},
+          ServiceClient { name '?' service 'webots_ros.set_int'},
+          ServiceClient { name '?' service 'webots_ros.set_float'},
+          ServiceClient { name '?' service 'webots_ros.set_int'}}
+        Subscribers {
+          Subscriber { name 'model_name' message 'std_msgs.String'},
+          Subscriber { name '?' message 'webots_ros.Int32Stamped'}}}
+}}}

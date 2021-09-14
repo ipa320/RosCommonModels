@@ -1,0 +1,20 @@
+PackageSet {
+  CatkinPackage costmap_cspace {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact laserscan_to_map {
+      Node { name laserscan_to_map
+        Publishers {
+          Publisher { name '?' message 'nav_msgs.OccupancyGrid'}}
+        Subscribers {
+          Subscriber { name 'scan' message 'sensor_msgs.LaserScan'}}
+        Parameters {
+          Parameter { name 'z_max' type Double },
+          Parameter { name 'accum_duration' type Double value 1.0},
+          Parameter { name 'z_min' type Double },
+          Parameter { name 'resolution' type Double value 0.1},
+          Parameter { name 'hz' type Double value 1.0},
+          Parameter { name 'global_frame' type String value 'map'},
+          Parameter { name 'neonavigation_compatible' type Integer },
+          Parameter { name 'robot_frame' type String value 'base_link'},
+          Parameter { name 'width' type Integer value 30}}}
+}}}

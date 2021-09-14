@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage image_transport {
+    FromGitRepo "https://github.com/ros-perception/image_common.git" 
+    Artifact republish {
+      Node { name republish
+        Parameters {
+          Parameter { name '?' type String }}}
+}}}

@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage twist_mux {
+    FromGitRepo "https://github.com/ros-teleop/twist_mux.git" 
+    Artifact twist_mux {
+      Node { name twist_mux
+        Publishers {
+          Publisher { name 'cmd_vel_out' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name '?' message 'geometry_msgs.Twist'},
+          Subscriber { name '?' message 'std_msgs.Bool'}}}
+}}}

@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage turtle_actionlib {
+    FromGitRepo "https://github.com/ros/common_tutorials.git" 
+    Artifact shape_server {
+      Node { name shape_server
+        Publishers {
+          Publisher { name '/turtle1/cmd_vel' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name '/turtle1/pose' message 'turtlesim.Pose'}}
+        ActionClients {
+          ActionClient { name '?' action 'turtle_actionlib.ShapeAction'}}}
+}}}

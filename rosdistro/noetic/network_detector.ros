@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage pr2_computer_monitor {
+    FromGitRepo "https://github.com/pr2/pr2_robot.git" 
+    Artifact network_detector {
+      Node { name network_detector
+        Publishers {
+          Publisher { name 'network/connected' message 'std_msgs.Bool'}}}
+}}}

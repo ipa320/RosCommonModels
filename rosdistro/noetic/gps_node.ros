@@ -1,0 +1,22 @@
+PackageSet {
+  CatkinPackage oxford_gps_eth {
+    FromGitRepo "https://bitbucket.org/DataspeedInc/oxford_gps_eth.git" 
+    Artifact gps_node {
+      Node { name gps_node
+        Publishers {
+          Publisher { name 'gps/vel' message 'geometry_msgs.TwistWithCovarianceStamped'},
+          Publisher { name 'gps/gga' message 'std_msgs.String'},
+          Publisher { name 'imu/data' message 'sensor_msgs.Imu'},
+          Publisher { name 'gps/nav_status' message 'std_msgs.String'},
+          Publisher { name 'gps/fix' message 'sensor_msgs.NavSatFix'},
+          Publisher { name 'gps/time_ref' message 'sensor_msgs.TimeReference'},
+          Publisher { name 'gps/pos_type' message 'std_msgs.String'},
+          Publisher { name 'gps/odom' message 'nav_msgs.Odometry'}}
+        Parameters {
+          Parameter { name 'interface' type String },
+          Parameter { name 'ip_address' type String },
+          Parameter { name 'frame_id_vel' type String },
+          Parameter { name 'frame_id_odom' type String },
+          Parameter { name 'port' type Integer },
+          Parameter { name 'frame_id_gps' type String }}}
+}}}

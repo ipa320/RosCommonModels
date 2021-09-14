@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage pr2_power_board {
+    FromGitRepo "https://github.com/pr2/pr2_power_drivers.git" 
+    Artifact power_node2 {
+      Node { name power_node2
+        ServiceServers {
+          ServiceServer { name 'control2' service 'pr2_power_board.PowerBoardCommand2'},
+          ServiceServer { name 'control' service 'pr2_power_board.PowerBoardCommand'}}
+        Publishers {
+          Publisher { name 'state' message 'pr2_msgs.PowerBoardState'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Subscribers {
+          Subscriber { name 'battery/server2' message 'pr2_msgs.BatteryServer2'}}
+        Parameters {
+          Parameter { name 'transition_frequency' type Double },
+          Parameter { name 'sample_frequency' type Double }}}
+}}}

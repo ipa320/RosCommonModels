@@ -1,0 +1,24 @@
+PackageSet {
+  CatkinPackage hokuyo3d {
+    FromGitRepo "https://github.com/at-wat/hokuyo3d.git" 
+    Artifact hokuyo3d {
+      Node { name hokuyo3d
+        Publishers {
+          Publisher { name 'hokuyo_cloud2' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'imu' message 'sensor_msgs.Imu'},
+          Publisher { name 'hokuyo_cloud' message 'sensor_msgs.PointCloud'},
+          Publisher { name 'mag' message 'sensor_msgs.MagneticField'}}
+        Parameters {
+          Parameter { name 'allow_jump_back' type Boolean },
+          Parameter { name 'vertical_interlace' type Integer value 1},
+          Parameter { name 'mag_frame_id' type String },
+          Parameter { name 'horizontal_interlace' type Integer value 4},
+          Parameter { name 'auto_reset' type Boolean },
+          Parameter { name 'port' type Integer value 10940},
+          Parameter { name 'ip' type String value '192.168.0.10'},
+          Parameter { name 'output_cycle' type String value 'field'},
+          Parameter { name 'range_min' type Double },
+          Parameter { name 'imu_frame_id' type String },
+          Parameter { name 'frame_id' type String value 'hokuyo3d'},
+          Parameter { name 'interlace' type Integer value 4}}}
+}}}

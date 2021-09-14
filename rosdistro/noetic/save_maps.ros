@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage map_organizer {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact save_maps {
+      Node { name save_maps
+        Subscribers {
+          Subscriber { name 'maps' message 'map_organizer_msgs.OccupancyGridArray'}}}
+}}}

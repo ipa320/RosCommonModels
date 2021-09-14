@@ -1,0 +1,32 @@
+PackageSet {
+  CatkinPackage steering_functions {
+    FromGitRepo "https://github.com/hbanzhaf/steering_functions.git" 
+    Artifact steering_functions_node {
+      Node { name steering_functions_node
+        Publishers {
+          Publisher { name 'visualization_path' message 'nav_msgs.Path'},
+          Publisher { name 'visualization_text' message 'visualization_msgs.MarkerArray'},
+          Publisher { name 'visualization_covariances' message 'visualization_msgs.MarkerArray'},
+          Publisher { name 'visualization_poses' message 'geometry_msgs.PoseArray'},
+          Publisher { name 'visualization_swath' message 'visualization_msgs.MarkerArray'}}
+        Parameters {
+          Parameter { name 'measurement_noise/std_y' type Double value 0.1},
+          Parameter { name 'motion_noise/alpha4' type Double value 0.1},
+          Parameter { name 'measurement_noise/std_x' type Double value 0.1},
+          Parameter { name 'motion_noise/alpha2' type Double },
+          Parameter { name 'controller/k2' type Double value 1.0},
+          Parameter { name 'measurement_noise/std_theta' type Double value 0.01},
+          Parameter { name 'motion_noise/alpha1' type Double value 0.1},
+          Parameter { name 'measurement_noise/std_x' type Double value 0.1},
+          Parameter { name 'wheel_base' type Double },
+          Parameter { name 'track_width' type Double },
+          Parameter { name 'kappa_max' type Double value 1.0},
+          Parameter { name 'wheel_radius' type Double },
+          Parameter { name 'measurement_noise/std_theta' type Double value 0.01},
+          Parameter { name 'controller/k1' type Double value 1.0},
+          Parameter { name 'sigma_max' type Double value 1.0},
+          Parameter { name 'wheel_width' type Double },
+          Parameter { name 'motion_noise/alpha3' type Double },
+          Parameter { name 'controller/k3' type Double value 1.0},
+          Parameter { name 'measurement_noise/std_y' type Double value 0.1}}}
+}}}

@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage multi_object_tracking_lidar {
+    FromGitRepo "https://github.com/praveen-palanisamy/multiple-object-tracking-lidar.git" 
+    Artifact kf_tracker {
+      Node { name kf_tracker
+        Publishers {
+          Publisher { name 'cluster_0' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'cluster_2' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'cluster_1' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'cluster_4' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'obj_id' message 'std_msgs.Int32MultiArray'},
+          Publisher { name 'cluster_3' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'viz' message 'visualization_msgs.MarkerArray'},
+          Publisher { name 'cluster_5' message 'sensor_msgs.PointCloud2'}}
+        Subscribers {
+          Subscriber { name 'filtered_cloud' message 'sensor_msgs.PointCloud2'}}}
+}}}

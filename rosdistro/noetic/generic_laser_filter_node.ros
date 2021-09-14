@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage laser_filters {
+    FromGitRepo "https://github.com/ros-perception/laser_filters.git" 
+    Artifact generic_laser_filter_node {
+      Node { name generic_laser_filter_node
+        Publishers {
+          Publisher { name 'output' message 'sensor_msgs.LaserScan'}}}
+}}}

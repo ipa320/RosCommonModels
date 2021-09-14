@@ -1,0 +1,28 @@
+PackageSet {
+  CatkinPackage rospilot {
+    FromGitRepo "https://github.com/rospilot/rospilot.git" 
+    Artifact camera_node {
+      Node { name camera_node
+        ServiceServers {
+          ServiceServer { name 'capture_image' service 'std_srvs.Empty'},
+          ServiceServer { name 'start_record' service 'std_srvs.Empty'},
+          ServiceServer { name 'stop_record' service 'std_srvs.Empty'}}
+        Publishers {
+          Publisher { name 'vision_targets' message 'rospilot.VisionTargets'},
+          Publisher { name 'image_raw/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name 'resolutions' message 'rospilot.Resolutions'}}
+        Parameters {
+          Parameter { name 'video_device' type String },
+          Parameter { name 'resolution' type String },
+          Parameter { name 'detector_enabled' type Boolean },
+          Parameter { name 'camera_type' type String value 'usb'},
+          Parameter { name 'raw_capture' type Boolean },
+          Parameter { name 'video_device' type String },
+          Parameter { name 'video_device' type String },
+          Parameter { name 'framerate' type Integer value 30},
+          Parameter { name 'mfc' type String },
+          Parameter { name 'h264_capture' type Boolean },
+          Parameter { name 'resolution' type String },
+          Parameter { name 'media_path' type String value '~/.rospilot/media'},
+          Parameter { name 'detector_enabled' type Boolean }}}
+}}}

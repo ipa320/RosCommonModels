@@ -1,0 +1,75 @@
+PackageSet {
+  CatkinPackage amcl {
+    FromGitRepo "https://github.com/ros-planning/navigation.git" 
+    Artifact amcl {
+      Node { name amcl
+        ServiceServers {
+          ServiceServer { name 'global_localization' service 'std_srvs.Empty'},
+          ServiceServer { name 'set_map' service 'nav_msgs.SetMap'},
+          ServiceServer { name 'request_nomotion_update' service 'std_srvs.Empty'}}
+        Publishers {
+          Publisher { name 'base_scan' message 'sensor_msgs.LaserScan'},
+          Publisher { name 'amcl_pose' message 'geometry_msgs.PoseWithCovarianceStamped'},
+          Publisher { name 'particlecloud' message 'geometry_msgs.PoseArray'},
+          Publisher { name '/tf' message 'tf2_msgs.TFMessage'}}
+        Subscribers {
+          Subscriber { name 'initialpose' message 'geometry_msgs.PoseWithCovarianceStamped'},
+          Subscriber { name 'map' message 'nav_msgs.OccupancyGrid'},
+          Subscriber { name 'initialpose' message 'geometry_msgs.PoseWithCovarianceStamped'}}
+        Parameters {
+          Parameter { name 'beam_skip_threshold' type Double value 0.3},
+          Parameter { name 'odom_model_type' type String value 'diff'},
+          Parameter { name 'selective_resampling' type Boolean },
+          Parameter { name 'initial_cov_yy' type Double },
+          Parameter { name 'odom_alpha5' type Double value 0.2},
+          Parameter { name 'laser_model_type' type String value 'likelihood_field'},
+          Parameter { name 'global_frame_id' type String value 'map'},
+          Parameter { name 'initial_cov_xx' type Double },
+          Parameter { name 'first_map_only' type Boolean },
+          Parameter { name 'resample_interval' type Integer value 2},
+          Parameter { name 'laser_sigma_hit' type Double value 0.2},
+          Parameter { name 'transform_tolerance' type Double value 0.1},
+          Parameter { name 'laser_z_rand' type Double value 0.05},
+          Parameter { name 'base_frame_id' type String value 'base_link'},
+          Parameter { name 'min_particles' type Integer value 100},
+          Parameter { name 'std_warn_level_yaw' type Double value 0.1},
+          Parameter { name 'laser_min_range' type Double value -1.0},
+          Parameter { name 'laser_max_range' type Double value -1.0},
+          Parameter { name 'beam_skip_distance' type Double value 0.5},
+          Parameter { name 'recovery_alpha_slow' type Double value 0.001},
+          Parameter { name 'laser_max_beams' type Integer value 30},
+          Parameter { name 'odom_frame_id' type String value 'odom'},
+          Parameter { name 'initial_cov_xx' type Double },
+          Parameter { name 'initial_pose_a' type Double },
+          Parameter { name 'save_pose_rate' type Double value 0.5},
+          Parameter { name 'laser_likelihood_max_dist' type Double value 2.0},
+          Parameter { name 'laser_z_max' type Double value 0.05},
+          Parameter { name 'update_min_d' type Double value 0.2},
+          Parameter { name 'initial_cov_aa' type Double },
+          Parameter { name 'gui_publish_rate' type Double value -1.0},
+          Parameter { name 'initial_cov_yy' type Double },
+          Parameter { name 'do_beamskip' type Boolean },
+          Parameter { name 'laser_lambda_short' type Double value 0.1},
+          Parameter { name 'use_map_topic' type Boolean },
+          Parameter { name 'kld_z' type Double value 0.99},
+          Parameter { name 'odom_alpha3' type Double value 0.2},
+          Parameter { name 'recovery_alpha_fast' type Double value 0.1},
+          Parameter { name 'odom_alpha1' type Double value 0.2},
+          Parameter { name 'beam_skip_error_threshold' type Double value 0.9},
+          Parameter { name 'odom_alpha2' type Double value 0.2},
+          Parameter { name 'initial_cov_aa' type Double },
+          Parameter { name 'std_warn_level_y' type Double value 0.2},
+          Parameter { name 'kld_err' type Double value 0.01},
+          Parameter { name 'max_particles' type Integer value 5000},
+          Parameter { name 'tf_broadcast' type Boolean value true},
+          Parameter { name 'initial_pose_x' type Double },
+          Parameter { name 'beam_skip_error_threshold_' type Double },
+          Parameter { name 'odom_alpha4' type Double value 0.2},
+          Parameter { name 'initial_pose_y' type Double },
+          Parameter { name 'std_warn_level_x' type Double value 0.2},
+          Parameter { name 'bag_scan_period' type Double value -1.0},
+          Parameter { name 'initial_pose_a' type Double },
+          Parameter { name 'update_min_a' type Double },
+          Parameter { name 'laser_z_hit' type Double value 0.95},
+          Parameter { name 'laser_z_short' type Double value 0.1}}}
+}}}
