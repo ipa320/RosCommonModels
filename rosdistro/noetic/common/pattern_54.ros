@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_54 {
       Node { name pattern_54
         Publishers {
-          Publisher { name '?' message 'nav_msgs.Odometry'}}}
+          Publisher { name 'gps/fix' message 'sensor_msgs.NavSatFix'}}}
 }}}

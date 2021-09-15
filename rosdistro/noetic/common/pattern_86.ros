@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage pattern_86 {
+    Artifact pattern_86 {
+      Node { name pattern_86
+        Publishers {
+          Publisher { name 'odom' message 'nav_msgs.Odometry'}}
+        Subscribers {
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'}}}
+}}}

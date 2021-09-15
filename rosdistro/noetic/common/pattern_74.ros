@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_74 {
     Artifact pattern_74 {
       Node { name pattern_74
-        Publishers {
-          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}}
+        Subscribers {
+          Subscriber { name 'xpp/state_des' message 'xpp_msgs.RobotStateCartesian'}}}
 }}}

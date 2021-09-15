@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_32 {
       Node { name pattern_32
         Subscribers {
-          Subscriber { name 'sync_set_position' message 'dynamixel_sdk_examples.SyncSetPosition'}}}
+          Subscriber { name '?' message 'geometry_msgs.Twist'}}}
 }}}

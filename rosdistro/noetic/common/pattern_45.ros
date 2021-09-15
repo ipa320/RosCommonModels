@@ -2,6 +2,8 @@ PackageSet {
   CatkinPackage pattern_45 {
     Artifact pattern_45 {
       Node { name pattern_45
+        ServiceServers {
+          ServiceServer { name 'dynamic_map' service 'nav_msgs.GetMap'}}
         Publishers {
           Publisher { name 'map' message 'nav_msgs.OccupancyGrid'}}}
 }}}

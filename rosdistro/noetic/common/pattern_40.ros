@@ -2,6 +2,10 @@ PackageSet {
   CatkinPackage pattern_40 {
     Artifact pattern_40 {
       Node { name pattern_40
+        ServiceServers {
+          ServiceServer { name 'dynamic_map' service 'nav_msgs.GetMap'}}
         Publishers {
-          Publisher { name '?' message 'sensor_msgs.PointCloud2'}}}
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'},
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name 'entropy' message 'std_msgs.Float64'}}}
 }}}

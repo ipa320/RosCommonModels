@@ -2,6 +2,9 @@ PackageSet {
   CatkinPackage pattern_70 {
     Artifact pattern_70 {
       Node { name pattern_70
-        Subscribers {
-          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'}}}
+        ServiceServers {
+          ServiceServer { name 'control' service 'pr2_power_board.PowerBoardCommand'}}
+        Publishers {
+          Publisher { name 'state' message 'pr2_msgs.PowerBoardState'},
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
 }}}

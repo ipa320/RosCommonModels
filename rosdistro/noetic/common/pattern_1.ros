@@ -3,18 +3,6 @@ PackageSet {
     Artifact pattern_1 {
       Node { name pattern_1
         Publishers {
-          Publisher { name 'base_bl_caster_r_wheel_controller/command' message 'std_msgs.Float64'},
-          Publisher { name 'diagnostic' message 'diagnostic_msgs.DiagnosticStatus'},
-          Publisher { name 'base_fl_caster_r_wheel_controller/command' message 'std_msgs.Float64'},
-          Publisher { name 'base_br_caster_r_wheel_controller/command' message 'std_msgs.Float64'},
-          Publisher { name 'base_fr_caster_r_wheel_controller/command' message 'std_msgs.Float64'},
-          Publisher { name 'base_fr_caster_rotation_controller/command' message 'std_msgs.Float64'},
-          Publisher { name 'base_fl_caster_rotation_controller/command' message 'std_msgs.Float64'},
-          Publisher { name 'state' message 'control_msgs.JointTrajectoryControllerState'},
-          Publisher { name 'base_bl_caster_rotation_controller/command' message 'std_msgs.Float64'},
-          Publisher { name 'base_br_caster_rotation_controller/command' message 'std_msgs.Float64'},
-          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-        Subscribers {
-          Subscriber { name 'joint_command' message 'control_msgs.JointTrajectoryControllerState'},
-          Subscriber { name 'joint_states' message 'sensor_msgs.JointState'}}}
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'},
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
 }}}

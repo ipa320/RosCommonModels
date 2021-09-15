@@ -3,6 +3,7 @@ PackageSet {
     Artifact pattern_59 {
       Node { name pattern_59
         Publishers {
-          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
-          Publisher { name 'state' message 'pr2_msgs.PowerBoardState'}}}
+          Publisher { name 'features' message 'calibration_msgs.CalibrationPattern'}}
+        ActionClients {
+          ActionClient { name '?' action 'image_cb_detector.ConfigAction'}}}
 }}}

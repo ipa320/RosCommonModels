@@ -3,5 +3,6 @@ PackageSet {
     Artifact pattern_19 {
       Node { name pattern_19
         Publishers {
-          Publisher { name 'marker' message 'visualization_msgs.Marker'}}}
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name 'tactile_data' message 'schunk_sdh.TactileSensor'}}}
 }}}

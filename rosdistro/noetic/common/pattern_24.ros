@@ -3,7 +3,5 @@ PackageSet {
     Artifact pattern_24 {
       Node { name pattern_24
         Publishers {
-          Publisher { name '?' message 'std_msgs.String'}}
-        Subscribers {
-          Subscriber { name '?' message 'nav_msgs.Odometry'}}}
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'}}}
 }}}

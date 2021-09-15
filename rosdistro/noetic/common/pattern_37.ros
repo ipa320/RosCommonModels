@@ -3,5 +3,7 @@ PackageSet {
     Artifact pattern_37 {
       Node { name pattern_37
         Subscribers {
-          Subscriber { name '?' message 'sensor_msgs.PointCloud2'}}}
+          Subscriber { name 'clicked_point' message 'geometry_msgs.PointStamped'},
+          Subscriber { name 'obstacles' message 'costmap_converter.ObstacleArrayMsg'},
+          Subscriber { name 'via_points' message 'nav_msgs.Path'}}}
 }}}

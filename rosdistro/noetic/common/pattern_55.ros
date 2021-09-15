@@ -2,6 +2,10 @@ PackageSet {
   CatkinPackage pattern_55 {
     Artifact pattern_55 {
       Node { name pattern_55
+        ServiceServers {
+          ServiceServer { name 'recover' service 'std_srvs.Trigger'},
+          ServiceServer { name 'init' service 'std_srvs.Trigger'},
+          ServiceServer { name 'shutdown' service 'std_srvs.Trigger'}}
         Publishers {
-          Publisher { name 'odom' message 'nav_msgs.Odometry'}}}
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
 }}}

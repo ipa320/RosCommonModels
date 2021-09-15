@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_61 {
       Node { name pattern_61
         Publishers {
-          Publisher { name 'settled_interval' message 'calibration_msgs.Interval'}}}
+          Publisher { name '?' message 'sensor_msgs.CameraInfo'}}}
 }}}

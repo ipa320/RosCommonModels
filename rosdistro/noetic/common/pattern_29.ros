@@ -3,5 +3,6 @@ PackageSet {
     Artifact pattern_29 {
       Node { name pattern_29
         Publishers {
-          Publisher { name '?' message 'sensor_msgs.CameraInfo'}}}
+          Publisher { name 'odom_combined' message 'nav_msgs.Odometry'},
+          Publisher { name 'state' message 'graft.GraftState'}}}
 }}}

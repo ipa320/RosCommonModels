@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage pattern_92 {
+    Artifact pattern_92 {
+      Node { name pattern_92
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name '?' message 'ros.NodeHandle'}}}
+}}}

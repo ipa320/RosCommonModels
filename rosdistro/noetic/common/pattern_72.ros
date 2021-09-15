@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_72 {
       Node { name pattern_72
         Subscribers {
-          Subscriber { name '?' message 'topic_tools.ShapeShifter'}}}
+          Subscriber { name 'joint_states' message 'sensor_msgs.JointState'}}}
 }}}

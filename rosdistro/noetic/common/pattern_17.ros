@@ -2,7 +2,6 @@ PackageSet {
   CatkinPackage pattern_17 {
     Artifact pattern_17 {
       Node { name pattern_17
-        Publishers {
-          Publisher { name 'visualization_marker' message 'visualization_msgs.Marker'},
-          Publisher { name 'visualization_marker_array' message 'visualization_msgs.MarkerArray'}}}
+        ServiceClients {
+          ServiceClient { name 'prbt/driver/get_object' service 'canopen_chain_node.GetObject'}}}
 }}}

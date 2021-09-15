@@ -2,6 +2,8 @@ PackageSet {
   CatkinPackage pattern_71 {
     Artifact pattern_71 {
       Node { name pattern_71
+        Publishers {
+          Publisher { name 'gripper_sub_position/command' message 'std_msgs.Float64'}}
         Subscribers {
-          Subscriber { name '?' message 'nav_msgs.Odometry'}}}
+          Subscriber { name 'gripper_position/command' message 'std_msgs.Float64'}}}
 }}}

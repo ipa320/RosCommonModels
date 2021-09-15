@@ -3,7 +3,6 @@ PackageSet {
     Artifact pattern_47 {
       Node { name pattern_47
         Publishers {
-          Publisher { name '?' message 'geometry_msgs.Twist'}}
-        Subscribers {
-          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}}
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'},
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'}}}
 }}}

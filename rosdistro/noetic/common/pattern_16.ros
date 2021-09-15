@@ -2,6 +2,12 @@ PackageSet {
   CatkinPackage pattern_16 {
     Artifact pattern_16 {
       Node { name pattern_16
-        Subscribers {
-          Subscriber { name '?' message 'sensor_msgs.Imu'}}}
+        ServiceClients {
+          ServiceClient { name '?' service 'webots_ros.node_get_field'},
+          ServiceClient { name '?' service 'webots_ros.supervisor_set_label'},
+          ServiceClient { name '?' service 'webots_ros.field_get_node'},
+          ServiceClient { name '?' service 'webots_ros.get_uint64'},
+          ServiceClient { name '?' service 'webots_ros.set_int'},
+          ServiceClient { name '?' service 'webots_ros.supervisor_movie_start_recording'},
+          ServiceClient { name '?' service 'webots_ros.get_bool'}}}
 }}}

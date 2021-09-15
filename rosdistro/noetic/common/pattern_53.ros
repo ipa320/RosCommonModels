@@ -2,7 +2,22 @@ PackageSet {
   CatkinPackage pattern_53 {
     Artifact pattern_53 {
       Node { name pattern_53
+        ServiceServers {
+          ServiceServer { name 'recover' service 'std_srvs.Trigger'},
+          ServiceServer { name 'stop' service 'std_srvs.Trigger'},
+          ServiceServer { name 'set_operation_mode' service 'cob_srvs.SetString'},
+          ServiceServer { name 'emergency_stop' service 'std_srvs.Trigger'},
+          ServiceServer { name 'shutdown' service 'std_srvs.Trigger'},
+          ServiceServer { name 'motor_on' service 'std_srvs.Trigger'},
+          ServiceServer { name 'init' service 'std_srvs.Trigger'},
+          ServiceServer { name 'motor_off' service 'std_srvs.Trigger'}}
         Publishers {
-          Publisher { name 'marker' message 'visualization_msgs.Marker'},
-          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
+          Publisher { name 'temperature' message 'schunk_sdh.TemperatureArray'},
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'},
+          Publisher { name 'joint_trajectory_controller/state' message 'control_msgs.JointTrajectoryControllerState'}}
+        Subscribers {
+          Subscriber { name 'joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArrayPtr'}}
+        ActionClients {
+          ActionClient { name '?' action 'control_msgs.FollowJointTrajectoryAction'}}}
 }}}

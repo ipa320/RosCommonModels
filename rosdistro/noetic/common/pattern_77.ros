@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_77 {
     Artifact pattern_77 {
       Node { name pattern_77
-        Publishers {
-          Publisher { name 'trajectory' message 'nav_msgs.Path'}}}
+        Subscribers {
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}}
 }}}

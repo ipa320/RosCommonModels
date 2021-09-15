@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_66 {
       Node { name pattern_66
         Publishers {
-          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'}}}
+          Publisher { name '?' message 'sensor_msgs.PointCloud2'}}}
 }}}

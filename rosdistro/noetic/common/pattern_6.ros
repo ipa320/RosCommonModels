@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_6 {
     Artifact pattern_6 {
       Node { name pattern_6
-        Publishers {
-          Publisher { name 'turtle1/cmd_vel' message 'geometry_msgs.Twist'}}}
+        ServiceClients {
+          ServiceClient { name '?' service 'webots_ros.robot_get_device_list'}}}
 }}}

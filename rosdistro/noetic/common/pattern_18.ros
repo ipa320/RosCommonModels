@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_18 {
     Artifact pattern_18 {
       Node { name pattern_18
-        Subscribers {
-          Subscriber { name 'voxel_grid' message 'costmap_2d.VoxelGrid'}}}
+        Publishers {
+          Publisher { name 'output' message 'sensor_msgs.Image'}}}
 }}}

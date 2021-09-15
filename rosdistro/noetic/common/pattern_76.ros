@@ -2,7 +2,6 @@ PackageSet {
   CatkinPackage pattern_76 {
     Artifact pattern_76 {
       Node { name pattern_76
-        Publishers {
-          Publisher { name 'scan' message 'sensor_msgs.LaserScan'},
-          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
+        ServiceClients {
+          ServiceClient { name 'spawn' service 'turtlesim.Spawn'}}}
 }}}

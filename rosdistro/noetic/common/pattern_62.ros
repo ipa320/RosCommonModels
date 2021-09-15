@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_62 {
       Node { name pattern_62
         Publishers {
-          Publisher { name 'visualization_marker_array' message 'visualization_msgs.MarkerArray'}}}
+          Publisher { name '?' message 'nav_msgs.OccupancyGrid'}}}
 }}}

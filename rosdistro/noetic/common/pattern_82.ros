@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_82 {
     Artifact pattern_82 {
       Node { name pattern_82
-        Publishers {
-          Publisher { name '?' message 'nav_msgs.OccupancyGrid'}}}
+        Subscribers {
+          Subscriber { name 'imu' message 'sensor_msgs.Imu'}}}
 }}}
