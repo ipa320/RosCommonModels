@@ -1,7 +1,0 @@
-PackageSet {
-  CatkinPackage pattern_17 {
-    Artifact pattern_17 {
-      Node { name pattern_17
-        ServiceClients {
-          ServiceClient { name 'prbt/driver/get_object' service 'canopen_chain_node.GetObject'}}}
-}}}

@@ -1,9 +1,0 @@
-PackageSet {
-  CatkinPackage pattern_52 {
-    Artifact pattern_52 {
-      Node { name pattern_52
-        ServiceServers {
-          ServiceServer { name 'stop' service 'std_srvs.Trigger'}}
-        Publishers {
-          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
-}}}

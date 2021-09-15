@@ -1,7 +1,0 @@
-PackageSet {
-  CatkinPackage pattern_94 {
-    Artifact pattern_94 {
-      Node { name pattern_94
-        Subscribers {
-          Subscriber { name 'initialpose' message 'geometry_msgs.PoseWithCovarianceStamped'}}}
-}}}

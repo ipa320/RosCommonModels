@@ -1,7 +1,0 @@
-PackageSet {
-  CatkinPackage pattern_43 {
-    Artifact pattern_43 {
-      Node { name pattern_43
-        Subscribers {
-          Subscriber { name '?' message 'topic_tools.ShapeShifter'}}}
-}}}

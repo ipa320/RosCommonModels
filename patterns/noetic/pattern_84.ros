@@ -1,7 +1,0 @@
-PackageSet {
-  CatkinPackage pattern_84 {
-    Artifact pattern_84 {
-      Node { name pattern_84
-        Publishers {
-          Publisher { name '?' message 'nav_msgs.Odometry'}}}
-}}}
