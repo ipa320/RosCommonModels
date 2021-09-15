@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_80 {
+    Artifact pattern_80 {
+      Node { name pattern_80
+        Subscribers {
+          Subscriber { name 'goal' message 'rm.PoseStamped'}}}
+}}}

@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_20 {
+    Artifact pattern_20 {
+      Node { name pattern_20
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}}
+}}}

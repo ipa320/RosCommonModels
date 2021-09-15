@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_51 {
+    Artifact pattern_51 {
+      Node { name pattern_51
+        Subscribers {
+          Subscriber { name 'voxel_grid' message 'costmap_2d.VoxelGrid'}}}
+}}}

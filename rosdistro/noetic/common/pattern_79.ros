@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_79 {
+    Artifact pattern_79 {
+      Node { name pattern_79
+        ServiceClients {
+          ServiceClient { name '?' service 'visp_camera_calibration.calibrate'}}}
+}}}

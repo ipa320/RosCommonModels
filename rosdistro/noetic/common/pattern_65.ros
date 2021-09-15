@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_65 {
+    Artifact pattern_65 {
+      Node { name pattern_65
+        Subscribers {
+          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}}
+}}}

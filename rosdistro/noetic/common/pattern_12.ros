@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage pattern_12 {
+    Artifact pattern_12 {
+      Node { name pattern_12
+        Publishers {
+          Publisher { name 'visualization_marker' message 'visualization_msgs.Marker'},
+          Publisher { name 'visualization_marker_array' message 'visualization_msgs.MarkerArray'}}}
+}}}

@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_77 {
+    Artifact pattern_77 {
+      Node { name pattern_77
+        Subscribers {
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}}
+}}}

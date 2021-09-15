@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage pattern_7 {
+    Artifact pattern_7 {
+      Node { name pattern_7
+        ServiceServers {
+          ServiceServer { name 'shutdown' service 'std_srvs.Trigger'},
+          ServiceServer { name 'init' service 'std_srvs.Trigger'},
+          ServiceServer { name 'recover' service 'std_srvs.Trigger'}}
+        Publishers {
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
+}}}

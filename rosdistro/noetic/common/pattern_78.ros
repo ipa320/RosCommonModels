@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage pattern_78 {
+    Artifact pattern_78 {
+      Node { name pattern_78
+        ServiceClients {
+          ServiceClient { name '?' service 'webots_ros.set_int'},
+          ServiceClient { name '?' service 'webots_ros.set_float'}}}
+}}}

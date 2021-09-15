@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_83 {
+    Artifact pattern_83 {
+      Node { name pattern_83
+        Subscribers {
+          Subscriber { name 'map' message 'nav_msgs.OccupancyGrid'}}}
+}}}

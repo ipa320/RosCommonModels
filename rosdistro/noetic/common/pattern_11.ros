@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_11 {
+    Artifact pattern_11 {
+      Node { name pattern_11
+        Publishers {
+          Publisher { name 'base_controller/command' message 'geometry_msgs.Twist'}}}
+}}}

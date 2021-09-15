@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage pattern_60 {
+    Artifact pattern_60 {
+      Node { name pattern_60
+        Publishers {
+          Publisher { name 'joint_trajectory_controller/state' message 'control_msgs.JointTrajectoryControllerState'},
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'},
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
+}}}

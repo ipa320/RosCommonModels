@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_76 {
+    Artifact pattern_76 {
+      Node { name pattern_76
+        ServiceClients {
+          ServiceClient { name 'spawn' service 'turtlesim.Spawn'}}}
+}}}

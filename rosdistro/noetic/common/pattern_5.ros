@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage pattern_5 {
+    Artifact pattern_5 {
+      Node { name pattern_5
+        Publishers {
+          Publisher { name 'marker' message 'visualization_msgs.Marker'},
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
+}}}

@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_44 {
+    Artifact pattern_44 {
+      Node { name pattern_44
+        ServiceServers {
+          ServiceServer { name 'reset' service 'std_srvs.Empty'}}}
+}}}

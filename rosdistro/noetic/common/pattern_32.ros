@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_32 {
+    Artifact pattern_32 {
+      Node { name pattern_32
+        Subscribers {
+          Subscriber { name '?' message 'geometry_msgs.Twist'}}}
+}}}

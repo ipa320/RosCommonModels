@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_81 {
+    Artifact pattern_81 {
+      Node { name pattern_81
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.Image'}}}
+}}}

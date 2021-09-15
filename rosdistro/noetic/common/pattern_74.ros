@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_74 {
+    Artifact pattern_74 {
+      Node { name pattern_74
+        Subscribers {
+          Subscriber { name 'xpp/state_des' message 'xpp_msgs.RobotStateCartesian'}}}
+}}}

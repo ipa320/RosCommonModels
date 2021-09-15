@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage pattern_35 {
+    Artifact pattern_35 {
+      Node { name pattern_35
+        Publishers {
+          Publisher { name '?' message 'trajectory_msgs.JointTrajectory'}}
+        Subscribers {
+          Subscriber { name '?' message 'ros.NodeHandle'}}}
+}}}

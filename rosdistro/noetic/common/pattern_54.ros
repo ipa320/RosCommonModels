@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_54 {
+    Artifact pattern_54 {
+      Node { name pattern_54
+        Publishers {
+          Publisher { name 'gps/fix' message 'sensor_msgs.NavSatFix'}}}
+}}}

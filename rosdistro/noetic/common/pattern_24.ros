@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_24 {
+    Artifact pattern_24 {
+      Node { name pattern_24
+        Publishers {
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'}}}
+}}}

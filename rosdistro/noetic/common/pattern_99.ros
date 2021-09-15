@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_99 {
+    Artifact pattern_99 {
+      Node { name pattern_99
+        Publishers {
+          Publisher { name 'visualization_marker_array' message 'visualization_msgs.MarkerArray'}}}
+}}}

@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage pattern_58 {
+    Artifact pattern_58 {
+      Node { name pattern_58
+        Publishers {
+          Publisher { name 'trajectory' message 'nav_msgs.Path'},
+          Publisher { name 'target' message 'visualization_msgs.MarkerArray'},
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'},
+          Publisher { name 'dwa_trajectory' message 'nav_msgs.Path'}}}
+}}}
