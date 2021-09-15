@@ -3,5 +3,6 @@ PackageSet {
     Artifact pattern_51 {
       Node { name pattern_51
         Publishers {
-          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'}}}
+          Publisher { name 'particlecloud' message 'geometry_msgs.PoseArray'},
+          Publisher { name 'amcl_pose' message 'geometry_msgs.PoseWithCovarianceStamped'}}}
 }}}

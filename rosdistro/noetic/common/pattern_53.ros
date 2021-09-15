@@ -3,6 +3,6 @@ PackageSet {
     Artifact pattern_53 {
       Node { name pattern_53
         Publishers {
-          Publisher { name 'state' message 'graft.GraftState'},
-          Publisher { name 'odom_combined' message 'nav_msgs.Odometry'}}}
+          Publisher { name 'marker' message 'visualization_msgs.Marker'},
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
 }}}

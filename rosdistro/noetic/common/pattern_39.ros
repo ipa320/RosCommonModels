@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_39 {
       Node { name pattern_39
         Publishers {
-          Publisher { name 'visualization_marker_array' message 'visualization_msgs.MarkerArray'}}}
+          Publisher { name '?' message 'geometry_msgs.PoseStamped'}}}
 }}}

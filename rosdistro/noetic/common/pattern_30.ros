@@ -3,7 +3,7 @@ PackageSet {
     Artifact pattern_30 {
       Node { name pattern_30
         Publishers {
-          Publisher { name '?' message 'sensor_msgs.PointCloud2'}}
+          Publisher { name '?' message 'trajectory_msgs.JointTrajectory'}}
         Subscribers {
-          Subscriber { name '?' message '?'}}}
+          Subscriber { name '?' message 'ros.NodeHandle'}}}
 }}}

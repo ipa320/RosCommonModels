@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_55 {
       Node { name pattern_55
         Publishers {
-          Publisher { name 'trajectory' message 'nav_msgs.Path'}}}
+          Publisher { name 'odom' message 'nav_msgs.Odometry'}}}
 }}}

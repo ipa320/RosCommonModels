@@ -3,6 +3,7 @@ PackageSet {
     Artifact pattern_2 {
       Node { name pattern_2
         Publishers {
-          Publisher { name 'state' message 'pr2_msgs.PowerBoardState'},
-          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
+          Publisher { name 'gripper_sub_position/command' message 'std_msgs.Float64'}}
+        Subscribers {
+          Subscriber { name 'gripper_position/command' message 'std_msgs.Float64'}}}
 }}}

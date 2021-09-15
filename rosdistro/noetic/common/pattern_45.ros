@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_45 {
       Node { name pattern_45
         Publishers {
-          Publisher { name 'image' message 'sensor_msgs.Image'}}}
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'}}}
 }}}

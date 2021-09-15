@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_3 {
       Node { name pattern_3
         Publishers {
-          Publisher { name 'marker' message 'visualization_msgs.Marker'}}}
+          Publisher { name '?' message 'geometry_msgs.Twist'}}}
 }}}

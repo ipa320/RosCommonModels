@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_32 {
     Artifact pattern_32 {
       Node { name pattern_32
-        Publishers {
-          Publisher { name 'pose' message 'geometry_msgs.PoseStamped'}}}
+        Subscribers {
+          Subscriber { name 'sync_set_position' message 'dynamixel_sdk_examples.SyncSetPosition'}}}
 }}}

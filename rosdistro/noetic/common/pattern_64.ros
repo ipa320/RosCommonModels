@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_64 {
     Artifact pattern_64 {
       Node { name pattern_64
-        Publishers {
-          Publisher { name 'features' message 'calibration_msgs.CalibrationPattern'}}}
+        Subscribers {
+          Subscriber { name '?' message 'turtlesim.Pose'}}}
 }}}

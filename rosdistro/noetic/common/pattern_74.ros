@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_74 {
       Node { name pattern_74
         Publishers {
-          Publisher { name '?' message 'geometry_msgs.Twist'}}}
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}}
 }}}

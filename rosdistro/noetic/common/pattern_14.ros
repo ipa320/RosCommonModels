@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_14 {
       Node { name pattern_14
         Subscribers {
-          Subscriber { name '?' message 'geometry_msgs.Twist'}}}
+          Subscriber { name '?' message 'nav_msgs.OccupancyGrid'}}}
 }}}

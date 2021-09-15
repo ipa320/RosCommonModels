@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_27 {
     Artifact pattern_27 {
       Node { name pattern_27
-        Publishers {
-          Publisher { name 'gps/fix' message 'sensor_msgs.NavSatFix'}}}
+        Subscribers {
+          Subscriber { name 'initialpose' message 'geometry_msgs.PoseWithCovarianceStamped'}}}
 }}}

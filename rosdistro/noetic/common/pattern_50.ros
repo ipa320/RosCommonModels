@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_50 {
       Node { name pattern_50
         Subscribers {
-          Subscriber { name 'imu' message 'sensor_msgs.Imu'}}}
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}}
 }}}

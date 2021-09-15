@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_43 {
       Node { name pattern_43
         Subscribers {
-          Subscriber { name '?' message 'nav_msgs.OccupancyGrid'}}}
+          Subscriber { name 'mapData' message 'rtabmap_ros.MapData'}}}
 }}}

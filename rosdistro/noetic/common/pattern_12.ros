@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_12 {
     Artifact pattern_12 {
       Node { name pattern_12
-        Subscribers {
-          Subscriber { name '?' message '?'}}}
+        Publishers {
+          Publisher { name 'pose' message 'geometry_msgs.PoseStamped'}}}
 }}}

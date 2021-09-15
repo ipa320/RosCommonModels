@@ -3,5 +3,6 @@ PackageSet {
     Artifact pattern_59 {
       Node { name pattern_59
         Publishers {
-          Publisher { name '?' message 'geometry_msgs.PoseWithCovarianceStamped'}}}
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name 'state' message 'pr2_msgs.PowerBoardState'}}}
 }}}
