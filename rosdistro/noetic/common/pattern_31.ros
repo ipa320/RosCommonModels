@@ -2,6 +2,8 @@ PackageSet {
   CatkinPackage pattern_31 {
     Artifact pattern_31 {
       Node { name pattern_31
-        Subscribers {
-          Subscriber { name '?' message 'turtlesim.Pose'}}}
+        Publishers {
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name 'joint_trajectory_controller/state' message 'control_msgs.JointTrajectoryControllerState'},
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'}}}
 }}}

@@ -3,5 +3,6 @@ PackageSet {
     Artifact pattern_46 {
       Node { name pattern_46
         Publishers {
-          Publisher { name '?' message 'sensor_msgs.LaserScan'}}}
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'}}}
 }}}

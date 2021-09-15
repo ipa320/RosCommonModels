@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_8 {
       Node { name pattern_8
         Publishers {
-          Publisher { name '?' message 'sensor_msgs.PointCloud2'}}}
+          Publisher { name '?' message 'sensor_msgs.Image'}}}
 }}}

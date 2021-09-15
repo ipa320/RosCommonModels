@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_71 {
     Artifact pattern_71 {
       Node { name pattern_71
-        Publishers {
-          Publisher { name '?' message 'sensor_msgs.Image'}}}
+        Subscribers {
+          Subscriber { name '?' message 'nav_msgs.Odometry'}}}
 }}}

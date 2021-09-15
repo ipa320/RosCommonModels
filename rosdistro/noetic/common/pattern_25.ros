@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_25 {
     Artifact pattern_25 {
       Node { name pattern_25
-        Publishers {
-          Publisher { name '?' message 'nav_msgs.Odometry'}}}
+        Subscribers {
+          Subscriber { name 'xpp/state_des' message 'xpp_msgs.RobotStateCartesian'}}}
 }}}

@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_28 {
       Node { name pattern_28
         Publishers {
-          Publisher { name 'voltage' message 'std_msgs.Float64'}}}
+          Publisher { name 'visualization_marker' message 'visualization_msgs.Marker'}}}
 }}}

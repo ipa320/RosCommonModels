@@ -3,10 +3,5 @@ PackageSet {
     Artifact pattern_82 {
       Node { name pattern_82
         Publishers {
-          Publisher { name 'temperature' message 'schunk_sdh.TemperatureArray'},
-          Publisher { name 'joint_states' message 'sensor_msgs.JointState'},
-          Publisher { name 'joint_trajectory_controller/state' message 'control_msgs.JointTrajectoryControllerState'},
-          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-        Subscribers {
-          Subscriber { name 'joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArrayPtr'}}}
+          Publisher { name '?' message 'nav_msgs.OccupancyGrid'}}}
 }}}

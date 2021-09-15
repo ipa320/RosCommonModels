@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_69 {
     Artifact pattern_69 {
       Node { name pattern_69
-        Subscribers {
-          Subscriber { name '?' message 'sensor_msgs.Imu'}}}
+        Publishers {
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
 }}}

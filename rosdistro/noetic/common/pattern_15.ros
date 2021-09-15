@@ -3,7 +3,5 @@ PackageSet {
     Artifact pattern_15 {
       Node { name pattern_15
         Publishers {
-          Publisher { name '?' message 'geometry_msgs.Twist'}}
-        Subscribers {
-          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}}
+          Publisher { name 'voltage' message 'std_msgs.Float64'}}}
 }}}

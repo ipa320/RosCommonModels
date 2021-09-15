@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_60 {
     Artifact pattern_60 {
       Node { name pattern_60
-        Publishers {
-          Publisher { name '?' message '?'}}}
+        Subscribers {
+          Subscriber { name '?' message 'calibration_msgs.Interval'}}}
 }}}

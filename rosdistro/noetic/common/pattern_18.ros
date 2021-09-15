@@ -2,7 +2,6 @@ PackageSet {
   CatkinPackage pattern_18 {
     Artifact pattern_18 {
       Node { name pattern_18
-        Publishers {
-          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'},
-          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'}}}
+        Subscribers {
+          Subscriber { name 'voxel_grid' message 'costmap_2d.VoxelGrid'}}}
 }}}

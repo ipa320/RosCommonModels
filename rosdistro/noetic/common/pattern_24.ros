@@ -2,6 +2,8 @@ PackageSet {
   CatkinPackage pattern_24 {
     Artifact pattern_24 {
       Node { name pattern_24
+        Publishers {
+          Publisher { name '?' message 'std_msgs.String'}}
         Subscribers {
-          Subscriber { name 'mapData' message 'rtabmap_ros.MapData'}}}
+          Subscriber { name '?' message 'nav_msgs.Odometry'}}}
 }}}

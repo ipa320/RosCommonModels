@@ -3,8 +3,6 @@ PackageSet {
     Artifact pattern_68 {
       Node { name pattern_68
         Publishers {
-          Publisher { name 'dwa_trajectory' message 'nav_msgs.Path'},
-          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'},
-          Publisher { name 'target' message 'visualization_msgs.MarkerArray'},
-          Publisher { name 'trajectory' message 'nav_msgs.Path'}}}
+          Publisher { name 'odom_combined' message 'nav_msgs.Odometry'},
+          Publisher { name 'state' message 'graft.GraftState'}}}
 }}}

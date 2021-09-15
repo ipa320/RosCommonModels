@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_9 {
       Node { name pattern_9
         Publishers {
-          Publisher { name '?' message 'nav_msgs.OccupancyGrid'}}}
+          Publisher { name 'features' message 'calibration_msgs.CalibrationPattern'}}}
 }}}

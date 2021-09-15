@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_79 {
       Node { name pattern_79
         Publishers {
-          Publisher { name 'odom' message 'nav_msgs.Odometry'}}}
+          Publisher { name 'clock' message 'rosgraph_msgs.Clock'}}}
 }}}

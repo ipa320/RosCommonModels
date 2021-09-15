@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_77 {
     Artifact pattern_77 {
       Node { name pattern_77
-        Subscribers {
-          Subscriber { name 'initialpose' message 'geometry_msgs.PoseWithCovarianceStamped'}}}
+        Publishers {
+          Publisher { name 'trajectory' message 'nav_msgs.Path'}}}
 }}}

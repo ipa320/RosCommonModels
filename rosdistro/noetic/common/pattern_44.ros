@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_44 {
       Node { name pattern_44
         Subscribers {
-          Subscriber { name '/joy' message 'sensor_msgs.Joy'}}}
+          Subscriber { name '?' message 'ros.NodeHandle'}}}
 }}}

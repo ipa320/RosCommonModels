@@ -3,5 +3,6 @@ PackageSet {
     Artifact pattern_5 {
       Node { name pattern_5
         Publishers {
-          Publisher { name 'joint_states' message 'sensor_msgs.JointState'}}}
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name 'tactile_data' message 'schunk_sdh.TactileSensor'}}}
 }}}

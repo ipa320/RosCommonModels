@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_16 {
       Node { name pattern_16
         Subscribers {
-          Subscriber { name '/xpp/state_des' message 'xpp_msgs.RobotStateCartesian'}}}
+          Subscriber { name '?' message 'sensor_msgs.Imu'}}}
 }}}

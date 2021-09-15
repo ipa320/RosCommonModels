@@ -3,6 +3,5 @@ PackageSet {
     Artifact pattern_78 {
       Node { name pattern_78
         Publishers {
-          Publisher { name 'visualization_marker_array' message 'visualization_msgs.MarkerArray'},
-          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'}}}
+          Publisher { name '?' message 'geometry_msgs.PoseWithCovarianceStamped'}}}
 }}}

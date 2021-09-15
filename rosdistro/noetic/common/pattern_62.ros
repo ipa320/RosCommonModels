@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_62 {
     Artifact pattern_62 {
       Node { name pattern_62
-        Subscribers {
-          Subscriber { name 'goal' message 'rm.PoseStamped'}}}
+        Publishers {
+          Publisher { name 'visualization_marker_array' message 'visualization_msgs.MarkerArray'}}}
 }}}

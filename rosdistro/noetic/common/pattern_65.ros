@@ -3,7 +3,5 @@ PackageSet {
     Artifact pattern_65 {
       Node { name pattern_65
         Publishers {
-          Publisher { name '?' message 'geometry_msgs.Twist'}}
-        Subscribers {
-          Subscriber { name '?' message 'ros.NodeHandle'}}}
+          Publisher { name 'base_controller/command' message 'geometry_msgs.Twist'}}}
 }}}

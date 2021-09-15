@@ -2,6 +2,9 @@ PackageSet {
   CatkinPackage pattern_21 {
     Artifact pattern_21 {
       Node { name pattern_21
-        Subscribers {
-          Subscriber { name '?' message 'nav_msgs.Odometry'}}}
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'},
+          Publisher { name 'trajectory' message 'nav_msgs.Path'},
+          Publisher { name 'target' message 'visualization_msgs.MarkerArray'},
+          Publisher { name 'dwa_trajectory' message 'nav_msgs.Path'}}}
 }}}

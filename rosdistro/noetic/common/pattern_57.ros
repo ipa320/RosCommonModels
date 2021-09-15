@@ -2,6 +2,8 @@ PackageSet {
   CatkinPackage pattern_57 {
     Artifact pattern_57 {
       Node { name pattern_57
+        Publishers {
+          Publisher { name 'odom' message 'nav_msgs.Odometry'}}
         Subscribers {
-          Subscriber { name '?' message 'ros.NodeHandle'}}}
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'}}}
 }}}

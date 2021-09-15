@@ -3,5 +3,9 @@ PackageSet {
     Artifact pattern_83 {
       Node { name pattern_83
         Publishers {
-          Publisher { name '?' message 'geometry_msgs.PoseStamped'}}}
+          Publisher { name 'base_scan' message 'sensor_msgs.LaserScan'},
+          Publisher { name 'tf' message 'tf2_msgs.TFMessage'}}
+        Subscribers {
+          Subscriber { name 'map' message 'nav_msgs.OccupancyGrid'},
+          Subscriber { name 'initialpose' message 'geometry_msgs.PoseWithCovarianceStamped'}}}
 }}}

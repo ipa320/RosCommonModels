@@ -3,5 +3,6 @@ PackageSet {
     Artifact pattern_26 {
       Node { name pattern_26
         Publishers {
-          Publisher { name '?' message 'sensor_msgs.CameraInfo'}}}
+          Publisher { name 'visualization_marker_array' message 'visualization_msgs.MarkerArray'},
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'}}}
 }}}
