@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_73 {
       Node { name pattern_73
         Publishers {
-          Publisher { name 'mag' message 'sensor_msgs.MagneticField'}}}
+          Publisher { name 'clock' message 'rosgraph_msgs.Clock'}}}
 }}}

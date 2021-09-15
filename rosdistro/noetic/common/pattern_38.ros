@@ -2,11 +2,6 @@ PackageSet {
   CatkinPackage pattern_38 {
     Artifact pattern_38 {
       Node { name pattern_38
-        Publishers {
-          Publisher { name 'joint_states' message 'sensor_msgs.JointState'},
-          Publisher { name 'joint_trajectory_controller/state' message 'control_msgs.JointTrajectoryControllerState'},
-          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
-          Publisher { name 'temperature' message 'schunk_sdh.TemperatureArray'}}
         Subscribers {
-          Subscriber { name 'joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArrayPtr'}}}
+          Subscriber { name '?' message 'nav_msgs.Odometry'}}}
 }}}

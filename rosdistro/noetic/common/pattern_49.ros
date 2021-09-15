@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_49 {
       Node { name pattern_49
         Subscribers {
-          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}}
+          Subscriber { name 'camera_info' message 'sensor_msgs.CameraInfo'}}}
 }}}

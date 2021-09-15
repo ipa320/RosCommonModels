@@ -2,7 +2,6 @@ PackageSet {
   CatkinPackage pattern_80 {
     Artifact pattern_80 {
       Node { name pattern_80
-        Publishers {
-          Publisher { name 'rpms' message 'std_msgs.UInt16'},
-          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}}
+        Subscribers {
+          Subscriber { name 'goal' message 'rm.PoseStamped'}}}
 }}}

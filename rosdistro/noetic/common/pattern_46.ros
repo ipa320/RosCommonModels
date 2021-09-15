@@ -2,7 +2,6 @@ PackageSet {
   CatkinPackage pattern_46 {
     Artifact pattern_46 {
       Node { name pattern_46
-        Publishers {
-          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'},
-          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'}}}
+        Subscribers {
+          Subscriber { name 'scan' message 'sensor_msgs.LaserScan'}}}
 }}}

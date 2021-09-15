@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_20 {
       Node { name pattern_20
         Publishers {
-          Publisher { name 'maps' message 'map_organizer_msgs.OccupancyGridArray'}}}
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}}
 }}}

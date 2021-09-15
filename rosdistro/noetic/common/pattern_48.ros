@@ -3,5 +3,6 @@ PackageSet {
     Artifact pattern_48 {
       Node { name pattern_48
         Subscribers {
-          Subscriber { name 'map' message 'nav_msgs.OccupancyGrid'}}}
+          Subscriber { name 'imu' message 'sensor_msgs.Imu'},
+          Subscriber { name 'scan' message 'sensor_msgs.LaserScan'}}}
 }}}

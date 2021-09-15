@@ -2,8 +2,6 @@ PackageSet {
   CatkinPackage pattern_41 {
     Artifact pattern_41 {
       Node { name pattern_41
-        Publishers {
-          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'},
-          Publisher { name 'entropy' message 'std_msgs.Float64'},
-          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'}}}
+        Subscribers {
+          Subscriber { name '?' message 'turtlesim.Pose'}}}
 }}}

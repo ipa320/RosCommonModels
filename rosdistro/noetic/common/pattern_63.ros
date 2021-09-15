@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_63 {
     Artifact pattern_63 {
       Node { name pattern_63
-        Subscribers {
-          Subscriber { name 'ImageFeature0D' message 'posedetection_msgs.ImageFeature0D'}}}
+        Publishers {
+          Publisher { name 'trajectory' message 'nav_msgs.Path'}}}
 }}}

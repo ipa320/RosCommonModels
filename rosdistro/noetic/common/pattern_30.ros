@@ -3,7 +3,5 @@ PackageSet {
     Artifact pattern_30 {
       Node { name pattern_30
         Publishers {
-          Publisher { name '?' message 'trajectory_msgs.JointTrajectory'}}
-        Subscribers {
-          Subscriber { name '?' message 'ros.NodeHandle'}}}
+          Publisher { name 'maps' message 'map_organizer_msgs.OccupancyGridArray'}}}
 }}}

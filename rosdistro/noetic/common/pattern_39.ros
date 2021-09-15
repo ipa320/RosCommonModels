@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_39 {
       Node { name pattern_39
         Publishers {
-          Publisher { name '?' message 'geometry_msgs.PoseStamped'}}}
+          Publisher { name 'voltage' message 'std_msgs.Float64'}}}
 }}}

@@ -2,6 +2,14 @@ PackageSet {
   CatkinPackage pattern_34 {
     Artifact pattern_34 {
       Node { name pattern_34
+        ServiceServers {
+          ServiceServer { name 'set_map' service 'nav_msgs.SetMap'},
+          ServiceServer { name 'global_localization' service 'std_srvs.Empty'},
+          ServiceServer { name 'request_nomotion_update' service 'std_srvs.Empty'}}
+        Publishers {
+          Publisher { name 'base_scan' message 'sensor_msgs.LaserScan'},
+          Publisher { name 'tf' message 'tf2_msgs.TFMessage'}}
         Subscribers {
-          Subscriber { name 'joint_states' message 'sensor_msgs.JointState'}}}
+          Subscriber { name 'initialpose' message 'geometry_msgs.PoseWithCovarianceStamped'},
+          Subscriber { name 'map' message 'nav_msgs.OccupancyGrid'}}}
 }}}

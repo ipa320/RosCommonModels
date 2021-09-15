@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_23 {
       Node { name pattern_23
         Publishers {
-          Publisher { name '?' message 'sensor_msgs.LaserScan'}}}
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'}}}
 }}}

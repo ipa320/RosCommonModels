@@ -3,5 +3,5 @@ PackageSet {
     Artifact pattern_11 {
       Node { name pattern_11
         Publishers {
-          Publisher { name 'gps/fix' message 'sensor_msgs.NavSatFix'}}}
+          Publisher { name 'base_controller/command' message 'geometry_msgs.Twist'}}}
 }}}

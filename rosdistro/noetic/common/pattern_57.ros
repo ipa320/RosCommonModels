@@ -3,7 +3,7 @@ PackageSet {
     Artifact pattern_57 {
       Node { name pattern_57
         Publishers {
-          Publisher { name 'odom' message 'nav_msgs.Odometry'}}
+          Publisher { name '?' message 'std_msgs.String'}}
         Subscribers {
-          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'}}}
+          Subscriber { name '?' message 'nav_msgs.Odometry'}}}
 }}}

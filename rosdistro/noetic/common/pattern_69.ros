@@ -2,6 +2,8 @@ PackageSet {
   CatkinPackage pattern_69 {
     Artifact pattern_69 {
       Node { name pattern_69
+        ServiceServers {
+          ServiceServer { name 'static_map' service 'nav_msgs.GetMap'}}
         Publishers {
-          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'}}}
 }}}

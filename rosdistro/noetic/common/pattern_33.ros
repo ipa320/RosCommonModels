@@ -2,6 +2,6 @@ PackageSet {
   CatkinPackage pattern_33 {
     Artifact pattern_33 {
       Node { name pattern_33
-        Subscribers {
-          Subscriber { name '?' message 'geometry_msgs.Twist'}}}
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.LaserScan'}}}
 }}}

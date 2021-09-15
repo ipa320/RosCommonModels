@@ -2,6 +2,7 @@ PackageSet {
   CatkinPackage pattern_27 {
     Artifact pattern_27 {
       Node { name pattern_27
-        Subscribers {
-          Subscriber { name 'initialpose' message 'geometry_msgs.PoseWithCovarianceStamped'}}}
+        Publishers {
+          Publisher { name 'particlecloud' message 'geometry_msgs.PoseArray'},
+          Publisher { name 'amcl_pose' message 'geometry_msgs.PoseWithCovarianceStamped'}}}
 }}}

@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_87 {
+    Artifact pattern_87 {
+      Node { name pattern_87
+        Subscribers {
+          Subscriber { name 'pose' message 'geometry_msgs.PoseStamped'}}}
+}}}
