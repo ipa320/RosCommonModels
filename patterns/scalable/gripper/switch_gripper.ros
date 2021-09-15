@@ -1,0 +1,3 @@
+PackageSet { package {
+	CatkinPackage switch_gripper{ artifact {
+		Artifact  switch_gripper { node Node { name switch_gripper serviceserver { ServiceServer { name "/gripper/switch" service "std_srvs.Trigger" } } publisher { Publisher { name "/gripper/status" message "std_msgs.String" } } } } }}}}

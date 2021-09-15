@@ -1,0 +1,3 @@
+PackageSet { package {
+	CatkinPackage d_camera_stream_image{ artifact {
+		Artifact  d_camera_stream_image { node Node { name camera_2d_stream_image serviceserver { ServiceServer { name "/set_camera_info" service "sensor_msgs.SetCameraInfo" } } publisher { Publisher { name "/image_raw" message "sensor_msgs.Image" } , Publisher { name "/camera_info" message "sensor_msgs.CameraInfo" } } } } }}}}

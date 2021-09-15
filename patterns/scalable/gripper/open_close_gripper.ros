@@ -1,0 +1,3 @@
+PackageSet { package {
+	CatkinPackage open_close_gripper{ artifact {
+		Artifact  open_close_gripper { node Node { name open_close_gripper serviceserver { ServiceServer { name "/gripper/open" service "std_srvs.Trigger" } , ServiceServer { name "/gripper/close" service "std_srvs.Trigger" } } publisher { Publisher { name "/gripper/status" message "std_msgs.String" } } } } }}}}

@@ -1,0 +1,3 @@
+PackageSet { package {
+	CatkinPackage camera_2d_polled_image{ artifact {
+		Artifact  camera_2d_polled_image { node Node { name NewNode serviceserver { ServiceServer { name "/request_image" service "std_srvs.Trigger" } , ServiceServer { name "/set_camera_info" service "sensor_msgs.SetCameraInfo" } } publisher { Publisher { name "/camera_info" message "sensor_msgs.CameraInfo" } , Publisher { name "/image_raw" message "sensor_msgs.Image" } } } } }}}}

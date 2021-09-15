@@ -1,0 +1,3 @@
+PackageSet { package {
+	CatkinPackage arm_node_template{ artifact {
+		Artifact  NewNode { node Node { name arm_manipulator_joint_trajectory publisher { Publisher { name "/joint_states" message "sensor_msgs.JointState" } } actionserver { ActionServer { name "/follow_joint_trajectory" action "control_msgs.FollowJointTrajectory" } } } } }}}}

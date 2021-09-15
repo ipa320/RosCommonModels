@@ -1,0 +1,3 @@
+PackageSet { package {
+	CatkinPackage laser_scan{ artifact {
+		Artifact  laser_scan { node Node { name Laser_scan publisher { Publisher { name "/laser_scan" message "sensor_msgs.LaserScan" } } } } }}}}

@@ -1,0 +1,3 @@
+PackageSet { package {
+	CatkinPackage joint_control_gripper{ artifact {
+		Artifact  joint_control_gripper { node Node { name joint_control_gripper publisher { Publisher { name "/gripper/joint_states" message "sensor_msgs.JointState" } } subscriber { Subscriber { name "/gripper/joint_goal" message "sensor_msgs.JointState" } } } } }}}}

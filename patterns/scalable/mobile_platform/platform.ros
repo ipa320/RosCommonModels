@@ -1,0 +1,3 @@
+PackageSet { package {
+	CatkinPackage platform{ artifact {
+		Artifact  platform { node Node { name mobile_platform publisher { Publisher { name "/odom" message "nav_msgs.Odometry" } } subscriber { Subscriber { name "/cmd_vel" message "geometry_msgs.Twist" } } } } }}}}
