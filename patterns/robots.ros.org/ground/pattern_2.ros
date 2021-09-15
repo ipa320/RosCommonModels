@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage pattern_2 {
+    Artifact pattern_2 {
+      Node { name pattern_2
+        Publishers {
+          Publisher { name '?' message 'std_msgs.Float32MultiArray'}}
+        Subscribers {
+          Subscriber { name '?' message 'std_msgs.Bool'},
+          Subscriber { name '?' message 'std_msgs.Float32'},
+          Subscriber { name '?' message 'geometry_msgs.Twist'}}}
+}}}

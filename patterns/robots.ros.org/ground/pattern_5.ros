@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage pattern_5 {
+    Artifact pattern_5 {
+      Node { name pattern_5
+        Publishers {
+          Publisher { name 'wifi_connected' message 'std_msgs.Bool'}}
+        Subscribers {
+          Subscriber { name 'imu/data_raw' message 'sensor_msgs.Imu'}}}
+}}}

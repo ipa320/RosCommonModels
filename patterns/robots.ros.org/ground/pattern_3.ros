@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage pattern_3 {
+    Artifact pattern_3 {
+      Node { name pattern_3
+        Publishers {
+          Publisher { name 'mcu/cmd_lights' message 'ridgeback_msgs.Lights'},
+          Publisher { name 'mcu/cmd_fans' message 'ridgeback_msgs.Fans'},
+          Publisher { name 'wifi_connected' message 'std_msgs.Bool'},
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'}}
+        Subscribers {
+          Subscriber { name 'mcu/status' message 'ridgeback_msgs.Status'},
+          Subscriber { name 'imu/data_raw' message 'sensor_msgs.Imu'},
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'},
+          Subscriber { name 'cmd_lights' message 'ridgeback_msgs.Lights'},
+          Subscriber { name 'status' message 'puma_motor_msgs.MultiStatus'}}}
+}}}
