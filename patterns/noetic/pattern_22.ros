@@ -1,7 +1,0 @@
-PackageSet {
-  CatkinPackage pattern_22 {
-    Artifact pattern_22 {
-      Node { name pattern_22
-        Publishers {
-          Publisher { name 'turtle1/cmd_vel' message 'geometry_msgs.Twist'}}}
-}}}

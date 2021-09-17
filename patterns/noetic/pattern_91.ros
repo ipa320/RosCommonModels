@@ -1,9 +1,0 @@
-PackageSet {
-  CatkinPackage pattern_91 {
-    Artifact pattern_91 {
-      Node { name pattern_91
-        ServiceClients {
-          ServiceClient { name '?' service 'webots_ros.get_string'},
-          ServiceClient { name '?' service 'webots_ros.robot_get_device_list'},
-          ServiceClient { name '?' service 'webots_ros.get_int'}}}
-}}}

@@ -1,7 +1,0 @@
-PackageSet {
-  CatkinPackage pattern_42 {
-    Artifact pattern_42 {
-      Node { name pattern_42
-        Subscribers {
-          Subscriber { name '?' message 'ros.NodeHandle'}}}
-}}}

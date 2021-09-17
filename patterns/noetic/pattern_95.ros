@@ -1,9 +1,0 @@
-PackageSet {
-  CatkinPackage pattern_95 {
-    Artifact pattern_95 {
-      Node { name pattern_95
-        ServiceServers {
-          ServiceServer { name 'sync_get_position' service 'dynamixel_sdk_examples.SyncGetPosition'}}
-        Subscribers {
-          Subscriber { name 'sync_set_position' message 'dynamixel_sdk_examples.SyncSetPosition'}}}
-}}}

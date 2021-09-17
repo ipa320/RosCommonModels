@@ -1,7 +1,0 @@
-PackageSet {
-  CatkinPackage pattern_41 {
-    Artifact pattern_41 {
-      Node { name pattern_41
-        Subscribers {
-          Subscriber { name '?' message 'turtlesim.Pose'}}}
-}}}

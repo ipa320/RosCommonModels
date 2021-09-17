@@ -1,8 +1,0 @@
-PackageSet {
-  CatkinPackage pattern_4 {
-    Artifact pattern_4 {
-      Node { name pattern_4
-        Publishers {
-          Publisher { name 'state' message 'graft.GraftState'},
-          Publisher { name 'odom_combined' message 'nav_msgs.Odometry'}}}
-}}}
