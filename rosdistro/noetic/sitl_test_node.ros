@@ -10,18 +10,18 @@ PackageSet {
           Subscriber { name '/mavros/local_position/local' message 'geometry_msgs.PoseStamped'}}
         Parameters {
           Parameter { name 'use_pid' type Boolean value true},
-          Parameter { name 'linvel_d_gain' type Double value 0.12},
           Parameter { name 'shape' type String value 'square'},
-          Parameter { name 'yawrate_i_gain' type Double value 0.00058},
-          Parameter { name 'mode' type String value 'position'},
-          Parameter { name 'yawrate_i_min' type Double value -0.005},
-          Parameter { name 'yawrate_d_gain' type Double value 0.12},
           Parameter { name 'linvel_i_gain' type Double value 0.05},
-          Parameter { name 'yawrate_p_gain' type Double value 0.011},
+          Parameter { name 'rate' type Double value 10.0},
           Parameter { name 'num_of_tests' type Integer value 10},
-          Parameter { name 'linvel_i_max' type Double value 0.1},
-          Parameter { name 'linvel_p_gain' type Double value 0.4},
+          Parameter { name 'linvel_d_gain' type Double value 0.12},
           Parameter { name 'linvel_i_min' type Double value -0.1},
+          Parameter { name 'yawrate_d_gain' type Double value 0.12},
           Parameter { name 'yawrate_i_max' type Double value 0.005},
-          Parameter { name 'rate' type Double value 10.0}}}
+          Parameter { name 'yawrate_i_gain' type Double value 0.00058},
+          Parameter { name 'yawrate_i_min' type Double value -0.005},
+          Parameter { name 'yawrate_p_gain' type Double value 0.011},
+          Parameter { name 'linvel_p_gain' type Double value 0.4},
+          Parameter { name 'mode' type String value 'position'},
+          Parameter { name 'linvel_i_max' type Double value 0.1}}}
 }}}

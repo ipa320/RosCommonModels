@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_mecanum_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact cob_mecanum_controller_node {
+      Node { name cob_mecanum_controller_node}
+}}}

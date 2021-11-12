@@ -2,18 +2,5 @@ PackageSet {
   CatkinPackage map_organizer {
     FromGitRepo "https://github.com/at-wat/neonavigation.git" 
     Artifact pointcloud_to_maps {
-      Node { name pointcloud_to_maps
-        Publishers {
-          Publisher { name 'maps' message 'map_organizer_msgs.OccupancyGridArray'}}
-        Subscribers {
-          Subscriber { name '?' message 'ros.NodeHandle'}}
-        Parameters {
-          Parameter { name 'robot_height' type Double value 1.0},
-          Parameter { name 'min_floor_area' type Double value 100.0},
-          Parameter { name 'floor_area_thresh_rate' type Double value 0.8},
-          Parameter { name 'grid' type Double value 0.05},
-          Parameter { name 'neonavigation_compatible' type Integer },
-          Parameter { name 'floor_tolerance' type Double value 0.2},
-          Parameter { name 'points_thresh_rate' type Double value 0.5},
-          Parameter { name 'floor_height' type Double value 0.1}}}
+      Node { name pointcloud_to_maps}
 }}}

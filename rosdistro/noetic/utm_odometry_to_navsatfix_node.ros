@@ -8,6 +8,6 @@ PackageSet {
         Subscribers {
           Subscriber { name 'odom' message 'nav_msgs.Odometry'}}
         Parameters {
-          Parameter { name 'zone' type String },
-          Parameter { name 'frame_id' type String }}}
+          Parameter { name 'frame_id' type String },
+          Parameter { name 'zone' type String }}}
 }}}

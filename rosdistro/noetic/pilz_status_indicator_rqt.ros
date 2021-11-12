@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pilz_status_indicator_rqt {
+    FromGitRepo "https://github.com/PilzDE/pilz_robots.git" 
+    Artifact pilz_status_indicator_rqt {
+      Node { name pilz_status_indicator_rqt}
+}}}

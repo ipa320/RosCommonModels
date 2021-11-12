@@ -4,7 +4,7 @@ PackageSet {
     Artifact viz {
       Node { name viz
         Publishers {
-          Publisher { name '/fake_controller_joint_states' message 'sensor_msgs.JointState'},
           Publisher { name '?' message 'sensor_msgs.PointCloud2'},
-          Publisher { name 'data' message 'visualization_msgs.MarkerArray'}}}
+          Publisher { name 'data' message 'visualization_msgs.MarkerArray'},
+          Publisher { name '/fake_controller_joint_states' message 'sensor_msgs.JointState'}}}
 }}}

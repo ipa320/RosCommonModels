@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage agni_tf_tools {
+    FromGitRepo "https://github.com/ubi-agni/agni_tf_tools.git" 
+    Artifact static_transform_publisher_gui {
+      Node { name static_transform_publisher_gui}
+}}}

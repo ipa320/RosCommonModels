@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage imu_complementary_filter {
+    FromGitRepo "https://github.com/ccny-ros-pkg/imu_tools.git" 
+    Artifact complementary_filter_node {
+      Node { name complementary_filter_node}
+}}}

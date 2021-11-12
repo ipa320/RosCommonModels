@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage multisense_ros {
+    FromGitRepo "https://github.com/carnegierobotics/multisense_ros.git" 
+    Artifact ros_driver {
+      Node { name ros_driver}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage actionlib_tutorials {
+    FromGitRepo "https://github.com/ros/common_tutorials.git" 
+    Artifact gen_numbers {
+      Node { name gen_numbers
+        Publishers {
+          Publisher { name 'random_number' message 'std_msgs.Float32'}}}
+}}}

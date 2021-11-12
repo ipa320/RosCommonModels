@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage cob_relayboard {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact relayboard_sim {
+      Node { name relayboard_sim
+        Publishers {
+          Publisher { name 'voltage' message 'std_msgs.Float64'},
+          Publisher { name 'emergency_stop_state' message 'cob_msgs.EmergencyStopState'}}}
+}}}

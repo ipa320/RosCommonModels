@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ecl_time_lite {
+    FromGitRepo "https://github.com/stonier/ecl_lite.git" 
+    Artifact demo_time_functions {
+      Node { name demo_time_functions}
+}}}

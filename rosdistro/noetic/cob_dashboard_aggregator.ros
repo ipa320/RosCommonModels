@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage cob_dashboard {
+    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
+    Artifact cob_dashboard_aggregator {
+      Node { name cob_dashboard_aggregator
+        Publishers {
+          Publisher { name 'dashboard_agg' message 'cob_msgs.DashboardState'}}
+        Subscribers {
+          Subscriber { name 'emergency_stop_state' message 'cob_msgs.EmergencyStopState'},
+          Subscriber { name 'power_state' message 'cob_msgs.PowerState'},
+          Subscriber { name 'diagnostics_toplevel_state' message 'diagnostic_msgs.DiagnosticStatus'}}}
+}}}

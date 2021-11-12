@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage collada_urdf {
+    FromGitRepo "https://github.com/ros/collada_urdf.git" 
+    Artifact collada_to_urdf {
+      Node { name collada_to_urdf}
+}}}

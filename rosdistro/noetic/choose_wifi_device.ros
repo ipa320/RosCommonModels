@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rospilot {
+    FromGitRepo "https://github.com/rospilot/rospilot.git" 
+    Artifact choose_wifi_device {
+      Node { name choose_wifi_device}
+}}}

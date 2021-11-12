@@ -4,6 +4,6 @@ PackageSet {
     Artifact extract_images {
       Node { name extract_images
         Parameters {
-          Parameter { name 'sec_per_frame' type Double value 0.1},
-          Parameter { name 'filename_format' type String value 'frame%04i.jpg'}}}
+          Parameter { name 'filename_format' type String value 'frame%04i.jpg'},
+          Parameter { name 'sec_per_frame' type Double value 0.1}}}
 }}}

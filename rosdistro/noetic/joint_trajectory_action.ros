@@ -9,7 +9,7 @@ PackageSet {
           Subscriber { name 'state' message 'pr2_controllers_msgs.JointTrajectoryControllerState'}}
         Parameters {
           Parameter { name '?' type Double value -1.0},
-          Parameter { name '?' type Double value -1.0},
           Parameter { name 'constraints/stopped_velocity_tolerance' type Double value 0.01},
-          Parameter { name 'constraints/goal_time' type Double }}}
+          Parameter { name 'constraints/goal_time' type Double },
+          Parameter { name '?' type Double value -1.0}}}
 }}}

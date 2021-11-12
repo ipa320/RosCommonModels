@@ -6,6 +6,6 @@ PackageSet {
         Subscribers {
           Subscriber { name 'ImageFeature0D' message 'posedetection_msgs.ImageFeature0D'}}
         Parameters {
-          Parameter { name 'window_name' type String },
-          Parameter { name 'autosize' type Boolean }}}
+          Parameter { name 'autosize' type Boolean },
+          Parameter { name 'window_name' type String }}}
 }}}

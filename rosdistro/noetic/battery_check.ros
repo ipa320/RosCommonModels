@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ocean_battery_driver {
+    FromGitRepo "https://github.com/pr2/pr2_power_drivers.git" 
+    Artifact battery_check {
+      Node { name battery_check}
+}}}

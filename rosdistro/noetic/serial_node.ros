@@ -6,6 +6,6 @@ PackageSet {
         Publishers {
           Publisher { name '?' message '?'}}
         Parameters {
-          Parameter { name '~port' type String value '/dev/ttyACM0'},
-          Parameter { name '~baud' type Integer value 57600}}}
+          Parameter { name '~baud' type Integer value 57600},
+          Parameter { name '~port' type String value '/dev/ttyACM0'}}}
 }}}

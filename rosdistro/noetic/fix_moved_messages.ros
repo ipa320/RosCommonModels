@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rosbag {
+    FromGitRepo "https://github.com/ros/ros_comm.git" 
+    Artifact fix_moved_messages {
+      Node { name fix_moved_messages}
+}}}

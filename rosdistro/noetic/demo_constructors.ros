@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ecl_utilities {
+    FromGitRepo "https://github.com/stonier/ecl_core.git" 
+    Artifact demo_constructors {
+      Node { name demo_constructors}
+}}}

@@ -6,7 +6,7 @@ PackageSet {
         Publishers {
           Publisher { name 'xpp/rviz_markers' message 'visualization_msgs.MarkerArray'}}
         Subscribers {
-          Subscriber { name '/xpp/terrain_info' message 'xpp_msgs.TerrainInfo'},
           Subscriber { name '/xpp/state_des' message 'xpp_msgs.RobotStateCartesian'},
-          Subscriber { name '/xpp/params' message 'xpp_msgs.RobotParameters'}}}
+          Subscriber { name '/xpp/params' message 'xpp_msgs.RobotParameters'},
+          Subscriber { name '/xpp/terrain_info' message 'xpp_msgs.TerrainInfo'}}}
 }}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage fake_localization {
+    FromGitRepo "https://github.com/ros-planning/navigation.git" 
+    Artifact static_odom_broadcaster {
+      Node { name static_odom_broadcaster
+        Publishers {
+          Publisher { name 'odom' message 'nav_msgs.Odometry'}}}
+}}}

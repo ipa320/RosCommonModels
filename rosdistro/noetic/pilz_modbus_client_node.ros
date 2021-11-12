@@ -9,7 +9,7 @@ PackageSet {
           Publisher { name '?' message 'ModbusMsgInStamped'}}
         Parameters {
           Parameter { name 'modbus_read_topic_name' type String value '/pilz_modbus_client_node/modbus_read'},
-          Parameter { name 'modbus_write_service_name' type String value '/pilz_modbus_client_node/modbus_write'},
+          Parameter { name 'modbus_connection_retry_timeout' type Double },
           Parameter { name 'modbus_response_timeout' type Integer },
-          Parameter { name 'modbus_connection_retry_timeout' type Double }}}
+          Parameter { name 'modbus_write_service_name' type String value '/pilz_modbus_client_node/modbus_write'}}}
 }}}

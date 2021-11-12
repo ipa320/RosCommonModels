@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage py_trees_ros {
+    FromGitRepo "https://github.com/splintered-reality/py_trees_ros.git" 
+    Artifact tutorial_dashboard {
+      Node { name tutorial_dashboard}
+}}}

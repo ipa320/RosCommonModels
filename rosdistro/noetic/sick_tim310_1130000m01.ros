@@ -4,6 +4,6 @@ PackageSet {
     Artifact sick_tim310_1130000m01 {
       Node { name sick_tim310_1130000m01
         Parameters {
-          Parameter { name 'subscribe_datagram' type Boolean },
-          Parameter { name 'device_number' type Integer }}}
+          Parameter { name 'device_number' type Integer },
+          Parameter { name 'subscribe_datagram' type Boolean }}}
 }}}

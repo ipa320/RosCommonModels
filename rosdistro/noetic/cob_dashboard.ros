@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_dashboard {
+    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
+    Artifact cob_dashboard {
+      Node { name cob_dashboard}
+}}}

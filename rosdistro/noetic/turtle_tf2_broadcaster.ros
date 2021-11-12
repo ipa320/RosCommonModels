@@ -4,7 +4,5 @@ PackageSet {
     Artifact turtle_tf2_broadcaster {
       Node { name turtle_tf2_broadcaster
         Subscribers {
-          Subscriber { name '?' message 'turtlesim.Pose'}}
-        Parameters {
-          Parameter { name 'turtle' type String }}}
+          Subscriber { name '?' message '?'}}}
 }}}

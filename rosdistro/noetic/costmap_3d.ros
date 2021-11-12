@@ -2,21 +2,5 @@ PackageSet {
   CatkinPackage costmap_cspace {
     FromGitRepo "https://github.com/at-wat/neonavigation.git" 
     Artifact costmap_3d {
-      Node { name costmap_3d
-        Publishers {
-          Publisher { name '?' message 'costmap_cspace_msgs.CSpace3D'},
-          Publisher { name 'footprint' message 'geometry_msgs.PolygonStamped'},
-          Publisher { name '?' message 'costmap_cspace_msgs.CSpace3DUpdate'},
-          Publisher { name 'debug' message 'sensor_msgs.PointCloud'}}
-        Subscribers {
-          Subscriber { name 'map_overlay' message 'nav_msgs.OccupancyGrid'},
-          Subscriber { name '?' message 'nav_msgs.OccupancyGrid'},
-          Subscriber { name '?' message 'nav_msgs.OccupancyGrid'},
-          Subscriber { name 'map' message 'nav_msgs.OccupancyGrid'}}
-        Parameters {
-          Parameter { name 'linear_expand' type <class 'float value 0.2},
-          Parameter { name 'ang_resolution' type Integer value 16},
-          Parameter { name 'overlay_mode' type String value 'max'},
-          Parameter { name 'linear_spread' type <class 'float value 0.5},
-          Parameter { name 'neonavigation_compatible' type Integer }}}
+      Node { name costmap_3d}
 }}}

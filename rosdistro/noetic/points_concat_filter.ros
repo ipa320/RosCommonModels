@@ -2,10 +2,5 @@ PackageSet {
   CatkinPackage points_preprocessor {
     FromGitRepo "https://github.com/nobleo/core_perception.git" 
     Artifact points_concat_filter {
-      Node { name points_concat_filter
-        Publishers {
-          Publisher { name '/points_concat' message 'PointCloudMsgT'}}
-        Parameters {
-          Parameter { name 'output_frame_id' type String value 'velodyne'},
-          Parameter { name 'input_topics' type String value '[/points_alpha, /points_beta]'}}}
+      Node { name points_concat_filter}
 }}}

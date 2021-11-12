@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_twist_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact debug_trajectory_marker_node {
+      Node { name debug_trajectory_marker_node}
+}}}

@@ -2,12 +2,5 @@ PackageSet {
   CatkinPackage map_organizer {
     FromGitRepo "https://github.com/at-wat/neonavigation.git" 
     Artifact select_map {
-      Node { name select_map
-        Publishers {
-          Publisher { name '?' message 'nav_msgs.OccupancyGrid'}}
-        Subscribers {
-          Subscriber { name '?' message 'ros.NodeHandle'},
-          Subscriber { name '?' message 'ros.NodeHandle'}}
-        Parameters {
-          Parameter { name 'neonavigation_compatible' type Integer }}}
+      Node { name select_map}
 }}}

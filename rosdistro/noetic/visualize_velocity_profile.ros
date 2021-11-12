@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage teb_local_planner {
+    FromGitRepo "https://github.com/rst-tu-dortmund/teb_local_planner.git" 
+    Artifact visualize_velocity_profile {
+      Node { name visualize_velocity_profile
+        Subscribers {
+          Subscriber { name '?' message 'teb_local_planner.FeedbackMsg'}}}
+}}}

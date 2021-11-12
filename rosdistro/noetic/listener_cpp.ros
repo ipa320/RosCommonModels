@@ -7,5 +7,5 @@ PackageSet {
           Subscriber { name '?' message 'sensor_msgs.Imu'}}
         Parameters {
           Parameter { name 'device' type String value 'gx5'},
-          Parameter { name 'device' type <class 'str value gx5}}}
+          Parameter { name 'device' type String value 'gx5'}}}
 }}}

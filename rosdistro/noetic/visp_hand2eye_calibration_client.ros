@@ -5,8 +5,8 @@ PackageSet {
       Node { name visp_hand2eye_calibration_client
         ServiceClients {
           ServiceClient { name '?' service 'visp_hand2eye_calibration.compute_effector_camera'},
-          ServiceClient { name '?' service 'visp_hand2eye_calibration.reset'},
-          ServiceClient { name '?' service 'visp_hand2eye_calibration.compute_effector_camera_quick'}}
+          ServiceClient { name '?' service 'visp_hand2eye_calibration.compute_effector_camera_quick'},
+          ServiceClient { name '?' service 'visp_hand2eye_calibration.reset'}}
         Publishers {
           Publisher { name '?' message 'geometry_msgs.Transform'},
           Publisher { name '?' message 'geometry_msgs.Transform'}}}

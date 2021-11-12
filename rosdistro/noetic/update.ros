@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage leo_fw {
+    FromGitRepo "https://github.com/LeoRover/leo_robot.git" 
+    Artifact update {
+      Node { name update}
+}}}

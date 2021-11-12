@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage magical_ros2_conversion_tool {
+    FromGitRepo "https://github.com/DLu/roscompile.git" 
+    Artifact ros2_conversion {
+      Node { name ros2_conversion}
+}}}

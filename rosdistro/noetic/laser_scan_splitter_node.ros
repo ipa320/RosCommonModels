@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage laser_scan_splitter {
+    FromGitRepo "https://github.com/ccny-ros-pkg/scan_tools.git" 
+    Artifact laser_scan_splitter_node {
+      Node { name laser_scan_splitter_node}
+}}}

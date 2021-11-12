@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rqt_publisher {
+    FromGitRepo "https://github.com/ros-visualization/rqt_publisher.git" 
+    Artifact rqt_publisher {
+      Node { name rqt_publisher}
+}}}

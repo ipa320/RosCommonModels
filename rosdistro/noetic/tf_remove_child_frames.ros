@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage mir_driver {
+    FromGitRepo "https://github.com/dfki-ric/mir_robot.git" 
+    Artifact tf_remove_child_frames {
+      Node { name tf_remove_child_frames
+        Publishers {
+          Publisher { name 'tf_out' message 'tf.tfMessage'},
+          Publisher { name 'tf_static_out' message 'tf.tfMessage'}}
+        Subscribers {
+          Subscriber { name 'tf_in' message 'tf.tfMessage'},
+          Subscriber { name 'tf_static_in' message 'tf.tfMessage'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage vrpn_client_ros {
+    FromGitRepo "https://github.com/ros-drivers/vrpn_client_ros.git" 
+    Artifact vrpn_client_node {
+      Node { name vrpn_client_node}
+}}}

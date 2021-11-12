@@ -6,7 +6,7 @@ PackageSet {
         Publishers {
           Publisher { name '?' message '?'}}
         Parameters {
-          Parameter { name '~client_addr' type String value '127.0.0.1'},
           Parameter { name '~client_port' type Integer value 11411},
+          Parameter { name '~client_addr' type String value '127.0.0.1'},
           Parameter { name '~server_port' type Integer value 11411}}}
 }}}

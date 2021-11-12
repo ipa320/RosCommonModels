@@ -4,14 +4,14 @@ PackageSet {
     Artifact pose_and_orientation_to_imu_node {
       Node { name pose_and_orientation_to_imu_node
         Publishers {
-          Publisher { name '/fused_imu' message 'sensor_msgs.Imu'},
-          Publisher { name '/state' message 'nav_msgs.Odometry'}}
+          Publisher { name '/state' message 'nav_msgs.Odometry'},
+          Publisher { name '/fused_imu' message 'sensor_msgs.Imu'}}
         Subscribers {
           Subscriber { name '/imu' message 'sensor_msgs.Imu'},
           Subscriber { name '/pose' message 'geometry_msgs.PoseStamped'}}
         Parameters {
           Parameter { name 'base_footprint_frame' type String value 'base_footprint'},
-          Parameter { name 'map_frame' type String value 'map'},
           Parameter { name 'base_stabilized_frame' type String value 'base_stabilized'},
+          Parameter { name 'map_frame' type String value 'map'},
           Parameter { name 'base_frame' type String value 'base_link'}}}
 }}}

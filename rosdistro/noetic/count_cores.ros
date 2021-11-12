@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rosbuild {
+    FromGitRepo "https://github.com/ros/ros.git" 
+    Artifact count_cores {
+      Node { name count_cores}
+}}}

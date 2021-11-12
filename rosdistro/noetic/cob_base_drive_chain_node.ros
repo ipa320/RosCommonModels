@@ -5,26 +5,26 @@ PackageSet {
       Node { name cob_base_drive_chain_node
         ServiceServers {
           ServiceServer { name 'shutdown' service 'std_srvs.Trigger'},
-          ServiceServer { name 'recover' service 'std_srvs.Trigger'},
+          ServiceServer { name 'ElmoRecorderConfig' service 'cob_base_drive_chain.ElmoRecorderConfig'},
           ServiceServer { name 'ElmoRecorderReadout' service 'cob_base_drive_chain.ElmoRecorderReadout'},
           ServiceServer { name 'init' service 'std_srvs.Trigger'},
-          ServiceServer { name 'ElmoRecorderConfig' service 'cob_base_drive_chain.ElmoRecorderConfig'}}
+          ServiceServer { name 'recover' service 'std_srvs.Trigger'}}
         Publishers {
-          Publisher { name '/base_bl_caster_rotation_controller/command' message 'std_msgs.Float64'},
-          Publisher { name '/base_fl_caster_r_wheel_controller/command' message 'std_msgs.Float64'},
-          Publisher { name '/base_br_caster_r_wheel_controller/command' message 'std_msgs.Float64'},
+          Publisher { name '/base_fr_caster_rotation_controller/command' message 'std_msgs.Float64'},
+          Publisher { name '/base_br_caster_rotation_controller/command' message 'std_msgs.Float64'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
-          Publisher { name '/base_bl_caster_r_wheel_controller/command' message 'std_msgs.Float64'},
-          Publisher { name 'state' message 'control_msgs.JointTrajectoryControllerState'},
-          Publisher { name '/base_fl_caster_rotation_controller/command' message 'std_msgs.Float64'},
           Publisher { name '/base_fr_caster_r_wheel_controller/command' message 'std_msgs.Float64'},
           Publisher { name 'diagnostic' message 'diagnostic_msgs.DiagnosticStatus'},
-          Publisher { name '/base_br_caster_rotation_controller/command' message 'std_msgs.Float64'},
-          Publisher { name '/base_fr_caster_rotation_controller/command' message 'std_msgs.Float64'}}
+          Publisher { name '/base_br_caster_r_wheel_controller/command' message 'std_msgs.Float64'},
+          Publisher { name '/base_fl_caster_rotation_controller/command' message 'std_msgs.Float64'},
+          Publisher { name '/base_bl_caster_rotation_controller/command' message 'std_msgs.Float64'},
+          Publisher { name '/base_fl_caster_r_wheel_controller/command' message 'std_msgs.Float64'},
+          Publisher { name 'state' message 'control_msgs.JointTrajectoryControllerState'},
+          Publisher { name '/base_bl_caster_r_wheel_controller/command' message 'std_msgs.Float64'}}
         Subscribers {
-          Subscriber { name '/joint_states' message 'sensor_msgs.JointState'},
-          Subscriber { name 'joint_command' message 'control_msgs.JointTrajectoryControllerState'}}
+          Subscriber { name 'joint_command' message 'control_msgs.JointTrajectoryControllerState'},
+          Subscriber { name '/joint_states' message 'sensor_msgs.JointState'}}
         Parameters {
-          Parameter { name 'IniDirectory' type String },
-          Parameter { name 'PublishEffort' type Boolean }}}
+          Parameter { name 'PublishEffort' type Boolean },
+          Parameter { name 'IniDirectory' type String }}}
 }}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage nmea_navsat_driver {
+    FromGitRepo "https://github.com/ros-drivers/nmea_navsat_driver.git" 
+    Artifact nmea_topic_driver {
+      Node { name nmea_topic_driver}
+}}}

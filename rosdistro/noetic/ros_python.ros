@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage webots_ros {
+    FromGitRepo "https://github.com/cyberbotics/webots_ros.git" 
+    Artifact ros_python {
+      Node { name ros_python
+        Publishers {
+          Publisher { name 'sensor' message 'std_msgs.Float64'}}
+        Subscribers {
+          Subscriber { name 'motor' message 'std_msgs.Float64'}}}
+}}}

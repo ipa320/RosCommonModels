@@ -6,6 +6,6 @@ PackageSet {
         ServiceServers {
           ServiceServer { name '?' service '?'}}
         ServiceClients {
-          ServiceClient { name '/prbt/driver/get_object' service 'canopen_chain_node.GetObject'},
-          ServiceClient { name '/prbt/driver/set_object' service 'canopen_chain_node.SetObject'}}}
+          ServiceClient { name '/prbt/driver/set_object' service 'canopen_chain_node.SetObject'},
+          ServiceClient { name '/prbt/driver/get_object' service 'canopen_chain_node.GetObject'}}}
 }}}

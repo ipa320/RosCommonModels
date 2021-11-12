@@ -1,0 +1,20 @@
+PackageSet {
+  CatkinPackage moveit_ros_move_group {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact move_group {
+      Node { name move_group
+        Parameters {
+          Parameter { name 'capabilities' type String },
+          Parameter { name 'default_planning_pipeline' type String },
+          Parameter { name '?' type String value 'robot_description'},
+          Parameter { name '?' type String },
+          Parameter { name '?' type String },
+          Parameter { name 'allow_trajectory_execution' type Boolean value true},
+          Parameter { name 'disable_capabilities' type String },
+          Parameter { name '?' type String value 'planning_scene_monitor'},
+          Parameter { name 'default_planning_pipeline' type String },
+          Parameter { name '?' type Double },
+          Parameter { name '?' type String },
+          Parameter { name '?' type String },
+          Parameter { name '?' type String }}}
+}}}

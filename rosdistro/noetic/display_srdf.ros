@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage srdfdom {
+    FromGitRepo "https://github.com/ros-planning/srdfdom.git" 
+    Artifact display_srdf {
+      Node { name display_srdf}
+}}}

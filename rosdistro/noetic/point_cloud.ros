@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage interactive_marker_tutorials {
+    FromGitRepo "https://github.com/ros-visualization/visualization_tutorials.git" 
+    Artifact point_cloud {
+      Node { name point_cloud}
+}}}

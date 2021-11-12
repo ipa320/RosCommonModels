@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage moveit_python {
+    FromGitRepo "https://github.com/mikeferguson/moveit_python.git" 
+    Artifact attach_box {
+      Node { name attach_box}
+}}}

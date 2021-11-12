@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage moveit_ros_warehouse {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact moveit_warehouse_services {
+      Node { name moveit_warehouse_services
+        ServiceServers {
+          ServiceServer { name 'list_robot_states' service '?'},
+          ServiceServer { name 'save_robot_state' service '?'},
+          ServiceServer { name 'has_robot_state' service '?'},
+          ServiceServer { name 'get_robot_state' service '?'},
+          ServiceServer { name 'delete_robot_state' service '?'},
+          ServiceServer { name 'rename_robot_state' service '?'}}
+        Parameters {
+          Parameter { name 'warehouse_port' type Integer value 33829},
+          Parameter { name 'warehouse_db_connection_retries' type Integer value 5},
+          Parameter { name 'warehouse_host' type String value 'localhost'},
+          Parameter { name 'warehouse_db_connection_timeout' type Double value 5.0}}}
+}}}

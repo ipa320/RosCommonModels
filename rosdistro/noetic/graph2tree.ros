@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage octomap {
+    FromGitRepo "https://github.com/OctoMap/octomap.git" 
+    Artifact graph2tree {
+      Node { name graph2tree}
+}}}

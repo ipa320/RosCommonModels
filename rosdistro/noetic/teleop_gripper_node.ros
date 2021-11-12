@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage franka_example_controllers {
+    FromGitRepo "https://github.com/frankaemika/franka_ros.git" 
+    Artifact teleop_gripper_node {
+      Node { name teleop_gripper_node}
+}}}

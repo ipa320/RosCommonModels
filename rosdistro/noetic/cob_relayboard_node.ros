@@ -7,7 +7,7 @@ PackageSet {
           Publisher { name 'emergency_stop_state' message 'cob_msgs.EmergencyStopState'},
           Publisher { name 'voltage' message 'std_msgs.Float64'}}
         Parameters {
-          Parameter { name 'protocol_version' type Integer value 1},
           Parameter { name 'ComPort' type String },
+          Parameter { name 'protocol_version' type Integer value 1},
           Parameter { name 'relayboard_timeout' type Double value 2.0}}}
 }}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage octomap {
+    FromGitRepo "https://github.com/OctoMap/octomap.git" 
+    Artifact compare_octrees {
+      Node { name compare_octrees}
+}}}

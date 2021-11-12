@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_sick_lms1xx {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact lms1xx_test {
+      Node { name lms1xx_test}
+}}}

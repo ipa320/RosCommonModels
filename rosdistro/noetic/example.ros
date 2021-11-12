@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rosparam_shortcuts {
+    FromGitRepo "https://github.com/PickNikRobotics/rosparam_shortcuts.git" 
+    Artifact example {
+      Node { name example}
+}}}

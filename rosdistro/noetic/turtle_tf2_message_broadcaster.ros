@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage turtle_tf2 {
+    FromGitRepo "https://github.com/ros/geometry_tutorials.git" 
+    Artifact turtle_tf2_message_broadcaster {
+      Node { name turtle_tf2_message_broadcaster
+        Publishers {
+          Publisher { name 'turtle_point_stamped' message 'geometry_msgs.PointStamped'}}
+        Subscribers {
+          Subscriber { name '?' message '?'}}}
+}}}

@@ -8,7 +8,7 @@ PackageSet {
         Subscribers {
           Subscriber { name '?' message 'nav_msgs.Odometry'}}
         Parameters {
-          Parameter { name 'controller_frequency' type Double },
           Parameter { name 'planner_frequency' type Double },
-          Parameter { name 'odom_topic' type String }}}
+          Parameter { name 'odom_topic' type String },
+          Parameter { name 'controller_frequency' type Double }}}
 }}}

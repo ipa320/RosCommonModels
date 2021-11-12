@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage roscpp {
+    FromGitRepo "https://github.com/ros/ros_comm.git" 
+    Artifact genmsg_cpp {
+      Node { name genmsg_cpp}
+}}}

@@ -2,11 +2,5 @@ PackageSet {
   CatkinPackage swri_image_util {
     FromGitRepo "https://github.com/swri-robotics/marti_common.git" 
     Artifact normalization_image_generator_node {
-      Node { name normalization_image_generator_node
-        Subscribers {
-          Subscriber { name 'image' message 'sensor_msgs.Image'}}
-        Parameters {
-          Parameter { name '?' type <class 'int value 200},
-          Parameter { name '?' type String },
-          Parameter { name '?' type <class 'int value 100}}}
+      Node { name normalization_image_generator_node}
 }}}

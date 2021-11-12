@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage turtlebot3_autorace_core {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_autorace_2020.git" 
+    Artifact traffic_light_core_mode_decider {
+      Node { name traffic_light_core_mode_decider
+        Publishers {
+          Publisher { name '/core/decided_mode' message 'std_msgs.UInt8'}}
+        Subscribers {
+          Subscriber { name '/detect/traffic_light' message 'std_msgs.UInt8'},
+          Subscriber { name '/core/returned_mode' message 'std_msgs.UInt8'}}}
+}}}

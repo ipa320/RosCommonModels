@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage pincher_arm_bringup {
+    FromGitRepo "https://github.com/fictionlab/pincher_arm.git" 
+    Artifact gripper_controller {
+      Node { name gripper_controller
+        Publishers {
+          Publisher { name '?' message 'std_msgs.Float64'}}
+        Subscribers {
+          Subscriber { name 'joint_states' message 'sensor_msgs.JointState'}}}
+}}}

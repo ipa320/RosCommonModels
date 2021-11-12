@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rosgraph {
+    FromGitRepo "https://github.com/ros/ros_comm.git" 
+    Artifact rosgraph {
+      Node { name rosgraph}
+}}}

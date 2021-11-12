@@ -4,6 +4,6 @@ PackageSet {
     Artifact determine_baud_node {
       Node { name determine_baud_node
         Parameters {
-          Parameter { name 'port' type String },
-          Parameter { name 'starting_baud' type Integer }}}
+          Parameter { name 'starting_baud' type Integer },
+          Parameter { name 'port' type String }}}
 }}}

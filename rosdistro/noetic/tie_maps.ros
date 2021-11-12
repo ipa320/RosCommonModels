@@ -2,11 +2,5 @@ PackageSet {
   CatkinPackage map_organizer {
     FromGitRepo "https://github.com/at-wat/neonavigation.git" 
     Artifact tie_maps {
-      Node { name tie_maps
-        Publishers {
-          Publisher { name 'maps' message 'map_organizer_msgs.OccupancyGridArray'},
-          Publisher { name '?' message 'nav_msgs.OccupancyGrid'}}
-        Parameters {
-          Parameter { name 'frame_id' type String value 'map'},
-          Parameter { name 'map_files' type String }}}
+      Node { name tie_maps}
 }}}

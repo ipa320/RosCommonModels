@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rosserial_xbee {
+    FromGitRepo "https://github.com/ros-drivers/rosserial.git" 
+    Artifact setup_xbee {
+      Node { name setup_xbee}
+}}}

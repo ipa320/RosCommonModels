@@ -7,10 +7,10 @@ PackageSet {
           Subscriber { name '?' message 'sensor_msgs.CompressedImage'}}
         Parameters {
           Parameter { name 'publish_rate' type Double value -1.0},
-          Parameter { name 'server_threads' type Integer value 1},
-          Parameter { name 'verbose' type Boolean value true},
-          Parameter { name 'port' type Integer value 8080},
-          Parameter { name 'address' type String value '0.0.0.0'},
           Parameter { name 'default_stream_type' type String value 'mjpeg'},
-          Parameter { name 'ros_threads' type Integer value 2}}}
+          Parameter { name 'ros_threads' type Integer value 2},
+          Parameter { name 'address' type String value '0.0.0.0'},
+          Parameter { name 'verbose' type Boolean value true},
+          Parameter { name 'server_threads' type Integer value 1},
+          Parameter { name 'port' type Integer value 8080}}}
 }}}

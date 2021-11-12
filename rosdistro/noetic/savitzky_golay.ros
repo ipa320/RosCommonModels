@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage cob_voltage_control {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact savitzky_golay {
+      Node { name savitzky_golay
+        Publishers {
+          Publisher { name '/power_state' message 'cob_msgs.PowerState'}}
+        Subscribers {
+          Subscriber { name '/power_board/voltage' message 'std_msgs.Float64'}}}
+}}}

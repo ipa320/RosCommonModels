@@ -2,9 +2,5 @@ PackageSet {
   CatkinPackage checkerboard_detector {
     FromGitRepo "https://github.com/jsk-ros-pkg/jsk_recognition.git" 
     Artifact objectdetection_transform_echo {
-      Node { name objectdetection_transform_echo
-        Publishers {
-          Publisher { name 'pose' message 'geometry_msgs.PoseStamped'}}
-        Parameters {
-          Parameter { name 'frame_id' type String }}}
+      Node { name objectdetection_transform_echo}
 }}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rospy {
+    FromGitRepo "https://github.com/ros/ros_comm.git" 
+    Artifact genmsg_py {
+      Node { name genmsg_py}
+}}}

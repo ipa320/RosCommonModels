@@ -2,17 +2,5 @@ PackageSet {
   CatkinPackage points_preprocessor {
     FromGitRepo "https://github.com/nobleo/core_perception.git" 
     Artifact space_filter {
-      Node { name space_filter
-        Publishers {
-          Publisher { name '/points_clipped' message 'sensor_msgs.PointCloud2'}}
-        Subscribers {
-          Subscriber { name '?' message '?'}}
-        Parameters {
-          Parameter { name 'below_distance' type Double value -1.5},
-          Parameter { name 'lateral_removal' type Boolean value true},
-          Parameter { name 'right_distance' type Double value 5.0},
-          Parameter { name 'subscribe_topic' type String value '/points_raw'},
-          Parameter { name 'above_distance' type Double value 0.5},
-          Parameter { name 'left_distance' type Double value 5.0},
-          Parameter { name 'vertical_removal' type Boolean value true}}}
+      Node { name space_filter}
 }}}

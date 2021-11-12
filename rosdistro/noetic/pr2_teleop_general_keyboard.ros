@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pr2_teleop_general {
+    FromGitRepo "https://github.com/pr2/pr2_apps.git" 
+    Artifact pr2_teleop_general_keyboard {
+      Node { name pr2_teleop_general_keyboard}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rospy_tutorials {
+    FromGitRepo "https://github.com/ros/ros_tutorials.git" 
+    Artifact listener_connection_header {
+      Node { name listener_connection_header
+        Subscribers {
+          Subscriber { name 'chatter' message 'std_msgs.String'}}}
+}}}

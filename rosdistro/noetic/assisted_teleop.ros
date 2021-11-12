@@ -8,10 +8,10 @@ PackageSet {
         Subscribers {
           Subscriber { name 'teleop_cmd_vel' message 'geometry_msgs.Twist'}}
         Parameters {
-          Parameter { name 'num_x_samples' type Integer value 10},
           Parameter { name 'num_th_samples' type Integer value 20},
-          Parameter { name 'rotational_collision_speed' type Double },
+          Parameter { name 'num_x_samples' type Integer value 10},
           Parameter { name 'translational_collision_speed' type Double },
+          Parameter { name 'controller_frequency' type Double value 10.0},
           Parameter { name 'theta_range' type Double value 0.7},
-          Parameter { name 'controller_frequency' type Double value 10.0}}}
+          Parameter { name 'rotational_collision_speed' type Double }}}
 }}}

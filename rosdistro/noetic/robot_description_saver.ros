@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage jsk_data {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common.git" 
+    Artifact robot_description_saver {
+      Node { name robot_description_saver
+        Publishers {
+          Publisher { name 'robot_description' message 'std_msgs.String'}}}
+}}}

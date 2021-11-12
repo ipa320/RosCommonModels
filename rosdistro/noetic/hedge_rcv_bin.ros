@@ -4,14 +4,14 @@ PackageSet {
     Artifact hedge_rcv_bin {
       Node { name hedge_rcv_bin
         Publishers {
+          Publisher { name 'beacon_raw_distance' message 'marvelmind_nav.beacon_distance'},
+          Publisher { name 'hedge_pos_a' message 'marvelmind_nav.hedge_pos_a'},
+          Publisher { name 'hedge_imu_raw' message 'marvelmind_nav.hedge_imu_raw'},
+          Publisher { name 'marvelmind_waypoint' message 'marvelmind_nav.marvelmind_waypoint'},
+          Publisher { name 'hedge_telemetry' message 'marvelmind_nav.hedge_telemetry'},
+          Publisher { name 'hedge_imu_fusion' message 'marvelmind_nav.hedge_imu_fusion'},
           Publisher { name 'hedge_pos_ang' message 'marvelmind_nav.hedge_pos_ang'},
           Publisher { name 'hedge_pos' message 'marvelmind_nav.hedge_pos'},
-          Publisher { name 'hedge_imu_raw' message 'marvelmind_nav.hedge_imu_raw'},
-          Publisher { name 'hedge_pos_a' message 'marvelmind_nav.hedge_pos_a'},
-          Publisher { name 'marvelmind_waypoint' message 'marvelmind_nav.marvelmind_waypoint'},
-          Publisher { name 'beacon_raw_distance' message 'marvelmind_nav.beacon_distance'},
           Publisher { name 'beacons_pos_a' message 'marvelmind_nav.beacon_pos_a'},
-          Publisher { name 'hedge_quality' message 'marvelmind_nav.hedge_quality'},
-          Publisher { name 'hedge_telemetry' message 'marvelmind_nav.hedge_telemetry'},
-          Publisher { name 'hedge_imu_fusion' message 'marvelmind_nav.hedge_imu_fusion'}}}
+          Publisher { name 'hedge_quality' message 'marvelmind_nav.hedge_quality'}}}
 }}}

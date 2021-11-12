@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage sound_play {
+    FromGitRepo "https://github.com/ros-drivers/audio_common.git" 
+    Artifact playbuiltin {
+      Node { name playbuiltin}
+}}}

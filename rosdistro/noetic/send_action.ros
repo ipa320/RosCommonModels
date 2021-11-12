@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage locomotor {
+    FromGitRepo "https://github.com/locusrobotics/robot_navigation.git" 
+    Artifact send_action {
+      Node { name send_action}
+}}}

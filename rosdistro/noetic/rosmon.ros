@@ -6,6 +6,6 @@ PackageSet {
         ServiceServers {
           ServiceServer { name 'start_stop' service 'rosmon_msgs.StartStop'}}
         Publishers {
-          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
-          Publisher { name 'state' message 'rosmon_msgs.State'}}}
+          Publisher { name 'state' message 'rosmon_msgs.State'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
 }}}

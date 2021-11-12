@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage schunk_simulated_tactile_sensors {
+    FromGitRepo "https://github.com/ipa320/schunk_modular_robotics.git" 
+    Artifact simulated_tactile_sensors {
+      Node { name simulated_tactile_sensors
+        Publishers {
+          Publisher { name 'tactile_data' message '?'}}
+        Subscribers {
+          Subscriber { name '?' message '?'}}}
+}}}

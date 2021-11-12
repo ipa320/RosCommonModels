@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rostest {
+    FromGitRepo "https://github.com/ros/ros_comm.git" 
+    Artifact publishtest {
+      Node { name publishtest
+        Subscribers {
+          Subscriber { name '?' message '?'}}}
+}}}

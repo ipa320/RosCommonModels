@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rm_dbus {
+    FromGitRepo "https://github.com/rm-controls/rm_control.git" 
+    Artifact rm_dbus {
+      Node { name rm_dbus}
+}}}

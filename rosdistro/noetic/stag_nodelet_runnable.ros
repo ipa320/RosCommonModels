@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage stag_ros {
+    FromGitRepo "https://github.com/usrl-uofsc/stag_ros.git" 
+    Artifact stag_nodelet_runnable {
+      Node { name stag_nodelet_runnable}
+}}}

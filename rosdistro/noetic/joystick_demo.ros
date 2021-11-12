@@ -4,21 +4,21 @@ PackageSet {
     Artifact joystick_demo {
       Node { name joystick_demo
         Publishers {
-          Publisher { name 'brake_cmd' message 'dbw_polaris_msgs.BrakeCmd'},
           Publisher { name 'steering_cmd' message 'dbw_polaris_msgs.SteeringCmd'},
-          Publisher { name 'gear_cmd' message 'dbw_polaris_msgs.GearCmd'},
           Publisher { name 'enable' message 'std_msgs.Empty'},
+          Publisher { name 'gear_cmd' message 'dbw_polaris_msgs.GearCmd'},
+          Publisher { name 'brake_cmd' message 'dbw_polaris_msgs.BrakeCmd'},
           Publisher { name 'disable' message 'std_msgs.Empty'},
           Publisher { name 'throttle_cmd' message 'dbw_polaris_msgs.ThrottleCmd'}}
         Subscribers {
           Subscriber { name '/joy' message 'sensor_msgs.Joy'}}
         Parameters {
-          Parameter { name 'strq' type Boolean },
-          Parameter { name 'throttle' type Boolean },
-          Parameter { name 'brake' type Boolean },
-          Parameter { name 'steer' type Boolean },
-          Parameter { name 'enable' type Boolean },
           Parameter { name 'count' type Boolean },
+          Parameter { name 'steer' type Boolean },
+          Parameter { name 'strq' type Boolean },
+          Parameter { name 'brake' type Boolean },
+          Parameter { name 'ignore' type Boolean },
+          Parameter { name 'throttle' type Boolean },
           Parameter { name 'shift' type Boolean },
-          Parameter { name 'ignore' type Boolean }}}
+          Parameter { name 'enable' type Boolean }}}
 }}}

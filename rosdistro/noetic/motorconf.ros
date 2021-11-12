@@ -4,20 +4,20 @@ PackageSet {
     Artifact motorconf {
       Node { name motorconf
         ServiceServers {
-          ServiceServer { name 'read_firmware' service 'ethercat_hardware.SoftProcessorFirmwareRead'},
+          ServiceServer { name 'write_firmware' service 'ethercat_hardware.SoftProcessorFirmwareWrite'},
           ServiceServer { name 'reset' service 'ethercat_hardware.SoftProcessorReset'},
-          ServiceServer { name 'write_firmware' service 'ethercat_hardware.SoftProcessorFirmwareWrite'}}
+          ServiceServer { name 'read_firmware' service 'ethercat_hardware.SoftProcessorFirmwareRead'}}
         Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
         Parameters {
-          Parameter { name 'enable_model' type Boolean },
-          Parameter { name 'save_directory' type String },
-          Parameter { name 'enable_ft_sensor' type Boolean },
-          Parameter { name 'load_save_files' type Boolean },
-          Parameter { name 'enable_pressure_sensor' type Boolean },
-          Parameter { name 'publish_temperature' type Boolean },
-          Parameter { name 'max_pd_retries' type Integer },
-          Parameter { name 'realtime_socket_timeout' type Integer },
           Parameter { name 'update_save_files' type Boolean },
-          Parameter { name 'do_not_halt' type Boolean }}}
+          Parameter { name 'do_not_halt' type Boolean },
+          Parameter { name 'realtime_socket_timeout' type Integer },
+          Parameter { name 'enable_model' type Boolean },
+          Parameter { name 'enable_ft_sensor' type Boolean },
+          Parameter { name 'publish_temperature' type Boolean },
+          Parameter { name 'enable_pressure_sensor' type Boolean },
+          Parameter { name 'load_save_files' type Boolean },
+          Parameter { name 'save_directory' type String },
+          Parameter { name 'max_pd_retries' type Integer }}}
 }}}
