@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage calibration_launch {
+    FromGitRepo "https://github.com/ros-perception/calibration.git" 
+    Artifact urdf_pub {
+      Node { name urdf_pub
+        Publishers {
+          Publisher { name 'robot_description' message '?'}}}
+}}}

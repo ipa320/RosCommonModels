@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rtabmap_ros {
+    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
+    Artifact point_cloud_assembler {
+      Node { name point_cloud_assembler}
+}}}

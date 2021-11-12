@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage octomap {
+    FromGitRepo "https://github.com/OctoMap/octomap.git" 
+    Artifact bt2vrml {
+      Node { name bt2vrml}
+}}}

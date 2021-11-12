@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage turtlebot3_autorace_driving {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_autorace_2020.git" 
+    Artifact control_moving {
+      Node { name control_moving
+        Publishers {
+          Publisher { name '/cmd_vel' message 'geometry_msgs.Twist'},
+          Publisher { name '/control/moving/complete' message 'std_msgs.UInt8'},
+          Publisher { name '/control/max_vel' message 'std_msgs.Float64'}}
+        Subscribers {
+          Subscriber { name '/control/moving/state' message 'turtlebot3_autorace_msgs.MovingParam'},
+          Subscriber { name '/odom' message 'nav_msgs.Odometry'}}}
+}}}

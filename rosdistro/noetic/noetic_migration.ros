@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage roscompile {
+    FromGitRepo "https://github.com/DLu/roscompile.git" 
+    Artifact noetic_migration {
+      Node { name noetic_migration}
+}}}

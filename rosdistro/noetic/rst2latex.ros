@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage lpg_planner {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_3rdparty.git" 
+    Artifact rst2latex {
+      Node { name rst2latex}
+}}}

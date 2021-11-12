@@ -1,8 +1,0 @@
-PackageSet {
-  CatkinPackage polled_camera {
-    FromGitRepo "https://github.com/ros-perception/image_common.git" 
-    Artifact poller {
-      Node { name poller
-        ServiceClients {
-          ServiceClient { name '?' service 'polled_camera.GetPolledImage'}}}
-}}}

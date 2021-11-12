@@ -1,9 +1,0 @@
-PackageSet {
-  CatkinPackage kvh_geo_fog_3d_driver {
-    FromGitRepo "https://github.com/MITRE/kvh_geo_fog_3d.git" 
-    Artifact determine_baud_node {
-      Node { name determine_baud_node
-        Parameters {
-          Parameter { name 'port' type String },
-          Parameter { name 'starting_baud' type Integer }}}
-}}}

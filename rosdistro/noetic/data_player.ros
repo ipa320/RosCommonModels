@@ -2,33 +2,5 @@ PackageSet {
   CatkinPackage rtabmap_ros {
     FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
     Artifact data_player {
-      Node { name data_player
-        ServiceServers {
-          ServiceServer { name 'pause' service 'std_srvs.Empty'},
-          ServiceServer { name 'resume' service 'std_srvs.Empty'}}
-        Publishers {
-          Publisher { name 'depth_registered/camera_info' message 'sensor_msgs.CameraInfo'},
-          Publisher { name 'odom' message 'nav_msgs.Odometry'},
-          Publisher { name 'scan_cloud' message 'sensor_msgs.PointCloud2'},
-          Publisher { name 'left/camera_info' message 'sensor_msgs.CameraInfo'},
-          Publisher { name 'right/camera_info' message 'sensor_msgs.CameraInfo'},
-          Publisher { name 'global_pose' message 'geometry_msgs.PoseWithCovarianceStamped'},
-          Publisher { name '/clock' message 'rosgraph_msgs.Clock'},
-          Publisher { name 'gps/fix' message 'sensor_msgs.NavSatFix'},
-          Publisher { name 'rgb/camera_info' message 'sensor_msgs.CameraInfo'},
-          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}
-        Parameters {
-          Parameter { name 'scan_range_min' type Double },
-          Parameter { name 'scan_angle_increment' type Double },
-          Parameter { name 'scan_range_max' type Double value 60},
-          Parameter { name 'database' type String },
-          Parameter { name 'rate' type Double value 1.0},
-          Parameter { name 'odom_frame_id' type String value 'odom'},
-          Parameter { name 'scan_angle_min' type Double },
-          Parameter { name 'frame_id' type String value 'base_link'},
-          Parameter { name 'start_id' type Integer },
-          Parameter { name 'camera_frame_id' type String value 'camera_optical_link'},
-          Parameter { name 'scan_angle_max' type Double },
-          Parameter { name 'publish_tf' type Boolean value true},
-          Parameter { name 'scan_frame_id' type String value 'base_laser_link'}}}
+      Node { name data_player}
 }}}

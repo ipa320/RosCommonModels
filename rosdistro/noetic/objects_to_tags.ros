@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rtabmap_ros {
+    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
+    Artifact objects_to_tags {
+      Node { name objects_to_tags
+        Subscribers {
+          Subscriber { name 'objectsStamped' message 'find_object_2d.ObjectsStamped'}}}
+}}}

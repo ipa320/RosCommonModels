@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage lpg_planner {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_3rdparty.git" 
+    Artifact catkin_find_pkg {
+      Node { name catkin_find_pkg}
+}}}

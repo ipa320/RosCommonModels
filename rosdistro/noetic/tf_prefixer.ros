@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage audibot_gazebo {
+    FromGitRepo "https://github.com/robustify/audibot.git" 
+    Artifact tf_prefixer {
+      Node { name tf_prefixer
+        Publishers {
+          Publisher { name '/tf' message 'tf2_msgs.TFMessage'},
+          Publisher { name '/tf_static' message 'tf2_msgs.TFMessage'}}
+        Subscribers {
+          Subscriber { name 'tf' message 'tf2_msgs.TFMessage'},
+          Subscriber { name 'tf_static' message 'tf2_msgs.TFMessage'}}}
+}}}

@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage cmvision {
+    FromGitRepo "https://github.com/teshanshanuka/cmvision.git" 
+    Artifact cmvision {
+      Node { name cmvision
+        Publishers {
+          Publisher { name 'blobs' message 'cmvision.Blobs'}}
+        Subscribers {
+          Subscriber { name 'image' message 'sensor_msgs.Image'}}
+        Parameters {
+          Parameter { name '/cmvision/debug_on' type Boolean },
+          Parameter { name '/cmvision/color_file' type String },
+          Parameter { name '/cmvision/spatial_radius_pix' type Double },
+          Parameter { name '/cmvision/mean_shift_on' type Boolean },
+          Parameter { name '/cmvision/color_radius_pix' type Double }}}
+}}}

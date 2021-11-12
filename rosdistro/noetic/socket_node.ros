@@ -1,10 +1,6 @@
 PackageSet {
-  CatkinPackage rosserial_server {
-    FromGitRepo "https://github.com/ros-drivers/rosserial.git" 
+  CatkinPackage nmea_comms {
+    FromGitRepo "https://github.com/ros-drivers/nmea_comms.git" 
     Artifact socket_node {
-      Node { name socket_node
-        Publishers {
-          Publisher { name '?' message '?'}}
-        Parameters {
-          Parameter { name '~port' type Integer value 11411}}}
+      Node { name socket_node}
 }}}

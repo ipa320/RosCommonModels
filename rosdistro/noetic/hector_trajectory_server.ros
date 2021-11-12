@@ -2,17 +2,5 @@ PackageSet {
   CatkinPackage hector_trajectory_server {
     FromGitRepo "https://github.com/tu-darmstadt-ros-pkg/hector_slam.git" 
     Artifact hector_trajectory_server {
-      Node { name hector_trajectory_server
-        ServiceServers {
-          ServiceServer { name 'trajectory_recovery_info' service 'hector_nav_msgs.GetRecoveryInfo'},
-          ServiceServer { name 'trajectory' service 'hector_nav_msgs.GetRobotTrajectory'}}
-        Publishers {
-          Publisher { name 'trajectory' message 'nav_msgs.Path'}}
-        Subscribers {
-          Subscriber { name 'syscommand' message 'std_msgs.String'}}
-        Parameters {
-          Parameter { name 'trajectory_update_rate' type Double value 4.0},
-          Parameter { name 'target_frame_name' type String value 'map'},
-          Parameter { name 'trajectory_publish_rate' type Double value 0.25},
-          Parameter { name 'source_frame_name' type String value 'base_link'}}}
+      Node { name hector_trajectory_server}
 }}}

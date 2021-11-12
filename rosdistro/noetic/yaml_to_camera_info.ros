@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage rtabmap_ros {
+    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
+    Artifact yaml_to_camera_info {
+      Node { name yaml_to_camera_info
+        Publishers {
+          Publisher { name 'camera_info' message 'sensor_msgs.CameraInfo'}}
+        Subscribers {
+          Subscriber { name 'image' message 'sensor_msgs.Image'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage toposens_echo_driver {
+    FromGitRepo "https://gitlab.com/toposens/public/ros-packages.git" 
+    Artifact toposens_echo_driver_node {
+      Node { name toposens_echo_driver_node}
+}}}

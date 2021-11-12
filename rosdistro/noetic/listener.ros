@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_inertial_examples {
+    FromGitRepo "https://github.com/LORD-MicroStrain/microstrain_inertial.git" 
+    Artifact listener {
+      Node { name listener
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.Imu'}}}
+}}}

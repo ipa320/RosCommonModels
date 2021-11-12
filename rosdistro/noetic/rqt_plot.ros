@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rqt_plot {
+    FromGitRepo "https://github.com/ros-visualization/rqt_plot.git" 
+    Artifact rqt_plot {
+      Node { name rqt_plot}
+}}}

@@ -1,8 +1,0 @@
-PackageSet {
-  CatkinPackage log_view {
-    FromGitRepo "https://github.com/hatchbed/log_view.git" 
-    Artifact log_viewer {
-      Node { name log_viewer
-        Subscribers {
-          Subscriber { name '/rosout_agg' message 'rosgraph_msgs.Log'}}}
-}}}

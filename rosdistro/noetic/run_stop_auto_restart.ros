@@ -1,8 +1,0 @@
-PackageSet {
-  CatkinPackage pr2_run_stop_auto_restart {
-    FromGitRepo "https://github.com/pr2/pr2_robot.git" 
-    Artifact run_stop_auto_restart {
-      Node { name run_stop_auto_restart
-        Subscribers {
-          Subscriber { name 'power_board/state' message 'pr2_msgs.PowerBoardState'}}}
-}}}

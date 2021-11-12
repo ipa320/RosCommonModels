@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage swri_roscpp {
+    FromGitRepo "https://github.com/swri-robotics/marti_common.git" 
+    Artifact dynamic_parameters_test_node {
+      Node { name dynamic_parameters_test_node}
+}}}

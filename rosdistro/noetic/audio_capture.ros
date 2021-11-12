@@ -2,17 +2,5 @@ PackageSet {
   CatkinPackage audio_capture {
     FromGitRepo "https://github.com/ros-drivers/audio_common.git" 
     Artifact audio_capture {
-      Node { name audio_capture
-        Publishers {
-          Publisher { name 'audio_info' message 'audio_common_msgs.AudioInfo'},
-          Publisher { name 'audio' message 'audio_common_msgs.AudioData'}}
-        Parameters {
-          Parameter { name '~sample_rate' type Integer value 16000},
-          Parameter { name '~device' type String },
-          Parameter { name '~sample_format' type String value 'S16LE'},
-          Parameter { name '~channels' type Integer value 1},
-          Parameter { name '~bitrate' type Integer value 192},
-          Parameter { name '~depth' type Integer value 16},
-          Parameter { name '~format' type String value 'mp3'},
-          Parameter { name '~dst' type String value 'appsink'}}}
+      Node { name audio_capture}
 }}}

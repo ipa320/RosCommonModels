@@ -1,8 +1,0 @@
-PackageSet {
-  CatkinPackage pr2_controller_manager {
-    FromGitRepo "https://github.com/pr2/pr2_mechanism.git" 
-    Artifact test_robot {
-      Node { name test_robot
-        Parameters {
-          Parameter { name 'robot_description' type String }}}
-}}}

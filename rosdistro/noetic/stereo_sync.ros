@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rtabmap_ros {
+    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
+    Artifact stereo_sync {
+      Node { name stereo_sync}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage gennodejs {
+    FromGitRepo "https://github.com/RethinkRobotics-opensource/gennodejs.git" 
+    Artifact gen_nodejs {
+      Node { name gen_nodejs}
+}}}

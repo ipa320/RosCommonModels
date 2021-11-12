@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rqt_ez_publisher {
+    FromGitRepo "https://github.com/OTL/rqt_ez_publisher.git" 
+    Artifact rqt_ez_publisher {
+      Node { name rqt_ez_publisher}
+}}}

@@ -8,7 +8,7 @@ PackageSet {
         Subscribers {
           Subscriber { name 'state' message 'pr2_controllers_msgs.JointControllerState'}}
         Parameters {
-          Parameter { name 'stall_timeout' type Double value 0.1},
+          Parameter { name 'goal_threshold' type Double value 0.01},
           Parameter { name 'stall_velocity_threshold' type Double value 1e-06},
-          Parameter { name 'goal_threshold' type Double value 0.01}}}
+          Parameter { name 'stall_timeout' type Double value 0.1}}}
 }}}

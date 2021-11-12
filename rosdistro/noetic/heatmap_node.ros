@@ -1,9 +1,0 @@
-PackageSet {
-  CatkinPackage global_planner_tests {
-    FromGitRepo "https://github.com/locusrobotics/robot_navigation.git" 
-    Artifact heatmap_node {
-      Node { name heatmap_node
-        Parameters {
-          Parameter { name 'map_filename' type String value 'package://global_planner_tests/maps/smile.png'},
-          Parameter { name 'global_planner' type String value 'dlux_global_planner::DluxGlobalPlanner'}}}
-}}}

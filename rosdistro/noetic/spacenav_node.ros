@@ -2,12 +2,5 @@ PackageSet {
   CatkinPackage spacenav_node {
     FromGitRepo "https://github.com/ros-drivers/joystick_drivers.git" 
     Artifact spacenav_node {
-      Node { name spacenav_node
-        Publishers {
-          Publisher { name 'spacenav/twist' message 'geometry_msgs.Twist'},
-          Publisher { name 'spacenav/offset' message 'geometry_msgs.Vector3'},
-          Publisher { name 'spacenav/rot_offset' message 'geometry_msgs.Vector3'},
-          Publisher { name 'spacenav/joy' message 'sensor_msgs.Joy'}}
-        Parameters {
-          Parameter { name 'full_scale' type Double value 512}}}
+      Node { name spacenav_node}
 }}}

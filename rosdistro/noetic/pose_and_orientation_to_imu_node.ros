@@ -10,8 +10,8 @@ PackageSet {
           Subscriber { name '/imu' message 'sensor_msgs.Imu'},
           Subscriber { name '/pose' message 'geometry_msgs.PoseStamped'}}
         Parameters {
-          Parameter { name 'base_footprint_frame' type String value 'base_footprint'},
           Parameter { name 'map_frame' type String value 'map'},
           Parameter { name 'base_stabilized_frame' type String value 'base_stabilized'},
-          Parameter { name 'base_frame' type String value 'base_link'}}}
+          Parameter { name 'base_frame' type String value 'base_link'},
+          Parameter { name 'base_footprint_frame' type String value 'base_footprint'}}}
 }}}

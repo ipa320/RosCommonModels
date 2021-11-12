@@ -4,6 +4,6 @@ PackageSet {
     Artifact graft_ukf_absolute {
       Node { name graft_ukf_absolute
         Publishers {
-          Publisher { name 'state' message 'graft.GraftState'},
-          Publisher { name 'odom_combined' message 'nav_msgs.Odometry'}}}
+          Publisher { name 'odom_combined' message 'nav_msgs.Odometry'},
+          Publisher { name 'state' message 'graft.GraftState'}}}
 }}}

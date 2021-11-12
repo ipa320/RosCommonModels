@@ -2,53 +2,5 @@ PackageSet {
   CatkinPackage gmapping {
     FromGitRepo "https://github.com/ros-perception/slam_gmapping.git" 
     Artifact slam_gmapping_replay {
-      Node { name slam_gmapping_replay
-        ServiceServers {
-          ServiceServer { name 'dynamic_map' service 'nav_msgs.GetMap'},
-          ServiceServer { name 'dynamic_map' service 'nav_msgs.GetMap'}}
-        Publishers {
-          Publisher { name 'entropy' message 'std_msgs.Float64'},
-          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'},
-          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'},
-          Publisher { name 'entropy' message 'std_msgs.Float64'},
-          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'},
-          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'}}
-        Parameters {
-          Parameter { name 'lasamplestep' type Double },
-          Parameter { name 'sigma' type Double },
-          Parameter { name 'delta' type Double },
-          Parameter { name 'angularUpdate' type Double },
-          Parameter { name 'lasamplerange' type Double },
-          Parameter { name 'particles' type Integer },
-          Parameter { name 'srr' type Double },
-          Parameter { name 'lstep' type Double },
-          Parameter { name 'tf_delay' type Double },
-          Parameter { name 'linearUpdate' type Double },
-          Parameter { name 'temporalUpdate' type Double },
-          Parameter { name 'llsamplerange' type Double },
-          Parameter { name 'ymin' type Double },
-          Parameter { name 'kernelSize' type Integer },
-          Parameter { name 'resampleThreshold' type Double },
-          Parameter { name 'map_frame' type String },
-          Parameter { name 'xmax' type Double },
-          Parameter { name 'occ_thresh' type Double },
-          Parameter { name 'map_update_interval' type Double },
-          Parameter { name 'minimumScore' type Double },
-          Parameter { name 'ymax' type Double },
-          Parameter { name 'astep' type Double },
-          Parameter { name 'throttle_scans' type Integer },
-          Parameter { name 'base_frame' type String },
-          Parameter { name 'odom_frame' type String },
-          Parameter { name 'xmin' type Double },
-          Parameter { name 'srt' type Double },
-          Parameter { name 'iterations' type Integer },
-          Parameter { name 'lskip' type Integer },
-          Parameter { name 'maxRange' type Double },
-          Parameter { name 'str' type Double },
-          Parameter { name 'ogain' type Double },
-          Parameter { name 'stt' type Double },
-          Parameter { name 'llsamplestep' type Double },
-          Parameter { name 'transform_publish_period' type Double value 0.05},
-          Parameter { name 'lsigma' type Double },
-          Parameter { name 'maxUrange' type Double }}}
+      Node { name slam_gmapping_replay}
 }}}

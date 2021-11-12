@@ -1,9 +1,0 @@
-PackageSet {
-  CatkinPackage pid {
-    FromGitRepo "https://bitbucket.org/AndyZe/pid.git" 
-    Artifact autotune {
-      Node { name autotune
-        Subscribers {
-          Subscriber { name '/setpoint' message 'std_msgs.Float64'},
-          Subscriber { name '/state' message 'std_msgs.Float64'}}}
-}}}

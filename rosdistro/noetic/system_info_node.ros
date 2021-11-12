@@ -2,7 +2,5 @@ PackageSet {
   CatkinPackage prbt_support {
     FromGitRepo "https://github.com/PilzDE/pilz_robots.git" 
     Artifact system_info_node {
-      Node { name system_info_node
-        ServiceClients {
-          ServiceClient { name '/prbt/driver/get_object' service 'canopen_chain_node.GetObject'}}}
+      Node { name system_info_node}
 }}}

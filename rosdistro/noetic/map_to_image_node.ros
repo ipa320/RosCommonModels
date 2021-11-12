@@ -1,9 +1,0 @@
-PackageSet {
-  CatkinPackage hector_compressed_map_transport {
-    FromGitRepo "https://github.com/tu-darmstadt-ros-pkg/hector_slam.git" 
-    Artifact map_to_image_node {
-      Node { name map_to_image_node
-        Subscribers {
-          Subscriber { name 'map' message 'nav_msgs.OccupancyGrid'},
-          Subscriber { name 'pose' message 'geometry_msgs.PoseStamped'}}}
-}}}

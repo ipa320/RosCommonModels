@@ -2,7 +2,5 @@ PackageSet {
   CatkinPackage ros_babel_fish {
     FromGitRepo "https://github.com/StefanFabian/ros_babel_fish.git" 
     Artifact any_subscriber {
-      Node { name any_subscriber
-        Subscribers {
-          Subscriber { name '?' message 'ros_babel_fish.BabelFishMessage'}}}
+      Node { name any_subscriber}
 }}}

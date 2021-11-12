@@ -8,6 +8,6 @@ PackageSet {
           Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}
         Parameters {
           Parameter { name 'start' type Double },
-          Parameter { name 'rate' type Double },
-          Parameter { name 'end' type Double }}}
+          Parameter { name 'end' type Double },
+          Parameter { name 'rate' type Double }}}
 }}}

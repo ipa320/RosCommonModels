@@ -2,17 +2,5 @@ PackageSet {
   CatkinPackage robot_calibration {
     FromGitRepo "https://github.com/mikeferguson/robot_calibration.git" 
     Artifact calibrate_base {
-      Node { name calibrate_base
-        Publishers {
-          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}
-        Subscribers {
-          Subscriber { name 'imu' message '?'},
-          Subscriber { name 'odom' message '?'},
-          Subscriber { name 'base_scan' message '?'}}
-        Parameters {
-          Parameter { name 'imu/gyro/scale' type Double value 0.001221729},
-          Parameter { name 'min_angle' type Double value -0.5},
-          Parameter { name 'max_angle' type Double value 0.5},
-          Parameter { name 'accel_limit' type Double value 2.0},
-          Parameter { name 'base_controller/track_width' type Double value 0.37476}}}
+      Node { name calibrate_base}
 }}}

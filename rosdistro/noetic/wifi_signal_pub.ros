@@ -4,9 +4,5 @@ PackageSet {
     Artifact wifi_signal_pub {
       Node { name wifi_signal_pub
         Publishers {
-          Publisher { name 'wifi_signal' message 'rtabmap_ros.UserData'}}
-        Parameters {
-          Parameter { name 'interface' type String value 'wlan0'},
-          Parameter { name 'rate' type Double value 0.5},
-          Parameter { name 'frame_id' type String value 'base_link'}}}
+          Publisher { name 'wifi_signal' message 'rtabmap_ros.UserData'}}}
 }}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage lpg_planner {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_3rdparty.git" 
+    Artifact f2py3.8 {
+      Node { name f2py3.8}
+}}}

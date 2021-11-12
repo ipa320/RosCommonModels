@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage interactive_marker_tutorials {
+    FromGitRepo "https://github.com/ros-visualization/visualization_tutorials.git" 
+    Artifact menu {
+      Node { name menu}
+}}}

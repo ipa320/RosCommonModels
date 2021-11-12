@@ -1,8 +1,0 @@
-PackageSet {
-  CatkinPackage prbt_hardware_support {
-    FromGitRepo "https://github.com/PilzDE/pilz_robots.git" 
-    Artifact fake_speed_override_node {
-      Node { name fake_speed_override_node
-        ServiceServers {
-          ServiceServer { name '/prbt/get_speed_override' service 'pilz_msgs.GetSpeedOverride'}}}
-}}}

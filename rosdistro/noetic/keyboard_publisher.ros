@@ -1,8 +1,0 @@
-PackageSet {
-  CatkinPackage cob_teleop {
-    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
-    Artifact keyboard_publisher {
-      Node { name keyboard_publisher
-        Publishers {
-          Publisher { name 'joy' message 'sensor_msgs.Joy'}}}
-}}}

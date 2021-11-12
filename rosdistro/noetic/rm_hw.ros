@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rm_hw {
+    FromGitRepo "https://github.com/rm-controls/rm_control.git" 
+    Artifact rm_hw {
+      Node { name rm_hw
+        Parameters {
+          Parameter { name '/robot_description' type String }}}
+}}}

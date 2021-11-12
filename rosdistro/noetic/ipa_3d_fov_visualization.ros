@@ -2,9 +2,5 @@ PackageSet {
   CatkinPackage ipa_3d_fov_visualization {
     FromGitRepo "https://github.com/ipa320/cob_perception_common.git" 
     Artifact ipa_3d_fov_visualization {
-      Node { name ipa_3d_fov_visualization
-        Publishers {
-          Publisher { name 'cam_fov' message 'visualization_msgs.Marker'}}
-        Subscribers {
-          Subscriber { name 'camera_info' message 'sensor_msgs.CameraInfo'}}}
+      Node { name ipa_3d_fov_visualization}
 }}}

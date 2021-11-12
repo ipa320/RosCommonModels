@@ -1,8 +1,0 @@
-PackageSet {
-  CatkinPackage slam_toolbox {
-    FromGitRepo "https://github.com/SteveMacenski/slam_toolbox.git" 
-    Artifact async_slam_toolbox_node {
-      Node { name async_slam_toolbox_node
-        Parameters {
-          Parameter { name 'stack_size_to_use' type Integer }}}
-}}}

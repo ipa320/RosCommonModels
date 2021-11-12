@@ -2,10 +2,5 @@ PackageSet {
   CatkinPackage swri_profiler {
     FromGitRepo "https://github.com/swri-robotics/swri_profiler.git" 
     Artifact basic_profiler_example_node {
-      Node { name basic_profiler_example_node
-        Subscribers {
-          Subscriber { name 'trigger_fibonacci' message 'std_msgs.Int32'}}
-        Parameters {
-          Parameter { name 'fibonacci_index2' type Integer value 40},
-          Parameter { name 'fibonacci_index1' type Integer value 30}}}
+      Node { name basic_profiler_example_node}
 }}}

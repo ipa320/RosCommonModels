@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pr2_position_scripts {
+    FromGitRepo "https://github.com/pr2/pr2_apps.git" 
+    Artifact head_down {
+      Node { name head_down}
+}}}

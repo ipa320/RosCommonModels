@@ -2,9 +2,5 @@ PackageSet {
   CatkinPackage mavros_extras {
     FromGitRepo "https://github.com/mavlink/mavros.git" 
     Artifact servo_state_publisher {
-      Node { name servo_state_publisher
-        Publishers {
-          Publisher { name 'joint_states' message 'sensor_msgs.JointState'}}
-        Subscribers {
-          Subscriber { name 'rc_out' message 'mavros_msgs.RCOut'}}}
+      Node { name servo_state_publisher}
 }}}

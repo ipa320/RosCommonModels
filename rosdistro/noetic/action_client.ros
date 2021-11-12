@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ros_babel_fish {
+    FromGitRepo "https://github.com/StefanFabian/ros_babel_fish.git" 
+    Artifact action_client {
+      Node { name action_client}
+}}}

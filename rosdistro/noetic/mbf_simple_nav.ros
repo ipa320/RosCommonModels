@@ -1,8 +1,0 @@
-PackageSet {
-  CatkinPackage mbf_simple_nav {
-    FromGitRepo "https://github.com/magazino/move_base_flex.git" 
-    Artifact mbf_simple_nav {
-      Node { name mbf_simple_nav
-        Parameters {
-          Parameter { name 'tf_cache_time' type Double value 10.0}}}
-}}}

@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage rtabmap_ros {
+    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
+    Artifact netvlad_tf_ros {
+      Node { name netvlad_tf_ros
+        Publishers {
+          Publisher { name 'netvlad_descriptor' message 'rtabmap_ros.GlobalDescriptor'}}
+        Subscribers {
+          Subscriber { name 'image' message 'sensor_msgs.Image'}}}
+}}}

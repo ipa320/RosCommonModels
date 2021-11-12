@@ -6,8 +6,8 @@ PackageSet {
         Publishers {
           Publisher { name 'input' message 'SilverhammerInternalBuffer'}}
         Parameters {
-          Parameter { name 'expected_rate' type Double value 2.0},
           Parameter { name 'receive_port' type Integer value 16484},
           Parameter { name 'fragment_packets_tolerance' type Integer },
+          Parameter { name 'expected_rate' type Double value 2.0},
           Parameter { name 'pesimistic' type Boolean value true}}}
 }}}

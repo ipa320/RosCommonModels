@@ -9,10 +9,10 @@ PackageSet {
         Subscribers {
           Subscriber { name 'syscommand' message 'std_msgs.String'}}
         Parameters {
-          Parameter { name 'draw_background_checkerboard' type Boolean value true},
+          Parameter { name 'plugins' type String },
           Parameter { name 'map_file_base_name' type String },
-          Parameter { name 'geotiff_save_period' type Double },
           Parameter { name 'draw_free_space_grid' type Boolean value true},
           Parameter { name 'map_file_path' type String value '.'},
-          Parameter { name 'plugins' type String }}}
+          Parameter { name 'geotiff_save_period' type Double },
+          Parameter { name 'draw_background_checkerboard' type Boolean value true}}}
 }}}

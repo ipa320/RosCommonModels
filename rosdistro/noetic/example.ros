@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage diagnostic_updater {
+    FromGitRepo "https://github.com/ros/diagnostics.git" 
+    Artifact example {
+      Node { name example
+        Publishers {
+          Publisher { name 'topic2' message 'std_msgs.Bool'},
+          Publisher { name 'topic1' message 'std_msgs.Bool'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Parameters {
+          Parameter { name 'diagnostic_period' type Double }}}
+}}}

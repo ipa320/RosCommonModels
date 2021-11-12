@@ -2,12 +2,5 @@ PackageSet {
   CatkinPackage pr2_ethercat {
     FromGitRepo "https://github.com/pr2/pr2_robot.git" 
     Artifact pr2_ethercat {
-      Node { name pr2_ethercat
-        ServiceServers {
-          ServiceServer { name 'reset_motors' service 'std_srvs.Empty'},
-          ServiceServer { name 'halt_motors' service 'std_srvs.Empty'},
-          ServiceServer { name 'publish_trace' service 'std_srvs.Empty'}}
-        Parameters {
-          Parameter { name '?' type String },
-          Parameter { name 'min_acceptable_rt_loop_frequency' type Double }}}
+      Node { name pr2_ethercat}
 }}}

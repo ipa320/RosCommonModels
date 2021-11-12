@@ -1,9 +1,0 @@
-PackageSet {
-  CatkinPackage nodelet {
-    FromGitRepo "https://github.com/ros/nodelet_core.git" 
-    Artifact nodelet {
-      Node { name nodelet
-        ServiceClients {
-          ServiceClient { name '?' service 'nodelet.NodeletUnload'},
-          ServiceClient { name '?' service 'nodelet.NodeletLoad'}}}
-}}}

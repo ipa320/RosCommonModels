@@ -1,8 +1,0 @@
-PackageSet {
-  CatkinPackage multires_image {
-    FromGitRepo "https://github.com/swri-robotics/mapviz.git" 
-    Artifact multires_view_node {
-      Node { name multires_view_node
-        Parameters {
-          Parameter { name '?' type String }}}
-}}}

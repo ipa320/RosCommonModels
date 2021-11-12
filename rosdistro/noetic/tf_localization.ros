@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage visp_tracker {
+    FromGitRepo "https://github.com/lagadic/vision_visp.git" 
+    Artifact tf_localization {
+      Node { name tf_localization
+        Subscribers {
+          Subscriber { name 'object_position' message 'geometry_msgs.TransformStamped'}}}
+}}}

@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage moveit_ros_warehouse {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact moveit_warehouse_broadcast {
+      Node { name moveit_warehouse_broadcast
+        Publishers {
+          Publisher { name 'motion_plan_results' message 'moveit_msgs.RobotTrajectory'},
+          Publisher { name 'motion_plan_request' message 'moveit_msgs.MotionPlanRequest'},
+          Publisher { name 'planning_scene' message 'moveit_msgs.PlanningScene'},
+          Publisher { name 'constraints' message 'moveit_msgs.Constraints'},
+          Publisher { name 'robot_states' message 'moveit_msgs.RobotState'}}}
+}}}

@@ -2,12 +2,5 @@ PackageSet {
   CatkinPackage map_organizer {
     FromGitRepo "https://github.com/at-wat/neonavigation.git" 
     Artifact pose_transform {
-      Node { name pose_transform
-        Publishers {
-          Publisher { name '?' message 'geometry_msgs.PoseWithCovarianceStamped'}}
-        Subscribers {
-          Subscriber { name '?' message 'ros.NodeHandle'}}
-        Parameters {
-          Parameter { name 'neonavigation_compatible' type Integer },
-          Parameter { name 'to_frame' type String value 'map'}}}
+      Node { name pose_transform}
 }}}

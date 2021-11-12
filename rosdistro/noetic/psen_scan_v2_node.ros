@@ -1,8 +1,0 @@
-PackageSet {
-  CatkinPackage psen_scan_v2 {
-    FromGitRepo "https://github.com/PilzDE/psen_scan_v2.git" 
-    Artifact psen_scan_v2_node {
-      Node { name psen_scan_v2_node
-        Publishers {
-          Publisher { name '?' message 'sensor_msgs.LaserScan'}}}
-}}}

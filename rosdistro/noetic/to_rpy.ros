@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage robot_calibration {
+    FromGitRepo "https://github.com/mikeferguson/robot_calibration.git" 
+    Artifact to_rpy {
+      Node { name to_rpy}
+}}}
