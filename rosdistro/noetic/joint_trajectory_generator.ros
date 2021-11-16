@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage joint_trajectory_generator {
-    FromGitRepo "https://github.com/pr2/pr2_common_actions.git" 
-    Artifact joint_trajectory_generator {
-      Node { name joint_trajectory_generator}
-}}}

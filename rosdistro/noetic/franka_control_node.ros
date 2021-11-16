@@ -2,5 +2,8 @@ PackageSet {
   CatkinPackage franka_control {
     FromGitRepo "https://github.com/frankaemika/franka_ros.git" 
     Artifact franka_control_node {
-      Node { name franka_control_node}
+      Node { name franka_control_node
+        ServiceServers {
+          ServiceServer { name 'disconnect' service 'std_srvs.Trigger.'},
+          ServiceServer { name 'connect' service 'std_srvs.Trigger.'}}}
 }}}

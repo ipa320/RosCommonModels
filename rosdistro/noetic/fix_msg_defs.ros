@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rosbag {
-    FromGitRepo "https://github.com/ros/ros_comm.git" 
-    Artifact fix_msg_defs {
-      Node { name fix_msg_defs}
-}}}

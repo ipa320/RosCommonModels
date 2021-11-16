@@ -2,5 +2,13 @@ PackageSet {
   CatkinPackage points_preprocessor {
     FromGitRepo "https://github.com/nobleo/core_perception.git" 
     Artifact cloud_transformer {
-      Node { name cloud_transformer}
+      Node { name cloud_transformer
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.PointCloud2'}}
+        Subscribers {
+          Subscriber { name '?' message '?'}}
+        Parameters {
+          Parameter { name 'target_frame' type String value 'velodyne'},
+          Parameter { name 'input_point_topic' type String value '/points_raw'},
+          Parameter { name 'output_point_topic' type String value '/points_transformed'}}}
 }}}

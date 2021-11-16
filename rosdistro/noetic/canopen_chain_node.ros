@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage canopen_chain_node {
-    FromGitRepo "https://github.com/ros-industrial/ros_canopen.git" 
-    Artifact canopen_chain_node {
-      Node { name canopen_chain_node}
-}}}

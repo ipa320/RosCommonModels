@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage octomap {
-    FromGitRepo "https://github.com/OctoMap/octomap.git" 
-    Artifact convert_octree {
-      Node { name convert_octree}
-}}}

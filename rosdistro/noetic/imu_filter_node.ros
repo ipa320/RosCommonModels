@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage imu_filter_madgwick {
-    FromGitRepo "https://github.com/ccny-ros-pkg/imu_tools.git" 
-    Artifact imu_filter_node {
-      Node { name imu_filter_node}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage pointgrey_camera_driver {
-    FromGitRepo "https://github.com/ros-drivers/pointgrey_camera_driver.git" 
-    Artifact stereo_node {
-      Node { name stereo_node}
-}}}

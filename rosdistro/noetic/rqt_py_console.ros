@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rqt_py_console {
-    FromGitRepo "https://github.com/ros-visualization/rqt_py_console.git" 
-    Artifact rqt_py_console {
-      Node { name rqt_py_console}
-}}}

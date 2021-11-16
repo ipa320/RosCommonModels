@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage pr2_mechanism_model {
-    FromGitRepo "https://github.com/pr2/pr2_mechanism.git" 
-    Artifact test_joint_calibration_simulator {
-      Node { name test_joint_calibration_simulator}
-}}}

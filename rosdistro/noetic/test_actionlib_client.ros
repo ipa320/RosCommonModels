@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage sound_play {
-    FromGitRepo "https://github.com/ros-drivers/audio_common.git" 
-    Artifact test_actionlib_client {
-      Node { name test_actionlib_client}
-}}}

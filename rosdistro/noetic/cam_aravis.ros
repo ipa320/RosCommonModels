@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage camera_aravis {
-    FromGitRepo "https://github.com/FraunhoferIOSB/camera_aravis.git" 
-    Artifact cam_aravis {
-      Node { name cam_aravis}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage dynamixel_sdk {
-    FromGitRepo "https://github.com/ROBOTIS-GIT/DynamixelSDK.git" 
-    Artifact packet_handler {
-      Node { name packet_handler}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rqt_tf_tree {
-    FromGitRepo "https://github.com/ros-visualization/rqt_tf_tree.git" 
-    Artifact rqt_tf_tree {
-      Node { name rqt_tf_tree}
-}}}

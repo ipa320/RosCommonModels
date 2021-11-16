@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage kobuki_driver {
-    FromGitRepo "https://github.com/yujinrobot/kobuki_core.git" 
-    Artifact kobuki_velocity_commands {
-      Node { name kobuki_velocity_commands}
-}}}

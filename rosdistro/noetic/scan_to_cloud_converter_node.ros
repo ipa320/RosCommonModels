@@ -2,5 +2,9 @@ PackageSet {
   CatkinPackage scan_to_cloud_converter {
     FromGitRepo "https://github.com/ccny-ros-pkg/scan_tools.git" 
     Artifact scan_to_cloud_converter_node {
-      Node { name scan_to_cloud_converter_node}
+      Node { name scan_to_cloud_converter_node
+        Publishers {
+          Publisher { name 'cloud' message 'PointCloudT'}}
+        Subscribers {
+          Subscriber { name 'scan' message 'sensor_msgs.LaserScan'}}}
 }}}

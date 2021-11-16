@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage fkie_node_manager {
-    FromGitRepo "https://github.com/fkie/multimaster_fkie.git" 
-    Artifact dynamic_reconfigure {
-      Node { name dynamic_reconfigure}
-}}}

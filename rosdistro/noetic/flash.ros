@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage leo_fw {
-    FromGitRepo "https://github.com/LeoRover/leo_robot.git" 
-    Artifact flash {
-      Node { name flash}
-}}}

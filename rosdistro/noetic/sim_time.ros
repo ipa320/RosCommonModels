@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage pid {
-    FromGitRepo "https://bitbucket.org/AndyZe/pid.git" 
-    Artifact sim_time {
-      Node { name sim_time}
-}}}

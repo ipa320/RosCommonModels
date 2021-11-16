@@ -2,5 +2,7 @@ PackageSet {
   CatkinPackage mesh_msgs_hdf5 {
     FromGitRepo "https://github.com/uos/mesh_tools.git" 
     Artifact mesh_msgs_hdf5 {
-      Node { name mesh_msgs_hdf5}
+      Node { name mesh_msgs_hdf5
+        Parameters {
+          Parameter { name 'inputFile' type String }}}
 }}}

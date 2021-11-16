@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage cob_safety_controller {
-    FromGitRepo "https://github.com/ipa320/cob_substitute.git" 
-    Artifact flexisoft_sim {
-      Node { name flexisoft_sim}
-}}}

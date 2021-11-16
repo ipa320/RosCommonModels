@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage turtlebot3_example {
-    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3.git" 
-    Artifact turtlebot3_client {
-      Node { name turtlebot3_client}
-}}}

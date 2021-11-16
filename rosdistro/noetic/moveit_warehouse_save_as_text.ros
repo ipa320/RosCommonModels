@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage moveit_ros_warehouse {
-    FromGitRepo "https://github.com/ros-planning/moveit.git" 
-    Artifact moveit_warehouse_save_as_text {
-      Node { name moveit_warehouse_save_as_text}
-}}}

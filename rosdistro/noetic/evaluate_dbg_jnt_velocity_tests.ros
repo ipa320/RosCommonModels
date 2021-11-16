@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage cob_twist_controller {
-    FromGitRepo "https://github.com/ipa320/cob_control.git" 
-    Artifact evaluate_dbg_jnt_velocity_tests {
-      Node { name evaluate_dbg_jnt_velocity_tests}
-}}}

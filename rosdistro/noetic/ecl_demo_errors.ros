@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage ecl_errors {
-    FromGitRepo "https://github.com/stonier/ecl_lite.git" 
-    Artifact ecl_demo_errors {
-      Node { name ecl_demo_errors}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rqt_joint_trajectory_controller {
-    FromGitRepo "https://github.com/ros-controls/ros_controllers.git" 
-    Artifact rqt_joint_trajectory_controller {
-      Node { name rqt_joint_trajectory_controller}
-}}}

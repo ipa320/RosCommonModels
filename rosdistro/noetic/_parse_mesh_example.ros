@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage tesseract_geometry {
-    FromGitRepo "https://github.com/ros-industrial-consortium/tesseract.git" 
-    Artifact _parse_mesh_example {
-      Node { name _parse_mesh_example}
-}}}

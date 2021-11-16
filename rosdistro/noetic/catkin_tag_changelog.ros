@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage ffha {
-    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_3rdparty.git" 
-    Artifact catkin_tag_changelog {
-      Node { name catkin_tag_changelog}
-}}}

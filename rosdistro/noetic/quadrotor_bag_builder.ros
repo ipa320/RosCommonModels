@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage xpp_examples {
-    FromGitRepo "https://github.com/leggedrobotics/xpp.git" 
-    Artifact quadrotor_bag_builder {
-      Node { name quadrotor_bag_builder}
-}}}

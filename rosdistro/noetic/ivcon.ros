@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage ivcon {
-    FromGitRepo "https://github.com/ros/ivcon.git" 
-    Artifact ivcon {
-      Node { name ivcon}
-}}}

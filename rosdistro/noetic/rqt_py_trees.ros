@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rqt_py_trees {
-    FromGitRepo "https://github.com/stonier/rqt_py_trees.git" 
-    Artifact rqt_py_trees {
-      Node { name rqt_py_trees}
-}}}

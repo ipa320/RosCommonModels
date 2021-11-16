@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage turtlebot3_autorace_camera {
-    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_autorace_2020.git" 
-    Artifact image_projection {
-      Node { name image_projection}
-}}}

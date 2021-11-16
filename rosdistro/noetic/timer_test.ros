@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage swri_roscpp {
-    FromGitRepo "https://github.com/swri-robotics/marti_common.git" 
-    Artifact timer_test {
-      Node { name timer_test}
-}}}

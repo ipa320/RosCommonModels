@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage pid {
-    FromGitRepo "https://bitbucket.org/AndyZe/pid.git" 
-    Artifact setpoint_node {
-      Node { name setpoint_node}
-}}}

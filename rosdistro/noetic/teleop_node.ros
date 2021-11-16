@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage teleop_twist_joy {
-    FromGitRepo "https://github.com/ros-teleop/teleop_twist_joy.git" 
-    Artifact teleop_node {
-      Node { name teleop_node}
-}}}

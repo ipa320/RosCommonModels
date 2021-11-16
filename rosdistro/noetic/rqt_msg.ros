@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rqt_msg {
-    FromGitRepo "https://github.com/ros-visualization/rqt_msg.git" 
-    Artifact rqt_msg {
-      Node { name rqt_msg}
-}}}

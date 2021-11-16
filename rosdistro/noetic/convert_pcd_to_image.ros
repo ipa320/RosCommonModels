@@ -2,5 +2,7 @@ PackageSet {
   CatkinPackage pcl_ros {
     FromGitRepo "https://github.com/ros-perception/perception_pcl.git" 
     Artifact convert_pcd_to_image {
-      Node { name convert_pcd_to_image}
+      Node { name convert_pcd_to_image
+        Publishers {
+          Publisher { name 'output' message 'sensor_msgs.Image'}}}
 }}}

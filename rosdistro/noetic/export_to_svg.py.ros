@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage teb_local_planner {
-    FromGitRepo "https://github.com/rst-tu-dortmund/teb_local_planner.git" 
-    Artifact export_to_svg.py {
-      Node { name export_to_svg.py}
-}}}

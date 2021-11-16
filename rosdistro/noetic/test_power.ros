@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage pr2_power_board {
-    FromGitRepo "https://github.com/pr2/pr2_power_drivers.git" 
-    Artifact test_power {
-      Node { name test_power}
-}}}

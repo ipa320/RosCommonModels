@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rosbuild {
-    FromGitRepo "https://github.com/ros/ros.git" 
-    Artifact download_checkmd5 {
-      Node { name download_checkmd5}
-}}}

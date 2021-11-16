@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage moveit_sim_controller {
-    FromGitRepo "https://github.com/PickNikRobotics/moveit_sim_controller.git" 
-    Artifact moveit_sim_hw_main {
-      Node { name moveit_sim_hw_main}
-}}}

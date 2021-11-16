@@ -2,5 +2,12 @@ PackageSet {
   CatkinPackage swri_image_util {
     FromGitRepo "https://github.com/swri-robotics/marti_common.git" 
     Artifact dummy_image_publisher {
-      Node { name dummy_image_publisher}
+      Node { name dummy_image_publisher
+        Publishers {
+          Publisher { name 'image' message 'sensor_msgs.Image'}}
+        Parameters {
+          Parameter { name 'height' type <class 'int value 480},
+          Parameter { name 'encoding' type String value 'mono8'},
+          Parameter { name 'width' type <class 'int value 640},
+          Parameter { name 'rate' type Double value 10.0}}}
 }}}

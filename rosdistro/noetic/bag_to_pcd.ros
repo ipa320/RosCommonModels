@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage pcl_ros {
-    FromGitRepo "https://github.com/ros-perception/perception_pcl.git" 
-    Artifact bag_to_pcd {
-      Node { name bag_to_pcd}
-}}}

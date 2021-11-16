@@ -2,5 +2,7 @@ PackageSet {
   CatkinPackage swri_transform_util {
     FromGitRepo "https://github.com/swri-robotics/marti_common.git" 
     Artifact lat_lon_tf_echo {
-      Node { name lat_lon_tf_echo}
+      Node { name lat_lon_tf_echo
+        Subscribers {
+          Subscriber { name '/local_xy_origin' message 'topic_tools.ShapeShifter'}}}
 }}}

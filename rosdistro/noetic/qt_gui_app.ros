@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage qt_gui_app {
-    FromGitRepo "https://github.com/ros-visualization/qt_gui_core.git" 
-    Artifact qt_gui_app {
-      Node { name qt_gui_app}
-}}}

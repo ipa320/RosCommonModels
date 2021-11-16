@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage dataspeed_can_usb {
-    FromGitRepo "https://bitbucket.org/dataspeedinc/dataspeed_can.git" 
-    Artifact can_node {
-      Node { name can_node}
-}}}

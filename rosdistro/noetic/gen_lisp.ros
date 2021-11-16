@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage genlisp {
-    FromGitRepo "https://github.com/ros/genlisp.git" 
-    Artifact gen_lisp {
-      Node { name gen_lisp}
-}}}

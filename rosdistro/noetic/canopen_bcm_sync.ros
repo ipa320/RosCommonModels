@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage canopen_master {
-    FromGitRepo "https://github.com/ros-industrial/ros_canopen.git" 
-    Artifact canopen_bcm_sync {
-      Node { name canopen_bcm_sync}
-}}}

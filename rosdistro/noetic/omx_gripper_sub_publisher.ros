@@ -2,5 +2,9 @@ PackageSet {
   CatkinPackage open_manipulator_gazebo {
     FromGitRepo "https://github.com/ROBOTIS-GIT/open_manipulator_simulations.git" 
     Artifact omx_gripper_sub_publisher {
-      Node { name omx_gripper_sub_publisher}
+      Node { name omx_gripper_sub_publisher
+        Publishers {
+          Publisher { name 'gripper_sub_position/command' message 'std_msgs.Float64'}}
+        Subscribers {
+          Subscriber { name 'gripper_position/command' message 'std_msgs.Float64'}}}
 }}}

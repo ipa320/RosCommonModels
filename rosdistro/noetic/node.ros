@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage opw_kinematics {
-    FromGitRepo "https://github.com/Jmeyer1292/opw_kinematics.git" 
-    Artifact node {
-      Node { name node}
-}}}

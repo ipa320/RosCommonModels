@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage robot_localization {
-    FromGitRepo "https://github.com/cra-ros-pkg/robot_localization.git" 
-    Artifact navsat_transform_node {
-      Node { name navsat_transform_node}
-}}}

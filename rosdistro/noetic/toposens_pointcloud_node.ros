@@ -2,5 +2,15 @@ PackageSet {
   CatkinPackage toposens_pointcloud {
     FromGitRepo "https://gitlab.com/toposens/public/ros-packages.git" 
     Artifact toposens_pointcloud_node {
-      Node { name toposens_pointcloud_node}
+      Node { name toposens_pointcloud_node
+        Publishers {
+          Publisher { name '?' message 'visualization_msgs.Marker'},
+          Publisher { name 'ts_cloud' message 'XYZINCloud'}}
+        Subscribers {
+          Subscriber { name '?' message 'toposens_msgs.TsScan'}}
+        Parameters {
+          Parameter { name 'lifetime_normals_vis' type <class 'float },
+          Parameter { name 'pcd_save_interval' type Integer },
+          Parameter { name 'target_frame' type String value 'toposens'},
+          Parameter { name 'scans_topic' type String value 'ts_scans'}}}
 }}}

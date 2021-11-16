@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage cob_twist_controller {
-    FromGitRepo "https://github.com/ipa320/cob_control.git" 
-    Artifact test_careobot_st_jla_ca_sphere {
-      Node { name test_careobot_st_jla_ca_sphere}
-}}}

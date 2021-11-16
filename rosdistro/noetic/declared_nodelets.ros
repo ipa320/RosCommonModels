@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage nodelet {
-    FromGitRepo "https://github.com/ros/nodelet_core.git" 
-    Artifact declared_nodelets {
-      Node { name declared_nodelets}
-}}}

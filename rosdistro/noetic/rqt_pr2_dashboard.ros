@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rqt_pr2_dashboard {
-    FromGitRepo "https://github.com/pr2/rqt_pr2_dashboard.git" 
-    Artifact rqt_pr2_dashboard {
-      Node { name rqt_pr2_dashboard}
-}}}

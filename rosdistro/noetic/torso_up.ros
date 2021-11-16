@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage pr2_position_scripts {
-    FromGitRepo "https://github.com/pr2/pr2_apps.git" 
-    Artifact torso_up {
-      Node { name torso_up}
-}}}

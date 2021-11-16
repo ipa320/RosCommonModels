@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rtabmap_ros {
-    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
-    Artifact rgbdx_sync {
-      Node { name rgbdx_sync}
-}}}

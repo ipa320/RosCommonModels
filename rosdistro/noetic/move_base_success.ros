@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage scenario_test_tools {
-    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
-    Artifact move_base_success {
-      Node { name move_base_success}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rqt_service_caller {
-    FromGitRepo "https://github.com/ros-visualization/rqt_service_caller.git" 
-    Artifact rqt_service_caller {
-      Node { name rqt_service_caller}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage fkie_master_sync {
-    FromGitRepo "https://github.com/fkie/multimaster_fkie.git" 
-    Artifact master_sync {
-      Node { name master_sync}
-}}}

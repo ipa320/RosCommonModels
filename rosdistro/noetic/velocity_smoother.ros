@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage cob_base_velocity_smoother {
-    FromGitRepo "https://github.com/ipa320/cob_control.git" 
-    Artifact velocity_smoother {
-      Node { name velocity_smoother}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage jsk_perception {
-    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_recognition.git" 
-    Artifact train_mask_rcnn {
-      Node { name train_mask_rcnn}
-}}}

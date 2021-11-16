@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage planner_cspace {
-    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
-    Artifact planner_3d {
-      Node { name planner_3d}
-}}}

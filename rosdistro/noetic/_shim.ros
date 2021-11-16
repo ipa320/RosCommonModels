@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rosmon_core {
-    FromGitRepo "https://github.com/xqms/rosmon.git" 
-    Artifact _shim {
-      Node { name _shim}
-}}}

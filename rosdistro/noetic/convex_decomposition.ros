@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage convex_decomposition {
-    FromGitRepo "https://github.com/ros/convex_decomposition.git" 
-    Artifact convex_decomposition {
-      Node { name convex_decomposition}
-}}}

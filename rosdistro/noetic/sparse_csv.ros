@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage diagnostic_analysis {
-    FromGitRepo "https://github.com/ros/diagnostics.git" 
-    Artifact sparse_csv {
-      Node { name sparse_csv}
-}}}

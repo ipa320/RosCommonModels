@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rokubimini_ethercat {
-    FromGitRepo "https://gitlab.com/botasys/bota_driver.git" 
-    Artifact rokubimini_ethercat_bus_manager_node {
-      Node { name rokubimini_ethercat_bus_manager_node}
-}}}

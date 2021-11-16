@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage tf2_kdl {
-    FromGitRepo "https://github.com/ros/geometry2.git" 
-    Artifact test {
-      Node { name test}
-}}}

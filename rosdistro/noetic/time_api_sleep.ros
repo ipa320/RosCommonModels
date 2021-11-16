@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage roscpp_tutorials {
-    FromGitRepo "https://github.com/ros/ros_tutorials.git" 
-    Artifact time_api_sleep {
-      Node { name time_api_sleep}
-}}}

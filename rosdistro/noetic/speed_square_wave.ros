@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage dataspeed_ulc_can {
-    FromGitRepo "https://bitbucket.org/DataspeedInc/dataspeed_ulc_ros.git" 
-    Artifact speed_square_wave {
-      Node { name speed_square_wave}
-}}}

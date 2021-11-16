@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage boost_sml {
-    FromGitRepo "https://github.com/PickNikRobotics/boost_sml.git" 
-    Artifact sml_graph_demo {
-      Node { name sml_graph_demo}
-}}}

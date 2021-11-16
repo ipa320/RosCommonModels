@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage mapviz {
-    FromGitRepo "https://github.com/swri-robotics/mapviz.git" 
-    Artifact mapviz {
-      Node { name mapviz}
-}}}

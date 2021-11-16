@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage ros_control_boilerplate {
-    FromGitRepo "https://github.com/PickNikRobotics/ros_control_boilerplate.git" 
-    Artifact controller_to_csv_main {
-      Node { name controller_to_csv_main}
-}}}

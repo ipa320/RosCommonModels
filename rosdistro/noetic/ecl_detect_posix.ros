@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage ecl_config {
-    FromGitRepo "https://github.com/stonier/ecl_lite.git" 
-    Artifact ecl_detect_posix {
-      Node { name ecl_detect_posix}
-}}}

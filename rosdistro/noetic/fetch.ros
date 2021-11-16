@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage fetch_tools {
-    FromGitRepo "https://github.com/fetchrobotics/fetch_tools.git" 
-    Artifact fetch {
-      Node { name fetch}
-}}}

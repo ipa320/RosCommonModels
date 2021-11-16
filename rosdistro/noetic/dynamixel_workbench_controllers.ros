@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage dynamixel_workbench_controllers {
-    FromGitRepo "https://github.com/ROBOTIS-GIT/dynamixel-workbench.git" 
-    Artifact dynamixel_workbench_controllers {
-      Node { name dynamixel_workbench_controllers}
-}}}

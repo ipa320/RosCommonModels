@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage class_loader {
-    FromGitRepo "https://github.com/ros/class_loader.git" 
-    Artifact class_loader_headers_update {
-      Node { name class_loader_headers_update}
-}}}

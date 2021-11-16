@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rospy {
-    FromGitRepo "https://github.com/ros/ros_comm.git" 
-    Artifact genutil {
-      Node { name genutil}
-}}}

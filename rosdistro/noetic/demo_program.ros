@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage pilz_robot_programming {
-    FromGitRepo "https://github.com/PilzDE/pilz_industrial_motion.git" 
-    Artifact demo_program {
-      Node { name demo_program}
-}}}

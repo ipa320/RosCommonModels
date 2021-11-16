@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage openslam_gmapping {
-    FromGitRepo "https://github.com/ros-perception/openslam_gmapping.git" 
-    Artifact scanmatch_test {
-      Node { name scanmatch_test}
-}}}

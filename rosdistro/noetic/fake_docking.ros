@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage cob_docker_control {
-    FromGitRepo "https://github.com/ipa320/cob_substitute.git" 
-    Artifact fake_docking {
-      Node { name fake_docking}
-}}}

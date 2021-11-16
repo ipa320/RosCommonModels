@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage dynamixel_workbench_operators {
-    FromGitRepo "https://github.com/ROBOTIS-GIT/dynamixel-workbench.git" 
-    Artifact wheel_operator {
-      Node { name wheel_operator}
-}}}

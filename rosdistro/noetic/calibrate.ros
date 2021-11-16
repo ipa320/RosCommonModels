@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage robot_calibration {
-    FromGitRepo "https://github.com/mikeferguson/robot_calibration.git" 
-    Artifact calibrate {
-      Node { name calibrate}
-}}}

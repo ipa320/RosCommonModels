@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage ecl_containers {
-    FromGitRepo "https://github.com/stonier/ecl_core.git" 
-    Artifact demo_container_formatters {
-      Node { name demo_container_formatters}
-}}}

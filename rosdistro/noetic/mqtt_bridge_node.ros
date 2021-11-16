@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage mqtt_bridge {
-    FromGitRepo "https://github.com/groove-x/mqtt_bridge.git" 
-    Artifact mqtt_bridge_node {
-      Node { name mqtt_bridge_node}
-}}}

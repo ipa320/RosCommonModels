@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rqt_robot_monitor {
-    FromGitRepo "https://github.com/ros-visualization/rqt_robot_monitor.git" 
-    Artifact rqt_robot_monitor {
-      Node { name rqt_robot_monitor}
-}}}

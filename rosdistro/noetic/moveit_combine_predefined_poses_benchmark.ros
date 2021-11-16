@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage moveit_ros_benchmarks {
-    FromGitRepo "https://github.com/ros-planning/moveit.git" 
-    Artifact moveit_combine_predefined_poses_benchmark {
-      Node { name moveit_combine_predefined_poses_benchmark}
-}}}

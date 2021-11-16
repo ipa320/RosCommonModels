@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage cob_grasp_generation {
-    FromGitRepo "https://github.com/ipa320/cob_manipulation.git" 
-    Artifact query_grasps_server {
-      Node { name query_grasps_server}
-}}}
