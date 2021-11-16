@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage costmap_cspace {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact pointcloud2_to_map {
+      Node { name pointcloud2_to_map}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage planner_cspace {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact dummy_robot {
+      Node { name dummy_robot}
+}}}

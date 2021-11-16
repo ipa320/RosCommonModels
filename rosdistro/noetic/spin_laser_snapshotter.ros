@@ -8,10 +8,10 @@ PackageSet {
         Subscribers {
           Subscriber { name 'joint_states' message 'sensor_msgs.JointState'}}
         Parameters {
-          Parameter { name 'negative_direction' type Boolean },
-          Parameter { name 'motor_frame' type String value 'multisense/motor'},
-          Parameter { name 'num_skips' type Integer },
           Parameter { name 'tf_polling_rate' type Double value 30.0},
-          Parameter { name 'spindle_frame' type String value 'multisense/spindle'},
-          Parameter { name 'use_tf' type Boolean }}}
+          Parameter { name 'motor_frame' type String value 'multisense/motor'},
+          Parameter { name 'use_tf' type Boolean },
+          Parameter { name 'negative_direction' type Boolean },
+          Parameter { name 'num_skips' type Integer },
+          Parameter { name 'spindle_frame' type String value 'multisense/spindle'}}}
 }}}

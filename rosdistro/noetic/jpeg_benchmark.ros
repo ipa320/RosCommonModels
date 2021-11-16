@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rospilot {
+    FromGitRepo "https://github.com/rospilot/rospilot.git" 
+    Artifact jpeg_benchmark {
+      Node { name jpeg_benchmark}
+}}}

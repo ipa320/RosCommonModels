@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage velodyne_pointcloud {
+    FromGitRepo "https://github.com/ros-drivers/velodyne.git" 
+    Artifact transform_node {
+      Node { name transform_node}
+}}}

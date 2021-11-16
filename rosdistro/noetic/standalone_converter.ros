@@ -2,5 +2,19 @@ PackageSet {
   CatkinPackage costmap_converter {
     FromGitRepo "https://github.com/rst-tu-dortmund/costmap_converter.git" 
     Artifact standalone_converter {
-      Node { name standalone_converter}
+      Node { name standalone_converter
+        Publishers {
+          Publisher { name 'costmap_obstacles' message 'costmap_converter.ObstacleArrayMsg'},
+          Publisher { name 'costmap_polygon_markers' message 'visualization_msgs.Marker'}}
+        Subscribers {
+          Subscriber { name '/move_base/local_costmap/costmap' message 'nav_msgs.OccupancyGrid'},
+          Subscriber { name '/move_base/local_costmap/costmap_updates' message 'map_msgs.OccupancyGridUpdate'}}
+        Parameters {
+          Parameter { name 'polygon_marker_topic' type String value 'costmap_polygon_markers'},
+          Parameter { name 'odom_topic' type String value '/odom'},
+          Parameter { name 'costmap_update_topic' type String value '/move_base/local_costmap/costmap_updates'},
+          Parameter { name 'converter_plugin' type String value 'costmap_converter::CostmapToPolygonsDBSMCCH'},
+          Parameter { name 'occupied_min_value' type Integer },
+          Parameter { name 'obstacles_topic' type String value 'costmap_obstacles'},
+          Parameter { name 'costmap_topic' type String value '/move_base/local_costmap/costmap'}}}
 }}}

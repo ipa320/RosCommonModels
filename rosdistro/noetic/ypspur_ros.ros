@@ -4,9 +4,9 @@ PackageSet {
     Artifact ypspur_ros {
       Node { name ypspur_ros
         Publishers {
+          Publisher { name '?' message 'ypspur_ros.DigitalInput'},
           Publisher { name '?' message 'sensor_msgs.JointState'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
-          Publisher { name '?' message 'ypspur_ros.DigitalInput'},
           Publisher { name '?' message 'geometry_msgs.WrenchStamped'},
           Publisher { name '?' message 'std_msgs.Float32'},
           Publisher { name '?' message 'nav_msgs.Odometry'}}
@@ -14,11 +14,11 @@ PackageSet {
           Subscriber { name '?' message 'std_msgs.Float32'},
           Subscriber { name '?' message 'ros.NodeHandle'},
           Subscriber { name '?' message 'ros.NodeHandle'},
-          Subscriber { name '?' message 'ros.NodeHandle'},
           Subscriber { name '?' message 'ypspur_ros.DigitalOutput'},
           Subscriber { name '?' message 'std_msgs.Float32'},
           Subscriber { name '?' message 'ros.NodeHandle'},
           Subscriber { name '?' message 'std_msgs.Float32'},
+          Subscriber { name '?' message 'ros.NodeHandle'},
           Subscriber { name '?' message 'std_msgs.Float32'}}
         Parameters {
           Parameter { name 'port' type String value '/dev/ttyACM0'},

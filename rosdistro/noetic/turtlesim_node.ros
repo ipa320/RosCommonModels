@@ -1,0 +1,26 @@
+PackageSet {
+  CatkinPackage turtlesim {
+    FromGitRepo "https://github.com/ros/ros_tutorials.git" 
+    Artifact turtlesim_node {
+      Node { name turtlesim_node
+        ServiceServers {
+          ServiceServer { name 'kill' service 'turtlesim.Kill'},
+          ServiceServer { name 'teleport_relative' service 'turtlesim.TeleportRelative'},
+          ServiceServer { name 'teleport_absolute' service 'turtlesim.TeleportAbsolute'},
+          ServiceServer { name 'reset' service 'std_srvs.Empty'},
+          ServiceServer { name 'clear' service 'std_srvs.Empty'},
+          ServiceServer { name 'set_pen' service 'turtlesim.SetPen'},
+          ServiceServer { name 'spawn' service 'turtlesim.Spawn'}}
+        Publishers {
+          Publisher { name 'pose' message 'Pose'},
+          Publisher { name 'color_sensor' message 'Color'}}
+        Subscribers {
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'background_g' type Integer value 255},
+          Parameter { name 'background_r' type Integer value 255},
+          Parameter { name 'background_r' type Integer value 69},
+          Parameter { name 'background_b' type Integer value 255},
+          Parameter { name 'background_g' type Integer value 86},
+          Parameter { name 'background_b' type Integer value 255}}}
+}}}

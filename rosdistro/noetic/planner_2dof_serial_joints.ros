@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage planner_cspace {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact planner_2dof_serial_joints {
+      Node { name planner_2dof_serial_joints}
+}}}

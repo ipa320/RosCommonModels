@@ -1,10 +1,6 @@
 PackageSet {
-  CatkinPackage fmi_adapter {
-    FromGitRepo "https://github.com/boschresearch/fmi_adapter.git" 
+  CatkinPackage opw_kinematics {
+    FromGitRepo "https://github.com/Jmeyer1292/opw_kinematics.git" 
     Artifact node {
-      Node { name node
-        Parameters {
-          Parameter { name 'fmu_path' type String },
-          Parameter { name 'update_period' type Double },
-          Parameter { name 'step_size' type Double }}}
+      Node { name node}
 }}}

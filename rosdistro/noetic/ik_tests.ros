@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage trac_ik_examples {
+    FromGitRepo "https://bitbucket.org/traclabs/trac_ik.git" 
+    Artifact ik_tests {
+      Node { name ik_tests
+        Parameters {
+          Parameter { name 'chain_end' type String },
+          Parameter { name 'timeout' type Double value 0.005},
+          Parameter { name 'urdf_param' type String value '/robot_description'},
+          Parameter { name 'num_samples' type Integer value 1000},
+          Parameter { name 'chain_start' type String }}}
+}}}

@@ -1,8 +1,8 @@
 PackageSet {
-  CatkinPackage microstrain_inertial_examples {
-    FromGitRepo "https://github.com/LORD-MicroStrain/microstrain_inertial.git" 
+  CatkinPackage rospy_tutorials {
+    FromGitRepo "https://github.com/ros/ros_tutorials.git" 
     Artifact listener {
       Node { name listener
         Subscribers {
-          Subscriber { name '?' message 'sensor_msgs.Imu'}}}
+          Subscriber { name 'chatter' message 'std_msgs.String'}}}
 }}}

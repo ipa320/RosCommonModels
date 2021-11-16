@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage open_manipulator_p_gazebo {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/open_manipulator_p_simulations.git" 
+    Artifact omp_gripper_sub_publisher {
+      Node { name omp_gripper_sub_publisher}
+}}}

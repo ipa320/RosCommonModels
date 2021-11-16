@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pointgrey_camera_driver {
+    FromGitRepo "https://github.com/ros-drivers/pointgrey_camera_driver.git" 
+    Artifact camera_node {
+      Node { name camera_node}
+}}}

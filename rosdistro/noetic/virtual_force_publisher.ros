@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage virtual_force_publisher {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common.git" 
+    Artifact virtual_force_publisher {
+      Node { name virtual_force_publisher}
+}}}

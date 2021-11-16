@@ -1,0 +1,26 @@
+PackageSet {
+  CatkinPackage stage_ros {
+    FromGitRepo "https://github.com/ros-simulation/stage_ros.git" 
+    Artifact stageros {
+      Node { name stageros
+        ServiceServers {
+          ServiceServer { name 'reset_positions' service 'std_srvs.Empty'}}
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.Image'},
+          Publisher { name '?' message 'nav_msgs.Odometry'},
+          Publisher { name '?' message 'sensor_msgs.CameraInfo'},
+          Publisher { name '?' message 'sensor_msgs.CameraInfo'},
+          Publisher { name '?' message 'sensor_msgs.LaserScan'},
+          Publisher { name '?' message 'sensor_msgs.Image'},
+          Publisher { name '?' message 'sensor_msgs.Image'},
+          Publisher { name '?' message 'sensor_msgs.LaserScan'},
+          Publisher { name '?' message 'sensor_msgs.Image'},
+          Publisher { name '?' message 'nav_msgs.Odometry'},
+          Publisher { name '/clock' message 'rosgraph_msgs.Clock'}}
+        Subscribers {
+          Subscriber { name '?' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'base_watchdog_timeout' type Double },
+          Parameter { name '/use_sim_time' type Boolean },
+          Parameter { name 'is_depth_canonical' type Boolean }}}
+}}}

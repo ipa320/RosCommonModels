@@ -1,6 +1,15 @@
 PackageSet {
-  CatkinPackage industrial_robot_client {
-    FromGitRepo "https://github.com/ros-industrial/industrial_core.git" 
+  CatkinPackage joint_trajectory_action {
+    FromGitRepo "https://github.com/pr2/pr2_controllers.git" 
     Artifact joint_trajectory_action {
-      Node { name joint_trajectory_action}
+      Node { name joint_trajectory_action
+        Publishers {
+          Publisher { name 'command' message 'trajectory_msgs.JointTrajectory'}}
+        Subscribers {
+          Subscriber { name 'state' message 'pr2_controllers_msgs.JointTrajectoryControllerState'}}
+        Parameters {
+          Parameter { name '?' type Double value -1.0},
+          Parameter { name 'constraints/stopped_velocity_tolerance' type Double value 0.01},
+          Parameter { name 'constraints/goal_time' type Double },
+          Parameter { name '?' type Double value -1.0}}}
 }}}

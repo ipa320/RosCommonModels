@@ -2,5 +2,9 @@ PackageSet {
   CatkinPackage ros_babel_fish {
     FromGitRepo "https://github.com/StefanFabian/ros_babel_fish.git" 
     Artifact any_publisher {
-      Node { name any_publisher}
+      Node { name any_publisher
+        Publishers {
+          Publisher { name '?' message '?'},
+          Publisher { name '?' message '?'},
+          Publisher { name '?' message '?'}}}
 }}}

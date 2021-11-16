@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage remote_rosbag_record {
+    FromGitRepo "https://github.com/yoshito-n-students/remote_rosbag_record.git" 
+    Artifact joy_listener {
+      Node { name joy_listener
+        Subscribers {
+          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}
+        Parameters {
+          Parameter { name 'start_regex' type String },
+          Parameter { name 'stop_regex' type String }}}
+}}}

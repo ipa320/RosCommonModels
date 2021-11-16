@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage socketcan_bridge {
+    FromGitRepo "https://github.com/ros-industrial/ros_canopen.git" 
+    Artifact socketcan_to_topic_node {
+      Node { name socketcan_to_topic_node
+        Parameters {
+          Parameter { name 'can_device' type String value 'can0'}}}
+}}}

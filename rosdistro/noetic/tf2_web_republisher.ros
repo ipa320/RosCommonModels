@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage tf2_web_republisher {
+    FromGitRepo "https://github.com/RobotWebTools/tf2_web_republisher.git" 
+    Artifact tf2_web_republisher {
+      Node { name tf2_web_republisher
+        ServiceServers {
+          ServiceServer { name 'republish_tfs' service '?'}}
+        Publishers {
+          Publisher { name '?' message 'tf2_web_republisher.TFArray'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage joystick_interrupt {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact joystick_interrupt {
+      Node { name joystick_interrupt}
+}}}

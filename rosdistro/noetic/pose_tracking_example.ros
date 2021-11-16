@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage moveit_servo {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact pose_tracking_example {
+      Node { name pose_tracking_example
+        Publishers {
+          Publisher { name 'target_pose' message 'geometry_msgs.PoseStamped'}}
+        Subscribers {
+          Subscriber { name 'status' message 'std_msgs.Int8'}}}
+}}}

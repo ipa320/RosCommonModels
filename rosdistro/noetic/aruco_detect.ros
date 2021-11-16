@@ -10,8 +10,8 @@ PackageSet {
           Publisher { name 'fiducial_vertices' message 'fiducial_msgs.FiducialArray'},
           Publisher { name 'fiducial_transforms' message 'fiducial_msgs.FiducialTransformArray'}}
         Subscribers {
-          Subscriber { name 'ignore_fiducials' message 'std_msgs.String'},
           Subscriber { name 'camera_info' message 'sensor_msgs.CameraInfo'},
+          Subscriber { name 'ignore_fiducials' message 'std_msgs.String'},
           Subscriber { name 'fiducial_vertices' message '?'}}
         Parameters {
           Parameter { name 'publish_images' type Boolean },

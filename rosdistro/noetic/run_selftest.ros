@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage self_test {
+    FromGitRepo "https://github.com/ros/diagnostics.git" 
+    Artifact run_selftest {
+      Node { name run_selftest
+        ServiceClients {
+          ServiceClient { name 'self_test' service 'diagnostic_msgs.SelfTest'}}}
+}}}

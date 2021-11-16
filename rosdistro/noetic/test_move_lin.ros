@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_cartesian_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact test_move_lin {
+      Node { name test_move_lin}
+}}}

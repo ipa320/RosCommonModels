@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage multi_map_server {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common.git" 
+    Artifact multi_map_server {
+      Node { name multi_map_server}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rosbag {
+    FromGitRepo "https://github.com/ros/ros_comm.git" 
+    Artifact bag2png {
+      Node { name bag2png}
+}}}

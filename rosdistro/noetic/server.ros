@@ -1,0 +1,21 @@
+PackageSet {
+  CatkinPackage nav_grid_server {
+    FromGitRepo "https://github.com/locusrobotics/robot_navigation.git" 
+    Artifact server {
+      Node { name server
+        ServiceServers {
+          ServiceServer { name 'static_map' service 'nav_msgs.GetMap'}}
+        Publishers {
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'}}
+        Parameters {
+          Parameter { name 'mode' type String value 'trinary'},
+          Parameter { name 'free_thresh' type Double value 0.196},
+          Parameter { name 'occupied_thresh' type Double value 0.65},
+          Parameter { name 'resolution' type Double value 0.05},
+          Parameter { name 'origin_y' type Double },
+          Parameter { name 'occupancy_grid_topic' type String value 'map'},
+          Parameter { name 'origin_x' type Double },
+          Parameter { name 'negate' type Boolean },
+          Parameter { name 'nav_grid_topic' type String value 'static_map'},
+          Parameter { name 'frame_id' type String value 'map'}}}
+}}}

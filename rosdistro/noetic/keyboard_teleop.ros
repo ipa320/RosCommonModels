@@ -1,14 +1,10 @@
 PackageSet {
-  CatkinPackage webots_ros {
-    FromGitRepo "https://github.com/cyberbotics/webots_ros.git" 
+  CatkinPackage ros_control_boilerplate {
+    FromGitRepo "https://github.com/PickNikRobotics/ros_control_boilerplate.git" 
     Artifact keyboard_teleop {
       Node { name keyboard_teleop
-        ServiceClients {
-          ServiceClient { name '?' service 'webots_ros.set_float'},
-          ServiceClient { name '?' service 'webots_ros.set_int'},
-          ServiceClient { name '?' service 'webots_ros.set_float'},
-          ServiceClient { name '?' service 'webots_ros.set_int'}}
+        Publishers {
+          Publisher { name '/iiwa_7_r800/joints_position_controller/command' message 'std_msgs.Float64MultiArray'}}
         Subscribers {
-          Subscriber { name 'model_name' message 'std_msgs.String'},
-          Subscriber { name '?' message 'webots_ros.Int32Stamped'}}}
+          Subscriber { name '/iiwa_7_r800/joint_states' message 'sensor_msgs.JointState'}}}
 }}}

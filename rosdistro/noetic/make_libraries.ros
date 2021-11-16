@@ -1,5 +1,5 @@
 PackageSet {
-  CatkinPackage rosserial_chibios {
+  CatkinPackage rosserial_windows {
     FromGitRepo "https://github.com/ros-drivers/rosserial.git" 
     Artifact make_libraries {
       Node { name make_libraries}

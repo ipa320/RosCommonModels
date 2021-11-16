@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage posedetection_msgs {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common_msgs.git" 
+    Artifact feature0d_view {
+      Node { name feature0d_view
+        Subscribers {
+          Subscriber { name 'ImageFeature0D' message 'posedetection_msgs.ImageFeature0D'}}
+        Parameters {
+          Parameter { name 'autosize' type Boolean },
+          Parameter { name 'window_name' type String }}}
+}}}

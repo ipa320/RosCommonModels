@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ros_ign_image {
+    FromGitRepo "https://github.com/ignitionrobotics/ros_ign.git" 
+    Artifact image_bridge {
+      Node { name image_bridge}
+}}}

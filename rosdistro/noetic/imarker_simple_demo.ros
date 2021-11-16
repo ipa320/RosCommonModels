@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rviz_visual_tools {
+    FromGitRepo "https://github.com/PickNikRobotics/rviz_visual_tools.git" 
+    Artifact imarker_simple_demo {
+      Node { name imarker_simple_demo}
+}}}

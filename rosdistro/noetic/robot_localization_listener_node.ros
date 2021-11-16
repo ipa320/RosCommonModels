@@ -2,5 +2,7 @@ PackageSet {
   CatkinPackage robot_localization {
     FromGitRepo "https://github.com/cra-ros-pkg/robot_localization.git" 
     Artifact robot_localization_listener_node {
-      Node { name robot_localization_listener_node}
+      Node { name robot_localization_listener_node
+        ServiceServers {
+          ServiceServer { name 'get_state' service 'robot_localization.GetState'}}}
 }}}

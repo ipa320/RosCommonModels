@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage costmap_cspace {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact costmap_3d {
+      Node { name costmap_3d}
+}}}

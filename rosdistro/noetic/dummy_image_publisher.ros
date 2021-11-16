@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage swri_image_util {
+    FromGitRepo "https://github.com/swri-robotics/marti_common.git" 
+    Artifact dummy_image_publisher {
+      Node { name dummy_image_publisher}
+}}}

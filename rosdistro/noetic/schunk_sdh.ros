@@ -1,0 +1,42 @@
+PackageSet {
+  CatkinPackage schunk_sdh {
+    FromGitRepo "https://github.com/ipa320/schunk_modular_robotics.git" 
+    Artifact schunk_sdh {
+      Node { name schunk_sdh
+        ServiceServers {
+          ServiceServer { name 'set_operation_mode' service 'cob_srvs.SetString'},
+          ServiceServer { name 'motor_on' service 'std_srvs.Trigger'},
+          ServiceServer { name 'motor_off' service 'std_srvs.Trigger'},
+          ServiceServer { name 'shutdown' service 'std_srvs.Trigger'},
+          ServiceServer { name 'init' service 'std_srvs.Trigger'},
+          ServiceServer { name 'emergency_stop' service 'std_srvs.Trigger'},
+          ServiceServer { name 'stop' service 'std_srvs.Trigger'},
+          ServiceServer { name 'recover' service 'std_srvs.Trigger'}}
+        Publishers {
+          Publisher { name 'temperature' message 'schunk_sdh.TemperatureArray'},
+          Publisher { name 'tactile_data' message 'schunk_sdh.TactileSensor'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'},
+          Publisher { name 'pressure' message 'schunk_sdh.PressureArrayList'},
+          Publisher { name 'joint_trajectory_controller/state' message 'control_msgs.JointTrajectoryControllerState'}}
+        Subscribers {
+          Subscriber { name 'joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArrayPtr'}}
+        ActionClients {
+          ActionClient { name '?' action 'control_msgs.FollowJointTrajectoryAction'}}
+        Parameters {
+          Parameter { name 'dsadevicenum' type Integer },
+          Parameter { name 'sdhdevicestring' type String value '/dev/pcan0'},
+          Parameter { name 'frequency' type Double },
+          Parameter { name 'id_write' type Integer value 42},
+          Parameter { name 'sdhdevicetype' type String value 'PCAN'},
+          Parameter { name 'dsa_dbg_level' type Integer },
+          Parameter { name 'OperationMode' type String value 'position'},
+          Parameter { name 'dsadevicestring' type String },
+          Parameter { name 'sdhdevicenum' type Integer },
+          Parameter { name 'dsa_calib_voltage' type Double value 592.1},
+          Parameter { name 'dsa_calib_pressure' type Double value 0.000473},
+          Parameter { name 'baudrate' type Integer value 1000000},
+          Parameter { name 'id_read' type Integer value 43},
+          Parameter { name 'timeout' type Double },
+          Parameter { name 'dsa_sensitivity' type Double value 0.5}}}
+}}}

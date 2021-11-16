@@ -2,5 +2,15 @@ PackageSet {
   CatkinPackage cob_collision_monitor {
     FromGitRepo "https://github.com/ipa320/cob_manipulation.git" 
     Artifact cob_collision_monitor_node {
-      Node { name cob_collision_monitor_node}
+      Node { name cob_collision_monitor_node
+        Publishers {
+          Publisher { name 'state_is_valid' message 'std_msgs.Bool'}}
+        Parameters {
+          Parameter { name 'ground_link' type String value 'base_link'},
+          Parameter { name 'verbose' type Boolean },
+          Parameter { name 'state_update_frequency' type Double },
+          Parameter { name 'ground_size' type Double value 10.0},
+          Parameter { name 'start_scene_monitor' type Boolean value true},
+          Parameter { name 'start_world_geometry_monitor' type Boolean value true},
+          Parameter { name 'max_age' type Double value 1.0}}}
 }}}

@@ -7,13 +7,14 @@ PackageSet {
           ServiceServer { name 'clear_map' service 'std_srvs.Empty'},
           ServiceServer { name 'add_fiducial' service 'fiducial_slam.AddFiducial'}}
         Publishers {
-          Publisher { name '/fiducials' message 'visualization_msgs.Marker'},
-          Publisher { name '/fiducial_slam/camera_pose' message 'geometry_msgs.PoseWithCovarianceStamped'},
           Publisher { name '/fiducial_pose' message 'geometry_msgs.PoseWithCovarianceStamped'},
+          Publisher { name '/fiducial_slam/camera_pose' message 'geometry_msgs.PoseWithCovarianceStamped'},
+          Publisher { name '/fiducials' message 'visualization_msgs.Marker'},
           Publisher { name '/fiducial_map' message 'fiducial_msgs.FiducialMapEntryArray'}}
         Subscribers {
           Subscriber { name '/fiducial_transforms' message 'fiducial_msgs.FiducialTransformArray'}}
         Parameters {
+          Parameter { name 'use_fiducial_area_as_weight' type Boolean },
           Parameter { name 'initial_map_file' type String },
           Parameter { name 'multi_error_theshold' type Double value -1},
           Parameter { name 'base_frame' type String value 'base_footprint'},
@@ -21,7 +22,6 @@ PackageSet {
           Parameter { name 'odom_frame' type String value 'odom'},
           Parameter { name 'future_date_transforms' type Double value 0.1},
           Parameter { name 'read_only_map' type Boolean },
-          Parameter { name 'use_fiducial_area_as_weight' type Boolean },
           Parameter { name 'map_frame' type String value 'map'},
           Parameter { name 'publish_tf' type Boolean value true},
           Parameter { name 'pose_publish_rate' type Integer value 20},

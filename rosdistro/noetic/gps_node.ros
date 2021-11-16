@@ -4,13 +4,13 @@ PackageSet {
     Artifact gps_node {
       Node { name gps_node
         Publishers {
+          Publisher { name 'gps/vel' message 'geometry_msgs.TwistWithCovarianceStamped'},
           Publisher { name 'gps/odom' message 'nav_msgs.Odometry'},
           Publisher { name 'gps/gga' message 'std_msgs.String'},
-          Publisher { name 'imu/data' message 'sensor_msgs.Imu'},
-          Publisher { name 'gps/pos_type' message 'std_msgs.String'},
-          Publisher { name 'gps/vel' message 'geometry_msgs.TwistWithCovarianceStamped'},
           Publisher { name 'gps/nav_status' message 'std_msgs.String'},
           Publisher { name 'gps/time_ref' message 'sensor_msgs.TimeReference'},
+          Publisher { name 'imu/data' message 'sensor_msgs.Imu'},
+          Publisher { name 'gps/pos_type' message 'std_msgs.String'},
           Publisher { name 'gps/fix' message 'sensor_msgs.NavSatFix'}}
         Parameters {
           Parameter { name 'ip_address' type String },

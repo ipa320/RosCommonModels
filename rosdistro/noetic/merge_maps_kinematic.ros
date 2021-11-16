@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage slam_toolbox {
+    FromGitRepo "https://github.com/SteveMacenski/slam_toolbox.git" 
+    Artifact merge_maps_kinematic {
+      Node { name merge_maps_kinematic
+        ServiceServers {
+          ServiceServer { name 'add_submap' service 'slam_toolbox_msgs.AddSubmap'},
+          ServiceServer { name 'merge_submaps' service 'slam_toolbox_msgs.MergeMaps'}}
+        Publishers {
+          Publisher { name '/map' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name '/map_metadata' message 'nav_msgs.MapMetaData'},
+          Publisher { name '?' message 'nav_msgs.MapMetaData'},
+          Publisher { name '?' message 'nav_msgs.OccupancyGrid'}}
+        Parameters {
+          Parameter { name 'resolution' type Double value 0.05}}}
+}}}

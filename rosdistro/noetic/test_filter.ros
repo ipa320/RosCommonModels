@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage robot_self_filter {
+    FromGitRepo "https://github.com/pr2/robot_self_filter.git" 
+    Artifact test_filter {
+      Node { name test_filter}
+}}}

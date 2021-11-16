@@ -4,8 +4,8 @@ PackageSet {
     Artifact sound {
       Node { name sound
         ServiceServers {
-          ServiceServer { name 'say' service 'cob_srvs.SetString'},
           ServiceServer { name 'play' service 'cob_srvs.SetString'},
+          ServiceServer { name 'say' service 'cob_srvs.SetString'},
           ServiceServer { name 'stop' service 'std_srvs.Trigger'},
           ServiceServer { name 'mute' service 'std_srvs.Trigger'},
           ServiceServer { name 'unmute' service 'std_srvs.Trigger'}}
@@ -16,8 +16,8 @@ PackageSet {
           Subscriber { name 'say' message 'std_msgs.String'},
           Subscriber { name 'play' message 'std_msgs.String'}}
         ActionClients {
-          ActionClient { name '?' action 'cob_sound.PlayAction'},
-          ActionClient { name '?' action 'cob_sound.SayAction'}}
+          ActionClient { name '?' action 'cob_sound.SayAction'},
+          ActionClient { name '?' action 'cob_sound.PlayAction'}}
         Parameters {
           Parameter { name 'cepstral_voice' type String value 'David'},
           Parameter { name 'mode' type String value 'festival'},

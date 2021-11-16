@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage explore_lite {
+    FromGitRepo "https://github.com/hrnr/m-explore.git" 
+    Artifact explore {
+      Node { name explore
+        Subscribers {
+          Subscriber { name '?' message 'map_msgs.OccupancyGridUpdate'},
+          Subscriber { name '?' message 'nav_msgs.OccupancyGrid'}}
+        Parameters {
+          Parameter { name 'costmap_topic' type String value 'costmap'},
+          Parameter { name 'costmap_updates_topic' type String value 'costmap_updates'},
+          Parameter { name 'robot_base_frame' type String value 'base_link'},
+          Parameter { name 'transform_tolerance' type Double value 0.3}}}
+}}}

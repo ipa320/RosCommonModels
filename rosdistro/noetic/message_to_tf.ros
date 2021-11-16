@@ -21,11 +21,11 @@ PackageSet {
           Parameter { name 'publish_euler_topic' type String },
           Parameter { name 'publish_roll_pitch' type Boolean },
           Parameter { name 'topic' type String },
-          Parameter { name 'position_frame_id' type String },
           Parameter { name 'child_frame_id' type String },
           Parameter { name 'imu_topic' type String },
           Parameter { name 'stabilized_frame_id' type String },
           Parameter { name 'footprint_frame_id' type String },
           Parameter { name 'odometry_topic' type String },
-          Parameter { name 'publish_pose_topic' type String }}}
+          Parameter { name 'publish_pose_topic' type String },
+          Parameter { name 'position_frame_id' type String }}}
 }}}

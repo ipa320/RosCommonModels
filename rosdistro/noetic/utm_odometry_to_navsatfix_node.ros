@@ -2,5 +2,12 @@ PackageSet {
   CatkinPackage gps_common {
     FromGitRepo "https://github.com/swri-robotics/gps_umd.git" 
     Artifact utm_odometry_to_navsatfix_node {
-      Node { name utm_odometry_to_navsatfix_node}
+      Node { name utm_odometry_to_navsatfix_node
+        Publishers {
+          Publisher { name 'odom_fix' message 'sensor_msgs.NavSatFix'}}
+        Subscribers {
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}
+        Parameters {
+          Parameter { name 'frame_id' type String },
+          Parameter { name 'zone' type String }}}
 }}}

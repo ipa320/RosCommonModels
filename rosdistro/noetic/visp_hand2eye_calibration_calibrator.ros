@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage visp_hand2eye_calibration {
+    FromGitRepo "https://github.com/lagadic/vision_visp.git" 
+    Artifact visp_hand2eye_calibration_calibrator {
+      Node { name visp_hand2eye_calibration_calibrator
+        ServiceServers {
+          ServiceServer { name '?' service '?'},
+          ServiceServer { name '?' service '?'},
+          ServiceServer { name '?' service '?'}}
+        Subscribers {
+          Subscriber { name '?' message '?'},
+          Subscriber { name '?' message '?'}}}
+}}}

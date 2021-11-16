@@ -4,7 +4,7 @@ PackageSet {
     Artifact pong {
       Node { name pong
         Parameters {
-          Parameter { name 'size' type Integer value 100},
           Parameter { name 'updates' type Boolean value true},
-          Parameter { name 'radius' type Double value 4.0}}}
+          Parameter { name 'radius' type Double value 4.0},
+          Parameter { name 'size' type Integer value 100}}}
 }}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage turtle_tf {
+    FromGitRepo "https://github.com/ros/geometry_tutorials.git" 
+    Artifact fixed_tf_broadcaster {
+      Node { name fixed_tf_broadcaster
+        Publishers {
+          Publisher { name '/tf' message '?'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_object_detection_visualizer {
+    FromGitRepo "https://github.com/ipa320/cob_perception_common.git" 
+    Artifact object_detection_visualizer {
+      Node { name object_detection_visualizer}
+}}}

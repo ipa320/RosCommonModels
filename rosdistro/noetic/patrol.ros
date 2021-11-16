@@ -1,10 +1,6 @@
 PackageSet {
-  CatkinPackage rtabmap_ros {
-    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
+  CatkinPackage planner_cspace {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
     Artifact patrol {
-      Node { name patrol
-        Publishers {
-          Publisher { name 'rtabmap/goal_node' message 'rtabmap_ros.Goal'}}
-        Subscribers {
-          Subscriber { name 'rtabmap/goal_reached' message 'std_msgs.Bool'}}}
+      Node { name patrol}
 }}}

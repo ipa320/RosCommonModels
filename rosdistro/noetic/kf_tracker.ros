@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage multi_object_tracking_lidar {
+    FromGitRepo "https://github.com/praveen-palanisamy/multiple-object-tracking-lidar.git" 
+    Artifact kf_tracker {
+      Node { name kf_tracker}
+}}}

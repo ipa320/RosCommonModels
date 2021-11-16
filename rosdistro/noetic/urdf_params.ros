@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage calibration_estimation {
+    FromGitRepo "https://github.com/ros-perception/calibration.git" 
+    Artifact urdf_params {
+      Node { name urdf_params}
+}}}

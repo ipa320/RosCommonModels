@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pcl_ros {
+    FromGitRepo "https://github.com/ros-perception/perception_pcl.git" 
+    Artifact pcd_to_pointcloud {
+      Node { name pcd_to_pointcloud}
+}}}

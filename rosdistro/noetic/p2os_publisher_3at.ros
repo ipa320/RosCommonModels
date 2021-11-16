@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage p2os_urdf {
+    FromGitRepo "https://github.com/allenh1/p2os.git" 
+    Artifact p2os_publisher_3at {
+      Node { name p2os_publisher_3at
+        Publishers {
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'}}}
+}}}

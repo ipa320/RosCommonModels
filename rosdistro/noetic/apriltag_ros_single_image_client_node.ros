@@ -2,5 +2,9 @@ PackageSet {
   CatkinPackage apriltag_ros {
     FromGitRepo "https://github.com/AprilRobotics/apriltag_ros.git" 
     Artifact apriltag_ros_single_image_client_node {
-      Node { name apriltag_ros_single_image_client_node}
+      Node { name apriltag_ros_single_image_client_node
+        ServiceClients {
+          ServiceClient { name 'single_image_tag_detection' service 'apriltag_ros.AnalyzeSingleImage'}}
+        Parameters {
+          Parameter { name '?' type Double }}}
 }}}

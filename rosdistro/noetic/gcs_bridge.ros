@@ -2,5 +2,11 @@ PackageSet {
   CatkinPackage mavros {
     FromGitRepo "https://github.com/mavlink/mavros.git" 
     Artifact gcs_bridge {
-      Node { name gcs_bridge}
+      Node { name gcs_bridge
+        Publishers {
+          Publisher { name 'to' message 'mavros_msgs.Mavlink'}}
+        Subscribers {
+          Subscriber { name 'from' message 'mavros_msgs.Mavlink'}}
+        Parameters {
+          Parameter { name 'gcs_url' type String value 'udp://@'}}}
 }}}

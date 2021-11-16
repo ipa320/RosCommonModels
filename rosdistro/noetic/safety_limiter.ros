@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage safety_limiter {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact safety_limiter {
+      Node { name safety_limiter}
+}}}

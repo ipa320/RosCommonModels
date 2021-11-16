@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pr2_arm_kinematics {
+    FromGitRepo "https://github.com/pr2/pr2_kinematics.git" 
+    Artifact pr2_arm_kinematics_node {
+      Node { name pr2_arm_kinematics_node}
+}}}

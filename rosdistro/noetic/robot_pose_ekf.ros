@@ -2,5 +2,25 @@ PackageSet {
   CatkinPackage robot_pose_ekf {
     FromGitRepo "https://github.com/ros-planning/robot_pose_ekf.git" 
     Artifact robot_pose_ekf {
-      Node { name robot_pose_ekf}
+      Node { name robot_pose_ekf
+        ServiceServers {
+          ServiceServer { name 'get_status' service 'robot_pose_ekf.GetStatus'}}
+        Publishers {
+          Publisher { name 'odom_combined' message 'geometry_msgs.PoseWithCovarianceStamped'}}
+        Subscribers {
+          Subscriber { name 'gps' message 'estimation.Gps'},
+          Subscriber { name 'vo' message 'estimation.Vo'},
+          Subscriber { name 'imu_data' message 'estimation.Imu'},
+          Subscriber { name 'odom' message 'estimation.Odom'}}
+        Parameters {
+          Parameter { name 'sensor_timeout' type Double value 1.0},
+          Parameter { name 'base_footprint_frame' type String value 'base_footprint'},
+          Parameter { name 'odom_used' type Boolean value true},
+          Parameter { name 'debug' type Boolean },
+          Parameter { name 'vo_used' type Boolean value true},
+          Parameter { name 'freq' type Double value 30.0},
+          Parameter { name 'self_diagnose' type Boolean },
+          Parameter { name 'gps_used' type Boolean },
+          Parameter { name 'output_frame' type String value 'odom_combined'},
+          Parameter { name 'imu_used' type Boolean value true}}}
 }}}

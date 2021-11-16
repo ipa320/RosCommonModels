@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage apriltag {
+    FromGitRepo "https://github.com/aprilrobotics/apriltag.git" 
+    Artifact apriltag_demo {
+      Node { name apriltag_demo}
+}}}

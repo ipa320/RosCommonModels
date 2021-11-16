@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rosbag {
+    FromGitRepo "https://github.com/ros/ros_comm.git" 
+    Artifact topic_renamer {
+      Node { name topic_renamer}
+}}}

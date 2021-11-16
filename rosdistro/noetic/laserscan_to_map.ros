@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage costmap_cspace {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact laserscan_to_map {
+      Node { name laserscan_to_map}
+}}}

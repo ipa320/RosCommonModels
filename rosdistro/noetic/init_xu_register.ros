@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage opt_camera {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_3rdparty.git" 
+    Artifact init_xu_register {
+      Node { name init_xu_register}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage obj_to_pointcloud {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact obj_to_pointcloud {
+      Node { name obj_to_pointcloud}
+}}}

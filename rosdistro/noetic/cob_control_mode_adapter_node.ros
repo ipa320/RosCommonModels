@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_control_mode_adapter {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact cob_control_mode_adapter_node {
+      Node { name cob_control_mode_adapter_node}
+}}}

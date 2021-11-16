@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage teb_local_planner {
+    FromGitRepo "https://github.com/rst-tu-dortmund/teb_local_planner.git" 
+    Artifact test_optim_node {
+      Node { name test_optim_node
+        Subscribers {
+          Subscriber { name '/clicked_point' message 'geometry_msgs.PointStamped'},
+          Subscriber { name 'via_points' message 'nav_msgs.Path'},
+          Subscriber { name 'obstacles' message 'costmap_converter.ObstacleArrayMsg'},
+          Subscriber { name '?' message 'geometry_msgs.Twist'}}}
+}}}

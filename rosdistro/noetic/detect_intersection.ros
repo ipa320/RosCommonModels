@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage turtlebot3_autorace_detect {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_autorace_2020.git" 
+    Artifact detect_intersection {
+      Node { name detect_intersection
+        Publishers {
+          Publisher { name '/detect/intersection_stamped' message 'std_msgs.UInt8'},
+          Publisher { name '/control/moving/state' message 'turtlebot3_autorace_msgs.MovingParam'}}
+        Subscribers {
+          Subscriber { name '/detect/intersection_order' message 'std_msgs.UInt8'},
+          Subscriber { name '/detect/traffic_sign' message 'std_msgs.UInt8'},
+          Subscriber { name '/control/moving/complete' message 'std_msgs.UInt8'}}}
+}}}

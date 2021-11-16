@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ecl_devices {
+    FromGitRepo "https://github.com/stonier/ecl_core.git" 
+    Artifact demo_serial_timeouts {
+      Node { name demo_serial_timeouts}
+}}}

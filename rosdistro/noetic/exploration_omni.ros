@@ -4,9 +4,9 @@ PackageSet {
     Artifact exploration_omni {
       Node { name exploration_omni
         Publishers {
-          Publisher { name 'target' message 'visualization_msgs.MarkerArray'},
           Publisher { name 'trajectory' message 'nav_msgs.Path'},
           Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'},
+          Publisher { name 'target' message 'visualization_msgs.MarkerArray'},
           Publisher { name 'dwa_trajectory' message 'nav_msgs.Path'}}
         Parameters {
           Parameter { name 'acc_lim_x' type Double value 1.0},
@@ -21,8 +21,9 @@ PackageSet {
           Parameter { name 'expl_weight' type Double value 1.0},
           Parameter { name 'min_rot_vel' type Double value -1.0},
           Parameter { name 'search_radius' type Double value 1.0},
-          Parameter { name 'boundary_radius' type Double value 0.7},
+          Parameter { name 'base_frame_id' type String value 'base_link'},
           Parameter { name 'max_rot_vel' type Double value 1.0},
+          Parameter { name 'boundary_radius' type Double value 0.7},
           Parameter { name 'val_dt' type Double value 0.1},
           Parameter { name 'vth_samples' type Integer value 5},
           Parameter { name 'val_horizon' type Double value 0.5},
@@ -33,7 +34,6 @@ PackageSet {
           Parameter { name 'frequency' type Double value 10.0},
           Parameter { name 'dwa_horizon' type Double value 1.0},
           Parameter { name 'ec_dt' type Double value 0.1},
-          Parameter { name 'base_frame_id' type String value 'base_link'},
           Parameter { name 'vx_samples' type Integer value 3},
           Parameter { name 'batch_size' type Integer value 100},
           Parameter { name 'num_basis' type Integer value 10},

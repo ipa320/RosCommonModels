@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pr2_teleop {
+    FromGitRepo "https://github.com/pr2/pr2_apps.git" 
+    Artifact teleop_gripper {
+      Node { name teleop_gripper}
+}}}

@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage cob_bms_driver {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact bms_driver_node {
+      Node { name bms_driver_node
+        Parameters {
+          Parameter { name 'bms_id_to_poll' type Integer },
+          Parameter { name 'poll_frequency_hz' type Integer },
+          Parameter { name 'can_device' type String }}}
+}}}

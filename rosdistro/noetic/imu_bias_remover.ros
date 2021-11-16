@@ -2,5 +2,18 @@ PackageSet {
   CatkinPackage imu_processors {
     FromGitRepo "https://github.com/ros-perception/imu_pipeline.git" 
     Artifact imu_bias_remover {
-      Node { name imu_bias_remover}
+      Node { name imu_bias_remover
+        Publishers {
+          Publisher { name 'bias' message 'geometry_msgs.Vector3Stamped'},
+          Publisher { name 'imu_biased' message 'sensor_msgs.Imu'}}
+        Subscribers {
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'},
+          Subscriber { name 'imu' message 'sensor_msgs.Imu'},
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}
+        Parameters {
+          Parameter { name 'odom_threshold' type Double value 0.001},
+          Parameter { name 'use_odom' type Boolean },
+          Parameter { name 'use_cmd_vel' type Boolean },
+          Parameter { name 'cmd_vel_threshold' type Double value 0.001},
+          Parameter { name 'accumulator_alpha' type Double value 0.01}}}
 }}}

@@ -1,0 +1,20 @@
+PackageSet {
+  CatkinPackage stag_ros {
+    FromGitRepo "https://github.com/usrl-uofsc/stag_ros.git" 
+    Artifact stag_node {
+      Node { name stag_node
+        Publishers {
+          Publisher { name 'stag_ros/markers' message 'stag_ros.STagMarkerArray'},
+          Publisher { name 'stag_ros/bundles' message 'stag_ros.STagMarkerArray'}}
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.CameraInfo'}}
+        Parameters {
+          Parameter { name 'raw_image_topic' type String value 'image_raw'},
+          Parameter { name 'is_compressed' type Boolean },
+          Parameter { name 'camera_info_topic' type String value 'camera_info'},
+          Parameter { name 'libraryHD' type Integer value 15},
+          Parameter { name 'show_markers' type Boolean },
+          Parameter { name 'tag_tf_prefix' type String value 'STag_'},
+          Parameter { name 'publish_tf' type Boolean },
+          Parameter { name 'errorCorrection' type Integer value 7}}}
+}}}

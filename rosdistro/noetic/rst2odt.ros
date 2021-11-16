@@ -1,5 +1,5 @@
 PackageSet {
-  CatkinPackage lpg_planner {
+  CatkinPackage ffha {
     FromGitRepo "https://github.com/jsk-ros-pkg/jsk_3rdparty.git" 
     Artifact rst2odt {
       Node { name rst2odt}

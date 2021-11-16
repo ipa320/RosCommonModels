@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage ocean_battery_driver {
+    FromGitRepo "https://github.com/pr2/pr2_power_drivers.git" 
+    Artifact ocean_server {
+      Node { name ocean_server
+        Publishers {
+          Publisher { name 'battery/server2' message 'pr2_msgs.BatteryServer2'},
+          Publisher { name 'battery/server' message 'pr2_msgs.BatteryServer'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Parameters {
+          Parameter { name 'debug_level' type Integer },
+          Parameter { name '?' type String },
+          Parameter { name 'lag_timeout' type Integer value 60},
+          Parameter { name 'number_of_ports' type Integer },
+          Parameter { name 'stale_timeout' type Integer value 120}}}
+}}}

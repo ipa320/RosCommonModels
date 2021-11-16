@@ -4,7 +4,7 @@ PackageSet {
     Artifact generate_state_database {
       Node { name generate_state_database
         Parameters {
-          Parameter { name 'planning_group' type String },
           Parameter { name 'state_space_parameterization' type String value 'JointModel'},
+          Parameter { name 'planning_group' type String },
           Parameter { name 'output_folder' type String value 'constraint_approximations_database'}}}
 }}}

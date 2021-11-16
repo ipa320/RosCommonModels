@@ -1,8 +1,6 @@
 PackageSet {
-  CatkinPackage cob_light {
-    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+  CatkinPackage tf2_kdl {
+    FromGitRepo "https://github.com/ros/geometry2.git" 
     Artifact test {
-      Node { name test
-        Publishers {
-          Publisher { name 'light_controller/command' message 'std_msgs.ColorRGBA'}}}
+      Node { name test}
 }}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage fkie_message_filters {
+    FromGitRepo "https://github.com/fkie/message_filters.git" 
+    Artifact hello_example {
+      Node { name hello_example}
+}}}

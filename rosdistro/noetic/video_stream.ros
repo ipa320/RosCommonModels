@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage video_stream_opencv {
+    FromGitRepo "https://github.com/ros-drivers/video_stream_opencv.git" 
+    Artifact video_stream {
+      Node { name video_stream}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage track_odometry {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact track_odometry {
+      Node { name track_odometry}
+}}}

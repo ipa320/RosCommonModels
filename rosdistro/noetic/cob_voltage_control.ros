@@ -1,0 +1,21 @@
+PackageSet {
+  CatkinPackage cob_voltage_control {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact cob_voltage_control {
+      Node { name cob_voltage_control
+        Publishers {
+          Publisher { name 'em_stop_state' message 'cob_msgs.EmergencyStopState'},
+          Publisher { name 'voltage' message 'std_msgs.Float64'},
+          Publisher { name 'power_state' message 'cob_msgs.PowerState'},
+          Publisher { name 'current' message 'std_msgs.Float64'}}
+        Subscribers {
+          Subscriber { name 'input/digital_sensors' message 'cob_phidgets.DigitalSensor'},
+          Subscriber { name 'input/analog_sensors' message 'cob_phidgets.AnalogSensor'}}
+        Parameters {
+          Parameter { name 'battery_min_voltage' type Double value 44.0},
+          Parameter { name 'scanner_stop_dio_port' type Integer value 1},
+          Parameter { name 'voltage_analog_port' type Integer value 1},
+          Parameter { name 'battery_max_voltage' type Double value 48.5},
+          Parameter { name 'robot_max_voltage' type Double value 70.0},
+          Parameter { name 'em_stop_dio_port' type Integer }}}
+}}}

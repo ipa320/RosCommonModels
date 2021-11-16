@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_teleop {
+    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
+    Artifact cob_teleop {
+      Node { name cob_teleop}
+}}}

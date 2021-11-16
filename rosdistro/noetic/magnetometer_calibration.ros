@@ -2,5 +2,15 @@ PackageSet {
   CatkinPackage robot_calibration {
     FromGitRepo "https://github.com/mikeferguson/robot_calibration.git" 
     Artifact magnetometer_calibration {
-      Node { name magnetometer_calibration}
+      Node { name magnetometer_calibration
+        Publishers {
+          Publisher { name '/cmd_vel' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name '/imu/mag' message 'sensor_msgs.MagneticField'}}
+        Parameters {
+          Parameter { name 'rotation_velocity' type Double },
+          Parameter { name 'rotation_manual' type Boolean },
+          Parameter { name 'rotation_duration' type Double },
+          Parameter { name 'soft_iron' type Boolean },
+          Parameter { name 'bag_file_name' type String }}}
 }}}

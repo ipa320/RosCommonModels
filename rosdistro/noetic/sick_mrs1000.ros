@@ -6,10 +6,10 @@ PackageSet {
         Publishers {
           Publisher { name 'cloud' message 'sensor_msgs.PointCloud2'}}
         Parameters {
-          Parameter { name 'port' type String value '2112'},
-          Parameter { name 'timelimit' type Integer value 5},
           Parameter { name 'range_min' type Double },
+          Parameter { name 'port' type String value '2112'},
           Parameter { name 'time_increment' type Double },
+          Parameter { name 'timelimit' type Integer value 5},
           Parameter { name 'range_max' type Double },
           Parameter { name 'hostname' type String }}}
 }}}

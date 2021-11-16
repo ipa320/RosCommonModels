@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pr2_tilt_laser_interface {
+    FromGitRepo "https://github.com/pr2/pr2_common_actions.git" 
+    Artifact grab_result {
+      Node { name grab_result}
+}}}

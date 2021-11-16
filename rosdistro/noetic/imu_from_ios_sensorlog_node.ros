@@ -7,8 +7,8 @@ PackageSet {
           Publisher { name '?' message 'sensor_msgs.Imu'}}
         Parameters {
           Parameter { name 'maxline' type Integer value 4096},
-          Parameter { name 'topic' type String value 'imu_iphone'},
-          Parameter { name 'frame_id' type String value 'imu_iphone'},
           Parameter { name 'ip' type String value '192.168.0.60'},
-          Parameter { name 'port' type Integer value 12000}}}
+          Parameter { name 'frame_id' type String value 'imu_iphone'},
+          Parameter { name 'port' type Integer value 12000},
+          Parameter { name 'topic' type String value 'imu_iphone'}}}
 }}}

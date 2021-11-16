@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage checkerboard_detector {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_recognition.git" 
+    Artifact checkerboard_detector {
+      Node { name checkerboard_detector}
+}}}

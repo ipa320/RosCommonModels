@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage turtlebot3_fake {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git" 
+    Artifact turtlebot3_fake_node {
+      Node { name turtlebot3_fake_node}
+}}}

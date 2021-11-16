@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage moveit_ros_planning {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact moveit_evaluate_collision_checking_speed {
+      Node { name moveit_evaluate_collision_checking_speed}
+}}}

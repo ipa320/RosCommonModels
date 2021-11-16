@@ -1,6 +1,9 @@
 PackageSet {
-  CatkinPackage dlux_global_planner {
+  CatkinPackage dwb_local_planner {
     FromGitRepo "https://github.com/locusrobotics/robot_navigation.git" 
     Artifact planner_node {
-      Node { name planner_node}
+      Node { name planner_node
+        Parameters {
+          Parameter { name 'scale' type Double value 1.0},
+          Parameter { name 'local_costmap_class' type String value 'nav_core_adapter::CostmapAdapter'}}}
 }}}

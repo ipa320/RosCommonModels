@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage plotjuggler {
+    FromGitRepo "https://github.com/facontidavide/PlotJuggler.git" 
+    Artifact plotjuggler {
+      Node { name plotjuggler}
+}}}

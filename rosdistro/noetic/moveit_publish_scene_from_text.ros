@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage moveit_ros_planning {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact moveit_publish_scene_from_text {
+      Node { name moveit_publish_scene_from_text
+        Publishers {
+          Publisher { name '?' message 'moveit_msgs.PlanningSceneWorld'},
+          Publisher { name '?' message 'moveit_msgs.PlanningScene'}}}
+}}}

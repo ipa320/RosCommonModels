@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage mir_driver {
+    FromGitRepo "https://github.com/dfki-ric/mir_robot.git" 
+    Artifact rep117_filter {
+      Node { name rep117_filter
+        Publishers {
+          Publisher { name 'scan_filtered' message 'sensor_msgs.LaserScan'}}
+        Subscribers {
+          Subscriber { name 'scan' message 'sensor_msgs.LaserScan'}}}
+}}}

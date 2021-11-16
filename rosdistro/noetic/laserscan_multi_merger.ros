@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ira_laser_tools {
+    FromGitRepo "https://github.com/iralabdisco/ira_laser_tools.git" 
+    Artifact laserscan_multi_merger {
+      Node { name laserscan_multi_merger}
+}}}

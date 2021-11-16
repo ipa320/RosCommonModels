@@ -1,0 +1,19 @@
+PackageSet {
+  CatkinPackage fake_localization {
+    FromGitRepo "https://github.com/ros-planning/navigation.git" 
+    Artifact fake_localization {
+      Node { name fake_localization
+        Publishers {
+          Publisher { name 'amcl_pose' message 'geometry_msgs.PoseWithCovarianceStamped'},
+          Publisher { name 'particlecloud' message 'geometry_msgs.PoseArray'}}
+        Subscribers {
+          Subscriber { name 'base_pose_ground_truth' message 'nav_msgs.Odometry'}}
+        Parameters {
+          Parameter { name 'odom_frame_id' type String value 'odom'},
+          Parameter { name 'delta_y' type Double },
+          Parameter { name 'base_frame_id' type String value 'base_link'},
+          Parameter { name 'transform_tolerance' type Double value 0.1},
+          Parameter { name 'global_frame_id' type String value 'map'},
+          Parameter { name 'delta_x' type Double },
+          Parameter { name 'delta_yaw' type Double }}}
+}}}

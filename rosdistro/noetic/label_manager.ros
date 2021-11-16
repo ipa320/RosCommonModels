@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage label_manager {
+    FromGitRepo "https://github.com/uos/mesh_tools.git" 
+    Artifact label_manager {
+      Node { name label_manager}
+}}}

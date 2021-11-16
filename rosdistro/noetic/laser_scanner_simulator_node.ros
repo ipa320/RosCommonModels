@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage mobile_robot_simulator {
+    FromGitRepo "https://github.com/nobleo/mobile_robot_simulator.git" 
+    Artifact laser_scanner_simulator_node {
+      Node { name laser_scanner_simulator_node}
+}}}

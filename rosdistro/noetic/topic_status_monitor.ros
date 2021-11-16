@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_monitoring {
+    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
+    Artifact topic_status_monitor {
+      Node { name topic_status_monitor}
+}}}
