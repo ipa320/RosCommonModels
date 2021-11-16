@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage wifi_ddwrt {
+    FromGitRepo "https://github.com/ros-drivers/wifi_ddwrt.git" 
+    Artifact monitor {
+      Node { name monitor
+        Publishers {
+          Publisher { name 'visualization_marker' message '?'}}
+        Subscribers {
+          Subscriber { name 'ddwrt/accesspoint' message 'pr2_msgs.AccessPoint'}}}
+}}}

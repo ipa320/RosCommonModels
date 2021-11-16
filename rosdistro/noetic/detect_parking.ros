@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage turtlebot3_autorace_detect {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_autorace_2020.git" 
+    Artifact detect_parking {
+      Node { name detect_parking
+        Publishers {
+          Publisher { name '/control/moving/state' message 'turtlebot3_autorace_msgs.MovingParam'},
+          Publisher { name '/detect/parking_stamped' message 'std_msgs.UInt8'},
+          Publisher { name '/control/max_vel' message 'std_msgs.Float64'}}
+        Subscribers {
+          Subscriber { name '/detect/scan' message 'sensor_msgs.LaserScan'},
+          Subscriber { name '/control/moving/complete' message 'std_msgs.UInt8'},
+          Subscriber { name '/detect/parking_order' message 'std_msgs.UInt8'}}}
+}}}

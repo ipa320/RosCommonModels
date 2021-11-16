@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage moveit_ros_occupancy_map_monitor {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact moveit_ros_occupancy_map_server {
+      Node { name moveit_ros_occupancy_map_server
+        Publishers {
+          Publisher { name 'octomap_binary' message 'octomap_msgs.Octomap'}}}
+}}}

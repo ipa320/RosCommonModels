@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage mpc_local_planner {
+    FromGitRepo "https://github.com/rst-tu-dortmund/mpc_local_planner.git" 
+    Artifact plot_optimal_control_results {
+      Node { name plot_optimal_control_results
+        Subscribers {
+          Subscriber { name '?' message 'mpc_local_planner_msgs.OptimalControlResult'}}}
+}}}

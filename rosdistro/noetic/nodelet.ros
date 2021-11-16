@@ -4,6 +4,6 @@ PackageSet {
     Artifact nodelet {
       Node { name nodelet
         ServiceClients {
-          ServiceClient { name '?' service 'nodelet.NodeletUnload'},
-          ServiceClient { name '?' service 'nodelet.NodeletLoad'}}}
+          ServiceClient { name '?' service 'nodelet.NodeletLoad'},
+          ServiceClient { name '?' service 'nodelet.NodeletUnload'}}}
 }}}

@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage leo_bringup {
+    FromGitRepo "https://github.com/LeoRover/leo_robot.git" 
+    Artifact leo_system {
+      Node { name leo_system
+        Subscribers {
+          Subscriber { name 'system/reboot' message 'std_msgs.Empty'},
+          Subscriber { name 'system/shutdown' message 'std_msgs.Empty'}}}
+}}}

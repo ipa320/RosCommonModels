@@ -10,15 +10,15 @@ PackageSet {
         Subscribers {
           Subscriber { name 'people_tracker_measurements' message 'people_msgs.PositionMeasurement'}}
         Parameters {
-          Parameter { name 'reliability_threshold' type Double value 1.0},
-          Parameter { name 'sys_sigma_pos_y' type Double },
-          Parameter { name 'start_distance_min' type Double },
-          Parameter { name 'fixed_frame' type String value 'default'},
+          Parameter { name 'sys_sigma_pos_x' type Double },
           Parameter { name 'sys_sigma_pos_z' type Double },
+          Parameter { name 'sys_sigma_vel_z' type Double },
+          Parameter { name 'sys_sigma_pos_y' type Double },
+          Parameter { name 'reliability_threshold' type Double value 1.0},
+          Parameter { name 'fixed_frame' type String value 'default'},
+          Parameter { name 'freq' type Double value 1.0},
           Parameter { name 'sys_sigma_vel_x' type Double },
           Parameter { name 'follow_one_person' type Boolean },
-          Parameter { name 'sys_sigma_pos_x' type Double },
-          Parameter { name 'sys_sigma_vel_y' type Double },
-          Parameter { name 'sys_sigma_vel_z' type Double },
-          Parameter { name 'freq' type Double value 1.0}}}
+          Parameter { name 'start_distance_min' type Double },
+          Parameter { name 'sys_sigma_vel_y' type Double }}}
 }}}

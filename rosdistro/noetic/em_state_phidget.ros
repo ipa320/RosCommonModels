@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage cob_phidget_em_state {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact em_state_phidget {
+      Node { name em_state_phidget
+        Publishers {
+          Publisher { name 'em_stop_state' message 'cob_msgs.EmergencyStopState'}}
+        Subscribers {
+          Subscriber { name 'digital_sensors' message 'cob_phidgets.DigitalSensor'}}}
+}}}

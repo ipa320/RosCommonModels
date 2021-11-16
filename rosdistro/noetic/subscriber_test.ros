@@ -6,12 +6,12 @@ PackageSet {
         Publishers {
           Publisher { name 'visualization_marker' message 'visualization_msgs.Marker'}}
         Subscribers {
-          Subscriber { name 'hedge_quality' message 'marvelmind_nav.hedge_quality'},
+          Subscriber { name 'hedge_imu_fusion' message 'marvelmind_nav.hedge_imu_fusion'},
           Subscriber { name 'hedge_imu_raw' message 'marvelmind_nav.hedge_imu_raw'},
-          Subscriber { name 'hedge_telemetry' message 'marvelmind_nav.hedge_telemetry'},
-          Subscriber { name 'beacon_raw_distance' message 'marvelmind_nav.beacon_distance'},
           Subscriber { name 'beacons_pos_a' message 'marvelmind_nav.beacon_pos_a'},
+          Subscriber { name 'hedge_quality' message 'marvelmind_nav.hedge_quality'},
           Subscriber { name 'marvelmind_waypoint' message 'marvelmind_nav.marvelmind_waypoint'},
-          Subscriber { name 'hedge_pos_ang' message 'marvelmind_nav.hedge_pos_ang'},
-          Subscriber { name 'hedge_imu_fusion' message 'marvelmind_nav.hedge_imu_fusion'}}}
+          Subscriber { name 'beacon_raw_distance' message 'marvelmind_nav.beacon_distance'},
+          Subscriber { name 'hedge_telemetry' message 'marvelmind_nav.hedge_telemetry'},
+          Subscriber { name 'hedge_pos_ang' message 'marvelmind_nav.hedge_pos_ang'}}}
 }}}

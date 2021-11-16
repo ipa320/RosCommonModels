@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage joy_teleop {
+    FromGitRepo "https://github.com/ros-teleop/teleop_tools.git" 
+    Artifact incrementer_server {
+      Node { name incrementer_server
+        Publishers {
+          Publisher { name 'command' message 'trajectory_msgs.JointTrajectory'}}}
+}}}

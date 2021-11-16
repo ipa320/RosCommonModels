@@ -4,12 +4,12 @@ PackageSet {
     Artifact image_saver {
       Node { name image_saver
         ServiceServers {
-          ServiceServer { name 'end' service 'std_srvs.Trigger'},
+          ServiceServer { name 'save' service 'std_srvs.Empty'},
           ServiceServer { name 'start' service 'std_srvs.Trigger'},
-          ServiceServer { name 'save' service 'std_srvs.Empty'}}
+          ServiceServer { name 'end' service 'std_srvs.Trigger'}}
         Parameters {
           Parameter { name 'save_all_image' type Boolean value true},
-          Parameter { name 'request_start_end' type Boolean },
           Parameter { name 'encoding' type String value 'bgr8'},
+          Parameter { name 'request_start_end' type Boolean },
           Parameter { name 'filename_format' type String value 'left%04i.%s'}}}
 }}}

@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage turtlebot3_autorace_detect {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_autorace_2020.git" 
+    Artifact detect_traffic_light {
+      Node { name detect_traffic_light
+        Publishers {
+          Publisher { name '/control/traffic_light_start' message 'std_msgs.UInt8'},
+          Publisher { name '/detect/traffic_light_stamped' message 'std_msgs.UInt8'},
+          Publisher { name '/detect/traffic_light' message 'std_msgs.UInt8'}}
+        Subscribers {
+          Subscriber { name '/control/traffic_light_finished' message 'std_msgs.UInt8'}}}
+}}}

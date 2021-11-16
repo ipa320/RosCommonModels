@@ -4,9 +4,9 @@ PackageSet {
     Artifact phidget_sensors {
       Node { name phidget_sensors
         ServiceServers {
+          ServiceServer { name 'set_trigger_value' service '?'},
           ServiceServer { name 'set_data_rate' service '?'},
-          ServiceServer { name 'set_digital' service '?'},
-          ServiceServer { name 'set_trigger_value' service '?'}}
+          ServiceServer { name 'set_digital' service '?'}}
         Publishers {
           Publisher { name 'digital_sensors' message 'cob_phidgets.DigitalSensor'},
           Publisher { name 'analog_sensors' message 'cob_phidgets.AnalogSensor'}}

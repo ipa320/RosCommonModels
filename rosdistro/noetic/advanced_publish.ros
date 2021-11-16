@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rospy_tutorials {
+    FromGitRepo "https://github.com/ros/ros_tutorials.git" 
+    Artifact advanced_publish {
+      Node { name advanced_publish
+        Publishers {
+          Publisher { name '?' message 'std_msgs.ColorRGBA'}}}
+}}}

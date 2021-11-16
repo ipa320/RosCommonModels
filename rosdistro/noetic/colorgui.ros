@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage cmvision {
+    FromGitRepo "https://github.com/teshanshanuka/cmvision.git" 
+    Artifact colorgui {
+      Node { name colorgui
+        Subscribers {
+          Subscriber { name 'image' message 'sensor_msgs.Image'}}}
+}}}

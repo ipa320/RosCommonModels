@@ -4,8 +4,8 @@ PackageSet {
     Artifact stereo_view {
       Node { name stereo_view
         Parameters {
-          Parameter { name 'queue_size' type Integer value 5},
-          Parameter { name 'autosize' type Boolean value true},
           Parameter { name 'approximate_sync' type Boolean },
-          Parameter { name 'filename_format' type String value '%s%04i.jpg'}}}
+          Parameter { name 'autosize' type Boolean value true},
+          Parameter { name 'filename_format' type String value '%s%04i.jpg'},
+          Parameter { name 'queue_size' type Integer value 5}}}
 }}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage controller_manager {
+    FromGitRepo "https://github.com/ros-controls/ros_control.git" 
+    Artifact controller_manager {
+      Node { name controller_manager
+        Subscribers {
+          Subscriber { name '?' message '?'}}}
+}}}

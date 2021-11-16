@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage teleop_legged_robots {
+    FromGitRepo "https://github.com/SoftServeSAG/teleop_legged_robots.git" 
+    Artifact teleop_legged_robots {
+      Node { name teleop_legged_robots
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.Twist'},
+          Publisher { name '?' message 'geometry_msgs.Pose'}}}
+}}}

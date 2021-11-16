@@ -6,7 +6,7 @@ PackageSet {
         Subscribers {
           Subscriber { name '?' message 'sensor_msgs.TimeReference'}}
         Parameters {
+          Parameter { name 'fixup_date' type Boolean },
           Parameter { name 'time_ref_topic' type String value 'time_ref'},
-          Parameter { name 'shm_unit' type Integer value 2},
-          Parameter { name 'fixup_date' type Boolean }}}
+          Parameter { name 'shm_unit' type Integer value 2}}}
 }}}

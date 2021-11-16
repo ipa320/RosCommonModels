@@ -6,8 +6,8 @@ PackageSet {
         ServiceServers {
           ServiceServer { name 'run_permitted' service 'std_srvs.SetBool'}}
         ServiceClients {
-          ServiceClient { name 'driver/halt' service 'std_srvs.Trigger'},
           ServiceClient { name 'driver/recover' service 'std_srvs.Trigger'},
+          ServiceClient { name 'driver/halt' service 'std_srvs.Trigger'},
           ServiceClient { name 'manipulator_joint_trajectory_controller/unhold' service 'std_srvs.Trigger'},
           ServiceClient { name 'manipulator_joint_trajectory_controller/hold' service 'std_srvs.Trigger'}}}
 }}}

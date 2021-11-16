@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage cob_light {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact test_sprofi_part {
+      Node { name test_sprofi_part
+        Publishers {
+          Publisher { name 'light_controller/command_mode' message 'cob_light.LightMode'}}}
+}}}

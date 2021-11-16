@@ -4,8 +4,8 @@ PackageSet {
     Artifact modbus_adapter_brake_test_node {
       Node { name modbus_adapter_brake_test_node
         ServiceServers {
-          ServiceServer { name '/prbt/brake_test_required' service 'pilz_msgs.IsBrakeTestRequired'},
-          ServiceServer { name '/prbt/send_brake_test_result' service '?'}}
+          ServiceServer { name '/prbt/send_brake_test_result' service '?'},
+          ServiceServer { name '/prbt/brake_test_required' service 'pilz_msgs.IsBrakeTestRequired'}}
         ServiceClients {
           ServiceClient { name '/pilz_modbus_client_node/modbus_write' service 'WriteModbusRegister'}}}
 }}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage fetch_teleop {
+    FromGitRepo "https://github.com/fetchrobotics/fetch_ros.git" 
+    Artifact tuck_arm {
+      Node { name tuck_arm
+        Subscribers {
+          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}}
+}}}

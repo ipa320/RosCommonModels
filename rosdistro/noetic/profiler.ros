@@ -4,6 +4,6 @@ PackageSet {
     Artifact profiler {
       Node { name profiler
         Subscribers {
-          Subscriber { name '/profiler/data' message 'swri_profiler_msgs.ProfileDataArray'},
-          Subscriber { name '/profiler/index' message 'swri_profiler_msgs.ProfileIndexArray'}}}
+          Subscriber { name '/profiler/index' message 'swri_profiler_msgs.ProfileIndexArray'},
+          Subscriber { name '/profiler/data' message 'swri_profiler_msgs.ProfileDataArray'}}}
 }}}

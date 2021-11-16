@@ -4,12 +4,12 @@ PackageSet {
     Artifact sick_tim551_2050001 {
       Node { name sick_tim551_2050001
         Parameters {
-          Parameter { name 'range_max' type Double },
           Parameter { name 'range_min' type Double },
-          Parameter { name 'device_number' type Integer },
+          Parameter { name 'range_max' type Double },
           Parameter { name 'subscribe_datagram' type Boolean },
+          Parameter { name 'time_increment' type Double },
           Parameter { name 'hostname' type String },
           Parameter { name 'timelimit' type Integer value 5},
-          Parameter { name 'time_increment' type Double },
-          Parameter { name 'port' type String value '2112'}}}
+          Parameter { name 'port' type String value '2112'},
+          Parameter { name 'device_number' type Integer }}}
 }}}

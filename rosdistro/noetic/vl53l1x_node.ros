@@ -7,16 +7,16 @@ PackageSet {
           Publisher { name 'range' message 'sensor_msgs.Range'},
           Publisher { name 'data' message 'vl53l1x.MeasurementData'}}
         Parameters {
-          Parameter { name 'i2c_address' type Integer value 41},
-          Parameter { name 'i2c_bus' type Integer value 1},
-          Parameter { name 'mode' type Integer value 3},
-          Parameter { name 'max_range' type <class 'float value 4.0},
-          Parameter { name 'max_sigma' type Double },
-          Parameter { name 'min_range' type <class 'float },
-          Parameter { name 'min_signal' type Double },
-          Parameter { name 'timing_budget' type Double value 0.1},
           Parameter { name 'offset' type Double },
           Parameter { name 'poll_rate' type Double value 100.0},
-          Parameter { name 'ignore_range_status' type Boolean },
-          Parameter { name 'field_of_view' type <class 'float value 0.471239}}}
+          Parameter { name 'field_of_view' type Double value 0.471239},
+          Parameter { name 'max_range' type Double value 4.0},
+          Parameter { name 'i2c_bus' type Integer value 1},
+          Parameter { name 'min_range' type Double },
+          Parameter { name 'i2c_address' type Integer value 41},
+          Parameter { name 'min_signal' type Double },
+          Parameter { name 'timing_budget' type Double value 0.1},
+          Parameter { name 'mode' type Integer value 3},
+          Parameter { name 'max_sigma' type Double },
+          Parameter { name 'ignore_range_status' type Boolean }}}
 }}}

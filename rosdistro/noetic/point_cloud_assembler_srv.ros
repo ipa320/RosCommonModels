@@ -5,8 +5,8 @@ PackageSet {
       Node { name point_cloud_assembler_srv
         Parameters {
           Parameter { name 'tf_tolerance_secs' type Double },
+          Parameter { name 'downsample_factor' type Integer value 1},
           Parameter { name 'fixed_frame' type String value 'ERROR_NO_NAME'},
           Parameter { name 'max_scans' type Integer value 400},
-          Parameter { name 'tf_cache_time_secs' type Double value 10.0},
-          Parameter { name 'downsample_factor' type Integer value 1}}}
+          Parameter { name 'tf_cache_time_secs' type Double value 10.0}}}
 }}}

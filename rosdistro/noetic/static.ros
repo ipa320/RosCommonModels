@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage people_velocity_tracker {
+    FromGitRepo "https://github.com/wg-perception/people.git" 
+    Artifact static {
+      Node { name static
+        Publishers {
+          Publisher { name '/people' message 'people_msgs.People'}}}
+}}}

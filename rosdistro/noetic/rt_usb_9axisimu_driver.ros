@@ -5,6 +5,6 @@ PackageSet {
       Node { name rt_usb_9axisimu_driver
         Publishers {
           Publisher { name 'imu/temperature' message 'std_msgs.Float64'},
-          Publisher { name 'imu/mag' message 'sensor_msgs.MagneticField'},
-          Publisher { name 'imu/data_raw' message 'sensor_msgs.Imu'}}}
+          Publisher { name 'imu/data_raw' message 'sensor_msgs.Imu'},
+          Publisher { name 'imu/mag' message 'sensor_msgs.MagneticField'}}}
 }}}

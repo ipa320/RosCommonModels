@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage pincher_arm_bringup {
+    FromGitRepo "https://github.com/fictionlab/pincher_arm.git" 
+    Artifact fake_joint_pub {
+      Node { name fake_joint_pub
+        Publishers {
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'}}}
+}}}

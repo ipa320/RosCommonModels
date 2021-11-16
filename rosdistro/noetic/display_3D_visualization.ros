@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage razor_imu_9dof {
+    FromGitRepo "https://github.com/ENSTABretagneRobotics/razor_imu_9dof.git" 
+    Artifact display_3D_visualization {
+      Node { name display_3D_visualization
+        Subscribers {
+          Subscriber { name 'imu' message 'sensor_msgs.Imu'}}}
+}}}

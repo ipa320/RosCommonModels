@@ -6,6 +6,6 @@ PackageSet {
         Subscribers {
           Subscriber { name 'joy' message 'sensor_msgs.Joy'}}
         Parameters {
-          Parameter { name 'stop_regex' type String },
-          Parameter { name 'start_regex' type String }}}
+          Parameter { name 'start_regex' type String },
+          Parameter { name 'stop_regex' type String }}}
 }}}

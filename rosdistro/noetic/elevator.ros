@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage cob_gazebo_worlds {
+    FromGitRepo "https://github.com/ipa320/cob_simulation.git" 
+    Artifact elevator {
+      Node { name elevator
+        Publishers {
+          Publisher { name '?' message 'std_msgs.Float64'}}
+        Subscribers {
+          Subscriber { name '/elevator_button1_bumper' message 'gazebo_msgs.ContactsState'}}}
+}}}

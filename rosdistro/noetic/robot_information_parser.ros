@@ -5,8 +5,8 @@ PackageSet {
       Node { name robot_information_parser
         ServiceClients {
           ServiceClient { name '?' service 'webots_ros.get_string'},
-          ServiceClient { name '?' service 'webots_ros.get_int'},
-          ServiceClient { name '?' service 'webots_ros.robot_get_device_list'}}
+          ServiceClient { name '?' service 'webots_ros.robot_get_device_list'},
+          ServiceClient { name '?' service 'webots_ros.get_int'}}
         Subscribers {
           Subscriber { name 'model_name' message 'std_msgs.String'}}}
 }}}

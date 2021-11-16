@@ -4,10 +4,10 @@ PackageSet {
     Artifact spacenav_node {
       Node { name spacenav_node
         Publishers {
-          Publisher { name 'spacenav/twist' message 'geometry_msgs.Twist'},
           Publisher { name 'spacenav/offset' message 'geometry_msgs.Vector3'},
-          Publisher { name 'spacenav/rot_offset' message 'geometry_msgs.Vector3'},
-          Publisher { name 'spacenav/joy' message 'sensor_msgs.Joy'}}
+          Publisher { name 'spacenav/joy' message 'sensor_msgs.Joy'},
+          Publisher { name 'spacenav/twist' message 'geometry_msgs.Twist'},
+          Publisher { name 'spacenav/rot_offset' message 'geometry_msgs.Vector3'}}
         Parameters {
           Parameter { name 'full_scale' type Double value 512}}}
 }}}

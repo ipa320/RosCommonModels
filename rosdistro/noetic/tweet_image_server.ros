@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rostwitter {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_3rdparty.git" 
+    Artifact tweet_image_server {
+      Node { name tweet_image_server
+        Subscribers {
+          Subscriber { name 'tweet' message 'std_msgs.String'}}}
+}}}

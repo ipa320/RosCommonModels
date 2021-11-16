@@ -5,11 +5,11 @@ PackageSet {
       Node { name mocap_node
         Publishers {
           Publisher { name '?' message 'nav_msgs.Odometry'},
-          Publisher { name '?' message 'geometry_msgs.Pose2D'},
-          Publisher { name '?' message 'geometry_msgs.PoseStamped'}}
+          Publisher { name '?' message 'geometry_msgs.PoseStamped'},
+          Publisher { name '?' message 'geometry_msgs.Pose2D'}}
         Parameters {
-          Parameter { name 'optitrack_config/command_port' type Integer },
-          Parameter { name 'optitrack_config/enable_optitrack' type Boolean },
           Parameter { name 'optitrack_config/data_port' type Integer },
-          Parameter { name 'optitrack_config/multicast_address' type String }}}
+          Parameter { name 'optitrack_config/multicast_address' type String },
+          Parameter { name 'optitrack_config/enable_optitrack' type Boolean },
+          Parameter { name 'optitrack_config/command_port' type Integer }}}
 }}}
