@@ -2,5 +2,9 @@ PackageSet {
   CatkinPackage turtle_tf2 {
     FromGitRepo "https://github.com/ros/geometry_tutorials.git" 
     Artifact turtle_tf2_listener {
-      Node { name turtle_tf2_listener}
+      Node { name turtle_tf2_listener
+        ServiceClients {
+          ServiceClient { name 'spawn' service 'turtlesim.Spawn'}}
+        Publishers {
+          Publisher { name 'turtle2/cmd_vel' message 'geometry_msgs.Twist'}}}
 }}}

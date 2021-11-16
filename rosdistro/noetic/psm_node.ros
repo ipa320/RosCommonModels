@@ -2,5 +2,21 @@ PackageSet {
   CatkinPackage polar_scan_matcher {
     FromGitRepo "https://github.com/ccny-ros-pkg/scan_tools.git" 
     Artifact psm_node {
-      Node { name psm_node}
+      Node { name psm_node
+        Publishers {
+          Publisher { name 'pose2D' message 'geometry_msgs.Pose2D'}}
+        Subscribers {
+          Subscriber { name 'imu' message 'sensor_msgs.Imu'},
+          Subscriber { name 'scan' message 'sensor_msgs.LaserScan'}}
+        Parameters {
+          Parameter { name 'odometry_type' type String },
+          Parameter { name 'publish_tf' type Boolean },
+          Parameter { name 'search_window' type Integer },
+          Parameter { name 'world_frame' type String },
+          Parameter { name 'stop_condition' type Double },
+          Parameter { name 'base_frame' type String },
+          Parameter { name 'publish_pose' type Boolean },
+          Parameter { name 'min_valid_points' type Integer },
+          Parameter { name 'max_iterations' type Integer },
+          Parameter { name 'max_error' type Double }}}
 }}}

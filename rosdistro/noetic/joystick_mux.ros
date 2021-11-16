@@ -2,5 +2,16 @@ PackageSet {
   CatkinPackage joystick_interrupt {
     FromGitRepo "https://github.com/at-wat/neonavigation.git" 
     Artifact joystick_mux {
-      Node { name joystick_mux}
+      Node { name joystick_mux
+        Publishers {
+          Publisher { name '?' message '?'},
+          Publisher { name '?' message '?'}}
+        Subscribers {
+          Subscriber { name '?' message 'topic_tools.ShapeShifter'},
+          Subscriber { name '?' message 'topic_tools.ShapeShifter'},
+          Subscriber { name 'joy' message '?'}}
+        Parameters {
+          Parameter { name 'neonavigation_compatible' type Integer },
+          Parameter { name 'timeout' type Double value 0.5},
+          Parameter { name 'interrupt_button' type Integer value 5}}}
 }}}

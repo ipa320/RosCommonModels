@@ -2,5 +2,23 @@ PackageSet {
   CatkinPackage trajectory_tracker {
     FromGitRepo "https://github.com/at-wat/neonavigation.git" 
     Artifact trajectory_tracker {
-      Node { name trajectory_tracker}
+      Node { name trajectory_tracker
+        Publishers {
+          Publisher { name 'tracking' message 'geometry_msgs.PoseStamped'},
+          Publisher { name 'status' message 'trajectory_tracker_msgs.TrajectoryTrackerStatus'},
+          Publisher { name '?' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name '?' message 'nav_msgs.Path'},
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'},
+          Subscriber { name 'path_velocity' message 'trajectory_tracker_msgs.PathWithVelocity'},
+          Subscriber { name '?' message 'ros.NodeHandle'}}
+        Parameters {
+          Parameter { name 'use_odom' type Boolean },
+          Parameter { name 'hz' type Double value 50.0},
+          Parameter { name 'frame_robot' type String value 'base_link'},
+          Parameter { name 'predict_odom' type Boolean value true},
+          Parameter { name 'frame_odom' type String value 'odom'},
+          Parameter { name 'max_dt' type Double value 0.1},
+          Parameter { name 'neonavigation_compatible' type Integer },
+          Parameter { name 'odom_timeout_sec' type Double value 0.1}}}
 }}}

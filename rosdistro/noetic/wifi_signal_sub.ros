@@ -2,5 +2,14 @@ PackageSet {
   CatkinPackage rtabmap_ros {
     FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
     Artifact wifi_signal_sub {
-      Node { name wifi_signal_sub}
+      Node { name wifi_signal_sub
+        Publishers {
+          Publisher { name 'wifi_signals' message 'sensor_msgs.PointCloud2'}}
+        Subscribers {
+          Subscriber { name '/rtabmap/mapData' message 'rtabmap_ros.MapData'}}
+        Parameters {
+          Parameter { name 'min' type Integer value -100},
+          Parameter { name 'auto' type Boolean },
+          Parameter { name 'max' type Integer value -50},
+          Parameter { name 'hue_symbol' type Boolean }}}
 }}}

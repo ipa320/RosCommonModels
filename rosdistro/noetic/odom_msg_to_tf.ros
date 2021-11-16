@@ -2,5 +2,10 @@ PackageSet {
   CatkinPackage rtabmap_ros {
     FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
     Artifact odom_msg_to_tf {
-      Node { name odom_msg_to_tf}
+      Node { name odom_msg_to_tf
+        Subscribers {
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}
+        Parameters {
+          Parameter { name 'frame_id' type String },
+          Parameter { name 'odom_frame_id' type String }}}
 }}}

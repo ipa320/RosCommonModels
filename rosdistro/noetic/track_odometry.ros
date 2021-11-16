@@ -2,5 +2,28 @@ PackageSet {
   CatkinPackage track_odometry {
     FromGitRepo "https://github.com/at-wat/neonavigation.git" 
     Artifact track_odometry {
-      Node { name track_odometry}
+      Node { name track_odometry
+        Publishers {
+          Publisher { name 'odom' message 'nav_msgs.Odometry'}}
+        Subscribers {
+          Subscriber { name '?' message 'ros.NodeHandle'},
+          Subscriber { name '?' message 'ros.NodeHandle'}}
+        Parameters {
+          Parameter { name 'sigma_predict' type Double value 0.5},
+          Parameter { name 'sync_window' type Integer value 50},
+          Parameter { name 'z_filter_timeconst' type Double value -1.0},
+          Parameter { name 'neonavigation_compatible' type Integer },
+          Parameter { name 'base_link_id' type String value 'base_link'},
+          Parameter { name 'predict_filter_tc' type Double value 1.0},
+          Parameter { name 'use_kf' type Boolean value true},
+          Parameter { name 'sigma_odom' type Double value 0.005},
+          Parameter { name 'z_filter' type Double },
+          Parameter { name 'odom_id' type String value 'odom'},
+          Parameter { name 'without_odom' type Boolean },
+          Parameter { name 'debug' type Boolean },
+          Parameter { name 'base_link_id' type String },
+          Parameter { name 'enable_negative_slip' type Boolean },
+          Parameter { name 'publish_tf' type Boolean value true},
+          Parameter { name 'tf_tolerance' type Double value 0.01},
+          Parameter { name 'enable_tcp_no_delay' type Boolean value true}}}
 }}}

@@ -11,8 +11,8 @@ do
   if(( ${number_of_lines%% *} > 5 ))
     then
       ((count_success=count_success+1))
-  else
-    rm $f
+  #else
+    #rm $f
   fi
 done
 

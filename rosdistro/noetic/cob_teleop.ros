@@ -2,5 +2,42 @@ PackageSet {
   CatkinPackage cob_teleop {
     FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
     Artifact cob_teleop {
-      Node { name cob_teleop}
+      Node { name cob_teleop
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.Twist'},
+          Publisher { name '?' message 'std_msgs.Float64MultiArray'},
+          Publisher { name '?' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name '/joy' message 'sensor_msgs.Joy'}}
+        Parameters {
+          Parameter { name 'right_indicator_button' type Integer value 9},
+          Parameter { name 'dock_action_name' type String value '/docker_control/dock'},
+          Parameter { name 'enable_sound' type Boolean },
+          Parameter { name 'axis_vz' type Integer value 17},
+          Parameter { name 'init_button' type Integer value 3},
+          Parameter { name '?' type Integer },
+          Parameter { name '?' type Integer },
+          Parameter { name 'undock_action_name' type String value '/docker_control/undock'},
+          Parameter { name 'up_down_button' type Integer value 4},
+          Parameter { name 'axis_yaw' type Integer value 19},
+          Parameter { name 'axis_pitch' type Integer value 19},
+          Parameter { name 'right_left_button' type Integer value 5},
+          Parameter { name 'mode_switch_button' type Integer },
+          Parameter { name 'apply_ramp' type Boolean value true},
+          Parameter { name 'run_button' type Integer value 9},
+          Parameter { name 'left_indicator_button' type Integer value 8},
+          Parameter { name 'axis_vy' type Integer value 16},
+          Parameter { name 'enable_light' type Boolean },
+          Parameter { name 'publish_freq' type Double value 30.0},
+          Parameter { name 'safety_button' type Integer value 10},
+          Parameter { name 'deadman_button' type Integer value 11},
+          Parameter { name 'undock_button' type Integer value 1},
+          Parameter { name 'light_action_name' type String value 'set_light'},
+          Parameter { name 'joy_num_modes' type Integer value 2},
+          Parameter { name 'axis_roll' type Integer value 16},
+          Parameter { name 'run_factor' type Double value 1.5},
+          Parameter { name 'axis_vx' type Integer value 17},
+          Parameter { name '?' type Integer },
+          Parameter { name 'dock_button' type Integer value 3},
+          Parameter { name 'sound_action_name' type String value '/sound/say'}}}
 }}}

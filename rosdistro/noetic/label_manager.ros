@@ -2,5 +2,16 @@ PackageSet {
   CatkinPackage label_manager {
     FromGitRepo "https://github.com/uos/mesh_tools.git" 
     Artifact label_manager {
-      Node { name label_manager}
+      Node { name label_manager
+        ServiceServers {
+          ServiceServer { name 'get_label_groups' service 'label_manager.GetLabelGroups'},
+          ServiceServer { name 'get_labeled_clusters' service 'mesh_msgs.GetLabeledClusters'},
+          ServiceServer { name 'get_labeled_cluster_group' service 'label_manager.GetLabeledClusterGroup'},
+          ServiceServer { name 'delete_label' service 'label_manager.DeleteLabel'}}
+        Publishers {
+          Publisher { name 'new_cluster_label' message 'mesh_msgs.MeshFaceCluster'}}
+        Subscribers {
+          Subscriber { name 'cluster_label' message 'mesh_msgs.MeshFaceClusterStamped'}}
+        Parameters {
+          Parameter { name 'folder_path' type String }}}
 }}}

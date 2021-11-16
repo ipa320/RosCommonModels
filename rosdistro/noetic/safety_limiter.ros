@@ -2,5 +2,23 @@ PackageSet {
   CatkinPackage safety_limiter {
     FromGitRepo "https://github.com/at-wat/neonavigation.git" 
     Artifact safety_limiter {
-      Node { name safety_limiter}
+      Node { name safety_limiter
+        Publishers {
+          Publisher { name 'collision' message 'sensor_msgs.PointCloud'},
+          Publisher { name '?' message 'geometry_msgs.Twist'},
+          Publisher { name 'status' message 'safety_limiter_msgs.SafetyLimiterStatus'}}
+        Subscribers {
+          Subscriber { name '?' message 'ros.NodeHandle'},
+          Subscriber { name '?' message 'ros.NodeHandle'},
+          Subscriber { name '?' message 'ros.NodeHandle'},
+          Subscriber { name '?' message 'sensor_msgs.PointCloud2'},
+          Subscriber { name '?' message 'ros.NodeHandle'}}
+        Parameters {
+          Parameter { name 'max_linear_vel' type Double },
+          Parameter { name 'max_angular_vel' type Double },
+          Parameter { name 'neonavigation_compatible' type Integer },
+          Parameter { name 'fixed_frame' type String value 'odom'},
+          Parameter { name 'base_frame' type String value 'base_link'},
+          Parameter { name 'watchdog_interval' type Double },
+          Parameter { name 'num_input_clouds' type Integer value 1}}}
 }}}

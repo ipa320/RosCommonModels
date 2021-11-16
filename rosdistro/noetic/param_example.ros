@@ -2,5 +2,16 @@ PackageSet {
   CatkinPackage swri_roscpp {
     FromGitRepo "https://github.com/swri-robotics/marti_common.git" 
     Artifact param_example {
-      Node { name param_example}
+      Node { name param_example
+        Parameters {
+          Parameter { name '?' type String },
+          Parameter { name '?' type Double },
+          Parameter { name '?' type Double },
+          Parameter { name '?' type Boolean },
+          Parameter { name 'used_dbl_var_1' type Double },
+          Parameter { name 'used_str_var_1' type String },
+          Parameter { name 'used_int_var_1' type Integer },
+          Parameter { name 'used_bool_var_1' type Boolean },
+          Parameter { name '?' type Integer },
+          Parameter { name '?' type Double }}}
 }}}

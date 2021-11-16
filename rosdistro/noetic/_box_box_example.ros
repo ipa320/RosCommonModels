@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage tesseract_collision {
+    FromGitRepo "https://github.com/ros-industrial-consortium/tesseract.git" 
+    Artifact _box_box_example {
+      Node { name _box_box_example}
+}}}

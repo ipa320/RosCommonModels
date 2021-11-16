@@ -2,5 +2,9 @@ PackageSet {
   CatkinPackage velodyne_pointcloud {
     FromGitRepo "https://github.com/ros-drivers/velodyne.git" 
     Artifact transform_node {
-      Node { name transform_node}
+      Node { name transform_node
+        Publishers {
+          Publisher { name 'velodyne_points' message 'sensor_msgs.PointCloud2'}}
+        Subscribers {
+          Subscriber { name 'velodyne_packets' message 'velodyne_msgs.VelodyneScan'}}}
 }}}

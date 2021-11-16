@@ -2,5 +2,7 @@ PackageSet {
   CatkinPackage octomap_server {
     FromGitRepo "https://github.com/OctoMap/octomap_mapping.git" 
     Artifact octomap_server_node {
-      Node { name octomap_server_node}
+      Node { name octomap_server_node
+        Parameters {
+          Parameter { name 'map_file' type String }}}
 }}}

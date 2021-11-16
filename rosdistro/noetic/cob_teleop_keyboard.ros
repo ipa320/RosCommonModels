@@ -2,5 +2,12 @@ PackageSet {
   CatkinPackage cob_teleop {
     FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
     Artifact cob_teleop_keyboard {
-      Node { name cob_teleop_keyboard}
+      Node { name cob_teleop_keyboard
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'walk_vel' type Double value 0.5},
+          Parameter { name 'run_vel' type Double value 1.0},
+          Parameter { name 'yaw_run_rate' type Double value 1.5},
+          Parameter { name 'yaw_rate' type Double value 1.0}}}
 }}}
