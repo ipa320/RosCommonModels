@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage tuw_ellipses {
-    FromGitRepo "https://github.com/tuw-robotics/tuw_marker_detection.git" 
-    Artifact ellipses_node {
-      Node { name ellipses_node}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage moveit_setup_assistant {
-    FromGitRepo "https://github.com/ros-planning/moveit.git" 
-    Artifact moveit_setup_assistant {
-      Node { name moveit_setup_assistant}
-}}}

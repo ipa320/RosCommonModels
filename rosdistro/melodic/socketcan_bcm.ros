@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage socketcan_interface {
-    FromGitRepo "https://github.com/ros-industrial/ros_canopen.git" 
-    Artifact socketcan_bcm {
-      Node { name socketcan_bcm}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage kinesis_video_streamer {
-    FromGitRepo "https://github.com/aws-robotics/kinesisvideo-ros1.git" 
-    Artifact kinesis_video_streamer {
-      Node { name kinesis_video_streamer}
-}}}

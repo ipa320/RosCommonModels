@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage hector_pose_estimation {
-    FromGitRepo "https://github.com/tu-darmstadt-ros-pkg/hector_localization.git" 
-    Artifact pose_estimation {
-      Node { name pose_estimation}
-}}}

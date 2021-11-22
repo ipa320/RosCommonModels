@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage diagnostic_aggregator {
-    FromGitRepo "https://github.com/ros/diagnostics.git" 
-    Artifact analyzer_loader {
-      Node { name analyzer_loader}
-}}}

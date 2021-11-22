@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage mavros {
-    FromGitRepo "https://github.com/mavlink/mavros.git" 
-    Artifact mavros_node {
-      Node { name mavros_node}
-}}}

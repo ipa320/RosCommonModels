@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rosbag_editor {
-    FromGitRepo "https://github.com/facontidavide/rosbag_editor.git" 
-    Artifact rosbag_editor {
-      Node { name rosbag_editor}
-}}}

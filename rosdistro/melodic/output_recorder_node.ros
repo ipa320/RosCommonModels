@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage cob_model_identifier {
-    FromGitRepo "https://github.com/ipa320/cob_control.git" 
-    Artifact output_recorder_node {
-      Node { name output_recorder_node}
-}}}

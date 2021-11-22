@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage lvr2 {
-    FromGitRepo "https://github.com/uos/lvr2.git" 
-    Artifact tests_high_five_cpp11_bin {
-      Node { name tests_high_five_cpp11_bin}
-}}}

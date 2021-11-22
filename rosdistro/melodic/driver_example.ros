@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage ur_client_library {
-    FromGitRepo "https://github.com/UniversalRobots/Universal_Robots_Client_Library.git" 
-    Artifact driver_example {
-      Node { name driver_example}
-}}}

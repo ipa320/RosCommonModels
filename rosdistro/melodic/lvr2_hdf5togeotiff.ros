@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage lvr2 {
-    FromGitRepo "https://github.com/uos/lvr2.git" 
-    Artifact lvr2_hdf5togeotiff {
-      Node { name lvr2_hdf5togeotiff}
-}}}

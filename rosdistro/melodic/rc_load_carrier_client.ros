@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rc_reason_clients {
-    FromGitRepo "https://github.com/roboception/rc_reason_clients_ros.git" 
-    Artifact rc_load_carrier_client {
-      Node { name rc_load_carrier_client}
-}}}

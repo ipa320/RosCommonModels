@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage robot_activity_tutorials {
-    FromGitRepo "https://github.com/snt-robotics/robot_activity.git" 
-    Artifact robot_activity_tutorials_node {
-      Node { name robot_activity_tutorials_node}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage base_local_planner {
-    FromGitRepo "https://github.com/ros-planning/navigation.git" 
-    Artifact point_grid {
-      Node { name point_grid}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage moveit_core {
-    FromGitRepo "https://github.com/ros-planning/moveit.git" 
-    Artifact moveit_version {
-      Node { name moveit_version}
-}}}

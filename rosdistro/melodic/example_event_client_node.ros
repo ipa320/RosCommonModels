@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rostate_machine {
-    FromGitRepo "https://github.com/OUXT-Polaris/rostate_machine.git" 
-    Artifact example_event_client_node {
-      Node { name example_event_client_node}
-}}}

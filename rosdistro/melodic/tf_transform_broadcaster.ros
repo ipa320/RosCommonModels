@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage criutils {
-    FromGitRepo "https://github.com/crigroup/criutils.git" 
-    Artifact tf_transform_broadcaster {
-      Node { name tf_transform_broadcaster}
-}}}

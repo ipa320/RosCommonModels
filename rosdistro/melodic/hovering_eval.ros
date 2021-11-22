@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rotors_evaluation {
-    FromGitRepo "https://github.com/ethz-asl/rotors_simulator.git" 
-    Artifact hovering_eval {
-      Node { name hovering_eval}
-}}}

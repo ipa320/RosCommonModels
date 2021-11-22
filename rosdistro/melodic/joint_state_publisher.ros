@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage joint_state_publisher {
-    FromGitRepo "https://github.com/ros/joint_state_publisher.git" 
-    Artifact joint_state_publisher {
-      Node { name joint_state_publisher}
-}}}

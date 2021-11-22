@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage ubiquity_motor {
-    FromGitRepo "https://github.com/UbiquityRobotics/ubiquity_motor.git" 
-    Artifact probe_robot {
-      Node { name probe_robot}
-}}}

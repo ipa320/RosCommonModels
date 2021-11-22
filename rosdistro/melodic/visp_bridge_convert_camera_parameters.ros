@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage visp_bridge {
-    FromGitRepo "https://github.com/lagadic/vision_visp.git" 
-    Artifact visp_bridge_convert_camera_parameters {
-      Node { name visp_bridge_convert_camera_parameters}
-}}}

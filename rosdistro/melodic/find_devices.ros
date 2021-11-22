@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage kobuki_ftdi {
-    FromGitRepo "https://github.com/yujinrobot/kobuki_core.git" 
-    Artifact find_devices {
-      Node { name find_devices}
-}}}

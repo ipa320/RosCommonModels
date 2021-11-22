@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rqt_joint_trajectory_plot {
-    FromGitRepo "https://github.com/tork-a/rqt_joint_trajectory_plot.git" 
-    Artifact rqt_joint_trajectory_plot {
-      Node { name rqt_joint_trajectory_plot}
-}}}

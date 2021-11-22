@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage visp_tracker {
-    FromGitRepo "https://github.com/lagadic/vision_visp.git" 
-    Artifact tracker {
-      Node { name tracker}
-}}}

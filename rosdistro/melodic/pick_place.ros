@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage pincher_arm_moveit_demos {
-    FromGitRepo "https://github.com/fictionlab/pincher_arm.git" 
-    Artifact pick_place {
-      Node { name pick_place}
-}}}

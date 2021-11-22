@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rtabmap_ros {
-    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
-    Artifact icp_odometry {
-      Node { name icp_odometry}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rc_genicam_driver {
-    FromGitRepo "https://github.com/roboception/rc_genicam_driver_ros.git" 
-    Artifact rc_genicam_driver {
-      Node { name rc_genicam_driver}
-}}}

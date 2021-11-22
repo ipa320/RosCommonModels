@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage sr_hand_detector {
-    FromGitRepo "https://github.com/shadow-robot/sr_hand_detector.git" 
-    Artifact sr_hand_autodetect {
-      Node { name sr_hand_autodetect}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rocon_uri {
-    FromGitRepo "https://github.com/robotics-in-concert/rocon_tools.git" 
-    Artifact rocon_uri {
-      Node { name rocon_uri}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage clover_simulation {
-    FromGitRepo "https://github.com/CopterExpress/clover.git" 
-    Artifact aruco_gen {
-      Node { name aruco_gen}
-}}}

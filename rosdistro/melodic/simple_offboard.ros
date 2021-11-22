@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage clover {
-    FromGitRepo "https://github.com/CopterExpress/clover.git" 
-    Artifact simple_offboard {
-      Node { name simple_offboard}
-}}}

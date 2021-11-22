@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage ecl_converters {
-    FromGitRepo "https://github.com/stonier/ecl_core.git" 
-    Artifact demo_float_converters {
-      Node { name demo_float_converters}
-}}}

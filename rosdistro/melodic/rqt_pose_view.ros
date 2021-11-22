@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rqt_pose_view {
-    FromGitRepo "https://github.com/ros-visualization/rqt_pose_view.git" 
-    Artifact rqt_pose_view {
-      Node { name rqt_pose_view}
-}}}

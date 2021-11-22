@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage easy_markers {
-    FromGitRepo "https://github.com/DLu/wu_ros_tools.git" 
-    Artifact std_marker_demo {
-      Node { name std_marker_demo}
-}}}

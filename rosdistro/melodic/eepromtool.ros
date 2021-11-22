@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage soem {
-    FromGitRepo "https://github.com/mgruhler/soem.git" 
-    Artifact eepromtool {
-      Node { name eepromtool}
-}}}

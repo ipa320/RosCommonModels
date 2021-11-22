@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage octomap {
-    FromGitRepo "https://github.com/OctoMap/octomap.git" 
-    Artifact intersection_example {
-      Node { name intersection_example}
-}}}

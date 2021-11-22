@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage turtle_tf {
-    FromGitRepo "https://github.com/ros/geometry_tutorials.git" 
-    Artifact dynamic_tf_broadcaster {
-      Node { name dynamic_tf_broadcaster}
-}}}

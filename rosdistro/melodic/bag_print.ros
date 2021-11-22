@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rosbag_pandas {
-    FromGitRepo "https://github.com/eurogroep/rosbag_pandas.git" 
-    Artifact bag_print {
-      Node { name bag_print}
-}}}

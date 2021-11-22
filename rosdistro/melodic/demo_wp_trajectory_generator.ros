@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage uuv_trajectory_control {
-    FromGitRepo "https://github.com/uuvsimulator/uuv_simulator.git" 
-    Artifact demo_wp_trajectory_generator {
-      Node { name demo_wp_trajectory_generator}
-}}}

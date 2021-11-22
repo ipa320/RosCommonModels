@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage py_trees_ros {
-    FromGitRepo "https://github.com/splintered-reality/py_trees_ros.git" 
-    Artifact mock_led_strip {
-      Node { name mock_led_strip}
-}}}

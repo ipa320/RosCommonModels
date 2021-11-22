@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage ecl_exceptions {
-    FromGitRepo "https://github.com/stonier/ecl_core.git" 
-    Artifact demo_exception_tracer {
-      Node { name demo_exception_tracer}
-}}}

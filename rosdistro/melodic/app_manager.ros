@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage app_manager {
-    FromGitRepo "https://github.com/pr2/app_manager.git" 
-    Artifact app_manager {
-      Node { name app_manager}
-}}}

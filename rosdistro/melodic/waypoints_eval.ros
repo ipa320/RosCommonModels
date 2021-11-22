@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rotors_evaluation {
-    FromGitRepo "https://github.com/ethz-asl/rotors_simulator.git" 
-    Artifact waypoints_eval {
-      Node { name waypoints_eval}
-}}}

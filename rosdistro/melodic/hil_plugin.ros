@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rqt_rotors {
-    FromGitRepo "https://github.com/ethz-asl/rotors_simulator.git" 
-    Artifact hil_plugin {
-      Node { name hil_plugin}
-}}}

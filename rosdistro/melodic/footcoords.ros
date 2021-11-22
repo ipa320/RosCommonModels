@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage jsk_footstep_controller {
-    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_control.git" 
-    Artifact footcoords {
-      Node { name footcoords}
-}}}

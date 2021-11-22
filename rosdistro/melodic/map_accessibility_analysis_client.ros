@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage cob_map_accessibility_analysis {
-    FromGitRepo "https://github.com/ipa320/cob_navigation.git" 
-    Artifact map_accessibility_analysis_client {
-      Node { name map_accessibility_analysis_client}
-}}}

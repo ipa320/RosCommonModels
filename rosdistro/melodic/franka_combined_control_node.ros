@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage franka_control {
-    FromGitRepo "https://github.com/frankaemika/franka_ros.git" 
-    Artifact franka_combined_control_node {
-      Node { name franka_combined_control_node}
-}}}

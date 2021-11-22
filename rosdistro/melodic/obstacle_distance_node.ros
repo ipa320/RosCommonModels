@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage cob_obstacle_distance_moveit {
-    FromGitRepo "https://github.com/ipa320/cob_manipulation.git" 
-    Artifact obstacle_distance_node {
-      Node { name obstacle_distance_node}
-}}}

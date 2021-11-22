@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage tf2_server {
-    FromGitRepo "https://github.com/peci1/tf2_server.git" 
-    Artifact tf2_server_node {
-      Node { name tf2_server_node}
-}}}

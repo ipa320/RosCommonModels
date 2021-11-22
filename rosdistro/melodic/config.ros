@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage ifm3d {
-    FromGitRepo "https://github.com/ifm/ifm3d-ros.git" 
-    Artifact config {
-      Node { name config}
-}}}

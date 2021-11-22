@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage pyros_test {
-    FromGitRepo "https://github.com/asmodehn/pyros-test.git" 
-    Artifact echo {
-      Node { name echo}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rwt_moveit {
-    FromGitRepo "https://github.com/tork-a/visualization_rwt.git" 
-    Artifact sample_moveit_publisher {
-      Node { name sample_moveit_publisher}
-}}}

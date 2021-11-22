@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage ubiquity_motor {
-    FromGitRepo "https://github.com/UbiquityRobotics/ubiquity_motor.git" 
-    Artifact test_pi_gpio {
-      Node { name test_pi_gpio}
-}}}

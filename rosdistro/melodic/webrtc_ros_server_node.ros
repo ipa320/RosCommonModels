@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage webrtc_ros {
-    FromGitRepo "https://github.com/RobotWebTools/webrtc_ros.git" 
-    Artifact webrtc_ros_server_node {
-      Node { name webrtc_ros_server_node}
-}}}

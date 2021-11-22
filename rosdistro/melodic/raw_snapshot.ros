@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage multisense_ros {
-    FromGitRepo "https://github.com/carnegierobotics/multisense_ros.git" 
-    Artifact raw_snapshot {
-      Node { name raw_snapshot}
-}}}

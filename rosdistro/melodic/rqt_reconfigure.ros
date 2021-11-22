@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rqt_reconfigure {
-    FromGitRepo "https://github.com/ros-visualization/rqt_reconfigure.git" 
-    Artifact rqt_reconfigure {
-      Node { name rqt_reconfigure}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage flir_boson_usb {
-    FromGitRepo "https://github.com/astuff/flir_boson_usb.git" 
-    Artifact flir_boson_usb_node {
-      Node { name flir_boson_usb_node}
-}}}

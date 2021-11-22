@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage moveit_ros_planning {
-    FromGitRepo "https://github.com/ros-planning/moveit.git" 
-    Artifact test_controller_manager {
-      Node { name test_controller_manager}
-}}}

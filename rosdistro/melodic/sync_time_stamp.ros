@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage urg_c {
-    FromGitRepo "https://github.com/ros-drivers/urg_c.git" 
-    Artifact sync_time_stamp {
-      Node { name sync_time_stamp}
-}}}

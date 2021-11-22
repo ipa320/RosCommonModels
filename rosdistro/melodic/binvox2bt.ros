@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage octomap {
-    FromGitRepo "https://github.com/OctoMap/octomap.git" 
-    Artifact binvox2bt {
-      Node { name binvox2bt}
-}}}

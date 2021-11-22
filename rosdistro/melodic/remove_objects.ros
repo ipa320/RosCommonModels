@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage moveit_python {
-    FromGitRepo "https://github.com/mikeferguson/moveit_python.git" 
-    Artifact remove_objects {
-      Node { name remove_objects}
-}}}

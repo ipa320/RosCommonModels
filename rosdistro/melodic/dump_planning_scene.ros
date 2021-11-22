@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage moveit_python {
-    FromGitRepo "https://github.com/mikeferguson/moveit_python.git" 
-    Artifact dump_planning_scene {
-      Node { name dump_planning_scene}
-}}}

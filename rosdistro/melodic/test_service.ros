@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rostest_node_interface_validation {
-    FromGitRepo "https://github.com/tecnalia-advancedmanufacturing-robotics/rostest_node_interface_validation.git" 
-    Artifact test_service {
-      Node { name test_service}
-}}}

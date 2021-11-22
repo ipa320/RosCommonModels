@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage swri_console {
-    FromGitRepo "https://github.com/swri-robotics/swri_console.git" 
-    Artifact rosout_agg_recorder {
-      Node { name rosout_agg_recorder}
-}}}

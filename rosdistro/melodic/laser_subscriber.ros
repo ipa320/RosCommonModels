@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage turtlebot3_follower {
-    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_applications.git" 
-    Artifact laser_subscriber {
-      Node { name laser_subscriber}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage novatel_span_driver {
-    FromGitRepo "https://github.com/ros-drivers/novatel_span_driver.git" 
-    Artifact driver {
-      Node { name driver}
-}}}

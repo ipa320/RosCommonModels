@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage jsk_footstep_planner {
-    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_control.git" 
-    Artifact footstep_planning_2d_perception_demo {
-      Node { name footstep_planning_2d_perception_demo}
-}}}

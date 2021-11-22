@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rtabmap_ros {
-    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
-    Artifact rtabmap_point_cloud_aggregator {
-      Node { name rtabmap_point_cloud_aggregator}
-}}}

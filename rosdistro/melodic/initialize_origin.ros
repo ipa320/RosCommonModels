@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage swri_transform_util {
-    FromGitRepo "https://github.com/swri-robotics/marti_common.git" 
-    Artifact initialize_origin {
-      Node { name initialize_origin}
-}}}

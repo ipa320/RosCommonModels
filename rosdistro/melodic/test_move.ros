@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage cob_script_server {
-    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
-    Artifact test_move {
-      Node { name test_move}
-}}}

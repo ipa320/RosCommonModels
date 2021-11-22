@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage moveit_ros_warehouse {
-    FromGitRepo "https://github.com/ros-planning/moveit.git" 
-    Artifact moveit_init_demo_warehouse {
-      Node { name moveit_init_demo_warehouse}
-}}}

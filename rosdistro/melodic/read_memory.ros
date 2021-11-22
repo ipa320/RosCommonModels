@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage prosilica_camera {
-    FromGitRepo "https://github.com/ros-drivers/prosilica_driver.git" 
-    Artifact read_memory {
-      Node { name read_memory}
-}}}

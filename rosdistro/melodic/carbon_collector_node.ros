@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage pal_carbon_collector {
-    FromGitRepo "https://github.com/pal-robotics/pal_statistics.git" 
-    Artifact carbon_collector_node {
-      Node { name carbon_collector_node}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage fsrobo_r_driver {
-    FromGitRepo "https://github.com/FUJISOFT-Robotics/fsrobo_r.git" 
-    Artifact robot_service_interface {
-      Node { name robot_service_interface}
-}}}

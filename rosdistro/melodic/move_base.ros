@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage move_base {
-    FromGitRepo "https://github.com/ros-planning/navigation.git" 
-    Artifact move_base {
-      Node { name move_base}
-}}}

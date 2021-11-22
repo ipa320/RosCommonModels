@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage static_tf {
-    FromGitRepo "https://github.com/DLu/static_tf.git" 
-    Artifact static_tf {
-      Node { name static_tf}
-}}}

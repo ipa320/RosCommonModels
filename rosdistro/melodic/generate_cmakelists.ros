@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage mrt_cmake_modules {
-    FromGitRepo "https://github.com/KIT-MRT/mrt_cmake_modules.git" 
-    Artifact generate_cmakelists {
-      Node { name generate_cmakelists}
-}}}

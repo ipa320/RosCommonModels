@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rc_roi_manager_gui {
-    FromGitRepo "https://github.com/roboception/rc_visard_ros.git" 
-    Artifact rc_roi_manager_gui {
-      Node { name rc_roi_manager_gui}
-}}}

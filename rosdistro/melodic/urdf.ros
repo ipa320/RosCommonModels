@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage kdl_parser_py {
-    FromGitRepo "https://github.com/ros/kdl_parser.git" 
-    Artifact urdf {
-      Node { name urdf}
-}}}

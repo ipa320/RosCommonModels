@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage roswww {
-    FromGitRepo "https://github.com/tork-a/roswww.git" 
-    Artifact test_single {
-      Node { name test_single}
-}}}

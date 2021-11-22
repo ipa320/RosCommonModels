@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage lvr2 {
-    FromGitRepo "https://github.com/uos/lvr2.git" 
-    Artifact lvr2_gs_reconstruction {
-      Node { name lvr2_gs_reconstruction}
-}}}

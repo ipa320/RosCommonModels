@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage checkerboard_detector {
-    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_recognition.git" 
-    Artifact objectdetection_transform_echo {
-      Node { name objectdetection_transform_echo}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage kobuki_driver {
-    FromGitRepo "https://github.com/yujinrobot/kobuki_core.git" 
-    Artifact demo_kobuki_initialisation {
-      Node { name demo_kobuki_initialisation}
-}}}

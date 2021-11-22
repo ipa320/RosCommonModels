@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rqt_logger_level {
-    FromGitRepo "https://github.com/ros-visualization/rqt_logger_level.git" 
-    Artifact rqt_logger_level {
-      Node { name rqt_logger_level}
-}}}

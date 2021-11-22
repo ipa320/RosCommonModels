@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage cob_twist_controller {
-    FromGitRepo "https://github.com/ipa320/cob_control.git" 
-    Artifact collect_twist_control_eval_data {
-      Node { name collect_twist_control_eval_data}
-}}}

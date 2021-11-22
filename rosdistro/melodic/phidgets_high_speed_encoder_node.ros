@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage phidgets_high_speed_encoder {
-    FromGitRepo "https://github.com/ros-drivers/phidgets_drivers.git" 
-    Artifact phidgets_high_speed_encoder_node {
-      Node { name phidgets_high_speed_encoder_node}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage multisense_cal_check {
-    FromGitRepo "https://github.com/carnegierobotics/multisense_ros.git" 
-    Artifact process_bags {
-      Node { name process_bags}
-}}}

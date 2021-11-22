@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage uuv_trajectory_control {
-    FromGitRepo "https://github.com/uuvsimulator/uuv_simulator.git" 
-    Artifact rov_pd_grav_compensation_controller {
-      Node { name rov_pd_grav_compensation_controller}
-}}}

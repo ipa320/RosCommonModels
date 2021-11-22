@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage seed_r7_samples {
-    FromGitRepo "https://github.com/seed-solutions/seed_r7_ros_pkg.git" 
-    Artifact moveit_sample_node {
-      Node { name moveit_sample_node}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage pacmod_game_control {
-    FromGitRepo "https://github.com/astuff/pacmod_game_control.git" 
-    Artifact pacmod_game_control_node {
-      Node { name pacmod_game_control_node}
-}}}

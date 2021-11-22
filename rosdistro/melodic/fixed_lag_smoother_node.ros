@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage fuse_optimizers {
-    FromGitRepo "https://github.com/locusrobotics/fuse.git" 
-    Artifact fixed_lag_smoother_node {
-      Node { name fixed_lag_smoother_node}
-}}}

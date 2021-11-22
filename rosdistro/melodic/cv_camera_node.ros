@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage cv_camera {
-    FromGitRepo "https://github.com/OTL/cv_camera.git" 
-    Artifact cv_camera_node {
-      Node { name cv_camera_node}
-}}}

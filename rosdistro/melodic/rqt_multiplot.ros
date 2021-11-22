@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rqt_multiplot {
-    FromGitRepo "https://github.com/anybotics/rqt_multiplot_plugin.git" 
-    Artifact rqt_multiplot {
-      Node { name rqt_multiplot}
-}}}

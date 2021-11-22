@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage swri_roscpp {
-    FromGitRepo "https://github.com/swri-robotics/marti_common.git" 
-    Artifact param_example {
-      Node { name param_example}
-}}}

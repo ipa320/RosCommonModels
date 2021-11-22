@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage wiimote {
-    FromGitRepo "https://github.com/ros-drivers/joystick_drivers.git" 
-    Artifact wiimote_node {
-      Node { name wiimote_node}
-}}}

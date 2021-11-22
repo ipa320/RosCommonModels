@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage euslime {
-    FromGitRepo "https://github.com/jsk-ros-pkg/euslime.git" 
-    Artifact euslime {
-      Node { name euslime}
-}}}

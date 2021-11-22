@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage tracetools {
-    FromGitRepo "https://github.com/boschresearch/ros1_tracetools.git" 
-    Artifact tracetools_test {
-      Node { name tracetools_test}
-}}}

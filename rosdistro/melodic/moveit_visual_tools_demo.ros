@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage moveit_visual_tools {
-    FromGitRepo "https://github.com/ros-planning/moveit_visual_tools.git" 
-    Artifact moveit_visual_tools_demo {
-      Node { name moveit_visual_tools_demo}
-}}}

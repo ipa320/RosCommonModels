@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage robot_nav_viz_demos {
-    FromGitRepo "https://github.com/locusrobotics/robot_navigation.git" 
-    Artifact named_colors_demo {
-      Node { name named_colors_demo}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage rc_visard_driver {
-    FromGitRepo "https://github.com/roboception/rc_visard_ros.git" 
-    Artifact rc_visard_driver {
-      Node { name rc_visard_driver}
-}}}

@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage uwsim {
-    FromGitRepo "https://github.com/uji-ros-pkg/underwater_simulation.git" 
-    Artifact uwsim_binary {
-      Node { name uwsim_binary}
-}}}

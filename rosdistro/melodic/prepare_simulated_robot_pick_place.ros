@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage fetch_gazebo {
-    FromGitRepo "https://github.com/fetchrobotics/fetch_gazebo.git" 
-    Artifact prepare_simulated_robot_pick_place {
-      Node { name prepare_simulated_robot_pick_place}
-}}}

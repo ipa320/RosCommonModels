@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage dbw_fca_can {
-    FromGitRepo "https://bitbucket.org/DataspeedInc/dbw_fca_ros.git" 
-    Artifact dbw_node {
-      Node { name dbw_node}
-}}}

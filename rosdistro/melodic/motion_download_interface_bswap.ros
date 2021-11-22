@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage industrial_robot_client {
-    FromGitRepo "https://github.com/ros-industrial/industrial_core.git" 
-    Artifact motion_download_interface_bswap {
-      Node { name motion_download_interface_bswap}
-}}}

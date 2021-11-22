@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage volta_rules {
-    FromGitRepo "https://github.com/botsync/volta.git" 
-    Artifact sensor_read {
-      Node { name sensor_read}
-}}}

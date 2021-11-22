@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage generic_throttle {
-    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
-    Artifact generic_throttle_node {
-      Node { name generic_throttle_node}
-}}}

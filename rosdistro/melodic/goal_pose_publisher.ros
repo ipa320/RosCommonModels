@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage towr_ros {
-    FromGitRepo "https://github.com/ethz-adrl/towr.git" 
-    Artifact goal_pose_publisher {
-      Node { name goal_pose_publisher}
-}}}

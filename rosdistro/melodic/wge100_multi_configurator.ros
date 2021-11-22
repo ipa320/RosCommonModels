@@ -1,6 +1,0 @@
-PackageSet {
-  CatkinPackage wge100_camera {
-    FromGitRepo "https://github.com/ros-drivers/wge100_driver.git" 
-    Artifact wge100_multi_configurator {
-      Node { name wge100_multi_configurator}
-}}}
