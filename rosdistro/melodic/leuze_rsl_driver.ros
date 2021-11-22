@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage leuze_rsl_driver {
+    FromGitRepo "https://gitlab.cc-asp.fraunhofer.de/led/leuze_ros_drivers.git" 
+    Artifact leuze_rsl_driver {
+      Node { name leuze_rsl_driver
+        Publishers {
+          Publisher { name '/scan_raw_data' message 'std_msgs.String'},
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'},
+          Publisher { name 'status' message 'leuze_msgs.ExtendedStatusProfileMsg'}}
+        Parameters {
+          Parameter { name 'scan_frame' type String },
+          Parameter { name 'ls_debug' type Boolean }}}
+}}}

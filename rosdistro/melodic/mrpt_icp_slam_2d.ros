@@ -1,0 +1,24 @@
+PackageSet {
+  CatkinPackage mrpt_icp_slam_2d {
+    FromGitRepo "https://github.com/mrpt-ros-pkg/mrpt_slam.git" 
+    Artifact mrpt_icp_slam_2d {
+      Node { name mrpt_icp_slam_2d
+        Publishers {
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'},
+          Publisher { name 'robot_pose' message 'geometry_msgs.PoseStamped'},
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name 'trajectory' message 'nav_msgs.Path'},
+          Publisher { name 'PointCloudMap' message 'sensor_msgs.PointCloud'}}
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.LaserScan'}}
+        Parameters {
+          Parameter { name 'ini_filename' type String },
+          Parameter { name 'rawlog_filename' type String },
+          Parameter { name 'odom_frame_id' type String value 'odom'},
+          Parameter { name 'sensor_source' type String value 'scan'},
+          Parameter { name 'base_frame_id' type String value 'base_link'},
+          Parameter { name 'global_frame_id' type String value 'map'},
+          Parameter { name 'trajectory_update_rate' type Double value 10.0},
+          Parameter { name 'rawlog_play_delay' type Double value 0.1},
+          Parameter { name 'trajectory_publish_rate' type Double value 5.0}}}
+}}}

@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage nmea_to_geopose {
+    FromGitRepo "https://github.com/OUXT-Polaris/nmea_to_geopose.git" 
+    Artifact nmea_to_geopose_node {
+      Node { name nmea_to_geopose_node
+        Publishers {
+          Publisher { name 'geopose' message 'geographic_msgs.GeoPoseStamped'}}
+        Subscribers {
+          Subscriber { name '?' message 'nmea_msgs.Sentence'}}
+        Parameters {
+          Parameter { name 'input_topic' type String value '/nmea_sentence'}}}
+}}}

@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage grid_map_visualization {
+    FromGitRepo "https://github.com/anybotics/grid_map.git" 
+    Artifact grid_map_visualization {
+      Node { name grid_map_visualization
+        Publishers {
+          Publisher { name '?' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name '?' message 'visualization_msgs.Marker'},
+          Publisher { name '?' message 'sensor_msgs.PointCloud2'},
+          Publisher { name '?' message 'sensor_msgs.PointCloud2'},
+          Publisher { name '?' message 'nav_msgs.GridCells'},
+          Publisher { name '?' message 'visualization_msgs.Marker'}}
+        Subscribers {
+          Subscriber { name '?' message 'grid_map_msgs.GridMap'}}
+        Parameters {
+          Parameter { name 'activity_check_rate' type Double value 2.0},
+          Parameter { name 'grid_map_topic' type String value '/grid_map'}}}
+}}}

@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage rt_usb_9axisimu_driver {
+    FromGitRepo "https://github.com/rt-net/rt_usb_9axisimu_driver.git" 
+    Artifact rt_usb_9axisimu_driver {
+      Node { name rt_usb_9axisimu_driver
+        Publishers {
+          Publisher { name 'imu/data_raw' message 'sensor_msgs.Imu'},
+          Publisher { name 'imu/temperature' message 'std_msgs.Float64'},
+          Publisher { name 'imu/mag' message 'sensor_msgs.MagneticField'}}}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage photo {
+    FromGitRepo "https://github.com/bosch-ros-pkg/photo.git" 
+    Artifact test_photo {
+      Node { name test_photo
+        ServiceClients {
+          ServiceClient { name '/photo/set_config' service 'photo.SetConfig'}}}
+}}}

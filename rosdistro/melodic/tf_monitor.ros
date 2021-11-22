@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage tf {
+    FromGitRepo "https://github.com/ros/geometry.git" 
+    Artifact tf_monitor {
+      Node { name tf_monitor
+        Subscribers {
+          Subscriber { name 'tf' message 'tf.tfMessage'},
+          Subscriber { name 'tf_static' message 'tf.tfMessage'}}
+        Parameters {
+          Parameter { name '?' type String },
+          Parameter { name '?' type String }}}
+}}}

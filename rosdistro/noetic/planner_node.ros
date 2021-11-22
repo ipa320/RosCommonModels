@@ -4,6 +4,6 @@ PackageSet {
     Artifact planner_node {
       Node { name planner_node
         Parameters {
-          Parameter { name 'local_costmap_class' type String value 'nav_core_adapter::CostmapAdapter'},
-          Parameter { name 'scale' type Double value 1.0}}}
+          Parameter { name 'scale' type Double value 1.0},
+          Parameter { name 'local_costmap_class' type String value 'nav_core_adapter::CostmapAdapter'}}}
 }}}

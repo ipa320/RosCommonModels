@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage rtabmap_ros {
+    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
+    Artifact map_assembler {
+      Node { name map_assembler
+        ServiceServers {
+          ServiceServer { name 'reset' service 'std_srvs.Empty'}}
+        Subscribers {
+          Subscriber { name 'mapData' message 'rtabmap_ros.MapData'}}
+        Parameters {
+          Parameter { name '?' type String },
+          Parameter { name 'regenerate_local_grids' type Boolean },
+          Parameter { name 'config_path' type String },
+          Parameter { name '?' type String },
+          Parameter { name '?' type Integer },
+          Parameter { name '?' type Boolean },
+          Parameter { name '?' type Double }}}
+}}}

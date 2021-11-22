@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage pr2_dense_laser_snapshotter {
+    FromGitRepo "https://github.com/UNR-RoboticsResearchLab/pr2_calibration.git" 
+    Artifact dense_laser_snapshotter {
+      Node { name dense_laser_snapshotter
+        Publishers {
+          Publisher { name 'dense_laser_snapshot' message 'calibration_msgs.DenseLaserSnapshot'}}
+        Subscribers {
+          Subscriber { name 'scan' message 'sensor_msgs.LaserScan'},
+          Subscriber { name 'laser_tilt_controller/laser_scanner_signal' message 'pr2_msgs.LaserScannerSignal'}}}
+}}}

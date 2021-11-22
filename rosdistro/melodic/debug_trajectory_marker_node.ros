@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage cob_twist_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact debug_trajectory_marker_node {
+      Node { name debug_trajectory_marker_node
+        Publishers {
+          Publisher { name 'trajectory_marker' message 'visualization_msgs.MarkerArray'}}
+        Parameters {
+          Parameter { name 'chain_tip_link' type String },
+          Parameter { name 'root_frame' type String },
+          Parameter { name 'frame_tracker/target_frame' type String }}}
+}}}

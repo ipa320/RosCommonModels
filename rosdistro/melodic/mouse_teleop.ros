@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage mouse_teleop {
+    FromGitRepo "https://github.com/ros-teleop/teleop_tools.git" 
+    Artifact mouse_teleop {
+      Node { name mouse_teleop
+        Publishers {
+          Publisher { name 'mouse_vel' message 'geometry_msgs.Twist'}}}
+}}}

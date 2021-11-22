@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage heifu_simple_waypoint {
+    FromGitRepo "https://gitlab.pdmfc.com/drones/ros1/heifu.git" 
+    Artifact heifu_simple_waypoint_node {
+      Node { name heifu_simple_waypoint_node
+        Publishers {
+          Publisher { name '?' message 'std_msgs.Empty'},
+          Publisher { name '?' message 'std_msgs.Empty'},
+          Publisher { name '?' message 'geometry_msgs.PoseStamped'}}
+        Subscribers {
+          Subscriber { name '?' message 'geometry_msgs.Pose'},
+          Subscriber { name '?' message 'geometry_msgs.PoseStamped'}}
+        Parameters {
+          Parameter { name 'paramNodeRate' type Double value 100.0}}}
+}}}

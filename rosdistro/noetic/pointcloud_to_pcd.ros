@@ -2,14 +2,5 @@ PackageSet {
   CatkinPackage pcl_ros {
     FromGitRepo "https://github.com/ros-perception/perception_pcl.git" 
     Artifact pointcloud_to_pcd {
-      Node { name pointcloud_to_pcd
-        Subscribers {
-          Subscriber { name '?' message '?'}}
-        Parameters {
-          Parameter { name 'prefix' type String },
-          Parameter { name 'prefix' type String },
-          Parameter { name 'compressed' type Boolean },
-          Parameter { name 'fixed_frame' type String },
-          Parameter { name 'filename' type String },
-          Parameter { name 'binary' type Boolean }}}
+      Node { name pointcloud_to_pcd}
 }}}

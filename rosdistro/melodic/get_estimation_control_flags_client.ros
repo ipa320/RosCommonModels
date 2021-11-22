@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact get_estimation_control_flags_client {
+      Node { name get_estimation_control_flags_client
+        ServiceClients {
+          ServiceClient { name 'GetEstimationControlFlags' service 'std_srvs.Trigger'}}}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage pr2_position_scripts {
+    FromGitRepo "https://github.com/pr2/pr2_apps.git" 
+    Artifact torso_down {
+      Node { name torso_down
+        Publishers {
+          Publisher { name 'torso_controller/command' message '?'}}}
+}}}

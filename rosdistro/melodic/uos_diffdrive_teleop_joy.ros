@@ -1,0 +1,22 @@
+PackageSet {
+  CatkinPackage uos_diffdrive_teleop {
+    FromGitRepo "https://github.com/uos/uos_tools.git" 
+    Artifact uos_diffdrive_teleop_joy {
+      Node { name uos_diffdrive_teleop_joy
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}
+        Parameters {
+          Parameter { name 'acc_ahead_neg' type Double value 0.8},
+          Parameter { name 'update_inputs_rate' type Double value 0.05},
+          Parameter { name 'acc_rot_neg' type Double value 1.8},
+          Parameter { name 'acc_ahead_stop' type Double value 2.0},
+          Parameter { name 'use_button_pressure' type Boolean },
+          Parameter { name 'max_vel' type Double value 1.0},
+          Parameter { name 'acc_rot_pos' type Double value 1.4},
+          Parameter { name 'acc_ahead_pos' type Double value 0.4},
+          Parameter { name 'max_rot_vel' type Double value 2.0},
+          Parameter { name 'update_velocity_rate' type Double value 0.01},
+          Parameter { name 'acc_rot_stop' type Double value 2.6}}}
+}}}

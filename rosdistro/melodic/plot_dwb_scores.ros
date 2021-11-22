@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage mir_dwb_critics {
+    FromGitRepo "https://github.com/dfki-ric/mir_robot.git" 
+    Artifact plot_dwb_scores {
+      Node { name plot_dwb_scores
+        Subscribers {
+          Subscriber { name 'move_base_node/DWBLocalPlanner/evaluation' message 'dwb_msgs.LocalPlanEvaluation'}}}
+}}}

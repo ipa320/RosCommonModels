@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage clock_relay {
+    FromGitRepo "https://github.com/clearpathrobotics/cpr_multimaster_tools.git" 
+    Artifact clock_relay_node {
+      Node { name clock_relay_node
+        Parameters {
+          Parameter { name 'parameter_namespace' type String },
+          Parameter { name '?' type Double },
+          Parameter { name 'clock_relay_type' type String }}}
+}}}

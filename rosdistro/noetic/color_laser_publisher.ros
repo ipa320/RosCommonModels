@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage multisense_ros {
+    FromGitRepo "https://github.com/carnegierobotics/multisense_ros.git" 
+    Artifact color_laser_publisher {
+      Node { name color_laser_publisher}
+}}}

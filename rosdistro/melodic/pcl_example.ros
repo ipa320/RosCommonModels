@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage cis_camera {
+    FromGitRepo "https://github.com/tork-a/cis_camera.git" 
+    Artifact pcl_example {
+      Node { name pcl_example
+        Publishers {
+          Publisher { name 'primary_cluster' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'object_cluster' message 'sensor_msgs.PointCloud2'}}}
+}}}

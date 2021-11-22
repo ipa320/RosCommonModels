@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage rtabmap_ros {
+    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
+    Artifact patrol {
+      Node { name patrol
+        Publishers {
+          Publisher { name 'rtabmap/goal_node' message 'rtabmap_ros.Goal'}}
+        Subscribers {
+          Subscriber { name 'rtabmap/goal_reached' message 'std_msgs.Bool'}}}
+}}}

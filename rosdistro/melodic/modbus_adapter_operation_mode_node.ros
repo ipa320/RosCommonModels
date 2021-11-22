@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage prbt_hardware_support {
+    FromGitRepo "https://github.com/PilzDE/pilz_robots.git" 
+    Artifact modbus_adapter_operation_mode_node {
+      Node { name modbus_adapter_operation_mode_node
+        ServiceServers {
+          ServiceServer { name '/prbt/get_operation_mode' service 'pilz_msgs.GetOperationMode'}}
+        Publishers {
+          Publisher { name '/prbt/operation_mode' message 'pilz_msgs.OperationModes'}}}
+}}}

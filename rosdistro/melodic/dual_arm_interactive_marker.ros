@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage franka_example_controllers {
+    FromGitRepo "https://github.com/frankaemika/franka_ros.git" 
+    Artifact dual_arm_interactive_marker {
+      Node { name dual_arm_interactive_marker
+        Subscribers {
+          Subscriber { name 'dual_arm_cartesian_impedance_example_controller/centering_frame' message 'geometry_msgs.PoseStamped'}}}
+}}}

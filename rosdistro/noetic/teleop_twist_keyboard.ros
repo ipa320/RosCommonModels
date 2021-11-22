@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage teleop_twist_keyboard {
+    FromGitRepo "https://github.com/ros-teleop/teleop_twist_keyboard.git" 
+    Artifact teleop_twist_keyboard {
+      Node { name teleop_twist_keyboard
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}}
+}}}

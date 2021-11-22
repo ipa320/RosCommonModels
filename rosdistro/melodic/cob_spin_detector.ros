@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage cob_base_controller_utils {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact cob_spin_detector {
+      Node { name cob_spin_detector
+        ServiceClients {
+          ServiceClient { name 'driver/halt' service 'std_srvs.Trigger'},
+          ServiceClient { name 'driver/shutdown' service 'std_srvs.Trigger'}}
+        Subscribers {
+          Subscriber { name 'twist_controller/wheel_commands' message 'cob_base_controller_utils.WheelCommands'}}
+        Parameters {
+          Parameter { name 'threshold' type Double },
+          Parameter { name 'shutdown' type Boolean }}}
+}}}

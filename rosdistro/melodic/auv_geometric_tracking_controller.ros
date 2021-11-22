@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage uuv_trajectory_control {
+    FromGitRepo "https://github.com/uuvsimulator/uuv_simulator.git" 
+    Artifact auv_geometric_tracking_controller {
+      Node { name auv_geometric_tracking_controller
+        Publishers {
+          Publisher { name 'error' message 'uuv_control_msgs.TrajectoryPoint'},
+          Publisher { name '?' message 'uuv_gazebo_ros_plugins_msgs.FloatStamped'},
+          Publisher { name 'reference' message 'uuv_control_msgs.TrajectoryPoint'}}
+        Subscribers {
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}}
+}}}

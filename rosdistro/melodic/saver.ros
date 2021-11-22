@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage nav_grid_server {
+    FromGitRepo "https://github.com/locusrobotics/robot_navigation.git" 
+    Artifact saver {
+      Node { name saver
+        Parameters {
+          Parameter { name 'output_directory' type String value '.'},
+          Parameter { name 'write_stamped' type Boolean },
+          Parameter { name 'topic' type String value 'map'},
+          Parameter { name 'map_extension' type String value 'png'},
+          Parameter { name 'write_unstamped' type Boolean value true},
+          Parameter { name 'once' type Boolean value true},
+          Parameter { name 'nav_grid' type Boolean },
+          Parameter { name 'map_prefix' type String value 'map'},
+          Parameter { name 'trinary_output' type Boolean value true}}}
+}}}

@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage pr2_navigation_self_filter {
+    FromGitRepo "https://github.com/PR2/pr2_navigation.git" 
+    Artifact self_filter {
+      Node { name self_filter
+        Publishers {
+          Publisher { name 'cloud_out' message 'sensor_msgs.PointCloud2'}}
+        Subscribers {
+          Subscriber { name 'cloud_in' message 'sensor_msgs.PointCloud2'}}
+        Parameters {
+          Parameter { name 'use_rgb' type Boolean },
+          Parameter { name 'sensor_frame' type String }}}
+}}}

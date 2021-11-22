@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_mimic {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact test_mimic {
+      Node { name test_mimic}
+}}}

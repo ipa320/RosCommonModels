@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage nav2d_localizer {
+    FromGitRepo "https://github.com/skasperski/navigation_2d.git" 
+    Artifact localizer {
+      Node { name localizer
+        ServiceClients {
+          ServiceClient { name '?' service 'nav_msgs.GetMap'}}
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.LaserScan'}}
+        Parameters {
+          Parameter { name 'map_service' type String value 'get_map'},
+          Parameter { name 'laser_topic' type String value 'scan'}}}
+}}}

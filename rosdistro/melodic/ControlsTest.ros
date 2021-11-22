@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage view_controller_msgs {
+    FromGitRepo "https://github.com/ros-visualization/view_controller_msgs.git" 
+    Artifact ControlsTest {
+      Node { name ControlsTest
+        Publishers {
+          Publisher { name '/rviz/camera_placement' message 'view_controller_msgs.CameraPlacement'}}}
+}}}

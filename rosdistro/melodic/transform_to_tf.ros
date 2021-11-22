@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rtabmap_ros {
+    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
+    Artifact transform_to_tf {
+      Node { name transform_to_tf
+        Subscribers {
+          Subscriber { name 'transform' message 'geometry_msgs.TransformStamped'}}}
+}}}

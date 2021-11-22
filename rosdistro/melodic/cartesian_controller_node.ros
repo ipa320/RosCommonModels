@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage cob_cartesian_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact cartesian_controller_node {
+      Node { name cartesian_controller_node
+        Publishers {
+          Publisher { name 'cartesian_controller/preview_path' message 'visualization_msgs.MarkerArray'}}}
+}}}

@@ -1,0 +1,25 @@
+PackageSet {
+  CatkinPackage rail_mesh_icp {
+    FromGitRepo "https://github.com/GT-RAIL/rail_mesh_icp.git" 
+    Artifact template_matcher_node {
+      Node { name template_matcher_node
+        ServiceServers {
+          ServiceServer { name 'match_template' service 'rail_mesh_icp.TemplateMatch'}}
+        ServiceClients {
+          ServiceClient { name '/icp_match_clouds' service 'rail_mesh_icp.ICPMatch'}}
+        Publishers {
+          Publisher { name 'target_points' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'template_points' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'matched_template_points' message 'sensor_msgs.PointCloud2'}}
+        Parameters {
+          Parameter { name 'template_frame' type String },
+          Parameter { name 'matching_frame' type String },
+          Parameter { name 'visualize' type Boolean },
+          Parameter { name 'pcl_topic' type String },
+          Parameter { name 'debug' type Boolean },
+          Parameter { name 'template_offset_string' type String },
+          Parameter { name 'pre_processed_cloud' type Boolean },
+          Parameter { name 'latch_initial' type Boolean },
+          Parameter { name 'template_file_path' type String },
+          Parameter { name 'initial_estimate_string' type String }}}
+}}}

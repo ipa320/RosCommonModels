@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage rocon_python_utils {
+    FromGitRepo "https://github.com/robotics-in-concert/rocon_tools.git" 
+    Artifact topic_relay {
+      Node { name topic_relay
+        Publishers {
+          Publisher { name '?' message '?'}}
+        Subscribers {
+          Subscriber { name '?' message '?'}}}
+}}}

@@ -5,12 +5,12 @@ PackageSet {
       Node { name ocean_server
         Publishers {
           Publisher { name 'battery/server2' message 'pr2_msgs.BatteryServer2'},
-          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
-          Publisher { name 'battery/server' message 'pr2_msgs.BatteryServer'}}
+          Publisher { name 'battery/server' message 'pr2_msgs.BatteryServer'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
         Parameters {
           Parameter { name 'debug_level' type Integer },
-          Parameter { name 'stale_timeout' type Integer value 120},
           Parameter { name '?' type String },
           Parameter { name 'lag_timeout' type Integer value 60},
-          Parameter { name 'number_of_ports' type Integer }}}
+          Parameter { name 'number_of_ports' type Integer },
+          Parameter { name 'stale_timeout' type Integer value 120}}}
 }}}

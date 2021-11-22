@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage cob_phidgets {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact range_sensors {
+      Node { name range_sensors
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.Range'}}}
+}}}

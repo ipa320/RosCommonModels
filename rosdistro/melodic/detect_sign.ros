@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage turtlebot3_autorace_detect {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_autorace.git" 
+    Artifact detect_sign {
+      Node { name detect_sign
+        Publishers {
+          Publisher { name '/detect/traffic_sign' message 'std_msgs.UInt8'}}}
+}}}

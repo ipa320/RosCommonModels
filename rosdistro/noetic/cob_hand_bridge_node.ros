@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_hand_bridge {
+    FromGitRepo "https://github.com/ipa320/cob_hand.git" 
+    Artifact cob_hand_bridge_node {
+      Node { name cob_hand_bridge_node}
+}}}

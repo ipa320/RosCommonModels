@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage cob_command_gui {
+    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
+    Artifact knoeppkes {
+      Node { name knoeppkes
+        Subscribers {
+          Subscriber { name '/emergency_stop_state' message 'cob_msgs.EmergencyStopState'}}}
+}}}

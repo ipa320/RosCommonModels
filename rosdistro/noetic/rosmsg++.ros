@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rosmsg_cpp {
+    FromGitRepo "https://github.com/ctu-vras/rosmsg_cpp.git" 
+    Artifact rosmsg++ {
+      Node { name rosmsg++}
+}}}

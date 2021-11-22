@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage cob_mecanum_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact cob_mecanum_controller_node {
+      Node { name cob_mecanum_controller_node
+        Publishers {
+          Publisher { name 'odom' message 'nav_msgs.Odometry'},
+          Publisher { name 'wheel_command' message 'sensor_msgs.JointState'}}
+        Subscribers {
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'},
+          Subscriber { name 'wheel_state' message 'sensor_msgs.JointState'}}
+        Parameters {
+          Parameter { name 'lx' type Double },
+          Parameter { name 'static_frame' type String },
+          Parameter { name 'ly' type Double },
+          Parameter { name 'odom_frame' type String },
+          Parameter { name 'r' type Double }}}
+}}}

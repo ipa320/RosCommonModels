@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage open_manipulator_with_tb3_tools {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3.git" 
+    Artifact pick_and_place_state_machine {
+      Node { name pick_and_place_state_machine
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name '?' message 'ar_track_alvar_msgs.AlvarMarkers'},
+          Subscriber { name '?' message 'ar_track_alvar_msgs.AlvarMarkers'},
+          Subscriber { name '?' message 'nav_msgs.Odometry'},
+          Subscriber { name '?' message 'ar_track_alvar_msgs.AlvarMarkers'}}}
+}}}

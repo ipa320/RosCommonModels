@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage vesc_ackermann {
+    FromGitRepo "https://github.com/f1tenth/vesc.git" 
+    Artifact vesc_to_odom_node {
+      Node { name vesc_to_odom_node
+        Publishers {
+          Publisher { name 'odom' message 'nav_msgs.Odometry'}}
+        Subscribers {
+          Subscriber { name 'sensors/core' message 'vesc_msgs.VescStateStamped'},
+          Subscriber { name 'sensors/servo_position_command' message 'std_msgs.Float64'}}
+        Parameters {
+          Parameter { name 'odom_frame' type String value 'odom'},
+          Parameter { name 'publish_tf' type Boolean },
+          Parameter { name 'base_frame' type String value 'base_link'},
+          Parameter { name 'use_servo_cmd_to_calc_angular_velocity' type Boolean value true}}}
+}}}

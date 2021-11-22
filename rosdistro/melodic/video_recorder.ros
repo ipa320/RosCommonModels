@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage image_view {
+    FromGitRepo "https://github.com/ros-perception/image_pipeline.git" 
+    Artifact video_recorder {
+      Node { name video_recorder
+        Parameters {
+          Parameter { name 'colormap' type Integer value -1},
+          Parameter { name 'fps' type Integer value 15},
+          Parameter { name 'codec' type String value 'MJPG'},
+          Parameter { name 'encoding' type String value 'bgr8'},
+          Parameter { name 'max_depth_range' type Double },
+          Parameter { name 'filename' type String value 'output.avi'},
+          Parameter { name 'use_dynamic_depth_range' type Boolean },
+          Parameter { name 'min_depth_range' type Double },
+          Parameter { name 'stamped_filename' type Boolean }}}
+}}}

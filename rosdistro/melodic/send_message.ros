@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage range_sensor_layer {
+    FromGitRepo "https://github.com/DLu/navigation_layers.git" 
+    Artifact send_message {
+      Node { name send_message
+        Publishers {
+          Publisher { name '/sonar' message 'sensor_msgs.Range'}}}
+}}}

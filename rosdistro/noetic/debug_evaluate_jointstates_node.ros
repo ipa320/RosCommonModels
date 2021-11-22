@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_twist_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact debug_evaluate_jointstates_node {
+      Node { name debug_evaluate_jointstates_node}
+}}}

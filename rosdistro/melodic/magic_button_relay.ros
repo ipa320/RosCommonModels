@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage yocs_joyop {
+    FromGitRepo "https://github.com/yujinrobot/yujin_ocs.git" 
+    Artifact magic_button_relay {
+      Node { name magic_button_relay
+        Publishers {
+          Publisher { name '?' message 'yocs_msgs.MagicButton'},
+          Publisher { name '?' message 'std_msgs.Empty'},
+          Publisher { name '?' message 'std_msgs.Time'}}
+        Subscribers {
+          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}}
+}}}

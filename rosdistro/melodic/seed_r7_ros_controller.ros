@@ -1,0 +1,28 @@
+PackageSet {
+  CatkinPackage seed_r7_ros_controller {
+    FromGitRepo "https://github.com/seed-solutions/seed_r7_ros_pkg.git" 
+    Artifact seed_r7_ros_controller {
+      Node { name seed_r7_ros_controller
+        ServiceServers {
+          ServiceServer { name 'led_control' service 'seed_r7_ros_controller.LedControl'},
+          ServiceServer { name 'reset_robot_status' service 'seed_r7_ros_controller.ResetRobotStatus'},
+          ServiceServer { name 'set_initialpose' service 'seed_r7_ros_controller.SetInitialPose'}}
+        Publishers {
+          Publisher { name 'voltage' message 'std_msgs.Float32'},
+          Publisher { name '/initialpose' message 'geometry_msgs.PoseWithCovarianceStamped'},
+          Publisher { name 'odom' message 'nav_msgs.Odometry'}}
+        Subscribers {
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'robot_description' type String },
+          Parameter { name 'robot_model_plugin' type String value 'seed_r7_robot_interface/TypeF'},
+          Parameter { name '/seed_r7_mover_controller/odom_rate' type Double },
+          Parameter { name 'port_upper' type String value '/dev/aero_upper'},
+          Parameter { name 'overlap_scale' type Double },
+          Parameter { name '/seed_r7_mover_controller/safety_duration' type Double },
+          Parameter { name 'controller_rate' type Double },
+          Parameter { name 'port_lower' type String value '/dev/aero_lower'},
+          Parameter { name '/seed_r7_mover_controller/safety_rate' type Double },
+          Parameter { name 'csv_config_dir' type String },
+          Parameter { name '/seed_r7_mover_controller/ros_rate' type Double }}}
+}}}

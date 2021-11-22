@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage costmap_2d {
+    FromGitRepo "https://github.com/ros-planning/navigation.git" 
+    Artifact costmap_2d_node {
+      Node { name costmap_2d_node}
+}}}

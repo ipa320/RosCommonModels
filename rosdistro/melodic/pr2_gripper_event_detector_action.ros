@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage pr2_gripper_sensor_action {
+    FromGitRepo "https://github.com/PR2/pr2_gripper_sensor.git" 
+    Artifact pr2_gripper_event_detector_action {
+      Node { name pr2_gripper_event_detector_action
+        Publishers {
+          Publisher { name 'event_detector' message 'pr2_gripper_sensor_msgs.PR2GripperEventDetectorCommand'}}
+        Subscribers {
+          Subscriber { name 'event_detector_state' message 'pr2_gripper_sensor_msgs.PR2GripperEventDetectorData'}}}
+}}}

@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage qb_device_driver {
+    FromGitRepo "https://bitbucket.org/qbrobotics/qbdevice-ros.git" 
+    Artifact qb_device_communication_handler {
+      Node { name qb_device_communication_handler
+        ServiceServers {
+          ServiceServer { name '/communication_handler/deactivate_motors' service 'qb_device_srvs.Trigger'},
+          ServiceServer { name '/communication_handler/get_measurements' service 'qb_device_srvs.GetMeasurements'},
+          ServiceServer { name '/communication_handler/set_control_mode' service 'qb_device_srvs.SetControlMode'},
+          ServiceServer { name '/communication_handler/get_info' service 'qb_device_srvs.Trigger'},
+          ServiceServer { name '/communication_handler/set_commands' service 'qb_device_srvs.SetCommands'},
+          ServiceServer { name '/communication_handler/set_pid' service 'qb_device_srvs.SetPID'},
+          ServiceServer { name '/communication_handler/activate_motors' service 'qb_device_srvs.Trigger'},
+          ServiceServer { name '/communication_handler/initialize_device' service 'qb_device_srvs.InitializeDevice'}}
+        Publishers {
+          Publisher { name '/communication_handler/connection_state' message 'qb_device_msgs.ConnectionState'}}}
+}}}

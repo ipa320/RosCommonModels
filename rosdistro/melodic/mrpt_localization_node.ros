@@ -1,0 +1,44 @@
+PackageSet {
+  CatkinPackage mrpt_localization {
+    FromGitRepo "https://github.com/mrpt-ros-pkg/mrpt_navigation.git" 
+    Artifact mrpt_localization_node {
+      Node { name mrpt_localization_node
+        ServiceServers {
+          ServiceServer { name 'static_map' service 'nav_msgs.GetMap'}}
+        ServiceClients {
+          ServiceClient { name 'static_map' service 'nav_msgs.GetMap'}}
+        Publishers {
+          Publisher { name 'particlecloud' message 'geometry_msgs.PoseArray'},
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name 'mrpt_pose' message 'geometry_msgs.PoseWithCovarianceStamped'},
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'}}
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.LaserScan'},
+          Subscriber { name 'initialpose' message 'geometry_msgs.PoseWithCovarianceStamped'},
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'},
+          Subscriber { name '?' message 'mrpt_msgs.ObservationRangeBeacon'},
+          Subscriber { name '?' message 'geometry_msgs.PoseWithCovarianceStamped'},
+          Subscriber { name 'map' message 'nav_msgs.OccupancyGrid'}}
+        Parameters {
+          Parameter { name 'map_file' type String },
+          Parameter { name 'pose_broadcast' type Boolean },
+          Parameter { name 'no_inputs_tolerance' type Double },
+          Parameter { name 'base_frame_id' type String value 'base_link'},
+          Parameter { name 'ini_file' type String },
+          Parameter { name 'debug' type Boolean value true},
+          Parameter { name 'first_map_only' type Boolean },
+          Parameter { name 'transform_tolerance' type Double value 0.1},
+          Parameter { name 'debug' type Boolean },
+          Parameter { name 'no_update_tolerance' type Double value 1.0},
+          Parameter { name 'tf_broadcast' type Boolean value true},
+          Parameter { name 'gui_mrpt' type Boolean },
+          Parameter { name 'global_frame_id' type String value 'map'},
+          Parameter { name 'sensor_sources' type String },
+          Parameter { name 'use_map_topic' type Boolean },
+          Parameter { name 'particlecloud_update_skip' type Integer },
+          Parameter { name 'tf_prefix' type String },
+          Parameter { name 'odom_frame_id' type String value 'odom'},
+          Parameter { name 'parameter_update_skip' type Integer },
+          Parameter { name 'map_update_skip' type Integer },
+          Parameter { name 'rate' type Double }}}
+}}}

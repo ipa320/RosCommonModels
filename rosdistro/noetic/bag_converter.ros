@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage gps_common {
+    FromGitRepo "https://github.com/swri-robotics/gps_umd.git" 
+    Artifact bag_converter {
+      Node { name bag_converter}
+}}}

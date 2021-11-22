@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage obj_to_pointcloud {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact obj_to_pointcloud {
+      Node { name obj_to_pointcloud
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.PointCloud2'}}
+        Parameters {
+          Parameter { name 'neonavigation_compatible' type Integer },
+          Parameter { name 'offset_x' type Double },
+          Parameter { name 'offset_y' type Double },
+          Parameter { name 'downsample_grid' type Double value 0.05},
+          Parameter { name 'offset_z' type Double },
+          Parameter { name 'points_per_meter_sq' type Double value 600.0},
+          Parameter { name 'frame_id' type String value 'map'},
+          Parameter { name 'scale' type Double value 1.0},
+          Parameter { name 'objs' type String }}}
+}}}

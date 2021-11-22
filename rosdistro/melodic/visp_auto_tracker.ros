@@ -1,0 +1,21 @@
+PackageSet {
+  CatkinPackage visp_auto_tracker {
+    FromGitRepo "https://github.com/lagadic/vision_visp.git" 
+    Artifact visp_auto_tracker {
+      Node { name visp_auto_tracker
+        Publishers {
+          Publisher { name '?' message 'visp_tracker.MovingEdgeSites'},
+          Publisher { name '?' message 'visp_tracker.KltPoints'},
+          Publisher { name '?' message 'geometry_msgs.PoseWithCovarianceStamped'},
+          Publisher { name '?' message 'std_msgs.Int8'},
+          Publisher { name '?' message 'std_msgs.String'},
+          Publisher { name '?' message 'geometry_msgs.PoseStamped'}}
+        Parameters {
+          Parameter { name 'tracker_ref_frame' type String value '/map'},
+          Parameter { name 'tracker_config_path' type String },
+          Parameter { name '/model_description' type String value '/map'},
+          Parameter { name 'debug_display' type Boolean },
+          Parameter { name 'model_path' type String },
+          Parameter { name 'code_message' type String },
+          Parameter { name 'model_name' type String }}}
+}}}

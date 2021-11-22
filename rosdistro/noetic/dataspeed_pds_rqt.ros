@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage dataspeed_pds_rqt {
+    FromGitRepo "https://bitbucket.org/DataspeedInc/dataspeed_pds.git" 
+    Artifact dataspeed_pds_rqt {
+      Node { name dataspeed_pds_rqt}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage robot_mechanism_controllers {
+    FromGitRepo "https://github.com/pr2/pr2_controllers.git" 
+    Artifact posture {
+      Node { name posture
+        Publishers {
+          Publisher { name '?' message '?'}}}
+}}}

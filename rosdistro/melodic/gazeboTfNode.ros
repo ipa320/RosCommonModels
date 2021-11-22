@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage rsm_additions {
+    FromGitRepo "https://github.com/MarcoStb1993/robot_statemachine.git" 
+    Artifact gazeboTfNode {
+      Node { name gazeboTfNode
+        Subscribers {
+          Subscriber { name '?' message 'nav_msgs.Odometry'}}
+        Parameters {
+          Parameter { name 'map_frame' type String value 'map'},
+          Parameter { name 'odom_topic' type String value '/ground_truth/state'},
+          Parameter { name 'robot_frame' type String value 'robot_footprint'}}}
+}}}

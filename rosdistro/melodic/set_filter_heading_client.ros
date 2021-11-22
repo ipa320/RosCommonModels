@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact set_filter_heading_client {
+      Node { name set_filter_heading_client
+        ServiceClients {
+          ServiceClient { name 'SetFilterHeading' service 'microstrain_mips.SetFilterHeading'}}}
+}}}

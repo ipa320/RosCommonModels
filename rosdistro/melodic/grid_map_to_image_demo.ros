@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage grid_map_demos {
+    FromGitRepo "https://github.com/anybotics/grid_map.git" 
+    Artifact grid_map_to_image_demo {
+      Node { name grid_map_to_image_demo
+        Subscribers {
+          Subscriber { name '?' message 'grid_map_msgs.GridMap'}}
+        Parameters {
+          Parameter { name 'grid_map_topic' type String value '/grid_map'},
+          Parameter { name 'file' type String value '~/.ros/grid_map.png'}}}
+}}}

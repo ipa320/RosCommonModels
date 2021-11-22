@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_sound {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact test_client {
+      Node { name test_client}
+}}}

@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage uuv_control_utils {
+    FromGitRepo "https://github.com/uuvsimulator/uuv_simulator.git" 
+    Artifact trajectory_marker_publisher {
+      Node { name trajectory_marker_publisher
+        Publishers {
+          Publisher { name 'trajectory_marker' message 'nav_msgs.Path'},
+          Publisher { name 'reference_marker' message 'visualization_msgs.Marker'},
+          Publisher { name 'waypoint_path_marker' message 'nav_msgs.Path'},
+          Publisher { name 'waypoint_markers' message 'visualization_msgs.MarkerArray'}}
+        Subscribers {
+          Subscriber { name 'waypoints' message 'uuv_control_msgs.WaypointSet'},
+          Subscriber { name 'automatic_on' message 'std_msgs.Bool'},
+          Subscriber { name 'reference' message 'uuv_control_msgs.TrajectoryPoint'},
+          Subscriber { name 'station_keeping_on' message 'std_msgs.Bool'},
+          Subscriber { name 'trajectory' message 'uuv_control_msgs.Trajectory'},
+          Subscriber { name 'trajectory_tracking_on' message 'std_msgs.Bool'}}}
+}}}

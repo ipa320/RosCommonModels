@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage tuw_aruco {
+    FromGitRepo "https://github.com/tuw-robotics/tuw_marker_detection.git" 
+    Artifact aruco_node {
+      Node { name aruco_node
+        Publishers {
+          Publisher { name 'fiducials' message 'marker_msgs.FiducialDetection'},
+          Publisher { name 'markers' message 'marker_msgs.MarkerDetection'}}}
+}}}

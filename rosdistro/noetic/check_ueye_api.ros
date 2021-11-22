@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ueye_cam {
+    FromGitRepo "https://github.com/anqixu/ueye_cam.git" 
+    Artifact check_ueye_api {
+      Node { name check_ueye_api}
+}}}

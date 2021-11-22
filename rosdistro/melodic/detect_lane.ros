@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage turtlebot3_autorace_detect {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_autorace.git" 
+    Artifact detect_lane {
+      Node { name detect_lane
+        Publishers {
+          Publisher { name '/detect/lane' message 'std_msgs.Float64'},
+          Publisher { name '/detect/white_line_reliability' message 'std_msgs.UInt8'},
+          Publisher { name '/detect/yellow_line_reliability' message 'std_msgs.UInt8'}}}
+}}}

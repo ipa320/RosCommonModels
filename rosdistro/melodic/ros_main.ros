@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage pf_driver {
+    FromGitRepo "https://github.com/PepperlFuchs/pf_lidar_ros_driver.git" 
+    Artifact ros_main {
+      Node { name ros_main
+        Parameters {
+          Parameter { name 'start_angle' type Integer },
+          Parameter { name 'max_num_points_scan' type Integer }}}
+}}}

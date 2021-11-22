@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact get_basic_status_client {
+      Node { name get_basic_status_client
+        ServiceClients {
+          ServiceClient { name 'GetBasicStatus' service 'std_srvs.Trigger'}}}
+}}}

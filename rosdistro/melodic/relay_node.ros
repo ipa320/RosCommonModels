@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage sainsmart_relay_usb {
+    FromGitRepo "https://bitbucket.org/DataspeedInc/sainsmart_relay_usb.git" 
+    Artifact relay_node {
+      Node { name relay_node
+        Publishers {
+          Publisher { name 'ready' message 'std_msgs.Bool'},
+          Publisher { name 'serial' message 'std_msgs.String'}}
+        Subscribers {
+          Subscriber { name 'relay_cmd' message 'std_msgs.Byte'}}
+        Parameters {
+          Parameter { name 'serial' type String },
+          Parameter { name 'desc' type String }}}
+}}}

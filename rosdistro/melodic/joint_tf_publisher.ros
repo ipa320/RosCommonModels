@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage ypspur_ros {
+    FromGitRepo "https://github.com/openspur/ypspur_ros.git" 
+    Artifact joint_tf_publisher {
+      Node { name joint_tf_publisher
+        Subscribers {
+          Subscriber { name '?' message 'ros.NodeHandle'}}
+        Parameters {
+          Parameter { name 'compatible' type Integer }}}
+}}}

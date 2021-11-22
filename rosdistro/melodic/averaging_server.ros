@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage actionlib_tutorials {
+    FromGitRepo "https://github.com/ros/common_tutorials.git" 
+    Artifact averaging_server {
+      Node { name averaging_server
+        Subscribers {
+          Subscriber { name '/random_number' message 'std_msgs.Float32'}}
+        ActionServers {
+          ActionServer { name '?' action 'actionlib_tutorials.AveragingAction'}}}
+}}}

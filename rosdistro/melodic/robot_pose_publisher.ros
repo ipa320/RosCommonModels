@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage rwt_nav {
+    FromGitRepo "https://github.com/tork-a/visualization_rwt.git" 
+    Artifact robot_pose_publisher {
+      Node { name robot_pose_publisher
+        Publishers {
+          Publisher { name 'robot_pose' message 'geometry_msgs.Pose'},
+          Publisher { name 'robot_pose' message 'geometry_msgs.PoseStamped'}}
+        Parameters {
+          Parameter { name 'base_frame' type String value '/base_link'},
+          Parameter { name 'is_stamped' type Boolean },
+          Parameter { name 'map_frame' type String value '/map'},
+          Parameter { name 'publish_frequency' type Double value 10}}}
+}}}

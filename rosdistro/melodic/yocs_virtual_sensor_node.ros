@@ -1,0 +1,24 @@
+PackageSet {
+  CatkinPackage yocs_virtual_sensor {
+    FromGitRepo "https://github.com/yujinrobot/yujin_ocs.git" 
+    Artifact yocs_virtual_sensor_node {
+      Node { name yocs_virtual_sensor_node
+        Publishers {
+          Publisher { name 'virtual_sensor_scan' message 'sensor_msgs.LaserScan'}}
+        Subscribers {
+          Subscriber { name 'column_pose_list' message 'yocs_msgs.ColumnList'},
+          Subscriber { name 'wall_pose_list' message 'yocs_msgs.WallList'}}
+        Parameters {
+          Parameter { name 'sensor_frame' type String value '/base_link'},
+          Parameter { name 'hits_count' type Integer value 2},
+          Parameter { name 'frequency' type Double },
+          Parameter { name 'range_max' type Double },
+          Parameter { name 'angle_max' type Double },
+          Parameter { name 'move_base/local_costmap/height' type Double },
+          Parameter { name 'range_min' type Double },
+          Parameter { name 'samples' type Integer value 360},
+          Parameter { name 'move_base/local_costmap/width' type Double },
+          Parameter { name 'angle_min' type Double },
+          Parameter { name 'global_frame' type String value '/map'},
+          Parameter { name 'move_base/local_costmap/update_frequency' type Double }}}
+}}}

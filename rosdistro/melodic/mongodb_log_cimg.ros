@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage mongodb_log {
+    FromGitRepo "https://github.com/strands-project/mongodb_store.git" 
+    Artifact mongodb_log_cimg {
+      Node { name mongodb_log_cimg
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.CompressedImage'}}}
+}}}

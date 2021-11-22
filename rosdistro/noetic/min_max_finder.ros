@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage mir_navigation {
+    FromGitRepo "https://github.com/dfki-ric/mir_robot.git" 
+    Artifact min_max_finder {
+      Node { name min_max_finder
+        Subscribers {
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}}
+}}}

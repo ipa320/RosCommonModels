@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage laser_joint_projector {
+    FromGitRepo "https://github.com/UNR-RoboticsResearchLab/pr2_calibration.git" 
+    Artifact laser_joint_projector_node {
+      Node { name laser_joint_projector_node
+        Publishers {
+          Publisher { name 'checkerboard_points' message 'sensor_msgs.PointCloud'}}
+        Subscribers {
+          Subscriber { name 'joint_state_features' message '?'}}
+        Parameters {
+          Parameter { name 'robot_description' type String }}}
+}}}

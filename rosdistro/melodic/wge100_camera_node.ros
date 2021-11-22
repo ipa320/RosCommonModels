@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage wge100_camera {
+    FromGitRepo "https://github.com/ros-drivers/wge100_driver.git" 
+    Artifact wge100_camera_node {
+      Node { name wge100_camera_node
+        ServiceServers {
+          ServiceServer { name 'set_camera_info' service 'sensor_msgs.SetCameraInfo'},
+          ServiceServer { name 'board_config' service 'wge100_camera.BoardConfig'}}
+        Subscribers {
+          Subscriber { name '?' message '?'}}}
+}}}

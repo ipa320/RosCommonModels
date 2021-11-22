@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage movie_publisher {
+    FromGitRepo "https://github.com/peci1/movie_publisher.git" 
+    Artifact movie_publisher_node {
+      Node { name movie_publisher_node
+        Publishers {
+          Publisher { name 'movie' message 'sensor_msgs.Image'}}
+        Parameters {
+          Parameter { name '/movie_publisher/num_frames' type  }}}
+}}}

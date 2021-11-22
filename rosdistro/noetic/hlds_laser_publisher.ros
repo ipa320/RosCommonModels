@@ -4,10 +4,10 @@ PackageSet {
     Artifact hlds_laser_publisher {
       Node { name hlds_laser_publisher
         Publishers {
-          Publisher { name 'scan' message 'sensor_msgs.LaserScan'},
-          Publisher { name 'rpms' message 'std_msgs.UInt16'}}
+          Publisher { name 'rpms' message 'std_msgs.UInt16'},
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}
         Parameters {
-          Parameter { name 'frame_id' type String value 'laser'},
           Parameter { name 'port' type String value '/dev/ttyUSB0'},
+          Parameter { name 'frame_id' type String value 'laser'},
           Parameter { name 'baud_rate' type Integer value 230400}}}
 }}}

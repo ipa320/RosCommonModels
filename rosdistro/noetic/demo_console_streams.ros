@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ecl_streams {
+    FromGitRepo "https://github.com/stonier/ecl_core.git" 
+    Artifact demo_console_streams {
+      Node { name demo_console_streams}
+}}}

@@ -1,0 +1,20 @@
+PackageSet {
+  CatkinPackage rotors_hil_interface {
+    FromGitRepo "https://github.com/ethz-asl/rotors_simulator.git" 
+    Artifact rotors_hil_interface_node {
+      Node { name rotors_hil_interface_node
+        Publishers {
+          Publisher { name '?' message 'mav_msgs.Actuators'},
+          Publisher { name '?' message 'mavros_msgs.Mavlink'}}
+        Subscribers {
+          Subscriber { name '?' message 'mavros_msgs.HilControls'}}
+        Parameters {
+          Parameter { name 'body_to_sensor_pitch' type Double },
+          Parameter { name 'body_to_sensor_roll' type Double },
+          Parameter { name 'body_to_sensor_yaw' type Double },
+          Parameter { name 'hil_controls_sub_topic' type String value 'mavros/hil_controls/hil_controls'},
+          Parameter { name 'actuators_pub_topic' type String },
+          Parameter { name 'hil_frequency' type Double value 100.0},
+          Parameter { name 'sensor_level_hil' type Boolean value true},
+          Parameter { name 'mavlink_pub_topic' type String value 'mavlink/to'}}}
+}}}

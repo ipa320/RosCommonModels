@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage rosbag_fancy {
+    FromGitRepo "https://github.com/xqms/rosbag_fancy.git" 
+    Artifact rosbag_fancy {
+      Node { name rosbag_fancy
+        ServiceServers {
+          ServiceServer { name 'start' service '?'},
+          ServiceServer { name 'stop' service '?'}}
+        Publishers {
+          Publisher { name 'status' message 'Status'}}}
+}}}

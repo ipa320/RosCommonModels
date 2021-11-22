@@ -4,25 +4,25 @@ PackageSet {
     Artifact cob_light {
       Node { name cob_light
         ServiceServers {
-          ServiceServer { name 'stop_mode' service 'cob_light.StopLightMode'},
-          ServiceServer { name 'set_light' service 'cob_light.SetLightMode'}}
+          ServiceServer { name 'set_light' service 'cob_light.SetLightMode'},
+          ServiceServer { name 'stop_mode' service 'cob_light.StopLightMode'}}
         Publishers {
-          Publisher { name 'marker' message 'visualization_msgs.Marker'},
-          Publisher { name 'debug' message 'std_msgs.ColorRGBA'},
           Publisher { name 'debugMulti' message 'cob_light.ColorRGBAArray'},
+          Publisher { name 'debug' message 'std_msgs.ColorRGBA'},
+          Publisher { name 'marker' message 'visualization_msgs.Marker'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
         Subscribers {
           Subscriber { name 'command' message 'cob_light.ColorRGBAArray'},
           Subscriber { name '/scan_unified' message 'sensor_msgs.LaserScan'}}
         Parameters {
+          Parameter { name 'startup_mode' type String value 'None'},
           Parameter { name 'num_leds' type Integer value 58},
-          Parameter { name 'invert_output' type Boolean },
-          Parameter { name 'devicestring' type String value '/dev/ttyLed'},
-          Parameter { name 'sim_enabled' type Boolean },
-          Parameter { name 'baudrate' type Integer value 230400},
           Parameter { name 'pubmarker' type Boolean value true},
           Parameter { name 'marker_frame' type String value 'base_link'},
-          Parameter { name 'devicedriver' type String value 'cob_ledboard'},
-          Parameter { name 'startup_mode' type String value 'None'},
-          Parameter { name 'led_offset' type Integer }}}
+          Parameter { name 'baudrate' type Integer value 230400},
+          Parameter { name 'devicestring' type String value '/dev/ttyLed'},
+          Parameter { name 'led_offset' type Integer },
+          Parameter { name 'invert_output' type Boolean },
+          Parameter { name 'sim_enabled' type Boolean },
+          Parameter { name 'devicedriver' type String value 'cob_ledboard'}}}
 }}}

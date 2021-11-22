@@ -1,0 +1,23 @@
+PackageSet {
+  CatkinPackage rsm_core {
+    FromGitRepo "https://github.com/MarcoStb1993/robot_statemachine.git" 
+    Artifact robotControlMuxNode {
+      Node { name robotControlMuxNode
+        ServiceServers {
+          ServiceServer { name 'setOperationMode' service 'rsm_msgs.SetOperationMode'}}
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.Twist'},
+          Publisher { name 'operationMode' message 'rsm_msgs.OperationMode'}}
+        Subscribers {
+          Subscriber { name '?' message 'geometry_msgs.Twist'},
+          Subscriber { name '?' message 'geometry_msgs.Twist'},
+          Subscriber { name '?' message 'sensor_msgs.Joy'}}
+        Parameters {
+          Parameter { name 'teleoperation_idle_timer' type Double value 0.5},
+          Parameter { name 'teleoperation_cmd_vel_topic' type String value 'teleoperation/cmd_vel'},
+          Parameter { name 'joystick_topic' type String value 'joy'},
+          Parameter { name 'update_frequency' type Double value 20.0},
+          Parameter { name 'autonomy_cmd_vel_topic' type String value 'autonomy/cmd_vel'},
+          Parameter { name 'joystick_used' type Boolean },
+          Parameter { name 'cmd_vel_topic' type String value 'cmd_vel'}}}
+}}}

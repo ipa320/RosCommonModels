@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage rotors_gazebo {
+    FromGitRepo "https://github.com/ethz-asl/rotors_simulator.git" 
+    Artifact waypoint_publisher_file {
+      Node { name waypoint_publisher_file
+        Publishers {
+          Publisher { name '?' message 'trajectory_msgs.MultiDOFJointTrajectory'}}
+        Subscribers {
+          Subscriber { name 'imu' message 'sensor_msgs.ImuPtr'}}}
+}}}

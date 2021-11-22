@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact gyro_bias_capture_client {
+      Node { name gyro_bias_capture_client
+        ServiceClients {
+          ServiceClient { name 'GyroBiasCapture' service 'std_srvs.Trigger'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage oled_display_node {
+    FromGitRepo "https://github.com/UbiquityRobotics/oled_display_node.git" 
+    Artifact oled_display_node {
+      Node { name oled_display_node}
+}}}

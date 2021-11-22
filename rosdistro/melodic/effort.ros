@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage robot_mechanism_controllers {
+    FromGitRepo "https://github.com/pr2/pr2_controllers.git" 
+    Artifact effort {
+      Node { name effort
+        Publishers {
+          Publisher { name '?' message '?'}}
+        Parameters {
+          Parameter { name '?' type String value 'JointEffortController'},
+          Parameter { name '?' type  }}}
+}}}

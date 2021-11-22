@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage distance_map_node {
+    FromGitRepo "https://github.com/artivis/distance_map.git" 
+    Artifact distance_map_node {
+      Node { name distance_map_node
+        Publishers {
+          Publisher { name 'distance_field_obstacles' message 'distance_map_msgs.DistanceMap'}}
+        Subscribers {
+          Subscriber { name '/map' message 'nav_msgs.OccupancyGrid'}}
+        Parameters {
+          Parameter { name 'distance_map_type' type String }}}
+}}}

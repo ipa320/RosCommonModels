@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage ainstein_radar_filters {
+    FromGitRepo "https://github.com/AinsteinAI/ainstein_radar.git" 
+    Artifact tracking_filter_cartesian_node {
+      Node { name tracking_filter_cartesian_node
+        Publishers {
+          Publisher { name 'objects' message 'ainstein_radar_msgs.RadarTrackedObjectArray'},
+          Publisher { name 'boxes' message 'ainstein_radar_msgs.BoundingBoxArray'}}
+        Subscribers {
+          Subscriber { name 'radar_in' message 'ainstein_radar_msgs.RadarTargetArray'},
+          Subscriber { name 'cloud_in' message 'sensor_msgs.PointCloud2'}}}
+}}}

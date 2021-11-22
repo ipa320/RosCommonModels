@@ -4,8 +4,8 @@ PackageSet {
     Artifact leg_detector {
       Node { name leg_detector
         Publishers {
-          Publisher { name 'visualization_marker' message 'visualization_msgs.Marker'},
           Publisher { name 'people_tracker_measurements' message 'people_msgs.PositionMeasurementArray'},
+          Publisher { name 'visualization_marker' message 'visualization_msgs.Marker'},
           Publisher { name 'leg_tracker_measurements' message 'people_msgs.PositionMeasurementArray'}}
         Parameters {
           Parameter { name 'use_seeds' type Boolean }}}

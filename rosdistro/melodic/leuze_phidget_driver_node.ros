@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage leuze_phidget_driver {
+    FromGitRepo "https://gitlab.cc-asp.fraunhofer.de/led/leuze_ros_drivers.git" 
+    Artifact leuze_phidget_driver_node {
+      Node { name leuze_phidget_driver_node
+        Publishers {
+          Publisher { name 'ik_show_inputs' message 'leuze_msgs.PhidgetIKInputMsg'},
+          Publisher { name '?' message 'std_msgs.Bool'}}
+        Subscribers {
+          Subscriber { name 'ik_set_outputs' message 'leuze_msgs.PhidgetIKOutputMsg'},
+          Subscriber { name '?' message 'std_msgs.Bool'}}}
+}}}

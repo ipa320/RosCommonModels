@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage global_planner {
+    FromGitRepo "https://github.com/ros-planning/navigation.git" 
+    Artifact planner {
+      Node { name planner
+        ServiceServers {
+          ServiceServer { name 'make_plan' service 'navfn.MakeNavPlan'}}
+        Subscribers {
+          Subscriber { name 'goal' message 'rm.PoseStamped'}}}
+}}}

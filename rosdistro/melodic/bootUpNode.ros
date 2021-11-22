@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage rsm_additions {
+    FromGitRepo "https://github.com/MarcoStb1993/robot_statemachine.git" 
+    Artifact bootUpNode {
+      Node { name bootUpNode
+        ServiceServers {
+          ServiceServer { name 'bootUpFinished' service 'std_srvs.SetBool'}}
+        Parameters {
+          Parameter { name 'wait_time' type Double value 1}}}
+}}}

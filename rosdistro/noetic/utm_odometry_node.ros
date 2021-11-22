@@ -8,8 +8,8 @@ PackageSet {
         Subscribers {
           Subscriber { name 'fix' message 'sensor_msgs.NavSatFix'}}
         Parameters {
-          Parameter { name 'child_frame_id' type String },
-          Parameter { name 'append_zone' type Boolean },
           Parameter { name 'rot_covariance' type Double value 99999.0},
-          Parameter { name 'frame_id' type String }}}
+          Parameter { name 'append_zone' type Boolean },
+          Parameter { name 'frame_id' type String },
+          Parameter { name 'child_frame_id' type String }}}
 }}}

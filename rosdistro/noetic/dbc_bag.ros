@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage dataspeed_can_tools {
+    FromGitRepo "https://bitbucket.org/dataspeedinc/dataspeed_can.git" 
+    Artifact dbc_bag {
+      Node { name dbc_bag}
+}}}

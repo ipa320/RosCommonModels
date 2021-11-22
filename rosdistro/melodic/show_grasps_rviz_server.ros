@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage cob_grasp_generation {
+    FromGitRepo "https://github.com/ipa320/cob_manipulation.git" 
+    Artifact show_grasps_rviz_server {
+      Node { name show_grasps_rviz_server
+        Publishers {
+          Publisher { name '/joint_states' message '?'},
+          Publisher { name '/object_marker' message '?'}}}
+}}}

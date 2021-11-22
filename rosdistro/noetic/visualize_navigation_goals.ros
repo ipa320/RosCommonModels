@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage cob_helper_tools {
+    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
+    Artifact visualize_navigation_goals {
+      Node { name visualize_navigation_goals
+        Publishers {
+          Publisher { name 'visualize_navigation_goals' message 'visualization_msgs.MarkerArray'}}}
+}}}

@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage turtlebot3_autorace_detect {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_autorace_2020.git" 
+    Artifact detect_tunnel {
+      Node { name detect_tunnel
+        Publishers {
+          Publisher { name '/detect/tunnel_stamped' message 'std_msgs.UInt8'},
+          Publisher { name '/control/moving/state' message 'turtlebot3_autorace_msgs.MovingParam'},
+          Publisher { name '/move_base_simple/goal' message 'geometry_msgs.PoseStamped'}}
+        Subscribers {
+          Subscriber { name '/control/moving/complete' message 'std_msgs.UInt8'},
+          Subscriber { name '/move_base/result' message 'move_base_msgs.MoveBaseActionResult'},
+          Subscriber { name '/detect/tunnel_order' message 'std_msgs.UInt8'},
+          Subscriber { name '/odom' message 'nav_msgs.Odometry'}}}
+}}}

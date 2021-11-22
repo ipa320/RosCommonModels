@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage turtlebot3_example {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3.git" 
+    Artifact turtlebot3_pointop_key {
+      Node { name turtlebot3_pointop_key
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}}
+}}}

@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage fingertip_pressure {
+    FromGitRepo "https://github.com/pr2/pr2_ethercat_drivers.git" 
+    Artifact sensor_info {
+      Node { name sensor_info
+        Publishers {
+          Publisher { name 'visualization_marker' message 'visualization_msgs.Marker'},
+          Publisher { name '?' message 'pr2_msgs.PressureState'},
+          Publisher { name '?' message 'fingertip_pressure.PressureInfo'},
+          Publisher { name 'visualization_marker' message 'visualization_msgs.Marker'}}
+        Subscribers {
+          Subscriber { name '?' message 'fingertip_pressure.PressureInfo'},
+          Subscriber { name '?' message 'fingertip_pressure.PressureInfo'},
+          Subscriber { name '?' message 'pr2_msgs.PressureState'},
+          Subscriber { name '?' message 'pr2_msgs.PressureState'}}}
+}}}

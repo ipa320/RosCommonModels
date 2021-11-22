@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage soem {
+    FromGitRepo "https://github.com/mgruhler/soem.git" 
+    Artifact slaveinfo {
+      Node { name slaveinfo}
+}}}

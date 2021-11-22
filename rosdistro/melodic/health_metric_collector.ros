@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage health_metric_collector {
+    FromGitRepo "https://github.com/aws-robotics/health-metrics-collector-ros1.git" 
+    Artifact health_metric_collector {
+      Node { name health_metric_collector
+        Publishers {
+          Publisher { name 'metrics' message 'ros_monitoring_msgs.MetricList'}}}
+}}}

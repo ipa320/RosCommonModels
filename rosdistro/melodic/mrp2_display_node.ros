@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage mrp2_display {
+    FromGitRepo "https://github.com/milvusrobotics/mrp2_robot.git" 
+    Artifact mrp2_display_node {
+      Node { name mrp2_display_node
+        ServiceServers {
+          ServiceServer { name '/panel_outputs/gpio' service 'mrp2_display.gpio'}}
+        Publishers {
+          Publisher { name 'panel_inputs' message 'std_msgs.Int32MultiArray'}}
+        Subscribers {
+          Subscriber { name '/estop_btn' message 'std_msgs.Bool'},
+          Subscriber { name '/estop' message 'std_msgs.Bool'},
+          Subscriber { name 'bumpers' message 'std_msgs.Int32MultiArray'},
+          Subscriber { name '/batt_volt' message 'std_msgs.Float32'}}
+        Parameters {
+          Parameter { name '~port' type String value '/dev/ttyS1'}}}
+}}}

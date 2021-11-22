@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage joint_states_settler {
+    FromGitRepo "https://github.com/ros-perception/calibration.git" 
+    Artifact view_interval {
+      Node { name view_interval
+        Subscribers {
+          Subscriber { name 'interval' message 'calibration_msgs.Interval'}}}
+}}}

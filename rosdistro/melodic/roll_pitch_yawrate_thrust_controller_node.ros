@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage rotors_control {
+    FromGitRepo "https://github.com/ethz-asl/rotors_simulator.git" 
+    Artifact roll_pitch_yawrate_thrust_controller_node {
+      Node { name roll_pitch_yawrate_thrust_controller_node
+        Publishers {
+          Publisher { name '?' message 'mav_msgs.Actuators'}}
+        Subscribers {
+          Subscriber { name '?' message 'nav_msgs.Odometry'},
+          Subscriber { name '?' message 'mav_msgs.RollPitchYawrateThrust'}}
+        Parameters {
+          Parameter { name '?' type Double },
+          Parameter { name '?' type Integer },
+          Parameter { name '?' type Double },
+          Parameter { name '?' type Double },
+          Parameter { name '?' type Double }}}
+}}}

@@ -1,0 +1,20 @@
+PackageSet {
+  CatkinPackage jsk_topic_tools {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common.git" 
+    Artifact topic_buffer_client {
+      Node { name topic_buffer_client
+        ServiceClients {
+          ServiceClient { name '/list' service 'jsk_topic_tools.List'},
+          ServiceClient { name '/update' service 'jsk_topic_tools.Update'},
+          ServiceClient { name '/update' service 'jsk_topic_tools.Update'}}
+        Publishers {
+          Publisher { name '?' message '?'},
+          Publisher { name '/update' message 'std_msgs.String'}}
+        Parameters {
+          Parameter { name 'use_service' type Boolean value true},
+          Parameter { name 'latched' type Boolean },
+          Parameter { name 'periodic_rate' type Double value 0.1},
+          Parameter { name 'fixed_rate' type Double value 0.1},
+          Parameter { name 'update_rate' type Double value 10.0},
+          Parameter { name 'debug' type Boolean }}}
+}}}

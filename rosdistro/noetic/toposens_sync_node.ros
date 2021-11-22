@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage toposens_sync {
+    FromGitRepo "https://gitlab.com/toposens/public/ros-packages.git" 
+    Artifact toposens_sync_node {
+      Node { name toposens_sync_node}
+}}}

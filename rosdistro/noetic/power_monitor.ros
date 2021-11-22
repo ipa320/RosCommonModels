@@ -9,8 +9,8 @@ PackageSet {
           Subscriber { name '?' message '?'},
           Subscriber { name 'battery/server2' message '?'}}
         Parameters {
-          Parameter { name 'advanced_log_file' type String },
-          Parameter { name 'frequency' type Double },
           Parameter { name 'battery_update_timeout' type Double },
-          Parameter { name 'estimation_method' type String }}}
+          Parameter { name 'estimation_method' type String },
+          Parameter { name 'frequency' type Double },
+          Parameter { name 'advanced_log_file' type String }}}
 }}}

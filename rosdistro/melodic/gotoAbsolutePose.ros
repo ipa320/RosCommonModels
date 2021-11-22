@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage uwsim {
+    FromGitRepo "https://github.com/uji-ros-pkg/underwater_simulation.git" 
+    Artifact gotoAbsolutePose {
+      Node { name gotoAbsolutePose
+        Publishers {
+          Publisher { name '?' message 'nav_msgs.Odometry'}}
+        Subscribers {
+          Subscriber { name '?' message 'nav_msgs.Odometry'}}}
+}}}

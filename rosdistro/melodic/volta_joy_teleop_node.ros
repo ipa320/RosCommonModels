@@ -1,0 +1,23 @@
+PackageSet {
+  CatkinPackage volta_teleoperator {
+    FromGitRepo "https://github.com/botsync/volta.git" 
+    Artifact volta_joy_teleop_node {
+      Node { name volta_joy_teleop_node
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.Twist'},
+          Publisher { name '?' message 'std_msgs.Bool'}}
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.Joy'}}
+        Parameters {
+          Parameter { name 'cmd_vel_topic' type String value 'joy/cmd_vel'},
+          Parameter { name 'stop_button' type Integer value 2},
+          Parameter { name 'max_linear_speed' type Double value 0.3},
+          Parameter { name 'angular_speed_axis' type Integer },
+          Parameter { name 'linear_speed_axis' type Integer value 1},
+          Parameter { name 'joy_topic' type String value '/joy'},
+          Parameter { name 'e_stop_button' type Integer value 3},
+          Parameter { name 'enable_button' type Integer value 1},
+          Parameter { name 'max_angular_speed' type Double value 0.3},
+          Parameter { name 'enable_e_stop' type Integer },
+          Parameter { name 'e_stop_pub_topic' type String value '/e_stop_sw_enable'}}}
+}}}

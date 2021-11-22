@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage locomotor {
+    FromGitRepo "https://github.com/locusrobotics/robot_navigation.git" 
+    Artifact locomotor1 {
+      Node { name locomotor1
+        Publishers {
+          Publisher { name '?' message 'std_msgs.String'}}
+        Subscribers {
+          Subscriber { name '?' message 'nav_msgs.Odometry'}}
+        Parameters {
+          Parameter { name 'odom_topic' type String },
+          Parameter { name 'controller_frequency' type Double }}}
+}}}

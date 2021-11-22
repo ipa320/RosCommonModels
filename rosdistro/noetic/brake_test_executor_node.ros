@@ -6,8 +6,8 @@ PackageSet {
         ServiceServers {
           ServiceServer { name '/prbt/execute_braketest' service 'pilz_msgs.BrakeTest'}}
         ServiceClients {
-          ServiceClient { name '/prbt/manipulator_joint_trajectory_controller/unhold' service 'std_srvs.Trigger'},
           ServiceClient { name '/prbt/braketest_adapter_node/trigger_braketest' service 'BrakeTest'},
-          ServiceClient { name '/prbt/send_brake_test_result' service 'SendBrakeTestResult'},
-          ServiceClient { name '/prbt/manipulator_joint_trajectory_controller/hold' service 'std_srvs.Trigger'}}}
+          ServiceClient { name '/prbt/manipulator_joint_trajectory_controller/unhold' service 'std_srvs.Trigger'},
+          ServiceClient { name '/prbt/manipulator_joint_trajectory_controller/hold' service 'std_srvs.Trigger'},
+          ServiceClient { name '/prbt/send_brake_test_result' service 'SendBrakeTestResult'}}}
 }}}

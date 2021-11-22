@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage network_monitor_udp {
+    FromGitRepo "https://github.com/pr2/linux_networking.git" 
+    Artifact udpmonsink {
+      Node { name udpmonsink
+        Publishers {
+          Publisher { name 'udpsink_feedback' message 'network_monitor_udp.UdpSink'}}}
+}}}

@@ -10,8 +10,8 @@ PackageSet {
         Subscribers {
           Subscriber { name 'state' message 'pr2_controllers_msgs.JointTrajectoryControllerState'}}
         Parameters {
+          Parameter { name '/robot_description' type String },
           Parameter { name 'pan_link' type String value 'head_pan_link'},
           Parameter { name 'success_angle_threshold' type Double value 0.1},
-          Parameter { name '/robot_description' type String },
           Parameter { name 'default_pointing_frame' type String value 'head_tilt_link'}}}
 }}}

@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage jsk_interactive_marker {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_visualization.git" 
+    Artifact pointcloud_cropper {
+      Node { name pointcloud_cropper
+        Publishers {
+          Publisher { name 'output' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'visualization_pointcloud' message 'sensor_msgs.PointCloud2'}}
+        Subscribers {
+          Subscriber { name 'input' message 'sensor_msgs.PointCloud2'}}}
+}}}

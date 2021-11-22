@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage datmo {
+    FromGitRepo "https://github.com/kostaskonkk/datmo.git" 
+    Artifact datmo {
+      Node { name datmo
+        Publishers {
+          Publisher { name 'datmo/box_kf' message 'datmo.TrackArray'},
+          Publisher { name 'datmo/marker_array' message 'visualization_msgs.MarkerArray'}}
+        Subscribers {
+          Subscriber { name '/scan' message 'sensor_msgs.LaserScan'}}
+        Parameters {
+          Parameter { name 'lidar_frame' type String value 'base_link'},
+          Parameter { name 'pub_markers' type Boolean },
+          Parameter { name 'threshold_distance' type Double value 0.2},
+          Parameter { name 'max_cluster_size' type Integer value 360},
+          Parameter { name 'world_frame' type String value 'map'},
+          Parameter { name 'euclidean_distance' type Double value 0.25}}}
+}}}

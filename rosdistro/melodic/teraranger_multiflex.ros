@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage teraranger_array {
+    FromGitRepo "https://github.com/Terabee/teraranger_array.git" 
+    Artifact teraranger_multiflex {
+      Node { name teraranger_multiflex
+        Publishers {
+          Publisher { name 'ranges' message 'teraranger_array.RangeArray'}}
+        Parameters {
+          Parameter { name 'portname' type String value '/dev/ttyACM0'}}}
+}}}

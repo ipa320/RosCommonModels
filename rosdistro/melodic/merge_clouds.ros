@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage laser_assembler {
+    FromGitRepo "https://github.com/ros-perception/laser_assembler.git" 
+    Artifact merge_clouds {
+      Node { name merge_clouds
+        Publishers {
+          Publisher { name 'cloud_out' message 'sensor_msgs.PointCloud'}}
+        Parameters {
+          Parameter { name '~max_frequency' type Double },
+          Parameter { name '~output_frame' type String }}}
+}}}

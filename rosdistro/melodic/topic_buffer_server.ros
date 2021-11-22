@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage jsk_topic_tools {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common.git" 
+    Artifact topic_buffer_server {
+      Node { name topic_buffer_server
+        ServiceServers {
+          ServiceServer { name 'list' service 'jsk_topic_tools.List'},
+          ServiceServer { name 'update' service 'jsk_topic_tools.Update'}}
+        Publishers {
+          Publisher { name '?' message '?'}}
+        Subscribers {
+          Subscriber { name 'update' message 'std_msgs.String'}}
+        Parameters {
+          Parameter { name 'periodic_rate' type Double value 0.1}}}
+}}}

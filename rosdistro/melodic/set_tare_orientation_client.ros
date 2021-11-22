@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact set_tare_orientation_client {
+      Node { name set_tare_orientation_client
+        ServiceClients {
+          ServiceClient { name 'SetTareOrientation' service 'microstrain_mips.SetTareOrientation'}}}
+}}}

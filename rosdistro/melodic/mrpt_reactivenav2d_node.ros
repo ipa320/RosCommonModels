@@ -1,0 +1,20 @@
+PackageSet {
+  CatkinPackage mrpt_reactivenav2d {
+    FromGitRepo "https://github.com/mrpt-ros-pkg/mrpt_navigation.git" 
+    Artifact mrpt_reactivenav2d_node {
+      Node { name mrpt_reactivenav2d_node
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name '?' message 'geometry_msgs.Polygon'},
+          Subscriber { name 'local_map_pointcloud' message 'sensor_msgs.PointCloud'},
+          Subscriber { name 'reactive_nav_goal' message 'geometry_msgs.PoseStamped'}}
+        Parameters {
+          Parameter { name 'frameid_reference' type String value '/map'},
+          Parameter { name 'target_allowed_distance' type Double value 0.4},
+          Parameter { name 'cfg_file_reactive' type String },
+          Parameter { name 'frameid_robot' type String value 'base_link'},
+          Parameter { name 'save_nav_log' type Boolean },
+          Parameter { name 'topic_robot_shape' type String },
+          Parameter { name 'nav_period' type Double value 0.1}}}
+}}}

@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage open_manipulator_with_tb3_tools {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3.git" 
+    Artifact open_manipulator_with_tb3_gripper_server {
+      Node { name open_manipulator_with_tb3_gripper_server
+        ServiceServers {
+          ServiceServer { name 'gripper' service 'open_manipulator_msgs.SetJointPosition'}}
+        Publishers {
+          Publisher { name 'gripper_position' message 'std_msgs.Float64MultiArray'},
+          Publisher { name 'gripper_position/command' message 'std_msgs.Float64'}}}
+}}}

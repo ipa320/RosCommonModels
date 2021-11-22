@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage omnibase_control {
+    FromGitRepo "https://github.com/ERC-BPGC/omnibase.git" 
+    Artifact teleop_node {
+      Node { name teleop_node
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_lookat_action {
+    FromGitRepo "https://github.com/ipa320/cob_manipulation.git" 
+    Artifact cob_lookat_action_server_node {
+      Node { name cob_lookat_action_server_node}
+}}}

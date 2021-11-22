@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage rosbag_snapshot {
+    FromGitRepo "https://github.com/ros/rosbag_snapshot.git" 
+    Artifact snapshot {
+      Node { name snapshot
+        Parameters {
+          Parameter { name 'record_all_topics' type Boolean },
+          Parameter { name 'default_memory_limit' type Double },
+          Parameter { name 'default_duration_limit' type Double }}}
+}}}

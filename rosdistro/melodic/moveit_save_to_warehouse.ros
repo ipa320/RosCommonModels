@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage moveit_ros_warehouse {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact moveit_save_to_warehouse {
+      Node { name moveit_save_to_warehouse
+        Subscribers {
+          Subscriber { name 'robot_state' message '?'},
+          Subscriber { name 'motion_plan_request' message '?'},
+          Subscriber { name 'constraints' message '?'}}}
+}}}

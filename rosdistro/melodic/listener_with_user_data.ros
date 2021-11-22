@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage rospy_tutorials {
+    FromGitRepo "https://github.com/ros/ros_tutorials.git" 
+    Artifact listener_with_user_data {
+      Node { name listener_with_user_data
+        Subscribers {
+          Subscriber { name 'chatter' message '?'},
+          Subscriber { name 'chatter2' message '?'},
+          Subscriber { name 'chatter' message '?'},
+          Subscriber { name 'chatter' message '?'}}}
+}}}

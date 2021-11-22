@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage moveit_ros_planning {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact moveit_display_random_state {
+      Node { name moveit_display_random_state
+        Publishers {
+          Publisher { name 'planning_scene' message 'moveit_msgs.PlanningScene'}}}
+}}}

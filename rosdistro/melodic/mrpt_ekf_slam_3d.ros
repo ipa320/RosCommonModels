@@ -1,0 +1,20 @@
+PackageSet {
+  CatkinPackage mrpt_ekf_slam_3d {
+    FromGitRepo "https://github.com/mrpt-ros-pkg/mrpt_slam.git" 
+    Artifact mrpt_ekf_slam_3d {
+      Node { name mrpt_ekf_slam_3d
+        Publishers {
+          Publisher { name '/state_viz' message 'visualization_msgs.MarkerArray'},
+          Publisher { name '/data_association_viz' message 'visualization_msgs.MarkerArray'}}
+        Subscribers {
+          Subscriber { name '?' message 'mrpt_msgs.ObservationRangeBearing'}}
+        Parameters {
+          Parameter { name 'ini_filename' type String },
+          Parameter { name 'sensor_source' type String value 'scan'},
+          Parameter { name 'rawlog_filename' type String },
+          Parameter { name 'rawlog_play_delay' type Double value 0.1},
+          Parameter { name 'odom_frame_id' type String value 'odom'},
+          Parameter { name 'ellipse_scale' type Double value 1},
+          Parameter { name 'base_frame_id' type String value 'base_link'},
+          Parameter { name 'global_frame_id' type String value 'map'}}}
+}}}

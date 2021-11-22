@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage ira_laser_tools {
+    FromGitRepo "https://github.com/iralabdisco/ira_laser_tools.git" 
+    Artifact laserscan_virtualizer {
+      Node { name laserscan_virtualizer
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.LaserScan'},
+          Publisher { name '?' message 'sensor_msgs.LaserScan'}}
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.PointCloud2'}}}
+}}}

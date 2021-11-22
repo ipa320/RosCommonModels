@@ -1,0 +1,20 @@
+PackageSet {
+  CatkinPackage ainstein_radar_drivers {
+    FromGitRepo "https://github.com/AinsteinAI/ainstein_radar.git" 
+    Artifact o79_udp_node {
+      Node { name o79_udp_node
+        Publishers {
+          Publisher { name 'ground' message 'ainstein_radar_msgs.RadarTrackedObjectArray'},
+          Publisher { name 'objects' message 'ainstein_radar_msgs.RadarTrackedObjectArray'},
+          Publisher { name 'radar_info' message 'ainstein_radar_msgs.RadarInfo'},
+          Publisher { name 'targets/raw' message 'ainstein_radar_msgs.RadarTargetArray'},
+          Publisher { name 'cloud/raw' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'boxes' message 'ainstein_radar_msgs.BoundingBoxArray'}}
+        Parameters {
+          Parameter { name 'radar_ip' type String value '10.0.0.10'},
+          Parameter { name 'host_port' type Integer value 1024},
+          Parameter { name 'host_ip' type String value '10.0.0.75'},
+          Parameter { name 'radar_port' type Integer value 7},
+          Parameter { name 'frame_id' type String value 'map'},
+          Parameter { name 'publish_raw_cloud' type Boolean }}}
+}}}

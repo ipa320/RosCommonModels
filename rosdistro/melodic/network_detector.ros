@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage network_detector {
+    FromGitRepo "https://github.com/pr2/linux_networking.git" 
+    Artifact network_detector {
+      Node { name network_detector
+        Publishers {
+          Publisher { name 'network/connected' message 'std_msgs.Bool'}}}
+}}}

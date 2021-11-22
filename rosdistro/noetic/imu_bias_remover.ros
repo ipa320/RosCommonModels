@@ -4,16 +4,16 @@ PackageSet {
     Artifact imu_bias_remover {
       Node { name imu_bias_remover
         Publishers {
-          Publisher { name 'imu_biased' message 'sensor_msgs.Imu'},
-          Publisher { name 'bias' message 'geometry_msgs.Vector3Stamped'}}
+          Publisher { name 'bias' message 'geometry_msgs.Vector3Stamped'},
+          Publisher { name 'imu_biased' message 'sensor_msgs.Imu'}}
         Subscribers {
-          Subscriber { name 'odom' message 'nav_msgs.Odometry'},
           Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'},
-          Subscriber { name 'imu' message 'sensor_msgs.Imu'}}
+          Subscriber { name 'imu' message 'sensor_msgs.Imu'},
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}
         Parameters {
-          Parameter { name 'cmd_vel_threshold' type Double value 0.001},
-          Parameter { name 'use_odom' type Boolean },
           Parameter { name 'odom_threshold' type Double value 0.001},
-          Parameter { name 'accumulator_alpha' type Double value 0.01},
-          Parameter { name 'use_cmd_vel' type Boolean }}}
+          Parameter { name 'use_odom' type Boolean },
+          Parameter { name 'use_cmd_vel' type Boolean },
+          Parameter { name 'cmd_vel_threshold' type Double value 0.001},
+          Parameter { name 'accumulator_alpha' type Double value 0.01}}}
 }}}

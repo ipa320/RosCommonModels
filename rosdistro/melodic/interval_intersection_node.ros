@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage interval_intersection {
+    FromGitRepo "https://github.com/ros-perception/calibration.git" 
+    Artifact interval_intersection_node {
+      Node { name interval_intersection_node
+        Publishers {
+          Publisher { name 'interval' message 'calibration_msgs.Interval'}}
+        Subscribers {
+          Subscriber { name '?' message 'calibration_msgs.Interval'}}}
+}}}

@@ -2,16 +2,5 @@ PackageSet {
   CatkinPackage trajectory_tracker {
     FromGitRepo "https://github.com/at-wat/neonavigation.git" 
     Artifact trajectory_recorder {
-      Node { name trajectory_recorder
-        ServiceServers {
-          ServiceServer { name 'clear_path' service 'std_srvs.Empty'}}
-        Publishers {
-          Publisher { name '?' message 'nav_msgs.Path'}}
-        Parameters {
-          Parameter { name 'store_time' type Boolean },
-          Parameter { name 'neonavigation_compatible' type Integer },
-          Parameter { name 'dist_interval' type Double value 0.3},
-          Parameter { name 'ang_interval' type Double value 1.0},
-          Parameter { name 'frame_robot' type String value 'base_link'},
-          Parameter { name 'frame_global' type String value 'map'}}}
+      Node { name trajectory_recorder}
 }}}

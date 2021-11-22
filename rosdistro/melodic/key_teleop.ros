@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage key_teleop {
+    FromGitRepo "https://github.com/ros-teleop/teleop_tools.git" 
+    Artifact key_teleop {
+      Node { name key_teleop
+        Publishers {
+          Publisher { name 'key_vel' message 'geometry_msgs.Twist'},
+          Publisher { name 'key_vel' message 'geometry_msgs.Twist'}}}
+}}}

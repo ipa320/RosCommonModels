@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rqt_shell {
+    FromGitRepo "https://github.com/ros-visualization/rqt_shell.git" 
+    Artifact rqt_shell {
+      Node { name rqt_shell}
+}}}

@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage moveit_servo {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact cpp_interface_example {
+      Node { name cpp_interface_example
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.TwistStamped'},
+          Publisher { name '?' message 'control_msgs.JointJog'}}
+        Subscribers {
+          Subscriber { name '?' message 'std_msgs.Int8'}}}
+}}}

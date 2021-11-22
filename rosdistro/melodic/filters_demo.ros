@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage grid_map_demos {
+    FromGitRepo "https://github.com/anybotics/grid_map.git" 
+    Artifact filters_demo {
+      Node { name filters_demo
+        Parameters {
+          Parameter { name 'input_topic' type String }}}
+}}}

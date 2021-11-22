@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage turtlebot3_automatic_parking_vision {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_applications.git" 
+    Artifact automatic_parking_vision {
+      Node { name automatic_parking_vision
+        Publishers {
+          Publisher { name '/cmd_vel' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name '/odom' message 'nav_msgs.Odometry'},
+          Subscriber { name '/ar_pose_marker' message 'ar_track_alvar_msgs.AlvarMarkers'}}}
+}}}

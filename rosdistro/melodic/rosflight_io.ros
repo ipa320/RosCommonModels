@@ -1,0 +1,55 @@
+PackageSet {
+  CatkinPackage rosflight {
+    FromGitRepo "https://github.com/rosflight/rosflight.git" 
+    Artifact rosflight_io {
+      Node { name rosflight_io
+        ServiceServers {
+          ServiceServer { name 'calibrate_imu' service 'std_srvs.Trigger'},
+          ServiceServer { name 'param_get' service 'rosflight_msgs.ParamGet'},
+          ServiceServer { name 'calibrate_rc_trim' service 'std_srvs.Trigger'},
+          ServiceServer { name 'param_save_to_file' service 'rosflight_msgs.ParamFile'},
+          ServiceServer { name 'calibrate_baro' service 'std_srvs.Trigger'},
+          ServiceServer { name 'calibrate_airspeed' service 'std_srvs.Trigger'},
+          ServiceServer { name 'param_write' service 'std_srvs.Trigger'},
+          ServiceServer { name 'reboot_to_bootloader' service 'std_srvs.Trigger'},
+          ServiceServer { name 'reboot' service 'std_srvs.Trigger'},
+          ServiceServer { name 'param_set' service 'rosflight_msgs.ParamSet'},
+          ServiceServer { name 'param_load_from_file' service 'rosflight_msgs.ParamFile'}}
+        Publishers {
+          Publisher { name 'attitude' message 'rosflight_msgs.Attitude'},
+          Publisher { name 'gnss_full' message 'rosflight_msgs.GNSSFull'},
+          Publisher { name 'output_raw' message 'rosflight_msgs.OutputRaw'},
+          Publisher { name 'attitude/euler' message 'geometry_msgs.Vector3Stamped'},
+          Publisher { name 'rc_raw' message 'rosflight_msgs.RCRaw'},
+          Publisher { name '?' message 'std_msgs.Int32'},
+          Publisher { name 'airspeed' message 'rosflight_msgs.Airspeed'},
+          Publisher { name 'navsat_compat/vel' message 'geometry_msgs.TwistStamped'},
+          Publisher { name 'status' message 'rosflight_msgs.Status'},
+          Publisher { name 'imu/data' message 'sensor_msgs.Imu'},
+          Publisher { name '?' message 'rosflight_msgs.Command'},
+          Publisher { name 'navsat_compat/fix' message 'sensor_msgs.NavSatFix'},
+          Publisher { name 'battery' message 'rosflight_msgs.BatteryStatus'},
+          Publisher { name 'unsaved_params' message 'std_msgs.Bool'},
+          Publisher { name 'version' message 'std_msgs.String'},
+          Publisher { name '?' message 'std_msgs.Float32'},
+          Publisher { name 'sonar' message 'sensor_msgs.Range'},
+          Publisher { name 'magnetometer' message 'sensor_msgs.MagneticField'},
+          Publisher { name 'baro' message 'rosflight_msgs.Barometer'},
+          Publisher { name 'imu/temperature' message 'sensor_msgs.Temperature'},
+          Publisher { name 'rosflight_errors' message 'rosflight_msgs.Error'},
+          Publisher { name 'gnss' message 'rosflight_msgs.GNSS'},
+          Publisher { name 'lidar' message 'sensor_msgs.Range'},
+          Publisher { name 'navsat_compat/time_reference' message 'sensor_msgs.TimeReference'}}
+        Subscribers {
+          Subscriber { name 'aux_command' message 'rosflight_msgs.AuxCommand'},
+          Subscriber { name 'command' message 'rosflight_msgs.Command'},
+          Subscriber { name 'external_attitude' message 'geometry_msgs.Quaternion'}}
+        Parameters {
+          Parameter { name 'frame_id' type String value 'world'},
+          Parameter { name 'udp' type Boolean },
+          Parameter { name 'bind_host' type String value 'localhost'},
+          Parameter { name 'baud_rate' type Integer value 921600},
+          Parameter { name 'remote_port' type Integer value 14525},
+          Parameter { name 'bind_port' type Integer value 14520},
+          Parameter { name 'port' type String value '/dev/ttyACM0'}}}
+}}}

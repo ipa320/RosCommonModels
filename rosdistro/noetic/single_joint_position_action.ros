@@ -11,6 +11,6 @@ PackageSet {
           Subscriber { name 'state' message 'pr2_controllers_msgs.JointTrajectoryControllerState'}}
         Parameters {
           Parameter { name 'goal_threshold' type Double value 0.1},
-          Parameter { name 'joint' type String },
-          Parameter { name 'max_acceleration' type Double value -1.0}}}
+          Parameter { name 'max_acceleration' type Double value -1.0},
+          Parameter { name 'joint' type String }}}
 }}}

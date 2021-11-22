@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage heifu_diagnostic {
+    FromGitRepo "https://gitlab.pdmfc.com/drones/ros1/heifu.git" 
+    Artifact heifu_diagnostic_node {
+      Node { name heifu_diagnostic_node
+        Publishers {
+          Publisher { name '?' message 'std_msgs.Int8'}}
+        Subscribers {
+          Subscriber { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Parameters {
+          Parameter { name 'paramNodeRate' type Double value 5.0}}}
+}}}

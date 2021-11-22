@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage jsk_interactive_marker {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_visualization.git" 
+    Artifact polygon_marker {
+      Node { name polygon_marker
+        Publishers {
+          Publisher { name 'selected_index' message 'jsk_recognition_msgs.Int32Stamped'},
+          Publisher { name 'selected_polygon' message 'geometry_msgs.PolygonStamped'},
+          Publisher { name 'selected_polygon_array' message 'jsk_recognition_msgs.PolygonArray'}}
+        Subscribers {
+          Subscriber { name 'polygon_array' message 'jsk_recognition_msgs.PolygonArray'}}}
+}}}

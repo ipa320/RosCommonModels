@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage moveit_ros_planning {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact moveit_list_request_adapter_plugins {
+      Node { name moveit_list_request_adapter_plugins}
+}}}

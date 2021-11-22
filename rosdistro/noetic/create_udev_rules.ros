@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage turtlebot3_bringup {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3.git" 
+    Artifact create_udev_rules {
+      Node { name create_udev_rules}
+}}}

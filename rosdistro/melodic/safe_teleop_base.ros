@@ -1,0 +1,39 @@
+PackageSet {
+  CatkinPackage safe_teleop_base {
+    FromGitRepo "https://github.com/SharedAutonomyToolkit/shared_autonomy_manipulation.git" 
+    Artifact safe_teleop_base {
+      Node { name safe_teleop_base
+        ServiceServers {
+          ServiceServer { name 'clear_costmaps' service 'std_srvs.Empty'}}
+        Publishers {
+          Publisher { name 'local_plan' message 'nav_msgs.Path'},
+          Publisher { name 'safe_vel' message 'geometry_msgs.Twist'},
+          Publisher { name 'user_plan' message 'nav_msgs.Path'}}
+        Subscribers {
+          Subscriber { name '/odom' message 'nav_msgs.Odometry'},
+          Subscriber { name 'base_velocity' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'point_grid/min_pt_separation' type Double value 0.01},
+          Parameter { name 'acc_lim_x' type Double value 2.5},
+          Parameter { name 'acc_lim_y' type Double value 2.5},
+          Parameter { name 'point_grid/max_obstacle_height' type Double value 2.0},
+          Parameter { name 'vtheta_samples' type Integer value 10},
+          Parameter { name 'sim_granularity' type Double value 0.025},
+          Parameter { name 'vx_samples' type Integer value 3},
+          Parameter { name 'max_rotational_vel' type Double value 1.0},
+          Parameter { name 'world_model' type String value 'costmap'},
+          Parameter { name 'occdist_scale' type Double value 0.01},
+          Parameter { name 'holonomic_robot' type Boolean value true},
+          Parameter { name 'min_vel_y' type Double value -0.2},
+          Parameter { name 'acc_lim_th' type Double value 3.2},
+          Parameter { name 'point_grid/grid_resolution' type Double value 0.2},
+          Parameter { name 'max_vel_x' type Double value 0.5},
+          Parameter { name 'sim_time' type Double value 1.0},
+          Parameter { name 'safe_backwards' type Boolean },
+          Parameter { name 'point_grid/max_sensor_range' type Double value 2.0},
+          Parameter { name 'user_bias' type Double value 0.6},
+          Parameter { name 'vy_samples' type Integer value 5},
+          Parameter { name 'max_vel_y' type Double value 0.2},
+          Parameter { name 'dwa' type Boolean value true},
+          Parameter { name 'min_vel_x' type Double value 0.1}}}
+}}}

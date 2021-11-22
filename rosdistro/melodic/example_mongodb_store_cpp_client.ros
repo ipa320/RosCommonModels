@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage mongodb_store {
+    FromGitRepo "https://github.com/strands-project/mongodb_store.git" 
+    Artifact example_mongodb_store_cpp_client {
+      Node { name example_mongodb_store_cpp_client
+        ServiceClients {
+          ServiceClient { name '?' service 'mongodb_store_msgs.MongoInsertMsg'},
+          ServiceClient { name '?' service 'mongodb_store_msgs.MongoQuerywithProjectionMsg'},
+          ServiceClient { name '?' service 'mongodb_store_msgs.MongoDeleteMsg'},
+          ServiceClient { name '?' service 'mongodb_store_msgs.MongoUpdateMsg'},
+          ServiceClient { name '?' service 'mongodb_store_msgs.MongoQueryMsg'}}
+        Publishers {
+          Publisher { name '?' message 'mongodb_store_msgs.Insert'}}}
+}}}

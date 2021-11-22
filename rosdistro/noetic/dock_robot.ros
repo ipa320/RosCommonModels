@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage fetch_open_auto_dock {
+    FromGitRepo "https://github.com/fetchrobotics/fetch_open_auto_dock.git" 
+    Artifact dock_robot {
+      Node { name dock_robot}
+}}}

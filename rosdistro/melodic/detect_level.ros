@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage turtlebot3_autorace_detect {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_autorace.git" 
+    Artifact detect_level {
+      Node { name detect_level
+        Publishers {
+          Publisher { name '/detect/level_crossing_stamped' message 'std_msgs.UInt8'},
+          Publisher { name '/control/level_crossing_start' message 'std_msgs.UInt8'},
+          Publisher { name '/control/max_vel' message 'std_msgs.Float64'}}
+        Subscribers {
+          Subscriber { name '/detect/level_crossing_order' message 'std_msgs.UInt8'},
+          Subscriber { name '/control/level_crossing_finished' message 'std_msgs.UInt8'}}}
+}}}

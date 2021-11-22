@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage quanergy_client_ros {
+    FromGitRepo "https://github.com/QuanergySystems/quanergy_client_ros.git" 
+    Artifact client_node {
+      Node { name client_node}
+}}}

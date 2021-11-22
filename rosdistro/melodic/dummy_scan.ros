@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage seed_r7_navigation {
+    FromGitRepo "https://github.com/seed-solutions/seed_r7_ros_pkg.git" 
+    Artifact dummy_scan {
+      Node { name dummy_scan
+        Publishers {
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}
+        Subscribers {
+          Subscriber { name 'map' message 'nav_msgs.OccupancyGrid'}}}
+}}}

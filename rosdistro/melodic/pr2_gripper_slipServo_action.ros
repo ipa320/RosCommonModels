@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage pr2_gripper_sensor_action {
+    FromGitRepo "https://github.com/PR2/pr2_gripper_sensor.git" 
+    Artifact pr2_gripper_slipServo_action {
+      Node { name pr2_gripper_slipServo_action
+        Publishers {
+          Publisher { name 'slip_servo' message 'pr2_gripper_sensor_msgs.PR2GripperSlipServoCommand'}}
+        Subscribers {
+          Subscriber { name 'slip_servo_state' message 'pr2_gripper_sensor_msgs.PR2GripperSlipServoData'}}}
+}}}

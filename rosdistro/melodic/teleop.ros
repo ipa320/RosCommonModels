@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage axis_camera {
+    FromGitRepo "https://github.com/ros-drivers/axis_camera.git" 
+    Artifact teleop {
+      Node { name teleop
+        Publishers {
+          Publisher { name 'cmd' message 'axis_camera.Axis'}}
+        Subscribers {
+          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage novatel_oem7_driver {
+    FromGitRepo "https://github.com/novatel/novatel_oem7_driver.git" 
+    Artifact oem7_bist {
+      Node { name oem7_bist}
+}}}

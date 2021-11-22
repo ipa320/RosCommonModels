@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage yocs_ar_pair_tracking {
+    FromGitRepo "https://github.com/yujinrobot/yujin_ocs.git" 
+    Artifact yocs_ar_pair_client {
+      Node { name yocs_ar_pair_client
+        Publishers {
+          Publisher { name 'update_ar_pairs' message 'yocs_msgs.ARPairList'}}
+        Subscribers {
+          Subscriber { name 'global_markers' message 'ar_track_alvar_msgs.AlvarMarkers'}}}
+}}}

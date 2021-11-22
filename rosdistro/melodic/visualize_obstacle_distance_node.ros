@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage cob_obstacle_distance_moveit {
+    FromGitRepo "https://github.com/ipa320/cob_manipulation.git" 
+    Artifact visualize_obstacle_distance_node {
+      Node { name visualize_obstacle_distance_node
+        Publishers {
+          Publisher { name 'obstacle_distance/distance_markers' message 'visualization_msgs.MarkerArray'}}
+        Subscribers {
+          Subscriber { name 'obstacle_distances' message 'cob_control_msgs.ObstacleDistances'}}}
+}}}

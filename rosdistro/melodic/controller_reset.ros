@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage fetch_bringup {
+    FromGitRepo "https://github.com/fetchrobotics/fetch_robots.git" 
+    Artifact controller_reset {
+      Node { name controller_reset
+        Subscribers {
+          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}}
+}}}

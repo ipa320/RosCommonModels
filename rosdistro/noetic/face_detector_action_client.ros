@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage face_detector {
+    FromGitRepo "https://github.com/wg-perception/people.git" 
+    Artifact face_detector_action_client {
+      Node { name face_detector_action_client}
+}}}

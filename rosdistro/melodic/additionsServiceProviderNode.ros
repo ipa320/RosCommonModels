@@ -1,0 +1,29 @@
+PackageSet {
+  CatkinPackage rsm_additions {
+    FromGitRepo "https://github.com/MarcoStb1993/robot_statemachine.git" 
+    Artifact additionsServiceProviderNode {
+      Node { name additionsServiceProviderNode
+        ServiceServers {
+          ServiceServer { name 'resetRealsensePosition' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setNavigationToReverse' service 'std_srvs.SetBool'}}
+        ServiceClients {
+          ServiceClient { name 'getNavigationGoal' service 'rsm_msgs.GetNavigationGoal'}}
+        Publishers {
+          Publisher { name 'explorationGoals' message 'geometry_msgs.PoseArray'},
+          Publisher { name 'realsense_controller/command' message 'std_msgs.Float64'},
+          Publisher { name 'goalObsolete' message 'std_msgs.Bool'},
+          Publisher { name '?' message 'geometry_msgs.Twist'},
+          Publisher { name 'failedGoals' message 'geometry_msgs.PoseArray'}}
+        Subscribers {
+          Subscriber { name '?' message 'geometry_msgs.Twist'},
+          Subscriber { name 'explorationGoalStatus' message 'rsm_msgs.GoalStatus'},
+          Subscriber { name 'explore/frontiers' message 'visualization_msgs.MarkerArray'},
+          Subscriber { name 'explorationMode' message 'std_msgs.Bool'}}
+        Parameters {
+          Parameter { name 'mapping_plugin' type String },
+          Parameter { name 'calculate_goal_plugin' type String },
+          Parameter { name 'navigation_plugin' type String },
+          Parameter { name 'autonomy_cmd_vel_topic' type String value '/autonomy/cmd_vel'},
+          Parameter { name 'update_frequency' type Double value 20.0},
+          Parameter { name 'exploration_goal_tolerance' type Double value 0.05}}}
+}}}

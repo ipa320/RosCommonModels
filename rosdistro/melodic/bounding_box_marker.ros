@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage jsk_interactive_marker {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_visualization.git" 
+    Artifact bounding_box_marker {
+      Node { name bounding_box_marker
+        Publishers {
+          Publisher { name 'selected_index' message 'jsk_recognition_msgs.Int32Stamped'},
+          Publisher { name 'selected_box' message 'jsk_recognition_msgs.BoundingBox'},
+          Publisher { name 'selected_box_array' message 'jsk_recognition_msgs.BoundingBoxArray'}}
+        Subscribers {
+          Subscriber { name 'bounding_box_array' message 'jsk_recognition_msgs.BoundingBoxArray'}}}
+}}}

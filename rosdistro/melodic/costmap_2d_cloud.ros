@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage costmap_2d {
+    FromGitRepo "https://github.com/ros-planning/navigation.git" 
+    Artifact costmap_2d_cloud {
+      Node { name costmap_2d_cloud
+        Publishers {
+          Publisher { name 'voxel_marked_cloud' message 'sensor_msgs.PointCloud'},
+          Publisher { name 'voxel_unknown_cloud' message 'sensor_msgs.PointCloud'}}
+        Subscribers {
+          Subscriber { name 'voxel_grid' message 'costmap_2d.VoxelGrid'}}}
+}}}

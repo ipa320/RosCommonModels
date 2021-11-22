@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rqt_joint_trajectory_plot {
+    FromGitRepo "https://github.com/tork-a/rqt_joint_trajectory_plot.git" 
+    Artifact joint_trajectory_generator {
+      Node { name joint_trajectory_generator
+        Publishers {
+          Publisher { name '?' message 'trajectory_msgs.JointTrajectory'}}}
+}}}

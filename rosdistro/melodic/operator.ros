@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage nav2d_operator {
+    FromGitRepo "https://github.com/skasperski/navigation_2d.git" 
+    Artifact operator {
+      Node { name operator
+        Parameters {
+          Parameter { name 'frequency' type Double value 100.0}}}
+}}}

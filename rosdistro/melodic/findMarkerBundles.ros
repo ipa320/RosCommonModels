@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage ar_track_alvar {
+    FromGitRepo "https://github.com/ros-perception/ar_track_alvar.git" 
+    Artifact findMarkerBundles {
+      Node { name findMarkerBundles
+        Publishers {
+          Publisher { name 'ARmarker_points' message 'visualization_msgs.Marker'},
+          Publisher { name 'ar_pose_marker' message 'ar_track_alvar_msgs.AlvarMarkers'},
+          Publisher { name 'visualization_marker' message 'visualization_msgs.Marker'}}
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.PointCloud2'}}}
+}}}

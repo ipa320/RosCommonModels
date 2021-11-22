@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage teb_local_planner {
+    FromGitRepo "https://github.com/rst-tu-dortmund/teb_local_planner.git" 
+    Artifact publish_dynamic_obstacle {
+      Node { name publish_dynamic_obstacle
+        Publishers {
+          Publisher { name '/test_optim_node/obstacles' message 'costmap_converter.ObstacleArrayMsg'}}}
+}}}

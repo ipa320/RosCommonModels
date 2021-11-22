@@ -6,16 +6,16 @@ PackageSet {
         Publishers {
           Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}
         Parameters {
-          Parameter { name 'error_limit' type Integer value 4},
+          Parameter { name 'allowed_device_time_origin_diff' type Double value 1.0},
+          Parameter { name 'frame_id' type String value 'laser'},
+          Parameter { name 'ip_address' type String value '192.168.0.10'},
           Parameter { name 'tm_timeout' type Double value 10.0},
           Parameter { name 'tm_interval' type Double value 0.06},
-          Parameter { name 'delay_estim_interval' type Double value 20.0},
-          Parameter { name 'allowed_device_time_origin_diff' type Double value 1.0},
+          Parameter { name 'debug' type Boolean },
           Parameter { name 'ip_port' type Integer value 10940},
-          Parameter { name 'sync_interval_max' type Double value 1.5},
-          Parameter { name 'ip_address' type String value '192.168.0.10'},
-          Parameter { name 'publish_intensity' type Boolean value true},
           Parameter { name 'sync_interval_min' type Double value 1.0},
-          Parameter { name 'frame_id' type <class 'str value laser},
-          Parameter { name 'debug' type Boolean }}}
+          Parameter { name 'error_limit' type Integer value 4},
+          Parameter { name 'delay_estim_interval' type Double value 20.0},
+          Parameter { name 'publish_intensity' type Boolean value true},
+          Parameter { name 'sync_interval_max' type Double value 1.5}}}
 }}}

@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage message_relay {
+    FromGitRepo "https://github.com/clearpathrobotics/cpr_multimaster_tools.git" 
+    Artifact message_relay_node {
+      Node { name message_relay_node
+        ServiceClients {
+          ServiceClient { name '/get_clock_offset' service 'multimaster_msgs.GetClockOffset'}}
+        Parameters {
+          Parameter { name '?' type Integer },
+          Parameter { name 'separate_service_queue' type Boolean value true},
+          Parameter { name '?' type Integer },
+          Parameter { name 'time_offset_operation' type String },
+          Parameter { name '?' type Double },
+          Parameter { name 'parameter_namespace' type String }}}
+}}}

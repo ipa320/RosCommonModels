@@ -1,0 +1,57 @@
+PackageSet {
+  CatkinPackage jsk_interactive_marker {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_visualization.git" 
+    Artifact transformable_server_sample {
+      Node { name transformable_server_sample
+        ServiceServers {
+          ServiceServer { name 'get_focus' service 'jsk_interactive_marker.GetTransformableMarkerFocus'},
+          ServiceServer { name 'get_pose' service 'jsk_interactive_marker.GetTransformableMarkerPose.'},
+          ServiceServer { name 'get_control_pose' service 'jsk_interactive_marker.GetTransformableMarkerPose.'},
+          ServiceServer { name '?' service 'jsk_interactive_marker.RemoveParentMarker'},
+          ServiceServer { name 'get_dimensions' service 'jsk_interactive_marker.GetMarkerDimensions'},
+          ServiceServer { name '?' service 'jsk_interactive_marker.SetParentMarker'},
+          ServiceServer { name 'set_color' service 'jsk_interactive_marker.SetTransformableMarkerColor'},
+          ServiceServer { name 'get_existence' service 'jsk_interactive_marker.GetTransformableMarkerExistence'},
+          ServiceServer { name 'set_dimensions' service 'jsk_interactive_marker.SetMarkerDimensions'},
+          ServiceServer { name 'set_focus' service 'jsk_interactive_marker.SetTransformableMarkerFocus'},
+          ServiceServer { name 'request_marker_operate' service 'jsk_rviz_plugins.MarkerOperate'},
+          ServiceServer { name 'set_control_pose' service 'jsk_interactive_marker.SetTransformableMarkerPose.'},
+          ServiceServer { name 'hide' service 'std_srvs.Empty'},
+          ServiceServer { name 'get_color' service 'jsk_interactive_marker.GetTransformableMarkerColor'},
+          ServiceServer { name 'set_pose' service 'jsk_interactive_marker.SetTransformableMarkerPose.'},
+          ServiceServer { name 'get_type' service 'jsk_interactive_marker.GetType'},
+          ServiceServer { name 'show' service 'std_srvs.Empty'},
+          ServiceServer { name '?' service 'jsk_interactive_marker.GetTransformableMarkerPose'}}
+        ServiceClients {
+          ServiceClient { name '?' service 'jsk_interactive_marker.GetTransformableMarkerPose'}}
+        Publishers {
+          Publisher { name 'focus_object_marker_name' message 'std_msgs.String'},
+          Publisher { name 'pose_with_name' message 'jsk_interactive_marker.PoseStampedWithName'},
+          Publisher { name 'focus_marker_name_text' message 'jsk_rviz_plugins.OverlayText'},
+          Publisher { name '?' message 'std_msgs.String'},
+          Publisher { name 'focus_marker_pose_text' message 'jsk_rviz_plugins.OverlayText'},
+          Publisher { name 'pose' message 'geometry_msgs.PoseStamped'},
+          Publisher { name 'marker_dimensions' message 'jsk_interactive_marker.MarkerDimensions'}}
+        Subscribers {
+          Subscriber { name 'set_z' message 'std_msgs.Float32'},
+          Subscriber { name 'set_small_radius' message 'std_msgs.Float32'},
+          Subscriber { name 'set_x' message 'std_msgs.Float32'},
+          Subscriber { name 'set_control_relative_pose' message 'geometry_msgs.Pose'},
+          Subscriber { name 'set_y' message 'std_msgs.Float32'},
+          Subscriber { name '?' message 'visualization_msgs.InteractiveMarkerUpdate'},
+          Subscriber { name 'set_pose' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name 'add_pose_relative' message 'geometry_msgs.Pose'},
+          Subscriber { name 'set_color' message 'std_msgs.ColorRGBA'},
+          Subscriber { name 'set_control_pose' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name 'add_pose' message 'geometry_msgs.Pose'},
+          Subscriber { name '?' message 'visualization_msgs.InteractiveMarkerFeedback'},
+          Subscriber { name 'set_radius' message 'std_msgs.Float32'},
+          Subscriber { name 'set_radius' message 'std_msgs.Float32'}}
+        Parameters {
+          Parameter { name 'strict_tf' type Boolean },
+          Parameter { name 'torus_udiv' type Integer value 20},
+          Parameter { name 'interactive_manipulator_orientation' type Integer },
+          Parameter { name 'use_parent_and_child' type Boolean },
+          Parameter { name 'torus_vdiv' type Integer value 20},
+          Parameter { name 'yaml_filename' type String }}}
+}}}

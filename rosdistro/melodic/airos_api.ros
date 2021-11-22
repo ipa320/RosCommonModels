@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage ubnt_airos_tools {
+    FromGitRepo "https://github.com/peci1/ubnt_airos_tools.git" 
+    Artifact airos_api {
+      Node { name airos_api
+        Publishers {
+          Publisher { name '~status' message 'ubnt_airos_tools.Status'},
+          Publisher { name '~interfaces' message 'ubnt_airos_tools.Interfaces'},
+          Publisher { name '~stations' message 'ubnt_airos_tools.Stations'}}}
+}}}

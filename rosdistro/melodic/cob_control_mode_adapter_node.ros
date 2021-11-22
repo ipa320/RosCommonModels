@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage cob_control_mode_adapter {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact cob_control_mode_adapter_node {
+      Node { name cob_control_mode_adapter_node
+        ServiceClients {
+          ServiceClient { name 'controller_manager/switch_controller' service 'controller_manager_msgs.SwitchController'},
+          ServiceClient { name 'controller_manager/load_controller' service 'controller_manager_msgs.LoadController'}}
+        Subscribers {
+          Subscriber { name '?' message 'std_msgs.Float64MultiArray'},
+          Subscriber { name '?' message 'std_msgs.Float64MultiArray'}}
+        Parameters {
+          Parameter { name 'max_command_silence' type Double },
+          Parameter { name 'joint_group_velocity_controller_name' type String value 'joint_group_velocity_controller'},
+          Parameter { name 'joint_group_position_controller_name' type String value 'joint_group_position_controller'},
+          Parameter { name 'joint_trajectory_controller_name' type String value 'joint_trajectory_controller'}}}
+}}}

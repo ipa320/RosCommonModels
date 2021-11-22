@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rwt_plot {
+    FromGitRepo "https://github.com/tork-a/visualization_rwt.git" 
+    Artifact random_float {
+      Node { name random_float
+        Publishers {
+          Publisher { name '/random_float' message 'std_msgs.Float64'}}}
+}}}

@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage cob_obstacle_distance {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact cob_obstacle_distance {
+      Node { name cob_obstacle_distance
+        ServiceServers {
+          ServiceServer { name 'obstacle_distance/registerLinkOfInterest' service 'cob_srvs.SetString'}}
+        Publishers {
+          Publisher { name 'obstacle_distance/marker' message 'visualization_msgs.MarkerArray'},
+          Publisher { name 'obstacle_distance' message 'cob_control_msgs.ObstacleDistances'}}
+        Subscribers {
+          Subscriber { name 'joint_states' message 'sensor_msgs.JointState'},
+          Subscriber { name 'obstacle_distance/registerObstacle' message 'moveit_msgs.CollisionObject'}}
+        Parameters {
+          Parameter { name 'root_frame' type String },
+          Parameter { name 'chain_tip_link' type String },
+          Parameter { name 'chain_base_link' type String }}}
+}}}

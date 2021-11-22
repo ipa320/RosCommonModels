@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage laser_joint_projector {
+    FromGitRepo "https://github.com/UNR-RoboticsResearchLab/pr2_calibration.git" 
+    Artifact time_alignment_node {
+      Node { name time_alignment_node
+        Publishers {
+          Publisher { name 'cb_cloud_0' message 'sensor_msgs.PointCloud'},
+          Publisher { name 'cb_cloud_1' message 'sensor_msgs.PointCloud'}}
+        Subscribers {
+          Subscriber { name 'joint_state_features' message 'calibration_msgs.JointStateCalibrationPattern'},
+          Subscriber { name 'keyboard_float' message 'std_msgs.Float64'}}
+        Parameters {
+          Parameter { name 'robot_description' type String },
+          Parameter { name 'tip' type String value 'tip_link'},
+          Parameter { name 'root' type String value 'root_link'}}}
+}}}

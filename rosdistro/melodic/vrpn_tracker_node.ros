@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage vrpn_client_ros {
+    FromGitRepo "https://github.com/ros-drivers/vrpn_client_ros.git" 
+    Artifact vrpn_tracker_node {
+      Node { name vrpn_tracker_node
+        Parameters {
+          Parameter { name 'tracker_name' type String }}}
+}}}

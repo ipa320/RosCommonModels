@@ -5,13 +5,13 @@ PackageSet {
       Node { name catch_the_bird
         ServiceClients {
           ServiceClient { name '?' service 'webots_ros.save_image'},
-          ServiceClient { name '?' service 'webots_ros.range_finder_get_info'},
+          ServiceClient { name '?' service 'webots_ros.get_float'},
+          ServiceClient { name '?' service 'webots_ros.set_int'},
           ServiceClient { name '?' service 'webots_ros.set_int'},
           ServiceClient { name '?' service 'webots_ros.robot_get_device_list'},
-          ServiceClient { name '?' service 'webots_ros.set_int'},
-          ServiceClient { name '?' service 'webots_ros.get_float'},
+          ServiceClient { name '?' service 'webots_ros.range_finder_get_info'},
           ServiceClient { name '?' service 'webots_ros.set_float'}}
         Subscribers {
-          Subscriber { name 'model_name' message 'std_msgs.String'},
-          Subscriber { name '?' message 'sensor_msgs.Image'}}}
+          Subscriber { name '?' message 'sensor_msgs.Image'},
+          Subscriber { name 'model_name' message 'std_msgs.String'}}}
 }}}

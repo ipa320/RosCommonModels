@@ -2,13 +2,5 @@ PackageSet {
   CatkinPackage robot_self_filter {
     FromGitRepo "https://github.com/pr2/robot_self_filter.git" 
     Artifact self_filter {
-      Node { name self_filter
-        Publishers {
-          Publisher { name 'cloud_out' message 'sensor_msgs.PointCloud2'}}
-        Subscribers {
-          Subscriber { name 'cloud_in' message 'sensor_msgs.PointCloud2'}}
-        Parameters {
-          Parameter { name 'use_rgb' type Boolean },
-          Parameter { name 'sensor_frame' type String },
-          Parameter { name 'max_queue_size' type Integer value 10}}}
+      Node { name self_filter}
 }}}

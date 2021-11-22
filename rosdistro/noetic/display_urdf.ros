@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage urdfdom_py {
+    FromGitRepo "https://github.com/ros/urdf_parser_py.git" 
+    Artifact display_urdf {
+      Node { name display_urdf}
+}}}

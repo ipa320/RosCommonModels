@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage twist_mux {
+    FromGitRepo "https://github.com/ros-teleop/twist_mux.git" 
+    Artifact joystick_relay {
+      Node { name joystick_relay
+        Publishers {
+          Publisher { name 'text_marker' message 'visualization_msgs.Marker'},
+          Publisher { name 'joy_priority' message 'std_msgs.Bool'},
+          Publisher { name 'joy_vel_out' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'joy_vel_in' message 'geometry_msgs.Twist'}}}
+}}}

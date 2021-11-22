@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact set_soft_iron_matrix_client {
+      Node { name set_soft_iron_matrix_client
+        ServiceClients {
+          ServiceClient { name 'SetSoftIronMatrix' service 'microstrain_mips.SetSoftIronMatrix'}}}
+}}}

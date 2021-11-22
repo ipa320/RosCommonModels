@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage cob_obstacle_distance {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact debug_obstacle_distance_node {
+      Node { name debug_obstacle_distance_node
+        Publishers {
+          Publisher { name 'obstacle_distance/distance_markers' message 'visualization_msgs.MarkerArray'}}
+        Subscribers {
+          Subscriber { name 'obstacle_distance' message 'cob_control_msgs.ObstacleDistances'}}
+        Parameters {
+          Parameter { name 'chain_base_link' type String }}}
+}}}

@@ -1,0 +1,49 @@
+PackageSet {
+  CatkinPackage heron_controller {
+    FromGitRepo "https://github.com/heron/heron_controller.git" 
+    Artifact controller {
+      Node { name controller
+        ServiceServers {
+          ServiceServer { name 'activate_control' service 'std_srvs.SetBool'}}
+        Publishers {
+          Publisher { name 'yaw_rate_debug' message 'geometry_msgs.Vector3'},
+          Publisher { name 'fwd_vel_debug' message 'geometry_msgs.Vector3'},
+          Publisher { name 'yaw_debug' message 'geometry_msgs.Vector3'}}
+        Subscribers {
+          Subscriber { name 'odometry/filtered' message 'nav_msgs.Odometry'},
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'},
+          Subscriber { name 'cmd_course' message 'heron_msgs.Course'},
+          Subscriber { name 'cmd_wrench' message 'geometry_msgs.Wrench'},
+          Subscriber { name 'cmd_helm' message 'heron_msgs.Helm'}}
+        Parameters {
+          Parameter { name 'yaw/kd' type Double value 1.0},
+          Parameter { name 'yaw/ki' type Double value 0.5},
+          Parameter { name 'yaw/imax' type Double },
+          Parameter { name 'fwd_vel/kf' type Double value 10},
+          Parameter { name 'max/fwd_vel' type Double },
+          Parameter { name 'yaw/kp' type Double value 5.0},
+          Parameter { name 'helm_cmd/timeout' type Double value 0.5},
+          Parameter { name 'wrench_cmd/timeout' type Double value 0.5},
+          Parameter { name 'vel_data_timeout' type Double },
+          Parameter { name 'max/bck_force' type Double },
+          Parameter { name 'max/fwd_force' type Double },
+          Parameter { name 'course_cmd/timeout' type Double value 0.5},
+          Parameter { name 'cov_limits/velocity' type Double value 0.28},
+          Parameter { name 'cov_limits/imu' type Double value 1.0},
+          Parameter { name 'fwd_vel/kd' type Double value 1.0},
+          Parameter { name 'yaw/kp' type Double value 5.0},
+          Parameter { name 'fwd_vel/imax' type Double },
+          Parameter { name 'max/bck_vel' type Double },
+          Parameter { name 'fwd_vel/ki' type Double },
+          Parameter { name 'yaw/imin' type Double },
+          Parameter { name 'fwd_vel/kp' type Double value 90.0},
+          Parameter { name 'twist_cmd/timeout' type Double value 0.5},
+          Parameter { name 'imu_data_timeout' type Double },
+          Parameter { name 'yaw_rate/kf' type Double value 10},
+          Parameter { name 'fwd_vel/imin' type Double },
+          Parameter { name 'yaw_rate/kp' type Double value 2.0},
+          Parameter { name 'yaw_rate/kd' type Double value 1.0},
+          Parameter { name 'yaw_rate/ki' type Double },
+          Parameter { name 'yaw_rate/imax' type Double },
+          Parameter { name 'yaw_rate/imin' type Double }}}
+}}}

@@ -2,9 +2,5 @@ PackageSet {
   CatkinPackage pcl_ros {
     FromGitRepo "https://github.com/ros-perception/perception_pcl.git" 
     Artifact convert_pointcloud_to_image {
-      Node { name convert_pointcloud_to_image
-        Publishers {
-          Publisher { name 'output' message 'sensor_msgs.Image'}}
-        Subscribers {
-          Subscriber { name 'input' message 'sensor_msgs.PointCloud2'}}}
+      Node { name convert_pointcloud_to_image}
 }}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage octomap {
+    FromGitRepo "https://github.com/OctoMap/octomap.git" 
+    Artifact log2graph {
+      Node { name log2graph}
+}}}

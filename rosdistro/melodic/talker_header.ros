@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rospy_tutorials {
+    FromGitRepo "https://github.com/ros/ros_tutorials.git" 
+    Artifact talker_header {
+      Node { name talker_header
+        Publishers {
+          Publisher { name 'chatter_header' message 'rospy_tutorials.HeaderString'}}}
+}}}

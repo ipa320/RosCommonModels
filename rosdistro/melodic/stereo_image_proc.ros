@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage stereo_image_proc {
+    FromGitRepo "https://github.com/ros-perception/image_pipeline.git" 
+    Artifact stereo_image_proc {
+      Node { name stereo_image_proc
+        Parameters {
+          Parameter { name 'queue_size' type Integer },
+          Parameter { name 'approximate_sync' type Boolean }}}
+}}}

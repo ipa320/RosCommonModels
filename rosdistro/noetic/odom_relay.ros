@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage leo_gazebo {
+    FromGitRepo "https://github.com/LeoRover/leo_simulator.git" 
+    Artifact odom_relay {
+      Node { name odom_relay
+        Publishers {
+          Publisher { name 'wheel_odom' message 'geometry_msgs.TwistStamped'}}
+        Subscribers {
+          Subscriber { name 'controllers/diff_drive/odom' message 'nav_msgs.Odometry'}}}
+}}}

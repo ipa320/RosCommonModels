@@ -1,0 +1,24 @@
+PackageSet {
+  CatkinPackage dbw_polaris_joystick_demo {
+    FromGitRepo "https://bitbucket.org/DataspeedInc/dbw_polaris_ros.git" 
+    Artifact joystick_demo {
+      Node { name joystick_demo
+        Publishers {
+          Publisher { name 'steering_cmd' message 'dbw_polaris_msgs.SteeringCmd'},
+          Publisher { name 'throttle_cmd' message 'dbw_polaris_msgs.ThrottleCmd'},
+          Publisher { name 'gear_cmd' message 'dbw_polaris_msgs.GearCmd'},
+          Publisher { name 'brake_cmd' message 'dbw_polaris_msgs.BrakeCmd'},
+          Publisher { name 'enable' message 'std_msgs.Empty'},
+          Publisher { name 'disable' message 'std_msgs.Empty'}}
+        Subscribers {
+          Subscriber { name '/joy' message 'sensor_msgs.Joy'}}
+        Parameters {
+          Parameter { name 'brake' type Boolean },
+          Parameter { name 'shift' type Boolean },
+          Parameter { name 'enable' type Boolean },
+          Parameter { name 'ignore' type Boolean },
+          Parameter { name 'count' type Boolean },
+          Parameter { name 'throttle' type Boolean },
+          Parameter { name 'strq' type Boolean },
+          Parameter { name 'steer' type Boolean }}}
+}}}

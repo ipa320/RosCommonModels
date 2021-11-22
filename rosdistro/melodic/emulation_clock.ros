@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage cob_hardware_emulation {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact emulation_clock {
+      Node { name emulation_clock
+        Publishers {
+          Publisher { name '/clock' message 'rosgraph_msgs.Clock'}}
+        Parameters {
+          Parameter { name '/emulation_dt_ms' type Integer value 10},
+          Parameter { name '/emulation_time_factor' type Double value 1.0}}}
+}}}

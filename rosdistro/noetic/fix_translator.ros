@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage gps_common {
+    FromGitRepo "https://github.com/swri-robotics/gps_umd.git" 
+    Artifact fix_translator {
+      Node { name fix_translator
+        Publishers {
+          Publisher { name 'navsat_fix_out' message 'sensor_msgs.NavSatFix'},
+          Publisher { name 'gps_fix_out' message 'gps_common.GPSFix'}}
+        Subscribers {
+          Subscriber { name 'gps_fix_in' message 'gps_common.GPSFix'},
+          Subscriber { name 'navsat_fix_in' message 'sensor_msgs.NavSatFix'}}}
+}}}

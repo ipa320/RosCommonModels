@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage turtlebot3_automatic_parking {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_applications.git" 
+    Artifact automatic_parking {
+      Node { name automatic_parking
+        Publishers {
+          Publisher { name '/scan_spot' message 'sensor_msgs.LaserScan'}}}
+}}}

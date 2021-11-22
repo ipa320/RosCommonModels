@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage mir_navigation {
+    FromGitRepo "https://github.com/dfki-ric/mir_robot.git" 
+    Artifact plot_mprim {
+      Node { name plot_mprim}
+}}}

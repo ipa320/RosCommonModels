@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage turtlesim {
+    FromGitRepo "https://github.com/ros/ros_tutorials.git" 
+    Artifact draw_square {
+      Node { name draw_square
+        ServiceClients {
+          ServiceClient { name 'reset' service 'std_srvs.Empty'}}
+        Publishers {
+          Publisher { name 'turtle1/cmd_vel' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'turtle1/pose' message 'turtlesim.Pose'}}}
+}}}

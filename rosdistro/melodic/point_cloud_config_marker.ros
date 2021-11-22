@@ -1,0 +1,20 @@
+PackageSet {
+  CatkinPackage jsk_interactive_marker {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_visualization.git" 
+    Artifact point_cloud_config_marker {
+      Node { name point_cloud_config_marker
+        Publishers {
+          Publisher { name 'get' message 'visualization_msgs.Marker'},
+          Publisher { name 'current_pose' message 'geometry_msgs.PoseStamped'}}
+        Subscribers {
+          Subscriber { name 'change_resolution' message 'std_msgs.Float32'},
+          Subscriber { name 'add_box' message 'std_msgs.Empty'},
+          Subscriber { name 'change_size' message 'geometry_msgs.Vector3'},
+          Subscriber { name 'update_pose' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name 'clear_box' message 'std_msgs.Empty'}}
+        Parameters {
+          Parameter { name 'server_name' type String },
+          Parameter { name 'base_frame' type String value '/pelvis'},
+          Parameter { name 'size' type Double value 1.0},
+          Parameter { name 'marker_name' type String value 'point_cloud_config_marker'}}}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rosauth {
+    FromGitRepo "https://github.com/GT-RAIL/rosauth.git" 
+    Artifact ros_mac_authentication {
+      Node { name ros_mac_authentication
+        ServiceServers {
+          ServiceServer { name 'authenticate' service 'rosauth.Authentication'}}}
+}}}

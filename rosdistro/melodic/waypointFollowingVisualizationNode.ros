@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage rsm_rviz_plugins {
+    FromGitRepo "https://github.com/MarcoStb1993/robot_statemachine.git" 
+    Artifact waypointFollowingVisualizationNode {
+      Node { name waypointFollowingVisualizationNode
+        ServiceClients {
+          ServiceClient { name 'getWaypointRoutines' service 'rsm_msgs.GetWaypointRoutines'},
+          ServiceClient { name 'moveWaypoint' service 'rsm_msgs.MoveWaypoint'},
+          ServiceClient { name 'setWaypointRoutine' service 'rsm_msgs.SetWaypointRoutine'},
+          ServiceClient { name 'removeWaypoint' service 'rsm_msgs.RemoveWaypoint'}}
+        Subscribers {
+          Subscriber { name 'waypoints' message 'rsm_msgs.WaypointArray'}}
+        Parameters {
+          Parameter { name 'update_frequency' type Double value 20.0}}}
+}}}

@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage turtlebot3_example {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3.git" 
+    Artifact turtlebot3_sonar {
+      Node { name turtlebot3_sonar
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'sensor_state' message 'turtlebot3_msgs.SensorState'}}}
+}}}

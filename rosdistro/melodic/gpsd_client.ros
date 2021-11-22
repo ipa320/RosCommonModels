@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage gpsd_client {
+    FromGitRepo "https://github.com/swri-robotics/gps_umd.git" 
+    Artifact gpsd_client {
+      Node { name gpsd_client
+        Publishers {
+          Publisher { name 'extended_fix' message 'GPSFix'},
+          Publisher { name 'fix' message 'NavSatFix'}}
+        Parameters {
+          Parameter { name 'use_gps_time' type Boolean },
+          Parameter { name 'host' type String },
+          Parameter { name 'check_fix_by_variance' type Boolean },
+          Parameter { name 'port' type Integer },
+          Parameter { name 'frame_id' type String value 'gps'}}}
+}}}

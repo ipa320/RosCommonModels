@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage turtlebot3_follower {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_applications.git" 
+    Artifact follower {
+      Node { name follower
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}}
+}}}

@@ -9,7 +9,7 @@ PackageSet {
           Subscriber { name '?' message 'ros.NodeHandle'},
           Subscriber { name '?' message 'ros.NodeHandle'}}
         Parameters {
-          Parameter { name 'compatible' type Integer },
+          Parameter { name 'accel' type Double value 0.3},
           Parameter { name 'skip_same' type Boolean value true},
-          Parameter { name 'accel' type Double value 0.3}}}
+          Parameter { name 'compatible' type Integer }}}
 }}}

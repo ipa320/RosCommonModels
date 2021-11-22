@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage heron_gazebo {
+    FromGitRepo "https://github.com/heron/heron_simulator.git" 
+    Artifact rpy_translator {
+      Node { name rpy_translator
+        Publishers {
+          Publisher { name 'imu/rpy' message 'geometry_msgs.Vector3Stamped'}}
+        Subscribers {
+          Subscriber { name 'imu/data_raw' message 'sensor_msgs.Imu'}}}
+}}}

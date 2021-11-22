@@ -1,0 +1,29 @@
+PackageSet {
+  CatkinPackage face_detector {
+    FromGitRepo "https://github.com/wg-perception/people.git" 
+    Artifact face_detector {
+      Node { name face_detector
+        Publishers {
+          Publisher { name 'face_detector/people_tracker_measurements_array' message 'people_msgs.PositionMeasurementArray'},
+          Publisher { name 'face_detector/faces_cloud' message 'sensor_msgs.PointCloud'}}
+        ActionServers {
+          ActionServer { name '?' action 'face_detector.FaceDetectorAction'}}
+        Parameters {
+          Parameter { name 'max_face_z_m' type Double },
+          Parameter { name 'face_size_min_m' type Double },
+          Parameter { name 'classifier_reliability' type Double },
+          Parameter { name 'fixed_frame' type String },
+          Parameter { name 'do_continuous' type Boolean value true},
+          Parameter { name 'classifier_name' type String },
+          Parameter { name 'queue_size' type Integer value 5},
+          Parameter { name 'use_external_init' type Boolean },
+          Parameter { name 'use_depth' type Boolean value true},
+          Parameter { name 'use_rgbd' type Boolean },
+          Parameter { name 'fixed_frame' type String value 'camera_rgb_optical_frame'},
+          Parameter { name 'do_publish_faces_of_unknown_size' type Boolean },
+          Parameter { name 'do_display' type Boolean },
+          Parameter { name 'face_size_max_m' type Double },
+          Parameter { name 'approximate_sync' type Boolean },
+          Parameter { name 'classifier_filename' type String },
+          Parameter { name 'face_separation_dist_m' type Double }}}
+}}}

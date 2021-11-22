@@ -1,0 +1,29 @@
+PackageSet {
+  CatkinPackage rail_segmentation {
+    FromGitRepo "https://github.com/GT-RAIL/rail_segmentation.git" 
+    Artifact rail_segmentation {
+      Node { name rail_segmentation
+        ServiceServers {
+          ServiceServer { name 'segment_objects' service 'rail_manipulation_msgs.SegmentObjects'},
+          ServiceServer { name 'remove_object' service 'rail_segmentation.RemoveObject'},
+          ServiceServer { name 'clear' service 'std_srvs.Empty'},
+          ServiceServer { name 'calculate_features' service 'rail_manipulation_msgs.ProcessSegmentedObjects'},
+          ServiceServer { name 'segment_objects_from_point_cloud' service 'rail_manipulation_msgs.SegmentObjectsFromPointCloud'},
+          ServiceServer { name 'segment' service 'std_srvs.Empty'}}
+        Publishers {
+          Publisher { name 'debug_img' message 'sensor_msgs.Image'},
+          Publisher { name 'segmented_objects' message 'rail_manipulation_msgs.SegmentedObjectList'},
+          Publisher { name 'segmented_table' message 'rail_manipulation_msgs.SegmentedObject'},
+          Publisher { name 'markers' message 'visualization_msgs.MarkerArray'},
+          Publisher { name 'debug_pc' message 'pcl.PointCloud<pcl.PointXYZRGB>'},
+          Publisher { name 'table_marker' message 'visualization_msgs.Marker'}}
+        Parameters {
+          Parameter { name 'min_cluster_size' type Integer },
+          Parameter { name 'max_cluster_size' type Integer },
+          Parameter { name 'crop_first' type Boolean },
+          Parameter { name 'label_markers' type Boolean },
+          Parameter { name 'cluster_tolerance' type Double },
+          Parameter { name 'point_cloud_topic' type String value '/head_camera/depth_registered/points'},
+          Parameter { name 'debug' type Boolean },
+          Parameter { name 'use_color' type Boolean }}}
+}}}

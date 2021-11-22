@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact get_accel_bias_client {
+      Node { name get_accel_bias_client
+        ServiceClients {
+          ServiceClient { name 'GetAccelBias' service 'std_srvs.Trigger'}}}
+}}}

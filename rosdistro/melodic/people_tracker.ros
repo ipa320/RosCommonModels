@@ -1,0 +1,24 @@
+PackageSet {
+  CatkinPackage people_tracking_filter {
+    FromGitRepo "https://github.com/wg-perception/people.git" 
+    Artifact people_tracker {
+      Node { name people_tracker
+        Publishers {
+          Publisher { name 'people_tracker_filter_visualization' message 'sensor_msgs.PointCloud'},
+          Publisher { name 'people_tracker_filter' message 'people_msgs.PositionMeasurement'},
+          Publisher { name 'people_tracker_measurements_visualization' message 'sensor_msgs.PointCloud'}}
+        Subscribers {
+          Subscriber { name 'people_tracker_measurements' message 'people_msgs.PositionMeasurement'}}
+        Parameters {
+          Parameter { name 'sys_sigma_vel_z' type Double },
+          Parameter { name 'fixed_frame' type String value 'default'},
+          Parameter { name 'follow_one_person' type Boolean },
+          Parameter { name 'sys_sigma_pos_x' type Double },
+          Parameter { name 'start_distance_min' type Double },
+          Parameter { name 'sys_sigma_vel_x' type Double },
+          Parameter { name 'sys_sigma_pos_z' type Double },
+          Parameter { name 'freq' type Double value 1.0},
+          Parameter { name 'reliability_threshold' type Double value 1.0},
+          Parameter { name 'sys_sigma_pos_y' type Double },
+          Parameter { name 'sys_sigma_vel_y' type Double }}}
+}}}

@@ -1,0 +1,73 @@
+PackageSet {
+  CatkinPackage robot_one {
+    FromGitRepo "https://github.com/AlexanderSilvaB/Robot-One-ROS.git" 
+    Artifact node {
+      Node { name node
+        ServiceServers {
+          ServiceServer { name '/robotOne/get' service 'robot_one.Get'},
+          ServiceServer { name '/robotOne/set' service 'robot_one.Set'}}
+        Publishers {
+          Publisher { name '/robotOne/get/gps/theta' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/controller/lowlevel' message 'std_msgs.Bool'},
+          Publisher { name '/robotOne/get/controller/manual' message 'std_msgs.Bool'},
+          Publisher { name '/robotOne/get/odometry/std/linear' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/gps/std/theta' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/trace' message 'std_msgs.Bool'},
+          Publisher { name '/robotOne/wait' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/laser' message 'sensor_msgs.LaserScan'},
+          Publisher { name '/robotOne/get/odometry/x' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/camera' message 'sensor_msgs.Image'},
+          Publisher { name '/robotOne/get/gps/x' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/gps' message 'geometry_msgs.Pose2D'},
+          Publisher { name '/robotOne/get/odometry' message 'geometry_msgs.Pose2D'},
+          Publisher { name '/robotOne/get/odometry/std/angular' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/odometry/std' message 'geometry_msgs.Point'},
+          Publisher { name '/robotOne/connected' message 'std_msgs.Bool'},
+          Publisher { name '/robotOne/get/velocity/wheels/right' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/velocity/wheels/left' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/odometry/theta' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/pose/x' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/velocity/wheels' message 'geometry_msgs.Point'},
+          Publisher { name '/robotOne/get/pose' message 'geometry_msgs.Pose2D'},
+          Publisher { name '/robotOne/get/pose/theta' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/velocity/linear' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/gps/y' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/gps/std' message 'geometry_msgs.Pose2D'},
+          Publisher { name '/robotOne/get/pose/y' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/gps/std/y' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/version' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/velocity' message 'geometry_msgs.Point'},
+          Publisher { name '/robotOne/get/odometry/y' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/gps/std/x' message 'std_msgs.Float32'},
+          Publisher { name '/robotOne/get/velocity/angular' message 'std_msgs.Float32'}}
+        Subscribers {
+          Subscriber { name '/robotOne/set/pose' message 'geometry_msgs.Pose2D'},
+          Subscriber { name '/robotOne/set/pose/y' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/pose/theta' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/odometry/std' message 'geometry_msgs.Point'},
+          Subscriber { name '/robotOne/set/odometry/x' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/odometry/y' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/odometry/theta' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/gps/std' message 'geometry_msgs.Pose2D'},
+          Subscriber { name '/robotOne/set/odometry/std/linear' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/odometry/std/angular' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/velocity' message 'geometry_msgs.Point'},
+          Subscriber { name '/robotOne/set/gps/std/y' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/gps/std/theta' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/gps/std/x' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/velocity/linear' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/velocity/angular' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/velocity/wheels' message 'geometry_msgs.Point'},
+          Subscriber { name '/robotOne/set/velocity/wheels/left' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/controller/lowlevel' message 'std_msgs.Bool'},
+          Subscriber { name '/robotOne/set/velocity/wheels/right' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/pose/x' message 'std_msgs.Float32'},
+          Subscriber { name '/robotOne/set/controller/manual' message 'std_msgs.Bool'},
+          Subscriber { name '/robotOne/set/trace' message 'std_msgs.Bool'},
+          Subscriber { name '/robotOne/connect' message 'std_msgs.String'},
+          Subscriber { name '/robotOne/set/odometry' message 'geometry_msgs.Pose2D'},
+          Subscriber { name '/robotOne/disconnect' message 'std_msgs.Empty'}}
+        Parameters {
+          Parameter { name 'autoConnect' type Boolean value true},
+          Parameter { name 'address' type String value '127.0.0.1'}}}
+}}}

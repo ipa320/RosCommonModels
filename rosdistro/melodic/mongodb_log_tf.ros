@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage mongodb_log {
+    FromGitRepo "https://github.com/strands-project/mongodb_store.git" 
+    Artifact mongodb_log_tf {
+      Node { name mongodb_log_tf
+        Subscribers {
+          Subscriber { name '?' message 'tf.tfMessage'}}}
+}}}

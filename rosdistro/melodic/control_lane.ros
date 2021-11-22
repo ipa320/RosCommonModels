@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage turtlebot3_autorace_control {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_autorace.git" 
+    Artifact control_lane {
+      Node { name control_lane
+        Publishers {
+          Publisher { name '/control/cmd_vel' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name '/control/lane' message 'std_msgs.Float64'},
+          Subscriber { name '/control/max_vel' message 'std_msgs.Float64'}}}
+}}}

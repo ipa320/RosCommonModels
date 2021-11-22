@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage uwsim {
+    FromGitRepo "https://github.com/uji-ros-pkg/underwater_simulation.git" 
+    Artifact setJointVelocity {
+      Node { name setJointVelocity
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.JointState'}}}
+}}}

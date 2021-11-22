@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage cob_twist_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact debug_evaluate_jointstates_node {
+      Node { name debug_evaluate_jointstates_node
+        Publishers {
+          Publisher { name 'debug/manipulability' message 'std_msgs.Float64'},
+          Publisher { name 'debug/twist_current' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'joint_states' message 'sensor_msgs.JointState'}}
+        Parameters {
+          Parameter { name 'chain_tip_link' type String },
+          Parameter { name 'chain_base_link' type String }}}
+}}}

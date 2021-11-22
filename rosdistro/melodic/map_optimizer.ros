@@ -1,0 +1,24 @@
+PackageSet {
+  CatkinPackage rtabmap_ros {
+    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
+    Artifact map_optimizer {
+      Node { name map_optimizer
+        Publishers {
+          Publisher { name '?' message 'rtabmap_ros.MapData'},
+          Publisher { name '?' message 'rtabmap_ros.MapGraph'}}
+        Subscribers {
+          Subscriber { name 'mapData' message 'rtabmap_ros.MapData'}}
+        Parameters {
+          Parameter { name 'ignore_variance' type Boolean },
+          Parameter { name 'global_optimization' type Boolean value true},
+          Parameter { name 'optimize_from_last_node' type Boolean },
+          Parameter { name 'odom_frame_id' type String value 'odom'},
+          Parameter { name 'map_frame_id' type String value 'map'},
+          Parameter { name 'publish_tf' type Boolean value true},
+          Parameter { name 'tf_delay' type Double value 0.05},
+          Parameter { name 'strategy' type Integer },
+          Parameter { name 'iterations' type Integer value 100},
+          Parameter { name 'epsilon' type Double },
+          Parameter { name 'slam_2d' type Boolean },
+          Parameter { name 'robust' type Boolean value true}}}
+}}}

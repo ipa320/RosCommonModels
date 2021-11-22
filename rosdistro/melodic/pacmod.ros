@@ -1,0 +1,48 @@
+PackageSet {
+  CatkinPackage pacmod {
+    FromGitRepo "https://github.com/astuff/pacmod.git" 
+    Artifact pacmod {
+      Node { name pacmod
+        Publishers {
+          Publisher { name 'parsed_tx/steer_pid_rpt_3' message 'pacmod_msgs.SteeringPIDRpt3'},
+          Publisher { name 'parsed_tx/date_time_rpt' message 'pacmod_msgs.DateTimeRpt'},
+          Publisher { name 'parsed_tx/steer_rpt_3' message 'pacmod_msgs.SystemRptFloat'},
+          Publisher { name 'parsed_tx/wheel_speed_rpt' message 'pacmod_msgs.WheelSpeedRpt'},
+          Publisher { name 'parsed_tx/steer_pid_rpt_4' message 'pacmod_msgs.SteeringPIDRpt4'},
+          Publisher { name 'parsed_tx/wiper_rpt' message 'pacmod_msgs.SystemRptInt'},
+          Publisher { name 'parsed_tx/horn_rpt' message 'pacmod_msgs.SystemRptInt'},
+          Publisher { name 'parsed_tx/steer_pid_rpt_1' message 'pacmod_msgs.SteeringPIDRpt1'},
+          Publisher { name 'parsed_tx/lat_lon_heading_rpt' message 'pacmod_msgs.LatLonHeadingRpt'},
+          Publisher { name 'parsed_tx/vehicle_speed_rpt' message 'pacmod_msgs.VehicleSpeedRpt'},
+          Publisher { name 'parsed_tx/steer_rpt_detail_2' message 'pacmod_msgs.MotorRpt2'},
+          Publisher { name 'parsed_tx/steer_rpt_2' message 'pacmod_msgs.SystemRptFloat'},
+          Publisher { name 'parsed_tx/brake_rpt_detail_1' message 'pacmod_msgs.MotorRpt1'},
+          Publisher { name 'parsed_tx/accel_rpt' message 'pacmod_msgs.SystemRptFloat'},
+          Publisher { name 'parsed_tx/brake_rpt' message 'pacmod_msgs.SystemRptFloat'},
+          Publisher { name 'as_tx/vehicle_speed' message 'std_msgs.Float64'},
+          Publisher { name 'parsed_tx/steer_rpt_detail_3' message 'pacmod_msgs.MotorRpt3'},
+          Publisher { name 'parsed_tx/parking_brake_status_rpt' message 'pacmod_msgs.ParkingBrakeStatusRpt'},
+          Publisher { name 'can_rx' message 'can_msgs.Frame'},
+          Publisher { name 'parsed_tx/turn_rpt' message 'pacmod_msgs.SystemRptInt'},
+          Publisher { name 'as_tx/enable' message 'std_msgs.Bool'},
+          Publisher { name 'parsed_tx/vin_rpt' message 'pacmod_msgs.VinRpt'},
+          Publisher { name 'parsed_tx/headlight_rpt' message 'pacmod_msgs.SystemRptInt'},
+          Publisher { name 'parsed_tx/steer_rpt' message 'pacmod_msgs.SystemRptFloat'},
+          Publisher { name 'parsed_tx/shift_rpt' message 'pacmod_msgs.SystemRptInt'},
+          Publisher { name 'parsed_tx/brake_rpt_detail_2' message 'pacmod_msgs.MotorRpt2'},
+          Publisher { name 'parsed_tx/steer_rpt_detail_1' message 'pacmod_msgs.MotorRpt1'},
+          Publisher { name 'parsed_tx/global_rpt' message 'pacmod_msgs.GlobalRpt'},
+          Publisher { name 'parsed_tx/brake_rpt_detail_3' message 'pacmod_msgs.MotorRpt3'},
+          Publisher { name 'parsed_tx/yaw_rate_rpt' message 'pacmod_msgs.YawRateRpt'},
+          Publisher { name 'parsed_tx/steer_pid_rpt_2' message 'pacmod_msgs.SteeringPIDRpt2'}}
+        Subscribers {
+          Subscriber { name 'as_rx/steer_cmd' message 'pacmod_msgs.PositionWithSpeed'},
+          Subscriber { name 'as_rx/turn_cmd' message 'pacmod_msgs.PacmodCmd'},
+          Subscriber { name 'as_rx/shift_cmd' message 'pacmod_msgs.PacmodCmd'},
+          Subscriber { name 'as_rx/accel_cmd' message 'pacmod_msgs.PacmodCmd'},
+          Subscriber { name 'as_rx/enable' message 'std_msgs.Bool'},
+          Subscriber { name 'as_rx/brake_cmd' message 'pacmod_msgs.PacmodCmd'},
+          Subscriber { name 'can_tx' message 'can_msgs.Frame'}}
+        Parameters {
+          Parameter { name 'vehicle_type' type String }}}
+}}}

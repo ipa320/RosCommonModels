@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pluginlib_tutorials {
+    FromGitRepo "https://github.com/ros/common_tutorials.git" 
+    Artifact polygon_loader {
+      Node { name polygon_loader}
+}}}

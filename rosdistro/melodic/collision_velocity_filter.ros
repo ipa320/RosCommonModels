@@ -1,0 +1,31 @@
+PackageSet {
+  CatkinPackage cob_collision_velocity_filter {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact collision_velocity_filter {
+      Node { name collision_velocity_filter
+        Publishers {
+          Publisher { name 'command' message 'geometry_msgs.Twist'},
+          Publisher { name '?' message 'visualization_msgs.Marker'},
+          Publisher { name 'relevant_obstacles_grid' message 'nav_msgs.OccupancyGrid'}}
+        Subscribers {
+          Subscriber { name 'command_in' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'robot_base_frame' type String value '/base_link'},
+          Parameter { name 'footprint_update_frequency' type Double value 1.0},
+          Parameter { name 'global_frame' type String value '/base_link'},
+          Parameter { name 'pot_ctrl_vmax' type Double value 0.6},
+          Parameter { name 'costmap_obstacle_treshold' type Integer value 250},
+          Parameter { name 'pot_ctrl_virt_mass' type Double value 0.8},
+          Parameter { name 'z_pos' type Double value 0.25},
+          Parameter { name 'obstacle_damping_dist' type Double value 5.0},
+          Parameter { name 'use_circumscribed_threshold' type Double value 0.2},
+          Parameter { name 'pot_ctrl_kp' type Double value 2.0},
+          Parameter { name 'stop_threshold' type Double value 0.1},
+          Parameter { name 'marker_frame' type String value '/base_link'},
+          Parameter { name 'pot_ctrl_vtheta_max' type Double value 0.8},
+          Parameter { name 'pot_ctrl_kv' type Double value 1.0},
+          Parameter { name 'influence_radius' type Double value 1.5},
+          Parameter { name 'marker_topic_name' type String value 'velocity_limited_marker'},
+          Parameter { name 'marker_lifetime' type Double value 1.0},
+          Parameter { name 'marker_disabled' type Boolean }}}
+}}}

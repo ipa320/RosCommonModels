@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage ainstein_radar_drivers {
+    FromGitRepo "https://github.com/AinsteinAI/ainstein_radar.git" 
+    Artifact o79_can_node {
+      Node { name o79_can_node
+        Publishers {
+          Publisher { name 'radar_info' message 'ainstein_radar_msgs.RadarInfo'}}
+        Parameters {
+          Parameter { name 'frame_id' type String value 'map'},
+          Parameter { name 'can_id' type String value '0x18FFB24D'}}}
+}}}

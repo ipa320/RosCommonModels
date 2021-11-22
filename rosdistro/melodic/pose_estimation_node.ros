@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage tuw_marker_pose_estimation {
+    FromGitRepo "https://github.com/tuw-robotics/tuw_marker_detection.git" 
+    Artifact pose_estimation_node {
+      Node { name pose_estimation_node
+        Publishers {
+          Publisher { name 'markers' message 'marker_msgs.MarkerDetection'}}
+        Subscribers {
+          Subscriber { name 'fiducials' message 'marker_msgs.FiducialDetection'}}}
+}}}

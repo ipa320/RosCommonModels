@@ -1,0 +1,19 @@
+PackageSet {
+  CatkinPackage schunk_sdh {
+    FromGitRepo "https://github.com/ipa320/schunk_modular_robotics.git" 
+    Artifact dsa_only {
+      Node { name dsa_only
+        Publishers {
+          Publisher { name 'tactile_data' message 'schunk_sdh.TactileSensor'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Parameters {
+          Parameter { name 'diag_frequency' type Double value 5.0},
+          Parameter { name 'publish_frequency' type Double },
+          Parameter { name 'poll_frequency' type Double value 5.0},
+          Parameter { name 'use_rle' type Boolean value true},
+          Parameter { name 'polling' type Boolean },
+          Parameter { name 'debug' type Boolean },
+          Parameter { name 'maxerror' type Integer value 8},
+          Parameter { name 'dsadevicestring' type String },
+          Parameter { name 'dsadevicenum' type Integer }}}
+}}}

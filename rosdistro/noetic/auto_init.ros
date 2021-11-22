@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage cob_helper_tools {
+    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
+    Artifact auto_init {
+      Node { name auto_init
+        Subscribers {
+          Subscriber { name '/emergency_stop_state' message 'cob_msgs.EmergencyStopState'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage urg_c {
+    FromGitRepo "https://github.com/ros-drivers/urg_c.git" 
+    Artifact angle_convert_test {
+      Node { name angle_convert_test}
+}}}

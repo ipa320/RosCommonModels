@@ -6,14 +6,14 @@ PackageSet {
         Publishers {
           Publisher { name '?' message 'nav_msgs.OccupancyGrid'}}
         Parameters {
+          Parameter { name 'merged_map_topic' type String value 'map'},
+          Parameter { name 'robot_map_updates_topic' type String value 'map_updates'},
+          Parameter { name 'world_frame' type String value 'world'},
+          Parameter { name 'discovery_rate' type Double value 0.05},
+          Parameter { name 'known_init_poses' type Boolean value true},
+          Parameter { name 'robot_namespace' type String },
           Parameter { name 'robot_map_topic' type String value 'map'},
           Parameter { name 'estimation_rate' type Double value 0.5},
-          Parameter { name 'world_frame' type String value 'world'},
-          Parameter { name 'merged_map_topic' type String value 'map'},
-          Parameter { name 'known_init_poses' type Boolean value true},
-          Parameter { name 'merging_rate' type Double value 4.0},
-          Parameter { name 'robot_namespace' type String },
-          Parameter { name 'robot_map_updates_topic' type String value 'map_updates'},
           Parameter { name 'estimation_confidence' type Double value 1.0},
-          Parameter { name 'discovery_rate' type Double value 0.05}}}
+          Parameter { name 'merging_rate' type Double value 4.0}}}
 }}}

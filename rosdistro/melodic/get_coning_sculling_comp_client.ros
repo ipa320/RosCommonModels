@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact get_coning_sculling_comp_client {
+      Node { name get_coning_sculling_comp_client
+        ServiceClients {
+          ServiceClient { name 'GetConingScullingComp' service 'std_srvs.Trigger'}}}
+}}}

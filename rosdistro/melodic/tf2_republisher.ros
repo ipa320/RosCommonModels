@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rosbag_fancy {
+    FromGitRepo "https://github.com/xqms/rosbag_fancy.git" 
+    Artifact tf2_republisher {
+      Node { name tf2_republisher
+        Subscribers {
+          Subscriber { name '/tf_static' message 'Msg'}}}
+}}}

@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage heron_gazebo {
+    FromGitRepo "https://github.com/heron/heron_simulator.git" 
+    Artifact cmd_drive_translate {
+      Node { name cmd_drive_translate
+        Publishers {
+          Publisher { name '?' message 'uuv_gazebo_ros_plugins_msgs.FloatStamped'},
+          Publisher { name '?' message 'uuv_gazebo_ros_plugins_msgs.FloatStamped'}}
+        Subscribers {
+          Subscriber { name 'cmd_drive' message 'heron_msgs.Drive'}}}
+}}}

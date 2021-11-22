@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage uwsim {
+    FromGitRepo "https://github.com/uji-ros-pkg/underwater_simulation.git" 
+    Artifact setVehicleTwist {
+      Node { name setVehicleTwist
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.TwistStamped'}}}
+}}}

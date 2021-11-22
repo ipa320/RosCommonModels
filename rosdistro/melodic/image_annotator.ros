@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage image_cb_detector {
+    FromGitRepo "https://github.com/ros-perception/calibration.git" 
+    Artifact image_annotator {
+      Node { name image_annotator
+        Publishers {
+          Publisher { name 'annotated' message 'sensor_msgs.Image'}}
+        Parameters {
+          Parameter { name 'marker_size' type Integer value 1},
+          Parameter { name 'scaling' type Double value 1.0}}}
+}}}

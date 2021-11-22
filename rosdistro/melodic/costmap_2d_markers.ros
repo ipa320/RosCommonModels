@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage costmap_2d {
+    FromGitRepo "https://github.com/ros-planning/navigation.git" 
+    Artifact costmap_2d_markers {
+      Node { name costmap_2d_markers
+        Publishers {
+          Publisher { name 'visualization_marker' message 'visualization_msgs.Marker'}}
+        Subscribers {
+          Subscriber { name 'voxel_grid' message 'costmap_2d.VoxelGrid'}}}
+}}}

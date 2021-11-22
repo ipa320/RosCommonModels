@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage cob_twist_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact cob_twist_controller_node {
+      Node { name cob_twist_controller_node
+        Publishers {
+          Publisher { name '/torso/joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'}}
+        Subscribers {
+          Subscriber { name '/torso/joint_states' message 'sensor_msgs.JointState'}}}
+}}}

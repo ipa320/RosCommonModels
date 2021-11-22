@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage ainstein_radar_filters {
+    FromGitRepo "https://github.com/AinsteinAI/ainstein_radar.git" 
+    Artifact radar_target_array_speed_filter_node {
+      Node { name radar_target_array_speed_filter_node
+        Publishers {
+          Publisher { name 'radar_out' message 'ainstein_radar_msgs.RadarTargetArray'}}
+        Subscribers {
+          Subscriber { name 'radar_in' message 'ainstein_radar_msgs.RadarTargetArray'},
+          Subscriber { name 'radar_vel' message 'geometry_msgs.Twist'},
+          Subscriber { name 'radar_vel_stamped' message 'geometry_msgs.TwistStamped'}}
+        Parameters {
+          Parameter { name 'is_rotated' type Boolean },
+          Parameter { name 'compute_3d' type Boolean },
+          Parameter { name 'min_speed_thresh' type Double value 1.0},
+          Parameter { name 'max_speed_thresh' type Double value 1.0}}}
+}}}

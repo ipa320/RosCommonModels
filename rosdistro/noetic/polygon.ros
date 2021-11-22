@@ -4,7 +4,7 @@ PackageSet {
     Artifact polygon {
       Node { name polygon
         Publishers {
-          Publisher { name 'polygons' message 'nav_2d_msgs.Polygon2DCollection'},
+          Publisher { name 'polygon3d' message 'geometry_msgs.PolygonStamped'},
           Publisher { name 'polygon' message 'nav_2d_msgs.Polygon2DStamped'},
-          Publisher { name 'polygon3d' message 'geometry_msgs.PolygonStamped'}}}
+          Publisher { name 'polygons' message 'nav_2d_msgs.Polygon2DCollection'}}}
 }}}

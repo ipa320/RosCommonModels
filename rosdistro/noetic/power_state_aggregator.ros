@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage cob_bms_driver {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact power_state_aggregator {
+      Node { name power_state_aggregator
+        Publishers {
+          Publisher { name 'power_state' message 'cob_msgs.PowerState'}}
+        Subscribers {
+          Subscriber { name 'remaining_capacity' message 'std_msgs.Float64'},
+          Subscriber { name 'temperature' message 'std_msgs.Float64'},
+          Subscriber { name 'current' message 'std_msgs.Float64'},
+          Subscriber { name 'voltage' message 'std_msgs.Float64'},
+          Subscriber { name 'full_charge_capacity' message 'std_msgs.Float64'}}}
+}}}

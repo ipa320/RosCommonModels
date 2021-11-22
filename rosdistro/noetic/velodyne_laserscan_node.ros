@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage velodyne_laserscan {
+    FromGitRepo "https://github.com/ros-drivers/velodyne.git" 
+    Artifact velodyne_laserscan_node {
+      Node { name velodyne_laserscan_node}
+}}}

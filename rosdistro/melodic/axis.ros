@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage axis_camera {
+    FromGitRepo "https://github.com/ros-drivers/axis_camera.git" 
+    Artifact axis {
+      Node { name axis
+        Publishers {
+          Publisher { name 'image_raw/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name 'camera_info' message 'sensor_msgs.CameraInfo'}}}
+}}}

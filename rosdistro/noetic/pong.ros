@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage robot_nav_viz_demos {
+    FromGitRepo "https://github.com/locusrobotics/robot_navigation.git" 
+    Artifact pong {
+      Node { name pong
+        Parameters {
+          Parameter { name 'updates' type Boolean value true},
+          Parameter { name 'radius' type Double value 4.0},
+          Parameter { name 'size' type Integer value 100}}}
+}}}

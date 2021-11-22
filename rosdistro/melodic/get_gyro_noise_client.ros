@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact get_gyro_noise_client {
+      Node { name get_gyro_noise_client
+        ServiceClients {
+          ServiceClient { name 'GetGyroNoise' service 'std_srvs.Trigger'}}}
+}}}

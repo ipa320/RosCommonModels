@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage warehouse_ros {
+    FromGitRepo "https://github.com/ros-planning/warehouse_ros.git" 
+    Artifact warehouse_test_dbloader {
+      Node { name warehouse_test_dbloader}
+}}}

@@ -1,0 +1,54 @@
+PackageSet {
+  CatkinPackage gmapping {
+    FromGitRepo "https://github.com/ros-perception/slam_gmapping.git" 
+    Artifact slam_gmapping {
+      Node { name slam_gmapping
+        ServiceServers {
+          ServiceServer { name 'dynamic_map' service 'nav_msgs.GetMap'},
+          ServiceServer { name 'dynamic_map' service 'nav_msgs.GetMap'}}
+        Publishers {
+          Publisher { name 'entropy' message 'std_msgs.Float64'},
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name 'entropy' message 'std_msgs.Float64'},
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'},
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'}}
+        Parameters {
+          Parameter { name 'llsamplestep' type Double },
+          Parameter { name 'sigma' type Double },
+          Parameter { name 'base_frame' type String },
+          Parameter { name 'srt' type Double },
+          Parameter { name 'ogain' type Double },
+          Parameter { name 'map_frame' type String },
+          Parameter { name 'lskip' type Integer },
+          Parameter { name 'lsigma' type Double },
+          Parameter { name 'srr' type Double },
+          Parameter { name 'delta' type Double },
+          Parameter { name 'odom_frame' type String },
+          Parameter { name 'linearUpdate' type Double },
+          Parameter { name 'particles' type Integer },
+          Parameter { name 'angularUpdate' type Double },
+          Parameter { name 'throttle_scans' type Integer },
+          Parameter { name 'tf_delay' type Double },
+          Parameter { name 'stt' type Double },
+          Parameter { name 'resampleThreshold' type Double },
+          Parameter { name 'xmax' type Double },
+          Parameter { name 'minimumScore' type Double },
+          Parameter { name 'temporalUpdate' type Double },
+          Parameter { name 'ymin' type Double },
+          Parameter { name 'xmin' type Double },
+          Parameter { name 'ymax' type Double },
+          Parameter { name 'transform_publish_period' type Double value 0.05},
+          Parameter { name 'occ_thresh' type Double },
+          Parameter { name 'kernelSize' type Integer },
+          Parameter { name 'maxUrange' type Double },
+          Parameter { name 'iterations' type Integer },
+          Parameter { name 'map_update_interval' type Double },
+          Parameter { name 'lstep' type Double },
+          Parameter { name 'str' type Double },
+          Parameter { name 'lasamplerange' type Double },
+          Parameter { name 'astep' type Double },
+          Parameter { name 'llsamplerange' type Double },
+          Parameter { name 'maxRange' type Double },
+          Parameter { name 'lasamplestep' type Double }}}
+}}}

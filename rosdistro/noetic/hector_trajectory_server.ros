@@ -11,8 +11,8 @@ PackageSet {
         Subscribers {
           Subscriber { name 'syscommand' message 'std_msgs.String'}}
         Parameters {
-          Parameter { name 'trajectory_update_rate' type Double value 4.0},
-          Parameter { name 'target_frame_name' type String value 'map'},
           Parameter { name 'trajectory_publish_rate' type Double value 0.25},
-          Parameter { name 'source_frame_name' type String value 'base_link'}}}
+          Parameter { name 'source_frame_name' type String value 'base_link'},
+          Parameter { name 'trajectory_update_rate' type Double value 4.0},
+          Parameter { name 'target_frame_name' type String value 'map'}}}
 }}}

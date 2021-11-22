@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage ati_force_torque {
+    FromGitRepo "https://github.com/KITrobotics/ati_force_torque.git" 
+    Artifact ati_force_torque_config {
+      Node { name ati_force_torque_config
+        ServiceServers {
+          ServiceServer { name 'SetBaudRate' service 'std_srvs.Trigger'},
+          ServiceServer { name 'Reset' service 'std_srvs.Trigger'},
+          ServiceServer { name 'SetBaseIdentifier' service 'std_srvs.Trigger'}}
+        Parameters {
+          Parameter { name 'HWComm/path' type String },
+          Parameter { name 'HWComm/baudrate' type Integer value -1},
+          Parameter { name 'HWComm/type' type Integer value -1},
+          Parameter { name 'FTS/future_baudrate' type Integer value 7},
+          Parameter { name 'FTS/base_identifier' type Integer value -1},
+          Parameter { name 'FTS/future_base_id' type Integer value 32}}}
+}}}

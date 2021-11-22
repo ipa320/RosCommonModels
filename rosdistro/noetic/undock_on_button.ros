@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage fetch_open_auto_dock {
+    FromGitRepo "https://github.com/fetchrobotics/fetch_open_auto_dock.git" 
+    Artifact undock_on_button {
+      Node { name undock_on_button
+        Subscribers {
+          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage moveit_servo {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact servo_server {
+      Node { name servo_server}
+}}}

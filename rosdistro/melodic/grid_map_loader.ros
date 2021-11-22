@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage grid_map_loader {
+    FromGitRepo "https://github.com/anybotics/grid_map.git" 
+    Artifact grid_map_loader {
+      Node { name grid_map_loader
+        Publishers {
+          Publisher { name '?' message 'grid_map_msgs.GridMap'}}
+        Parameters {
+          Parameter { name 'bag_topic' type String value '/grid_map'},
+          Parameter { name 'duration' type Double value 5.0},
+          Parameter { name 'file_path' type String },
+          Parameter { name 'publish_topic' type String }}}
+}}}

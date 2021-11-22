@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage xv_11_laser_driver {
+    FromGitRepo "https://github.com/rohbotics/xv_11_laser_driver.git" 
+    Artifact neato_laser_publisher {
+      Node { name neato_laser_publisher
+        Publishers {
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'},
+          Publisher { name 'rpms' message 'std_msgs.UInt16'}}
+        Parameters {
+          Parameter { name 'firmware_version' type Integer value 2},
+          Parameter { name 'frame_id' type String value 'neato_laser'},
+          Parameter { name 'port' type String value '/dev/ttyUSB0'},
+          Parameter { name 'baud_rate' type Integer value 115200}}}
+}}}

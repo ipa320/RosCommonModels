@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage dynamixel_workbench_operators {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/dynamixel-workbench.git" 
+    Artifact joint_operator {
+      Node { name joint_operator
+        ServiceServers {
+          ServiceServer { name 'execution' service 'std_srvs.Trigger'}}
+        Publishers {
+          Publisher { name 'joint_trajectory' message 'trajectory_msgs.JointTrajectory'}}
+        Parameters {
+          Parameter { name 'trajectory_info' type String }}}
+}}}

@@ -4,13 +4,13 @@ PackageSet {
     Artifact video_recorder {
       Node { name video_recorder
         Parameters {
-          Parameter { name 'codec' type String value 'MJPG'},
-          Parameter { name 'max_depth_range' type Double },
-          Parameter { name 'use_dynamic_depth_range' type Boolean },
-          Parameter { name 'colormap' type Integer value -1},
-          Parameter { name 'fps' type Integer value 15},
           Parameter { name 'encoding' type String value 'bgr8'},
+          Parameter { name 'min_depth_range' type Double },
+          Parameter { name 'use_dynamic_depth_range' type Boolean },
+          Parameter { name 'codec' type String value 'MJPG'},
+          Parameter { name 'fps' type Integer value 15},
           Parameter { name 'filename' type String value 'output.avi'},
+          Parameter { name 'colormap' type Integer value -1},
           Parameter { name 'stamped_filename' type Boolean },
-          Parameter { name 'min_depth_range' type Double }}}
+          Parameter { name 'max_depth_range' type Double }}}
 }}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage laser_scan_sparsifier {
+    FromGitRepo "https://github.com/ccny-ros-pkg/scan_tools.git" 
+    Artifact laser_scan_sparsifier_node {
+      Node { name laser_scan_sparsifier_node}
+}}}

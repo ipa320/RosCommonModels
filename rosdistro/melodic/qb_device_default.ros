@@ -1,0 +1,22 @@
+PackageSet {
+  CatkinPackage qb_device_control {
+    FromGitRepo "https://bitbucket.org/qbrobotics/qbdevice-ros.git" 
+    Artifact qb_device_default {
+      Node { name qb_device_default
+        ServiceServers {
+          ServiceServer { name 'set_async_pid' service 'qb_device_srvs.SetPID'},
+          ServiceServer { name 'get_async_measurements' service 'qb_device_srvs.GetMeasurements'},
+          ServiceServer { name 'set_async_commands' service 'qb_device_srvs.SetCommands'}}
+        ServiceClients {
+          ServiceClient { name '/communication_handler/set_commands' service 'qb_device_srvs.SetCommands'},
+          ServiceClient { name '/communication_handler/get_measurements' service 'qb_device_srvs.GetMeasurements'},
+          ServiceClient { name '/communication_handler/set_pid' service 'qb_device_srvs.SetPID'}}
+        Publishers {
+          Publisher { name 'frequency' message 'std_msgs.Int32'}}
+        Subscribers {
+          Subscriber { name 'control/startup_sync' message 'std_msgs.Header'}}
+        Parameters {
+          Parameter { name 'control_duration' type Double value 0.01},
+          Parameter { name 'robot_activate_control' type Boolean value true},
+          Parameter { name 'use_waypoints' type Boolean }}}
+}}}

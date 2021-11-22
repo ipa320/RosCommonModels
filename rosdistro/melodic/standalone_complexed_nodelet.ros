@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage jsk_topic_tools {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common.git" 
+    Artifact standalone_complexed_nodelet {
+      Node { name standalone_complexed_nodelet
+        Parameters {
+          Parameter { name 'candidate_num' type Integer value 100}}}
+}}}

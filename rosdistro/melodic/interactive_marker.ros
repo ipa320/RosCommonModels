@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage franka_example_controllers {
+    FromGitRepo "https://github.com/frankaemika/franka_ros.git" 
+    Artifact interactive_marker {
+      Node { name interactive_marker
+        Publishers {
+          Publisher { name 'equilibrium_pose' message 'geometry_msgs.PoseStamped'}}}
+}}}

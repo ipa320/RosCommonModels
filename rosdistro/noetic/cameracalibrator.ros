@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage camera_calibration {
+    FromGitRepo "https://github.com/ros-perception/image_pipeline.git" 
+    Artifact cameracalibrator {
+      Node { name cameracalibrator}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage fake_joint_driver {
+    FromGitRepo "https://github.com/tork-a/fake_joint.git" 
+    Artifact fake_joint_driver_node {
+      Node { name fake_joint_driver_node
+        Parameters {
+          Parameter { name 'use_robot_description' type Boolean value true}}}
+}}}

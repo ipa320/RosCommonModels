@@ -1,0 +1,43 @@
+PackageSet {
+  CatkinPackage move_basic {
+    FromGitRepo "https://github.com/UbiquityRobotics/move_basic.git" 
+    Artifact move_basic {
+      Node { name move_basic
+        Publishers {
+          Publisher { name '/cmd_vel' message 'geometry_msgs.Twist'},
+          Publisher { name '/plan' message 'nav_msgs.Path'},
+          Publisher { name '/move_base/goal' message 'move_base_msgs.MoveBaseActionGoal'},
+          Publisher { name '/obstacle_viz' message 'visualization_msgs.Marker'},
+          Publisher { name '/obstacle_distance' message 'geometry_msgs.Vector3'},
+          Publisher { name '/lateral_error' message 'geometry_msgs.Vector3'}}
+        Subscribers {
+          Subscriber { name '/move_base_simple/goal' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name '/move_base/stop' message 'std_msgs.Bool'},
+          Subscriber { name '/sonars' message 'sensor_msgs.Range'},
+          Subscriber { name '/scan' message 'sensor_msgs.LaserScan'}}
+        Parameters {
+          Parameter { name 'min_side_dist' type Double value 0.3},
+          Parameter { name 'preferred_planning_frame' type String },
+          Parameter { name 'alternate_planning_frame' type String value 'odom'},
+          Parameter { name 'preferred_driving_frame' type String value 'map'},
+          Parameter { name 'alternate_driving_frame' type String value 'odom'},
+          Parameter { name 'turning_acceleration' type Double value 0.2},
+          Parameter { name 'base_frame' type String value 'base_link'},
+          Parameter { name 'min_linear_velocity' type Double value 0.1},
+          Parameter { name 'localization_latency' type Double value 0.5},
+          Parameter { name 'base_frame' type String value 'base_footprint'},
+          Parameter { name 'min_turning_velocity' type Double value 0.18},
+          Parameter { name 'base_frame' type String value 'base_link'},
+          Parameter { name 'max_lateral_velocity' type Double value 0.5},
+          Parameter { name 'linear_acceleration' type Double value 0.1},
+          Parameter { name 'max_turning_velocity' type Double value 1.0},
+          Parameter { name 'linear_tolerance' type Double value 0.05},
+          Parameter { name 'angular_tolerance' type Double value 0.05},
+          Parameter { name 'max_linear_velocity' type Double value 0.5},
+          Parameter { name 'forward_obstacle_threshold' type Double value 0.5},
+          Parameter { name 'lateral_kp' type Double },
+          Parameter { name 'lateral_ki' type Double },
+          Parameter { name 'lateral_kd' type Double value 3.0},
+          Parameter { name 'runaway_timeout' type Double value 1.0},
+          Parameter { name 'obstacle_wait_threshold' type Double value 60.0}}}
+}}}

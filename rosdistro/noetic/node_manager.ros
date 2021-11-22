@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage fkie_node_manager {
+    FromGitRepo "https://github.com/fkie/multimaster_fkie.git" 
+    Artifact node_manager {
+      Node { name node_manager}
+}}}

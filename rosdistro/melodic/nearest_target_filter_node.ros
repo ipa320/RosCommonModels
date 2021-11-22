@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage ainstein_radar_filters {
+    FromGitRepo "https://github.com/AinsteinAI/ainstein_radar.git" 
+    Artifact nearest_target_filter_node {
+      Node { name nearest_target_filter_node
+        Publishers {
+          Publisher { name 'nearest_target_array' message 'ainstein_radar_msgs.RadarTargetArray'},
+          Publisher { name 'nearest_target' message 'ainstein_radar_msgs.RadarTargetStamped'}}
+        Subscribers {
+          Subscriber { name 'radar_in' message '?'}}
+        Parameters {
+          Parameter { name 'min_dist_thresh' type Double },
+          Parameter { name 'data_lpf_timeout' type Double value 3.0},
+          Parameter { name 'data_lpf_alpha' type Double value 0.1},
+          Parameter { name 'max_dist_thresh' type Double value 100.0}}}
+}}}

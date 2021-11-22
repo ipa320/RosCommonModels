@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage cob_phidget_power_state {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact power_state_phidget {
+      Node { name power_state_phidget
+        Publishers {
+          Publisher { name 'power_state' message 'cob_msgs.PowerState'}}
+        Subscribers {
+          Subscriber { name 'analog_sensors' message 'cob_phidgets.AnalogSensor'}}}
+}}}

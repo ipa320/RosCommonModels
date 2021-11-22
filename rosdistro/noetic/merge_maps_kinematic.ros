@@ -4,8 +4,8 @@ PackageSet {
     Artifact merge_maps_kinematic {
       Node { name merge_maps_kinematic
         ServiceServers {
-          ServiceServer { name 'merge_submaps' service 'slam_toolbox_msgs.MergeMaps'},
-          ServiceServer { name 'add_submap' service 'slam_toolbox_msgs.AddSubmap'}}
+          ServiceServer { name 'add_submap' service 'slam_toolbox_msgs.AddSubmap'},
+          ServiceServer { name 'merge_submaps' service 'slam_toolbox_msgs.MergeMaps'}}
         Publishers {
           Publisher { name '/map' message 'nav_msgs.OccupancyGrid'},
           Publisher { name '/map_metadata' message 'nav_msgs.MapMetaData'},

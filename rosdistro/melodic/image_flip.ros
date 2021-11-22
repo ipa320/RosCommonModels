@@ -1,0 +1,23 @@
+PackageSet {
+  CatkinPackage cob_image_flip {
+    FromGitRepo "https://github.com/ipa320/cob_perception_common.git" 
+    Artifact image_flip {
+      Node { name image_flip
+        Publishers {
+          Publisher { name 'disparityimage_out' message 'stereo_msgs.DisparityImage'},
+          Publisher { name 'colorimage_inplane_transform' message 'cob_perception_msgs.Float64ArrayStamped'},
+          Publisher { name 'pointcloud_out' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'disparityimage_inplane_transform' message 'cob_perception_msgs.Float64ArrayStamped'},
+          Publisher { name 'pointcloud_inplane_transform' message 'cob_perception_msgs.Float64ArrayStamped'}}
+        Subscribers {
+          Subscriber { name 'disparityimage_in' message 'stereo_msgs.DisparityImage'},
+          Subscriber { name 'pointcloud_in' message 'sensor_msgs.PointCloud2'}}
+        Parameters {
+          Parameter { name 'flip_color_image' type Boolean },
+          Parameter { name 'reference_frame' type String },
+          Parameter { name 'rotation_mode' type Integer },
+          Parameter { name 'flip_pointcloud' type Boolean },
+          Parameter { name 'rotation_angle' type Double },
+          Parameter { name 'flip_disparity_image' type Boolean },
+          Parameter { name 'display_warnings' type Boolean }}}
+}}}

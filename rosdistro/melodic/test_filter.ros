@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage pr2_navigation_self_filter {
+    FromGitRepo "https://github.com/PR2/pr2_navigation.git" 
+    Artifact test_filter {
+      Node { name test_filter
+        Publishers {
+          Publisher { name 'visualization_marker' message 'visualization_msgs.Marker'}}}
+}}}

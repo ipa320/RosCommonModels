@@ -6,14 +6,14 @@ PackageSet {
         Publishers {
           Publisher { name 'joint_states' message 'sensor_msgs.JointState'}}
         ActionClients {
-          ActionClient { name 'move' action 'franka_gripper.MoveAction'},
-          ActionClient { name 'stop' action 'franka_gripper.StopAction'},
+          ActionClient { name 'homing' action 'franka_gripper.HomingAction'},
           ActionClient { name 'grasp' action 'franka_gripper.GraspAction'},
           ActionClient { name 'gripper_action' action 'control_msgs.GripperCommandAction'},
-          ActionClient { name 'homing' action 'franka_gripper.HomingAction'}}
+          ActionClient { name 'move' action 'franka_gripper.MoveAction'},
+          ActionClient { name 'stop' action 'franka_gripper.StopAction'}}
         Parameters {
           Parameter { name 'default_speed' type Double },
+          Parameter { name 'robot_ip' type String },
           Parameter { name 'stop_at_shutdown' type Boolean },
-          Parameter { name 'publish_rate' type Double },
-          Parameter { name 'robot_ip' type String }}}
+          Parameter { name 'publish_rate' type Double }}}
 }}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage franka_example_controllers {
+    FromGitRepo "https://github.com/frankaemika/franka_ros.git" 
+    Artifact move_to_start {
+      Node { name move_to_start}
+}}}

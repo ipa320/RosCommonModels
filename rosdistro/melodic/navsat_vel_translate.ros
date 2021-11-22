@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage heron_gazebo {
+    FromGitRepo "https://github.com/heron/heron_simulator.git" 
+    Artifact navsat_vel_translate {
+      Node { name navsat_vel_translate
+        Publishers {
+          Publisher { name 'navsat/vel' message 'geometry_msgs.TwistStamped'}}
+        Subscribers {
+          Subscriber { name 'navsat/velocity' message 'geometry_msgs.Vector3Stamped'}}}
+}}}

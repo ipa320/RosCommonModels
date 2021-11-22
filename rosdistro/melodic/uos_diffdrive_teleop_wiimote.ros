@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage uos_diffdrive_teleop {
+    FromGitRepo "https://github.com/uos/uos_tools.git" 
+    Artifact uos_diffdrive_teleop_wiimote {
+      Node { name uos_diffdrive_teleop_wiimote
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}
+        Parameters {
+          Parameter { name 'max_rotational_vel' type Double value 1.5},
+          Parameter { name 'max_vel_x' type Double value 1.5}}}
+}}}

@@ -1,0 +1,21 @@
+PackageSet {
+  CatkinPackage rc_cloud_accumulator {
+    FromGitRepo "https://github.com/roboception/rc_cloud_accumulator.git" 
+    Artifact rc_cloud_accumulator {
+      Node { name rc_cloud_accumulator
+        ServiceServers {
+          ServiceServer { name 'toggle_pause' service 'std_srvs.Empty'},
+          ServiceServer { name 'save_cloud' service 'std_srvs.Empty'}}
+        Subscribers {
+          Subscriber { name 'trajectory' message 'nav_msgs.Path'},
+          Subscriber { name 'pose' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name 'stereo/points2' message 'pointcloud_t'}}
+        Parameters {
+          Parameter { name 'voxel_grid_size_display' type Double value 0.05},
+          Parameter { name 'minimum_distance' type Double },
+          Parameter { name 'output_filename' type String value 'cloud.pcd'},
+          Parameter { name 'maximum_distance' type Double value 5.0},
+          Parameter { name 'voxel_grid_size_save' type Double value 0.01},
+          Parameter { name 'keep_high_resolution' type Boolean value true},
+          Parameter { name 'start_paused' type Boolean }}}
+}}}

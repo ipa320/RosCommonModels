@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage mir_navigation {
+    FromGitRepo "https://github.com/dfki-ric/mir_robot.git" 
+    Artifact acc_finder {
+      Node { name acc_finder
+        Subscribers {
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'},
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}}
+}}}

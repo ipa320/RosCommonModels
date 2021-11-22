@@ -4,7 +4,7 @@ PackageSet {
     Artifact buffer_server {
       Node { name buffer_server
         Parameters {
+          Parameter { name 'buffer_size' type Double value 120.0},
           Parameter { name 'use_node_namespace' type Boolean },
-          Parameter { name 'publish_frame_service' type Boolean },
-          Parameter { name 'buffer_size' type Double value 120.0}}}
+          Parameter { name 'publish_frame_service' type Boolean }}}
 }}}

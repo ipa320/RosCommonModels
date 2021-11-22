@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage ainstein_radar_tools {
+    FromGitRepo "https://github.com/AinsteinAI/ainstein_radar.git" 
+    Artifact radar_camera_fusion_node {
+      Node { name radar_camera_fusion_node
+        Publishers {
+          Publisher { name 'boxes' message 'ainstein_radar_msgs.BoundingBoxArray'}}
+        Subscribers {
+          Subscriber { name 'objects_topic' message 'vision_msgs.Detection2DArray'},
+          Subscriber { name 'radar_topic' message 'ainstein_radar_msgs.RadarTargetArray'},
+          Subscriber { name 'radar_bbox_topic' message 'ainstein_radar_msgs.BoundingBoxArray'}}
+        Parameters {
+          Parameter { name 'use_object_width_for_bbox' type Boolean }}}
+}}}

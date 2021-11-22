@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage turtlebot3_autorace_detect {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_autorace_2020.git" 
+    Artifact detect_construction {
+      Node { name detect_construction
+        Publishers {
+          Publisher { name '/control/max_vel' message 'std_msgs.Float64'},
+          Publisher { name '/control/moving/state' message 'turtlebot3_autorace_msgs.MovingParam'},
+          Publisher { name '/detect/construction_stamped' message 'std_msgs.UInt8'}}
+        Subscribers {
+          Subscriber { name '/detect/construction_order' message 'std_msgs.UInt8'},
+          Subscriber { name '/detect/scan' message 'sensor_msgs.LaserScan'},
+          Subscriber { name '/control/moving/complete' message 'std_msgs.UInt8'}}}
+}}}

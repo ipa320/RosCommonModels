@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage xpp_hyq {
+    FromGitRepo "https://github.com/leggedrobotics/xpp.git" 
+    Artifact urdf_visualizer_hyq1 {
+      Node { name urdf_visualizer_hyq1}
+}}}

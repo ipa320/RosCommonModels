@@ -4,8 +4,8 @@ PackageSet {
     Artifact test_optim_node {
       Node { name test_optim_node
         Subscribers {
-          Subscriber { name '?' message 'geometry_msgs.Twist'},
           Subscriber { name '/clicked_point' message 'geometry_msgs.PointStamped'},
           Subscriber { name 'via_points' message 'nav_msgs.Path'},
-          Subscriber { name 'obstacles' message 'costmap_converter.ObstacleArrayMsg'}}}
+          Subscriber { name 'obstacles' message 'costmap_converter.ObstacleArrayMsg'},
+          Subscriber { name '?' message 'geometry_msgs.Twist'}}}
 }}}

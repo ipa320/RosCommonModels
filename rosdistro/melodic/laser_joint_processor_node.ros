@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage laser_joint_processor {
+    FromGitRepo "https://github.com/UNR-RoboticsResearchLab/pr2_calibration.git" 
+    Artifact laser_joint_processor_node {
+      Node { name laser_joint_processor_node
+        Publishers {
+          Publisher { name 'joint_features' message 'calibration_msgs.JointStateCalibrationPattern'}}}
+}}}

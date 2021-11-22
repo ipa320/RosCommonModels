@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rosserial_python {
+    FromGitRepo "https://github.com/ros-drivers/rosserial.git" 
+    Artifact message_info_service {
+      Node { name message_info_service}
+}}}

@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage nav2d_remote {
+    FromGitRepo "https://github.com/skasperski/navigation_2d.git" 
+    Artifact sim_joy {
+      Node { name sim_joy
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}}
+}}}

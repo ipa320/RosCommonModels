@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage cob_twist_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact test_publisher_twist_stamped {
+      Node { name test_publisher_twist_stamped
+        Publishers {
+          Publisher { name 'twist_controller/command_twist_stamped' message 'geometry_msgs.TwistStamped'}}}
+}}}

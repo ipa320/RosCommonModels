@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage dynamixel_sdk_examples {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/DynamixelSDK.git" 
+    Artifact bulk_read_write_node {
+      Node { name bulk_read_write_node
+        ServiceServers {
+          ServiceServer { name '/bulk_get_item' service 'dynamixel_sdk_examples.BulkGetItem'}}
+        Subscribers {
+          Subscriber { name '/bulk_set_item' message 'dynamixel_sdk_examples.BulkSetItem'}}}
+}}}

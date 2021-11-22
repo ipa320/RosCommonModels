@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rosflight {
+    FromGitRepo "https://github.com/rosflight/rosflight.git" 
+    Artifact calibrate_mag {
+      Node { name calibrate_mag
+        ServiceClients {
+          ServiceClient { name 'param_set' service 'rosflight_msgs.ParamSet'}}}
+}}}

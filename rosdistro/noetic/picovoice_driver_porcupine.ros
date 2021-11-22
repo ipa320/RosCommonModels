@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage picovoice_driver {
+    FromGitRepo "https://github.com/reinzor/picovoice_ros.git" 
+    Artifact picovoice_driver_porcupine {
+      Node { name picovoice_driver_porcupine}
+}}}

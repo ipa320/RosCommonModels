@@ -4,11 +4,11 @@ PackageSet {
     Artifact turtlebot3_diagnostics {
       Node { name turtlebot3_diagnostics
         Publishers {
-          Publisher { name 'version_info' message 'turtlebot3_msgs.VersionInfo'},
-          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name 'version_info' message 'turtlebot3_msgs.VersionInfo'}}
         Subscribers {
-          Subscriber { name 'firmware_version' message 'turtlebot3_msgs.VersionInfo'},
+          Subscriber { name 'sensor_state' message 'turtlebot3_msgs.SensorState'},
           Subscriber { name 'imu' message 'sensor_msgs.Imu'},
-          Subscriber { name 'scan' message 'sensor_msgs.LaserScan'},
-          Subscriber { name 'sensor_state' message 'turtlebot3_msgs.SensorState'}}}
+          Subscriber { name 'firmware_version' message 'turtlebot3_msgs.VersionInfo'},
+          Subscriber { name 'scan' message 'sensor_msgs.LaserScan'}}}
 }}}

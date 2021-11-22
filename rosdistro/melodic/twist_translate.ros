@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage heron_gazebo {
+    FromGitRepo "https://github.com/heron/heron_simulator.git" 
+    Artifact twist_translate {
+      Node { name twist_translate
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'cmd_vel_unscaled' message 'geometry_msgs.Twist'}}}
+}}}

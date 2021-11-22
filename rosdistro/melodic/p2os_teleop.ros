@@ -1,0 +1,24 @@
+PackageSet {
+  CatkinPackage p2os_teleop {
+    FromGitRepo "https://github.com/allenh1/p2os.git" 
+    Artifact p2os_teleop {
+      Node { name p2os_teleop
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'des_vel' message 'geometry_msgs.Twist'},
+          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}
+        Parameters {
+          Parameter { name 'max_vy_run' type Double value 0.6},
+          Parameter { name 'axis_vx' type Integer value 3},
+          Parameter { name 'max_vy' type Double value 0.6},
+          Parameter { name 'max_vw_run' type Double value 0.8},
+          Parameter { name 'axis_vy' type Integer value 2},
+          Parameter { name 'max_vx_run' type Double value 0.6},
+          Parameter { name 'axis_vw' type Integer },
+          Parameter { name 'deadman_button' type Integer },
+          Parameter { name 'joy_msg_timeout' type Double value -1.0},
+          Parameter { name 'max_vw' type Double value 0.8},
+          Parameter { name 'run_button' type Integer },
+          Parameter { name 'max_vx' type Double value 0.6}}}
+}}}

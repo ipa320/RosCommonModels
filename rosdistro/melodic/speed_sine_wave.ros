@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage dataspeed_ulc_can {
+    FromGitRepo "https://bitbucket.org/DataspeedInc/dataspeed_ulc_ros.git" 
+    Artifact speed_sine_wave {
+      Node { name speed_sine_wave
+        Subscribers {
+          Subscriber { name '/vehicle/ulc_report' message 'dataspeed_ulc_msgs.UlcReport'}}}
+}}}

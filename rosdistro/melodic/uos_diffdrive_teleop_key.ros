@@ -1,0 +1,23 @@
+PackageSet {
+  CatkinPackage uos_diffdrive_teleop {
+    FromGitRepo "https://github.com/uos/uos_tools.git" 
+    Artifact uos_diffdrive_teleop_key {
+      Node { name uos_diffdrive_teleop_key
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'acc_ahead_neg' type Double value 0.8},
+          Parameter { name 'acc_rot_stop' type Double value 2.6},
+          Parameter { name 'max_vel' type Double value 1.0},
+          Parameter { name 'acc_ahead_stop' type Double value 2.0},
+          Parameter { name 'acc_rot_pos' type Double value 1.4},
+          Parameter { name 'acc_rot_neg' type Double value 1.8},
+          Parameter { name 'normal_x' type Double value 0.5},
+          Parameter { name 'acc_ahead_pos' type Double value 0.4},
+          Parameter { name 'high_x' type Double value 1.0},
+          Parameter { name 'update_inputs_rate' type Double value 0.05},
+          Parameter { name 'max_rot_vel' type Double value 2.0},
+          Parameter { name 'high_y' type Double value 1.0},
+          Parameter { name 'normal_y' type Double value 0.5},
+          Parameter { name 'update_velocity_rate' type Double value 0.01}}}
+}}}

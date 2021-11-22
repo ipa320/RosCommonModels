@@ -1,0 +1,24 @@
+PackageSet {
+  CatkinPackage jsk_interactive_marker {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_visualization.git" 
+    Artifact urdf_control_marker {
+      Node { name urdf_control_marker
+        ServiceClients {
+          ServiceClient { name 'set_dynamic_tf' service 'dynamic_tf_publisher.SetDynamicTF'},
+          ServiceClient { name 'set_dynamic_tf' service 'dynamic_tf_publisher.SetDynamicTF'}}
+        Publishers {
+          Publisher { name 'pose' message 'geometry_msgs.PoseStamped'},
+          Publisher { name 'selected_pose' message 'geometry_msgs.PoseStamped'}}
+        Subscribers {
+          Subscriber { name 'set_pose' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name 'show_marker' message 'std_msgs.Bool'}}
+        Parameters {
+          Parameter { name 'fixed_frame_id' type String value '/odom_on_ground'},
+          Parameter { name 'frame_id' type String value '/map'},
+          Parameter { name 'marker_scale' type Double value 1.0},
+          Parameter { name 'use_dynamic_tf' type Boolean },
+          Parameter { name 'center_marker' type String },
+          Parameter { name 'marker_frame_id' type String value '/urdf_control_marker'},
+          Parameter { name 'center_marker_scale' type Double value 1.0},
+          Parameter { name 'move_2d' type Boolean }}}
+}}}

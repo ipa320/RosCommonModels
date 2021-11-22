@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage roscompile {
+    FromGitRepo "https://github.com/DLu/roscompile.git" 
+    Artifact convert_to_format_2 {
+      Node { name convert_to_format_2}
+}}}

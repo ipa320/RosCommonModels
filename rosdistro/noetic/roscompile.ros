@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage roscompile {
+    FromGitRepo "https://github.com/DLu/roscompile.git" 
+    Artifact roscompile {
+      Node { name roscompile}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact set_filter_euler_client {
+      Node { name set_filter_euler_client
+        ServiceClients {
+          ServiceClient { name 'SetFilterEuler' service 'microstrain_mips.SetFilterEuler'}}}
+}}}

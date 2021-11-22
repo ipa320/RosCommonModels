@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage interactive_marker_proxy {
+    FromGitRepo "https://github.com/RobotWebTools/interactive_marker_proxy.git" 
+    Artifact proxy {
+      Node { name proxy
+        ServiceServers {
+          ServiceServer { name '?' service 'interactive_marker_proxy.GetInit'}}
+        Publishers {
+          Publisher { name '?' message 'visualization_msgs.InteractiveMarkerUpdate'}}
+        Parameters {
+          Parameter { name 'update_rate' type Double value 30.0}}}
+}}}

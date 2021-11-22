@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage pr2_gripper_sensor_action {
+    FromGitRepo "https://github.com/PR2/pr2_gripper_sensor.git" 
+    Artifact pr2_gripper_sensor_action {
+      Node { name pr2_gripper_sensor_action
+        Publishers {
+          Publisher { name 'command' message 'pr2_controllers_msgs.Pr2GripperCommand'}}
+        Subscribers {
+          Subscriber { name 'state' message 'pr2_controllers_msgs.JointControllerState'}}
+        Parameters {
+          Parameter { name 'position_servo_position_tolerance' type Double },
+          Parameter { name 'stall_velocity_threshold' type Double value 1e-06},
+          Parameter { name 'stall_timeout' type Double value 0.1}}}
+}}}

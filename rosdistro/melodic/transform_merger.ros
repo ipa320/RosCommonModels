@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage jsk_topic_tools {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common.git" 
+    Artifact transform_merger {
+      Node { name transform_merger
+        Publishers {
+          Publisher { name '/tf_merged' message 'tf.tfMessage'}}
+        Subscribers {
+          Subscriber { name '/tf' message 'tf.tfMessage'}}
+        Parameters {
+          Parameter { name 'loop_hz' type Double value 1.0}}}
+}}}

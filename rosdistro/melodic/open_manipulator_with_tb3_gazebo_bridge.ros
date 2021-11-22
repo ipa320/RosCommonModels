@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage open_manipulator_with_tb3_tools {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3.git" 
+    Artifact open_manipulator_with_tb3_gazebo_bridge {
+      Node { name open_manipulator_with_tb3_gazebo_bridge
+        Publishers {
+          Publisher { name 'gripper_position/command' message 'std_msgs.Float64'},
+          Publisher { name 'joint1_position/command' message 'std_msgs.Float64'},
+          Publisher { name 'joint4_position/command' message 'std_msgs.Float64'},
+          Publisher { name 'joint2_position/command' message 'std_msgs.Float64'},
+          Publisher { name 'joint3_position/command' message 'std_msgs.Float64'}}
+        Subscribers {
+          Subscriber { name 'gripper_position' message 'std_msgs.Float64MultiArray'},
+          Subscriber { name 'joint_trajectory_point' message 'std_msgs.Float64MultiArray'}}}
+}}}

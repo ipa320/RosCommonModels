@@ -1,0 +1,20 @@
+PackageSet {
+  CatkinPackage vesc_driver {
+    FromGitRepo "https://github.com/f1tenth/vesc.git" 
+    Artifact vesc_driver_node {
+      Node { name vesc_driver_node
+        Publishers {
+          Publisher { name 'sensors/core' message 'vesc_msgs.VescStateStamped'},
+          Publisher { name 'sensors/servo_position_command' message 'std_msgs.Float64'}}
+        Subscribers {
+          Subscriber { name 'commands/motor/brake' message 'std_msgs.Float64'},
+          Subscriber { name 'commands/motor/position' message 'std_msgs.Float64'},
+          Subscriber { name 'commands/motor/speed' message 'std_msgs.Float64'},
+          Subscriber { name 'commands/motor/duty_cycle' message 'std_msgs.Float64'},
+          Subscriber { name 'commands/servo/position' message 'std_msgs.Float64'},
+          Subscriber { name 'commands/motor/current' message 'std_msgs.Float64'}}
+        Parameters {
+          Parameter { name '?' type Double },
+          Parameter { name 'port' type String },
+          Parameter { name '?' type Double }}}
+}}}

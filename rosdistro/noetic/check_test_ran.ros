@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rosunit {
+    FromGitRepo "https://github.com/ros/ros.git" 
+    Artifact check_test_ran {
+      Node { name check_test_ran}
+}}}

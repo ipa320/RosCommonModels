@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage cob_obstacle_distance_moveit {
+    FromGitRepo "https://github.com/ipa320/cob_manipulation.git" 
+    Artifact test_obstacle_publisher_node {
+      Node { name test_obstacle_publisher_node
+        Publishers {
+          Publisher { name '/collision_object' message 'moveit_msgs.CollisionObject'}}}
+}}}

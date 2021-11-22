@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact get_zero_angle_update_threshold_client {
+      Node { name get_zero_angle_update_threshold_client
+        ServiceClients {
+          ServiceClient { name 'GetZeroAngleUpdateThreshold' service 'std_srvs.Trigger'}}}
+}}}

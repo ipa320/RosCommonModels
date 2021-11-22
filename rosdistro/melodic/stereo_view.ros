@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage image_view {
+    FromGitRepo "https://github.com/ros-perception/image_pipeline.git" 
+    Artifact stereo_view {
+      Node { name stereo_view
+        Parameters {
+          Parameter { name 'filename_format' type String value '%s%04i.jpg'},
+          Parameter { name 'approximate_sync' type Boolean },
+          Parameter { name 'autosize' type Boolean value true},
+          Parameter { name 'queue_size' type Integer value 5}}}
+}}}

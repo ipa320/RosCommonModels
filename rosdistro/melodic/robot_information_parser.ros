@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage webots_ros {
+    FromGitRepo "https://github.com/cyberbotics/webots_ros.git" 
+    Artifact robot_information_parser {
+      Node { name robot_information_parser
+        ServiceClients {
+          ServiceClient { name '?' service 'webots_ros.get_int'},
+          ServiceClient { name '?' service 'webots_ros.robot_get_device_list'},
+          ServiceClient { name '?' service 'webots_ros.get_string'}}
+        Subscribers {
+          Subscriber { name 'model_name' message 'std_msgs.String'}}}
+}}}

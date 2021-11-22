@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ffha {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_3rdparty.git" 
+    Artifact f2py3 {
+      Node { name f2py3}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage gazebo_plugins {
+    FromGitRepo "https://github.com/ros-simulation/gazebo_ros_pkgs.git" 
+    Artifact set_wrench {
+      Node { name set_wrench
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.Wrench'}}}
+}}}

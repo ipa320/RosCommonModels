@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage rostate_machine {
+    FromGitRepo "https://github.com/OUXT-Polaris/rostate_machine.git" 
+    Artifact rostate_machine_node {
+      Node { name rostate_machine_node
+        Publishers {
+          Publisher { name '?' message 'std_msgs.String'},
+          Publisher { name '?' message 'rostate_machine.State'}}
+        Subscribers {
+          Subscriber { name '?' message '?'}}
+        Parameters {
+          Parameter { name 'dot_filepath' type String },
+          Parameter { name 'description' type String },
+          Parameter { name '?' type Double value 10}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_linear_nav {
+    FromGitRepo "https://github.com/ipa320/cob_navigation.git" 
+    Artifact cob_linear_nav {
+      Node { name cob_linear_nav}
+}}}

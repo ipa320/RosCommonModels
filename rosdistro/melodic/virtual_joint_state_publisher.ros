@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage rwt_moveit {
+    FromGitRepo "https://github.com/tork-a/visualization_rwt.git" 
+    Artifact virtual_joint_state_publisher {
+      Node { name virtual_joint_state_publisher
+        Publishers {
+          Publisher { name 'goal_joint_states' message 'sensor_msgs.JointState'},
+          Publisher { name 'start_joint_states' message 'sensor_msgs.JointState'}}
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.JointState'},
+          Subscriber { name '/update_start_joint_position' message 'std_msgs.Float64MultiArray'},
+          Subscriber { name '/update_goal_joint_position' message 'std_msgs.Float64MultiArray'}}
+        Parameters {
+          Parameter { name '?' type  }}}
+}}}

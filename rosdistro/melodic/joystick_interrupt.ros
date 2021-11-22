@@ -1,0 +1,25 @@
+PackageSet {
+  CatkinPackage joystick_interrupt {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact joystick_interrupt {
+      Node { name joystick_interrupt
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.Twist'},
+          Publisher { name 'interrupt_status' message 'std_msgs.Bool'}}
+        Subscribers {
+          Subscriber { name 'joy' message '?'},
+          Subscriber { name '?' message 'ros.NodeHandle'}}
+        Parameters {
+          Parameter { name 'neonavigation_compatible' type Integer },
+          Parameter { name 'angular_vel' type Double value 0.8},
+          Parameter { name 'linear_vel' type Double value 0.5},
+          Parameter { name 'high_speed_button' type Integer value -1},
+          Parameter { name 'interrupt_button' type Integer value 6},
+          Parameter { name 'angular_high_speed_ratio' type Double value 1.1},
+          Parameter { name 'linear_axis' type Integer value 1},
+          Parameter { name 'linear_high_speed_ratio' type Double value 1.3},
+          Parameter { name 'timeout' type Double value 0.5},
+          Parameter { name 'angular_axis2' type Integer value -1},
+          Parameter { name 'angular_axis' type Integer },
+          Parameter { name 'linear_axis2' type Integer value -1}}}
+}}}

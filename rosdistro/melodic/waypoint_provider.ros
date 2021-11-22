@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage yocs_waypoint_provider {
+    FromGitRepo "https://github.com/yujinrobot/yujin_ocs.git" 
+    Artifact waypoint_provider {
+      Node { name waypoint_provider
+        Parameters {
+          Parameter { name 'filename' type String }}}
+}}}

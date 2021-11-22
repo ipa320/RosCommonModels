@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage flir_ptu_driver {
+    FromGitRepo "https://github.com/ros-drivers/flir_ptu.git" 
+    Artifact cmd_angles {
+      Node { name cmd_angles
+        Publishers {
+          Publisher { name 'ptu/cmd' message 'sensor_msgs.JointState'}}}
+}}}

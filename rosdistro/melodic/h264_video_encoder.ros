@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage h264_video_encoder {
+    FromGitRepo "https://github.com/aws-robotics/kinesisvideo-encoder-ros1.git" 
+    Artifact h264_video_encoder {
+      Node { name h264_video_encoder
+        Publishers {
+          Publisher { name '?' message 'kinesis_video_msgs.KinesisVideoFrame'}}
+        Subscribers {
+          Subscriber { name '?' message '?'}}}
+}}}

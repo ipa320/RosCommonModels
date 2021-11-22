@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage diagnostic_analysis {
+    FromGitRepo "https://github.com/ros/diagnostics.git" 
+    Artifact export_csv {
+      Node { name export_csv}
+}}}

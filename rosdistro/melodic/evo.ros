@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage teraranger {
+    FromGitRepo "https://github.com/Terabee/teraranger.git" 
+    Artifact evo {
+      Node { name evo
+        Publishers {
+          Publisher { name 'teraranger_evo' message 'sensor_msgs.Range'}}
+        Parameters {
+          Parameter { name 'sensor_type' type String value 'Evo_60m'},
+          Parameter { name 'sensor_type' type String },
+          Parameter { name 'sensor_type' type String value 'Evo_60m'},
+          Parameter { name 'portname' type String value '/dev/ttyACM0'},
+          Parameter { name 'frame_id' type String value 'base_range'}}}
+}}}
