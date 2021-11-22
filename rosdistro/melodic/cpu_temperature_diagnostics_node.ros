@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage cpu_temperature_diagnostics {
+    FromGitRepo "https://github.com/yotabits/cpu_temperature_diagnostics.git" 
+    Artifact cpu_temperature_diagnostics_node {
+      Node { name cpu_temperature_diagnostics_node
+        Parameters {
+          Parameter { name 'critical_temp_override' type Integer },
+          Parameter { name 'max_temp_override' type Integer },
+          Parameter { name 'prefix' type String }}}
+}}}

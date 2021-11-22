@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rospilot {
+    FromGitRepo "https://github.com/rospilot/rospilot.git" 
+    Artifact load_osm.sh {
+      Node { name load_osm.sh}
+}}}

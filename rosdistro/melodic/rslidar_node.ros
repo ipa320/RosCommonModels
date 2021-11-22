@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rslidar_driver {
+    FromGitRepo "https://github.com/CPFL/robosense.git" 
+    Artifact rslidar_node {
+      Node { name rslidar_node}
+}}}

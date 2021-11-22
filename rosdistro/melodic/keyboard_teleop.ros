@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage ros_control_boilerplate {
+    FromGitRepo "https://github.com/PickNikRobotics/ros_control_boilerplate.git" 
+    Artifact keyboard_teleop {
+      Node { name keyboard_teleop
+        Publishers {
+          Publisher { name '/iiwa_7_r800/joints_position_controller/command' message 'std_msgs.Float64MultiArray'}}
+        Subscribers {
+          Subscriber { name '/iiwa_7_r800/joint_states' message 'sensor_msgs.JointState'}}}
+}}}

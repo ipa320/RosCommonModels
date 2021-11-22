@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage rr_openrover_driver {
+    FromGitRepo "https://github.com/RoverRobotics/rr_openrover_stack.git" 
+    Artifact diagnostics {
+      Node { name diagnostics
+        Publishers {
+          Publisher { name '/inorbit/custom_data/0' message 'std_msgs.String'}}
+        Subscribers {
+          Subscriber { name '/raw_slow_rate_data' message 'rr_openrover_driver_msgs.RawRrOpenroverDriverSlowRateData'},
+          Subscriber { name '/rr_openrover_driver/charging' message 'std_msgs.Bool'},
+          Subscriber { name '/rr_openrover_driver/battery_status_b' message 'rr_openrover_driver_msgs.SmartBatteryStatus'},
+          Subscriber { name '/rr_openrover_driver/raw_med_rate_data' message 'rr_openrover_driver_msgs.RawRrOpenroverDriverMedRateData'},
+          Subscriber { name '/rr_openrover_driver/battery_status_a' message 'rr_openrover_driver_msgs.SmartBatteryStatus'}}}
+}}}

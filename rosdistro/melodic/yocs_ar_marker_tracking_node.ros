@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage yocs_ar_marker_tracking {
+    FromGitRepo "https://github.com/yujinrobot/yujin_ocs.git" 
+    Artifact yocs_ar_marker_tracking_node {
+      Node { name yocs_ar_marker_tracking_node}
+}}}

@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage tf {
+    FromGitRepo "https://github.com/ros/geometry.git" 
+    Artifact tf_remap {
+      Node { name tf_remap
+        Publishers {
+          Publisher { name '/tf' message 'tf.tfMessage'}}
+        Subscribers {
+          Subscriber { name '/tf_old' message 'tf.tfMessage'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage zbar_ros {
+    FromGitRepo "https://github.com/ros-drivers/zbar_ros.git" 
+    Artifact barcode_reader_node {
+      Node { name barcode_reader_node}
+}}}

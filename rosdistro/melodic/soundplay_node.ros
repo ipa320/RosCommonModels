@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage sound_play {
+    FromGitRepo "https://github.com/ros-drivers/audio_common.git" 
+    Artifact soundplay_node {
+      Node { name soundplay_node
+        Publishers {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Subscribers {
+          Subscriber { name 'robotsound' message 'sound_play.SoundRequest'}}}
+}}}

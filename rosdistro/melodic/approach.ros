@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage yocs_ar_pair_approach {
+    FromGitRepo "https://github.com/yujinrobot/yujin_ocs.git" 
+    Artifact approach {
+      Node { name approach}
+}}}

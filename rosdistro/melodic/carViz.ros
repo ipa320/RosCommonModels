@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage jderobot_carviz {
+    FromGitRepo "https://github.com/JdeRobot/carViz.git" 
+    Artifact carViz {
+      Node { name carViz}
+}}}

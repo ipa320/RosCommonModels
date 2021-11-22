@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage kobuki_ftdi {
+    FromGitRepo "https://github.com/yujinrobot/kobuki_core.git" 
+    Artifact turtlebot_config {
+      Node { name turtlebot_config}
+}}}

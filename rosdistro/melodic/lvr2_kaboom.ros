@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage lvr2 {
+    FromGitRepo "https://github.com/uos/lvr2.git" 
+    Artifact lvr2_kaboom {
+      Node { name lvr2_kaboom}
+}}}

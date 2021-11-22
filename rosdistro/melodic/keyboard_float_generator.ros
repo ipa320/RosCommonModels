@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage laser_joint_projector {
+    FromGitRepo "https://github.com/UNR-RoboticsResearchLab/pr2_calibration.git" 
+    Artifact keyboard_float_generator {
+      Node { name keyboard_float_generator
+        Publishers {
+          Publisher { name 'keyboard_float' message 'std_msgs.Float64'}}}
+}}}

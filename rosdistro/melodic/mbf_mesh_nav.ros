@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage mbf_mesh_nav {
+    FromGitRepo "https://github.com/uos/mesh_navigation.git" 
+    Artifact mbf_mesh_nav {
+      Node { name mbf_mesh_nav
+        Parameters {
+          Parameter { name 'tf_cache_time' type Double value 10.0}}}
+}}}

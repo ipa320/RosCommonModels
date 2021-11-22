@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage mongodb_log {
+    FromGitRepo "https://github.com/strands-project/mongodb_store.git" 
+    Artifact mongodb_log {
+      Node { name mongodb_log
+        Subscribers {
+          Subscriber { name '?' message '?'}}}
+}}}

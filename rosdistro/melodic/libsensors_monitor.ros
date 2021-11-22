@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage libsensors_monitor {
+    FromGitRepo "https://github.com/ros-drivers/linux_peripheral_interfaces.git" 
+    Artifact libsensors_monitor {
+      Node { name libsensors_monitor}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage urg_c {
+    FromGitRepo "https://github.com/ros-drivers/urg_c.git" 
+    Artifact timeout_test {
+      Node { name timeout_test}
+}}}

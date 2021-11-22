@@ -1,0 +1,19 @@
+PackageSet {
+  CatkinPackage ws281x {
+    FromGitRepo "https://github.com/CopterExpress/ros_led.git" 
+    Artifact ws281x_node {
+      Node { name ws281x_node
+        ServiceServers {
+          ServiceServer { name 'set_gamma' service 'ws281x.SetGamma'},
+          ServiceServer { name 'set_leds' service 'led_msgs.SetLEDs'}}
+        Publishers {
+          Publisher { name 'state' message 'led_msgs.LEDStateArray'}}
+        Parameters {
+          Parameter { name 'dma' type Integer value 10},
+          Parameter { name 'led_count' type Integer value 30},
+          Parameter { name 'invert' type Boolean },
+          Parameter { name 'gpio_pin' type Integer value 21},
+          Parameter { name 'brightness' type Integer value 255},
+          Parameter { name 'strip_type' type String value 'WS2811_STRIP_GBR'},
+          Parameter { name 'target_frequency' type Integer }}}
+}}}

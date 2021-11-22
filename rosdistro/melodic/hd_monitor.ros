@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage cob_monitoring {
+    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
+    Artifact hd_monitor {
+      Node { name hd_monitor
+        Publishers {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
+}}}

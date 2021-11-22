@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage image_rotate {
+    FromGitRepo "https://github.com/ros-perception/image_pipeline.git" 
+    Artifact image_rotate {
+      Node { name image_rotate}
+}}}

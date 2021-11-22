@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage phidgets_imu {
+    FromGitRepo "https://github.com/ros-drivers/phidgets_drivers.git" 
+    Artifact phidgets_imu_node {
+      Node { name phidgets_imu_node}
+}}}

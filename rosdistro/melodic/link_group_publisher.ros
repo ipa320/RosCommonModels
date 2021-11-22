@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage rwt_moveit {
+    FromGitRepo "https://github.com/tork-a/visualization_rwt.git" 
+    Artifact link_group_publisher {
+      Node { name link_group_publisher
+        Parameters {
+          Parameter { name '?' type  },
+          Parameter { name '?' type  },
+          Parameter { name '?' type  }}}
+}}}

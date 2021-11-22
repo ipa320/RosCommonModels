@@ -1,0 +1,25 @@
+PackageSet {
+  CatkinPackage rplidar_ros {
+    FromGitRepo "https://github.com/Slamtec/rplidar_ros.git" 
+    Artifact rplidarNode {
+      Node { name rplidarNode
+        ServiceServers {
+          ServiceServer { name 'start_motor' service 'std_srvs.Empty'},
+          ServiceServer { name 'stop_motor' service 'std_srvs.Empty'}}
+        Publishers {
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}
+        Parameters {
+          Parameter { name 'serial_port' type String value '/dev/ttyUSB0'},
+          Parameter { name 'udp_port' type Integer value 8089},
+          Parameter { name 'scan_mode' type String },
+          Parameter { name 'scan_frequency' type Double value 10.0},
+          Parameter { name 'frame_id' type String value 'laser_frame'},
+          Parameter { name 'udp_ip' type String value '192.168.11.2'},
+          Parameter { name 'serial_baudrate' type Integer value 115200},
+          Parameter { name 'scan_frequency' type Double value 20.0},
+          Parameter { name 'angle_compensate' type Boolean },
+          Parameter { name 'inverted' type Boolean },
+          Parameter { name 'tcp_port' type Integer value 20108},
+          Parameter { name 'channel_type' type String value 'serial'},
+          Parameter { name 'tcp_ip' type String value '192.168.0.7'}}}
+}}}

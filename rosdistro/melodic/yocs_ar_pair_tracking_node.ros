@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage yocs_ar_pair_tracking {
+    FromGitRepo "https://github.com/yujinrobot/yujin_ocs.git" 
+    Artifact yocs_ar_pair_tracking_node {
+      Node { name yocs_ar_pair_tracking_node
+        Parameters {
+          Parameter { name 'ar_pair_left_id' type Integer value 3},
+          Parameter { name 'ar_pair_baseline' type Double value 0.26},
+          Parameter { name 'ar_pair_target_pose_offset' type Double value 0.4},
+          Parameter { name 'ar_pair_right_id' type Integer }}}
+}}}

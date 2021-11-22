@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage nmc_nlp_lite {
+    FromGitRepo "https://github.com/nmcbins/nmc_nlp_lite_ros.git" 
+    Artifact nmc_nlp_lite_client2_example_pub {
+      Node { name nmc_nlp_lite_client2_example_pub
+        Publishers {
+          Publisher { name 'nmc_nlp_in' message 'nmc_nlp_lite.nmcNLPMsg'}}}
+}}}

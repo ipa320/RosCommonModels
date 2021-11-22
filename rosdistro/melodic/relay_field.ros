@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage topic_tools {
+    FromGitRepo "https://github.com/ros/ros_comm.git" 
+    Artifact relay_field {
+      Node { name relay_field
+        Publishers {
+          Publisher { name '?' message '?'}}
+        Subscribers {
+          Subscriber { name '?' message '?'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage urg_node {
+    FromGitRepo "https://github.com/ros-drivers/urg_node.git" 
+    Artifact urg_node {
+      Node { name urg_node}
+}}}

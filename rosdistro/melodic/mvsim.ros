@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage mvsim {
+    FromGitRepo "https://github.com/ual-arm-ros-pkg/mvsim.git" 
+    Artifact mvsim {
+      Node { name mvsim}
+}}}

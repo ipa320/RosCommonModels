@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_gazebo_worlds {
+    FromGitRepo "https://github.com/ipa320/cob_simulation.git" 
+    Artifact tf_publisher {
+      Node { name tf_publisher}
+}}}

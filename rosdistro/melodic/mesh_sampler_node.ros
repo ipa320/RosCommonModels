@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rail_mesh_icp {
+    FromGitRepo "https://github.com/GT-RAIL/rail_mesh_icp.git" 
+    Artifact mesh_sampler_node {
+      Node { name mesh_sampler_node}
+}}}

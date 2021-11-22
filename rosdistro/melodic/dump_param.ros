@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rosmon_core {
+    FromGitRepo "https://github.com/xqms/rosmon.git" 
+    Artifact dump_param {
+      Node { name dump_param}
+}}}

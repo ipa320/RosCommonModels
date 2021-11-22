@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage cob_base_velocity_smoother {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact cob_base_velocity_smoother {
+      Node { name cob_base_velocity_smoother
+        Publishers {
+          Publisher { name 'output' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'input' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'thresh_max_acc' type Double value 0.3},
+          Parameter { name 'circular_buffer_capacity' type Integer value 12},
+          Parameter { name 'loop_rate' type Double value 30.0},
+          Parameter { name 'min_input_rate' type Double value 9.0},
+          Parameter { name 'maximal_time_delay_to_stop' type Double value 0.1},
+          Parameter { name 'maximal_time_delay' type Double value 4.0}}}
+}}}

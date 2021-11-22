@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage point_cloud_publisher_tutorial {
+    FromGitRepo "https://github.com/ros-planning/navigation_tutorials.git" 
+    Artifact point_cloud_publisher {
+      Node { name point_cloud_publisher
+        Publishers {
+          Publisher { name 'cloud' message 'sensor_msgs.PointCloud'}}}
+}}}

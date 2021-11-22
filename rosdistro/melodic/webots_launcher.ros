@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage webots_ros {
+    FromGitRepo "https://github.com/cyberbotics/webots_ros.git" 
+    Artifact webots_launcher {
+      Node { name webots_launcher}
+}}}

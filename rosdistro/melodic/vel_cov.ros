@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage heron_control {
+    FromGitRepo "https://github.com/heron/heron.git" 
+    Artifact vel_cov {
+      Node { name vel_cov
+        Publishers {
+          Publisher { name 'navsat/vel_cov' message 'geometry_msgs.TwistWithCovarianceStamped'}}
+        Subscribers {
+          Subscriber { name 'navsat/vel' message 'geometry_msgs.TwistStamped'},
+          Subscriber { name 'navsat/fix' message 'sensor_msgs.NavSatFix'}}}
+}}}

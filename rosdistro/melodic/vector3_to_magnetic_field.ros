@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage heron_gazebo {
+    FromGitRepo "https://github.com/heron/heron_simulator.git" 
+    Artifact vector3_to_magnetic_field {
+      Node { name vector3_to_magnetic_field
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.MagneticField'}}
+        Subscribers {
+          Subscriber { name '?' message 'geometry_msgs.Vector3Stamped'}}}
+}}}

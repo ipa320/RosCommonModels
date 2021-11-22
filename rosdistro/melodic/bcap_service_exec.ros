@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage bcap_service {
+    FromGitRepo "https://github.com/DENSORobot/denso_robot_ros.git" 
+    Artifact bcap_service_exec {
+      Node { name bcap_service_exec
+        ServiceServers {
+          ServiceServer { name 'bcap_service' service '?'}}
+        Parameters {
+          Parameter { name 'port_number' type Integer },
+          Parameter { name 'retry_count' type Integer },
+          Parameter { name 'watchdog_timer' type Integer },
+          Parameter { name 'timeout' type Integer },
+          Parameter { name 'ip_address' type String },
+          Parameter { name 'wait_time' type Integer },
+          Parameter { name 'invoke_timeout' type Integer },
+          Parameter { name 'conn_type' type String }}}
+}}}

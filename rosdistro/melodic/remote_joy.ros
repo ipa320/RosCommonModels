@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage nav2d_remote {
+    FromGitRepo "https://github.com/skasperski/navigation_2d.git" 
+    Artifact remote_joy {
+      Node { name remote_joy
+        ServiceClients {
+          ServiceClient { name 'StartMapping' service 'std_srvs.Trigger'},
+          ServiceClient { name 'Pause' service 'std_srvs.Trigger'},
+          ServiceClient { name 'Stop' service 'std_srvs.Trigger'},
+          ServiceClient { name 'StartExploration' service 'std_srvs.Trigger'}}
+        Publishers {
+          Publisher { name 'cmd' message 'nav2d_operator.cmd'}}
+        Subscribers {
+          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}}
+}}}

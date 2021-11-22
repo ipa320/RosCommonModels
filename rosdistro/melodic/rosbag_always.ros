@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage jsk_data {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common.git" 
+    Artifact rosbag_always {
+      Node { name rosbag_always}
+}}}

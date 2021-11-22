@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage dynamic_robot_state_publisher {
+    FromGitRepo "https://github.com/peci1/dynamic_robot_state_publisher.git" 
+    Artifact dynamic_robot_state_publisher {
+      Node { name dynamic_robot_state_publisher}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage turtlesim_dash_tutorial {
+    FromGitRepo "https://github.com/banerjs/turtlesim_dash_tutorial.git" 
+    Artifact dashboard {
+      Node { name dashboard}
+}}}

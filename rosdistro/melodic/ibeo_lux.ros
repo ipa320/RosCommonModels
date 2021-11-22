@@ -1,0 +1,25 @@
+PackageSet {
+  CatkinPackage ibeo_lux {
+    FromGitRepo "https://github.com/astuff/ibeo_lux.git" 
+    Artifact ibeo_lux {
+      Node { name ibeo_lux
+        Publishers {
+          Publisher { name 'parsed_tx/error_warning' message 'ibeo_msgs.ErrorWarning'},
+          Publisher { name 'parsed_tx/host_vehicle_state_2806' message 'ibeo_msgs.HostVehicleState2806'},
+          Publisher { name 'as_tx/point_cloud' message 'pcl.PointCloud<pcl.PointXYZ>'},
+          Publisher { name 'parsed_tx/scan_data_2204' message 'ibeo_msgs.ScanData2204'},
+          Publisher { name 'parsed_tx/host_vehicle_state_2807' message 'ibeo_msgs.HostVehicleState2807'},
+          Publisher { name 'as_tx/objects' message 'visualization_msgs.MarkerArray'},
+          Publisher { name 'as_tx/object_contour_points' message 'visualization_msgs.Marker'},
+          Publisher { name 'parsed_tx/scan_data_2202' message 'ibeo_msgs.ScanData2202'},
+          Publisher { name 'parsed_tx/scan_data_2205' message 'ibeo_msgs.ScanData2205'},
+          Publisher { name 'parsed_tx/object_data_2221' message 'ibeo_msgs.ObjectData2221'},
+          Publisher { name 'parsed_tx/host_vehicle_state_2805' message 'ibeo_msgs.HostVehicleState2805'},
+          Publisher { name 'tcp_tx' message 'network_interface.TCPFrame'},
+          Publisher { name 'parsed_tx/camera_image' message 'ibeo_msgs.CameraImage'},
+          Publisher { name 'parsed_tx/object_data_2280' message 'ibeo_msgs.ObjectData2280'},
+          Publisher { name 'parsed_tx/object_data_2225' message 'ibeo_msgs.ObjectData2225'}}
+        Parameters {
+          Parameter { name 'port' type Integer },
+          Parameter { name 'is_fusion' type Boolean }}}
+}}}

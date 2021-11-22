@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage master_discovery_fkie {
+    FromGitRepo "https://github.com/fkie/multimaster_fkie.git" 
+    Artifact master_discovery {
+      Node { name master_discovery}
+}}}

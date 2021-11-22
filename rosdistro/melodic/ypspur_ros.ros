@@ -1,0 +1,53 @@
+PackageSet {
+  CatkinPackage ypspur_ros {
+    FromGitRepo "https://github.com/openspur/ypspur_ros.git" 
+    Artifact ypspur_ros {
+      Node { name ypspur_ros
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.WrenchStamped'},
+          Publisher { name '?' message 'nav_msgs.Odometry'},
+          Publisher { name '?' message 'ypspur_ros.DigitalInput'},
+          Publisher { name '?' message 'sensor_msgs.JointState'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name '?' message 'std_msgs.Float32'}}
+        Subscribers {
+          Subscriber { name '?' message 'std_msgs.Float32'},
+          Subscriber { name '?' message 'std_msgs.Float32'},
+          Subscriber { name '?' message 'ros.NodeHandle'},
+          Subscriber { name '?' message 'ypspur_ros.DigitalOutput'},
+          Subscriber { name '?' message 'ros.NodeHandle'},
+          Subscriber { name '?' message 'std_msgs.Float32'},
+          Subscriber { name '?' message 'ros.NodeHandle'},
+          Subscriber { name '?' message 'ros.NodeHandle'},
+          Subscriber { name '?' message 'std_msgs.Float32'}}
+        Parameters {
+          Parameter { name 'max_joint_id' type Integer value 32},
+          Parameter { name 'simulate_control' type Boolean },
+          Parameter { name '?' type Boolean },
+          Parameter { name 'cmd_vel_expire' type Double value -1.0},
+          Parameter { name '?' type Double value 3.14},
+          Parameter { name 'tf_time_offset' type Double },
+          Parameter { name '?' type String },
+          Parameter { name 'simulate' type Boolean },
+          Parameter { name '?' type Double },
+          Parameter { name 'ipc_key' type Integer value 28741},
+          Parameter { name 'port' type String value '/dev/ttyACM0'},
+          Parameter { name 'ypspur_bin' type String value 'ypspur-coordinator'},
+          Parameter { name 'compatible' type Integer },
+          Parameter { name '?' type String },
+          Parameter { name '?' type Double value 1.0},
+          Parameter { name '?' type Boolean },
+          Parameter { name '?' type String },
+          Parameter { name 'separated_joint_control' type Boolean },
+          Parameter { name '?' type Boolean value true},
+          Parameter { name '?' type Boolean },
+          Parameter { name 'param_file' type String },
+          Parameter { name '?' type Boolean },
+          Parameter { name 'base_link_id' type String value 'base_link'},
+          Parameter { name '?' type String value 'HIGH_IMPEDANCE'},
+          Parameter { name 'odom_id' type String value 'odom'},
+          Parameter { name 'hz' type Double value 200.0},
+          Parameter { name 'avoid_publishing_duplicated_odom' type Boolean value true},
+          Parameter { name 'OdometryMode' type String value 'diff'},
+          Parameter { name 'publish_odom_tf' type Boolean value true}}}
+}}}

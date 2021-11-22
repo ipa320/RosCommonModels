@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage moveit_python {
+    FromGitRepo "https://github.com/mikeferguson/moveit_python.git" 
+    Artifact load_planning_scene {
+      Node { name load_planning_scene
+        Publishers {
+          Publisher { name 'planning_scene' message '?'}}}
+}}}

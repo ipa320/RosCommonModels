@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage aruco_detect {
+    FromGitRepo "https://github.com/UbiquityRobotics/fiducials.git" 
+    Artifact create_markers {
+      Node { name create_markers}
+}}}

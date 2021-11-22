@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage default_cfg_fkie {
+    FromGitRepo "https://github.com/fkie/multimaster_fkie.git" 
+    Artifact default_cfg {
+      Node { name default_cfg}
+}}}

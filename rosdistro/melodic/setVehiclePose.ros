@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage uwsim {
+    FromGitRepo "https://github.com/uji-ros-pkg/underwater_simulation.git" 
+    Artifact setVehiclePose {
+      Node { name setVehiclePose
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.Pose'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pr2_gazebo {
+    FromGitRepo "https://github.com/PR2/pr2_simulator.git" 
+    Artifact pr2_simulate_torso_spring {
+      Node { name pr2_simulate_torso_spring}
+}}}

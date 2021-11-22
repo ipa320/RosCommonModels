@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact set_mag_adaptive_vals_client {
+      Node { name set_mag_adaptive_vals_client
+        ServiceClients {
+          ServiceClient { name 'SetMagAdaptiveVals' service 'microstrain_mips.SetMagAdaptiveVals'}}}
+}}}

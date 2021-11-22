@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage openzen_sensor {
+    FromGitRepo "https://bitbucket.org/lpresearch/openzenros.git" 
+    Artifact openzen_sensor_node {
+      Node { name openzen_sensor_node}
+}}}

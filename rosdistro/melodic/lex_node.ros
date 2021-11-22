@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage lex_node {
+    FromGitRepo "https://github.com/aws-robotics/lex-ros1.git" 
+    Artifact lex_node {
+      Node { name lex_node}
+}}}

@@ -1,0 +1,22 @@
+PackageSet {
+  CatkinPackage semantic_point_annotator {
+    FromGitRepo "https://github.com/PR2/pr2_navigation.git" 
+    Artifact sac_inc_ground_removal_node {
+      Node { name sac_inc_ground_removal_node
+        Publishers {
+          Publisher { name 'cloud_ground_filtered' message 'sensor_msgs.PointCloud2'}}
+        Parameters {
+          Parameter { name 'sac_min_points_per_model' type Integer value 6},
+          Parameter { name 'sac_fitting_distance_threshold' type Double },
+          Parameter { name 'laser_tilt_mount_frame' type String value 'laser_tilt_mount_link'},
+          Parameter { name 'sac_fitting_distance_threshold' type Double value 0.015},
+          Parameter { name 'sac_distance_threshold' type Double },
+          Parameter { name 'ground_slope_threshold' type Double },
+          Parameter { name 'robot_footprint_frame' type String value 'base_footprint'},
+          Parameter { name 'sac_max_iterations' type Integer value 200},
+          Parameter { name 'z_threshold' type Double value 0.1},
+          Parameter { name 'planar_refine' type Integer value 1},
+          Parameter { name 'sac_distance_threshold' type Double value 0.03},
+          Parameter { name 'ground_slope_threshold' type Double },
+          Parameter { name 'z_threshold' type Double }}}
+}}}

@@ -1,0 +1,33 @@
+PackageSet {
+  CatkinPackage jsk_interactive_marker {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_visualization.git" 
+    Artifact interactive_point_cloud {
+      Node { name interactive_point_cloud
+        ServiceServers {
+          ServiceServer { name '?' service 'jsk_interactive_marker.SetParentMarker'},
+          ServiceServer { name '?' service 'jsk_interactive_marker.GetTransformableMarkerPose'},
+          ServiceServer { name '?' service 'jsk_interactive_marker.RemoveParentMarker'}}
+        ServiceClients {
+          ServiceClient { name '?' service 'jsk_interactive_marker.GetTransformableMarkerPose'}}
+        Publishers {
+          Publisher { name 'handle_pose' message 'geometry_msgs.PoseStamped'},
+          Publisher { name 'handle_pose_array' message 'geometry_msgs.PoseArray'},
+          Publisher { name 'grasp_pose' message 'geometry_msgs.PoseStamped'},
+          Publisher { name 'left_click_point' message 'geometry_msgs.PointStamped'},
+          Publisher { name 'box_movement' message 'jsk_recognition_msgs.BoundingBoxMovement'},
+          Publisher { name 'right_click_point' message 'geometry_msgs.PointStamped'},
+          Publisher { name 'left_click_point_relative' message 'geometry_msgs.PointStamped'},
+          Publisher { name 'marker_pose' message 'geometry_msgs.PoseStamped'}}
+        Subscribers {
+          Subscriber { name 'set_handle_pose' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name '?' message 'visualization_msgs.InteractiveMarkerFeedback'},
+          Subscriber { name 'set_marker_pose' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name '?' message 'visualization_msgs.InteractiveMarkerUpdate'}}
+        Parameters {
+          Parameter { name 'handle_pose' type String value '/handle_estimator/output_best'},
+          Parameter { name 'display_interactive_manipulator' type Boolean value true},
+          Parameter { name 'input_bounding_box' type String value '/bounding_box_marker/selected_box_array'},
+          Parameter { name 'use_bounding_box' type Boolean value true},
+          Parameter { name 'point_size' type Double value 0.004},
+          Parameter { name 'input' type String value '/selected_pointcloud'}}}
+}}}

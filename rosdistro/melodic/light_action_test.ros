@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_light {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact light_action_test {
+      Node { name light_action_test}
+}}}

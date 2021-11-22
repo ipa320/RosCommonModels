@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage bcap_service_test {
+    FromGitRepo "https://github.com/DENSORobot/denso_robot_ros.git" 
+    Artifact bcap_service_test {
+      Node { name bcap_service_test
+        ServiceClients {
+          ServiceClient { name 'bcap_service' service 'bcap'}}}
+}}}

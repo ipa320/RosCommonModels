@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage teraranger {
+    FromGitRepo "https://github.com/Terabee/teraranger.git" 
+    Artifact duo {
+      Node { name duo
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.Range'},
+          Publisher { name '?' message 'sensor_msgs.Range'}}
+        Parameters {
+          Parameter { name 'frame_id_ir' type String value 'base_range_ir'},
+          Parameter { name 'topicnamei' type String value 'teraranger_duo/ultrasound'},
+          Parameter { name 'frame_id_us' type String value 'base_range_us'},
+          Parameter { name 'portname' type String value '/dev/ttyUSB0'},
+          Parameter { name 'topicname' type String value 'teraranger_duo/infrared'}}}
+}}}

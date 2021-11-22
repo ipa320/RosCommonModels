@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage mrp2_hardware {
+    FromGitRepo "https://github.com/milvusrobotics/mrp2_robot.git" 
+    Artifact mrp2_sonar {
+      Node { name mrp2_sonar
+        Publishers {
+          Publisher { name 'sonar_1' message 'sensor_msgs.Range'},
+          Publisher { name 'sonar_7' message 'sensor_msgs.Range'},
+          Publisher { name 'sonar_4' message 'sensor_msgs.Range'},
+          Publisher { name 'sonar_3' message 'sensor_msgs.Range'},
+          Publisher { name 'sonar_5' message 'sensor_msgs.Range'},
+          Publisher { name 'sonar_2' message 'sensor_msgs.Range'},
+          Publisher { name 'sonar_6' message 'sensor_msgs.Range'}}
+        Parameters {
+          Parameter { name '~sonar_baud' type Integer value 115200},
+          Parameter { name '~sonar_port' type String value '/dev/mrp2_ftdi_MRP2SNR001'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage velodyne_driver {
+    FromGitRepo "https://github.com/ros-drivers/velodyne.git" 
+    Artifact vdump {
+      Node { name vdump}
+}}}

@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage uos_freespace {
+    FromGitRepo "https://github.com/uos/uos_tools.git" 
+    Artifact uos_freespace {
+      Node { name uos_freespace
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'scan' message 'sensor_msgs.LaserScan'}}
+        Parameters {
+          Parameter { name 'max_rotational_vel_' type Double value 0.3},
+          Parameter { name 'max_vel_x_' type Double value 0.5}}}
+}}}

@@ -1,0 +1,54 @@
+PackageSet {
+  CatkinPackage jsk_interactive_marker {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_visualization.git" 
+    Artifact interactive_marker_interface {
+      Node { name interactive_marker_interface
+        ServiceServers {
+          ServiceServer { name 'set_pose' service 'jsk_interactive_marker.MarkerSetPose'},
+          ServiceServer { name 'reset_pose' service 'jsk_interactive_marker.SetPose'},
+          ServiceServer { name 'del_markers' service 'jsk_interactive_marker.MarkerSetPose'},
+          ServiceServer { name 'set_markers' service 'jsk_interactive_marker.MarkerSetPose'}}
+        ServiceClients {
+          ServiceClient { name 'set_dynamic_tf' service 'dynamic_tf_publisher.SetDynamicTF'}}
+        Publishers {
+          Publisher { name 'pose' message 'jsk_interactive_marker.MarkerPose'},
+          Publisher { name 'marker_menu' message 'jsk_interactive_marker.MarkerMenu'},
+          Publisher { name 'pose_update' message 'geometry_msgs.PoseStamped'}}
+        Subscribers {
+          Subscriber { name 'toggle_start_ik' message 'std_msgs.Empty'},
+          Subscriber { name 'move_marker' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name 'toggle_ik_mode' message 'std_msgs.Empty'},
+          Subscriber { name 'select_marker_menu' message 'jsk_interactive_marker.MarkerMenu'}}
+        Parameters {
+          Parameter { name 'manipulation_mode_menu' type Boolean },
+          Parameter { name 'look_hand_menu' type Boolean },
+          Parameter { name 'select_arm_menu' type Boolean },
+          Parameter { name 'move_menu' type Boolean },
+          Parameter { name 'target_frame' type String },
+          Parameter { name 'use_torso_menu' type Boolean },
+          Parameter { name 'publish_marker_menu' type Boolean },
+          Parameter { name 'marker_name' type String value '100'},
+          Parameter { name 'use_base_marker' type Boolean },
+          Parameter { name 'head_link_frame' type String value 'head_tilt_link'},
+          Parameter { name 'use_center_sphere' type Boolean },
+          Parameter { name 'server_name' type String },
+          Parameter { name 'ik_mode_menu' type Boolean },
+          Parameter { name 'reset_marker_pos_menu' type Boolean },
+          Parameter { name 'harf_grasp_menu' type Boolean },
+          Parameter { name 'stop_grasp_menu' type Boolean },
+          Parameter { name 'head_mesh' type String value 'package://pr2_description/meshes/head_v0/head_tilt.dae'},
+          Parameter { name 'use_head_marker' type Boolean },
+          Parameter { name 'move_base_frame' type String value '/base_link'},
+          Parameter { name 'grasp_menu' type Boolean },
+          Parameter { name 'hand_type' type String value 'GENERIC'},
+          Parameter { name 'force_mode_menu' type Boolean },
+          Parameter { name 'force_move_menu' type Boolean },
+          Parameter { name 'change_using_ik_menu' type Boolean },
+          Parameter { name 'touch_it_menu' type Boolean },
+          Parameter { name '?' type String },
+          Parameter { name 'use_finger_marker' type Boolean },
+          Parameter { name 'pick_menu' type Boolean },
+          Parameter { name 'set_origin_menu' type Boolean },
+          Parameter { name 'move_safety_menu' type Boolean },
+          Parameter { name 'base_frame' type String value '/base_link'}}}
+}}}

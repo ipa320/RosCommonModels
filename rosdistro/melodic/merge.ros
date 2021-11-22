@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage movie_publisher {
+    FromGitRepo "https://github.com/peci1/movie_publisher.git" 
+    Artifact merge {
+      Node { name merge}
+}}}

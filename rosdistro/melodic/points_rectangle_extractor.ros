@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage image_view2 {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common.git" 
+    Artifact points_rectangle_extractor {
+      Node { name points_rectangle_extractor
+        Publishers {
+          Publisher { name 'output' message 'sensor_msgs.PointCloud2'}}}
+}}}

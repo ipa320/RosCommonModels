@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_frame_tracker {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact cob_frame_tracker_node {
+      Node { name cob_frame_tracker_node}
+}}}

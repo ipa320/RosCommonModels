@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage jsk_interactive_marker {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_visualization.git" 
+    Artifact triangle_foot {
+      Node { name triangle_foot
+        Parameters {
+          Parameter { name 'size' type Double value 1.0},
+          Parameter { name 'reverse' type Boolean },
+          Parameter { name 'server_name' type String },
+          Parameter { name 'marker_name' type String value 'triangle_marker'}}}
+}}}

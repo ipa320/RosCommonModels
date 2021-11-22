@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage distance_map_tools {
+    FromGitRepo "https://github.com/artivis/distance_map.git" 
+    Artifact distance_map_imarker {
+      Node { name distance_map_imarker
+        Publishers {
+          Publisher { name 'distance_map_markers' message 'visualization_msgs.MarkerArray'}}
+        Subscribers {
+          Subscriber { name '/distance_map_node/distance_field_obstacles' message 'distance_map_msgs.DistanceMap'}}}
+}}}

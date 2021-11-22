@@ -1,0 +1,34 @@
+PackageSet {
+  CatkinPackage schunk_sdh {
+    FromGitRepo "https://github.com/ipa320/schunk_modular_robotics.git" 
+    Artifact sdh_only {
+      Node { name sdh_only
+        ServiceServers {
+          ServiceServer { name 'motor_off' service 'std_srvs.Trigger'},
+          ServiceServer { name 'motor_on' service 'std_srvs.Trigger'},
+          ServiceServer { name 'shutdown' service 'std_srvs.Trigger'},
+          ServiceServer { name 'recover' service 'std_srvs.Trigger'},
+          ServiceServer { name 'init' service 'std_srvs.Trigger'},
+          ServiceServer { name 'set_operation_mode' service 'cob_srvs.SetString'},
+          ServiceServer { name 'stop' service 'std_srvs.Trigger'},
+          ServiceServer { name 'emergency_stop' service 'std_srvs.Trigger'}}
+        Publishers {
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'},
+          Publisher { name 'temperature' message 'schunk_sdh.TemperatureArray'},
+          Publisher { name 'joint_trajectory_controller/state' message 'control_msgs.JointTrajectoryControllerState'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Subscribers {
+          Subscriber { name 'joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArrayPtr'}}
+        ActionServers {
+          ActionServer { name '?' action 'control_msgs.FollowJointTrajectoryAction'}}
+        Parameters {
+          Parameter { name 'id_read' type Integer value 43},
+          Parameter { name 'sdhdevicenum' type Integer },
+          Parameter { name 'id_write' type Integer value 42},
+          Parameter { name 'timeout' type Double },
+          Parameter { name 'sdhdevicestring' type String value '/dev/pcan0'},
+          Parameter { name 'sdhdevicetype' type String value 'PCAN'},
+          Parameter { name 'OperationMode' type String value 'position'},
+          Parameter { name 'baudrate' type Integer value 1000000},
+          Parameter { name 'frequency' type Double }}}
+}}}

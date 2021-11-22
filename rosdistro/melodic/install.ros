@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage husky_bringup {
+    FromGitRepo "https://github.com/husky/husky.git" 
+    Artifact install {
+      Node { name install}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage opt_camera {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_3rdparty.git" 
+    Artifact nm33_node {
+      Node { name nm33_node}
+}}}

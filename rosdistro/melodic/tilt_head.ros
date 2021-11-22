@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage fetch_navigation {
+    FromGitRepo "https://github.com/fetchrobotics/fetch_ros.git" 
+    Artifact tilt_head {
+      Node { name tilt_head
+        Subscribers {
+          Subscriber { name 'move_base/TrajectoryPlannerROS/local_plan' message 'nav_msgs.Path'},
+          Subscriber { name 'move_base/status' message 'actionlib_msgs.GoalStatusArray'}}}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage moveit_ros_planning {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact demo_scene {
+      Node { name demo_scene
+        Publishers {
+          Publisher { name 'attached_collision_object' message 'moveit_msgs.AttachedCollisionObject'}}}
+}}}

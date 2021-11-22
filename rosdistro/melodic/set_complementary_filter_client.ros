@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact set_complementary_filter_client {
+      Node { name set_complementary_filter_client
+        ServiceClients {
+          ServiceClient { name 'SetComplementaryFilter' service 'microstrain_mips.SetComplementaryFilter'}}}
+}}}

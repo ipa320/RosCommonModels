@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ati_force_torque {
+    FromGitRepo "https://github.com/KITrobotics/ati_force_torque.git" 
+    Artifact ati_force_torque_node {
+      Node { name ati_force_torque_node}
+}}}

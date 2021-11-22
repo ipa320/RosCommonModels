@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rocon_master_info {
+    FromGitRepo "https://github.com/robotics-in-concert/rocon_tools.git" 
+    Artifact rocon_master_info {
+      Node { name rocon_master_info}
+}}}

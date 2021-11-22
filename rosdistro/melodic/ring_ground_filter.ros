@@ -1,0 +1,21 @@
+PackageSet {
+  CatkinPackage points_preprocessor {
+    FromGitRepo "https://github.com/nobleo/core_perception.git" 
+    Artifact ring_ground_filter {
+      Node { name ring_ground_filter
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.PointCloud2'},
+          Publisher { name '?' message 'sensor_msgs.PointCloud2'}}
+        Subscribers {
+          Subscriber { name '?' message '?'}}
+        Parameters {
+          Parameter { name 'vertical_thres' type Double value 0.08},
+          Parameter { name 'point_topic' type String value '/points_raw'},
+          Parameter { name 'max_slope' type Double value 10.0},
+          Parameter { name 'no_ground_point_topic' type String value '/points_no_ground'},
+          Parameter { name 'remove_floor' type Boolean value true},
+          Parameter { name 'horizontal_res' type Integer },
+          Parameter { name 'sensor_model' type Integer value 64},
+          Parameter { name 'sensor_height' type Double value 1.8},
+          Parameter { name 'ground_point_topic' type String value '/points_ground'}}}
+}}}

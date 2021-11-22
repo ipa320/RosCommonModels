@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage xsens_driver {
+    FromGitRepo "https://github.com/ethz-asl/ethzasl_xsens_driver.git" 
+    Artifact mtdevice {
+      Node { name mtdevice}
+}}}

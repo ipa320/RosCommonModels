@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage cob_base_velocity_smoother {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact velocity_smoother {
+      Node { name velocity_smoother
+        Publishers {
+          Publisher { name 'smooth_cmd_vel' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'robot_cmd_vel' message 'geometry_msgs.Twist'},
+          Subscriber { name 'odometry' message 'nav_msgs.Odometry'},
+          Subscriber { name 'raw_cmd_vel' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'frequency' type Double value 20.0},
+          Parameter { name 'robot_feedback' type Integer },
+          Parameter { name 'decel_factor' type Double value 1.0},
+          Parameter { name 'decel_factor_safe' type Double value 1.0}}}
+}}}

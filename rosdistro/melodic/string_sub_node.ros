@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pyros_test {
+    FromGitRepo "https://github.com/asmodehn/pyros-test.git" 
+    Artifact string_sub_node {
+      Node { name string_sub_node}
+}}}

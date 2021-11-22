@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage dataspeed_pds_can {
+    FromGitRepo "https://bitbucket.org/DataspeedInc/dataspeed_pds.git" 
+    Artifact pds_node {
+      Node { name pds_node}
+}}}

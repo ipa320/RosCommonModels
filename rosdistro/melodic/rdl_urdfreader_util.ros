@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rdl_urdfreader {
+    FromGitRepo "https://gitlab.com/jlack/rdl.git" 
+    Artifact rdl_urdfreader_util {
+      Node { name rdl_urdfreader_util}
+}}}

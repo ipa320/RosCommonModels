@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage turtlebot3_panorama {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_applications.git" 
+    Artifact turtlebot3_panorama {
+      Node { name turtlebot3_panorama
+        ServiceServers {
+          ServiceServer { name 'take_pano' service 'turtlebot3_applications_msgs.TakePanorama'}}
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rocon_interactions {
+    FromGitRepo "https://github.com/robotics-in-concert/rocon_tools.git" 
+    Artifact fake_remocon {
+      Node { name fake_remocon
+        Publishers {
+          Publisher { name '?' message '?'}}}
+}}}

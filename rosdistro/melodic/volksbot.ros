@@ -1,0 +1,28 @@
+PackageSet {
+  CatkinPackage volksbot_driver {
+    FromGitRepo "https://github.com/uos/volksbot_driver.git" 
+    Artifact volksbot {
+      Node { name volksbot
+        Publishers {
+          Publisher { name 'odom' message 'nav_msgs.Odometry'},
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'}}
+        Subscribers {
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'cov_xrotation' type Double },
+          Parameter { name 'max_acc_l' type Integer value 10000},
+          Parameter { name 'turning_adaptation' type Double value 0.95},
+          Parameter { name 'x_stddev' type Double value 0.002},
+          Parameter { name 'cov_xy' type Double },
+          Parameter { name 'rotation_stddev' type Double value 0.017},
+          Parameter { name 'wheel_radius' type Double value 0.0985},
+          Parameter { name 'publish_tf' type Boolean },
+          Parameter { name 'max_vel_r' type Integer value 8400},
+          Parameter { name 'max_vel_l' type Integer value 8250},
+          Parameter { name 'drive_backwards' type Boolean },
+          Parameter { name 'num_wheels' type Integer value 6},
+          Parameter { name 'axis_length' type Double value 0.41},
+          Parameter { name 'gear_ratio' type Integer value 74},
+          Parameter { name 'max_acc_r' type Integer value 10000},
+          Parameter { name 'cov_yrotation' type Double }}}
+}}}

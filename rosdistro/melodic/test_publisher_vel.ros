@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage cob_twist_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact test_publisher_vel {
+      Node { name test_publisher_vel
+        Publishers {
+          Publisher { name 'joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'}}}
+}}}

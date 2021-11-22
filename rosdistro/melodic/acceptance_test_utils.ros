@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pilz_industrial_motion_testutils {
+    FromGitRepo "https://github.com/PilzDE/pilz_common.git" 
+    Artifact acceptance_test_utils {
+      Node { name acceptance_test_utils}
+}}}

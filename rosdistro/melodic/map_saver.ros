@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage map_server {
+    FromGitRepo "https://github.com/ros-planning/navigation.git" 
+    Artifact map_saver {
+      Node { name map_saver
+        Subscribers {
+          Subscriber { name 'map' message 'nav_msgs.OccupancyGrid'}}}
+}}}

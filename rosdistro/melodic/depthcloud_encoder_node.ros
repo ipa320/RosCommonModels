@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage depthcloud_encoder {
+    FromGitRepo "https://github.com/RobotWebTools/depthcloud_encoder.git" 
+    Artifact depthcloud_encoder_node {
+      Node { name depthcloud_encoder_node}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage nav2d_navigator {
+    FromGitRepo "https://github.com/skasperski/navigation_2d.git" 
+    Artifact set_goal_client {
+      Node { name set_goal_client
+        Subscribers {
+          Subscriber { name 'goal' message 'geometry_msgs.PoseStamped'}}}
+}}}

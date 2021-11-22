@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage mikrotik_swos_tools {
+    FromGitRepo "https://github.com/peci1/mikrotik_swos_tools.git" 
+    Artifact swos_api {
+      Node { name swos_api
+        Publishers {
+          Publisher { name '~statistics' message 'mikrotik_swos_tools.Statistics'}}}
+}}}

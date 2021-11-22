@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rdl_benchmark {
+    FromGitRepo "https://gitlab.com/jlack/rdl.git" 
+    Artifact rdl_benchmark_kinematics_benchmark {
+      Node { name rdl_benchmark_kinematics_benchmark}
+}}}

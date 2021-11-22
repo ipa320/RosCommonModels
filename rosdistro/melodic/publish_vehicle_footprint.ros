@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage uuv_assistants {
+    FromGitRepo "https://github.com/uuvsimulator/uuv_simulator.git" 
+    Artifact publish_vehicle_footprint {
+      Node { name publish_vehicle_footprint
+        Publishers {
+          Publisher { name 'label' message 'visualization_msgs.Marker'},
+          Publisher { name 'footprint' message 'geometry_msgs.PolygonStamped'}}
+        Subscribers {
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}}
+}}}

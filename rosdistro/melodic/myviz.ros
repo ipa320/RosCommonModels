@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rviz_python_tutorial {
+    FromGitRepo "https://github.com/ros-visualization/visualization_tutorials.git" 
+    Artifact myviz {
+      Node { name myviz}
+}}}

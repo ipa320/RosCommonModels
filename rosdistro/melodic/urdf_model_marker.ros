@@ -1,0 +1,34 @@
+PackageSet {
+  CatkinPackage jsk_interactive_marker {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_visualization.git" 
+    Artifact urdf_model_marker {
+      Node { name urdf_model_marker
+        ServiceServers {
+          ServiceServer { name 'unlock_joint_states' service 'std_srvs.Empty'},
+          ServiceServer { name 'lock_joint_states' service 'std_srvs.Empty'}}
+        ServiceClients {
+          ServiceClient { name 'set_dynamic_tf' service 'dynamic_tf_publisher.SetDynamicTF'},
+          ServiceClient { name 'publish_tf' service 'std_srvs.Empty'}}
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.PoseStamped'},
+          Publisher { name 'marker_menu' message 'jsk_interactive_marker.MarkerMenu'},
+          Publisher { name 'move_model' message 'jsk_interactive_marker.MoveModel'},
+          Publisher { name 'move_object' message 'jsk_interactive_marker.MoveObject'},
+          Publisher { name '?' message 'jsk_recognition_msgs.Int32Stamped'},
+          Publisher { name 'pose' message 'jsk_interactive_marker.MarkerPose'},
+          Publisher { name '?' message 'sensor_msgs.JointState'},
+          Publisher { name '?' message 'geometry_msgs.PoseStamped'}}
+        Subscribers {
+          Subscriber { name '?' message 'std_msgs.Empty'},
+          Subscriber { name '?' message 'sensor_msgs.JointState'},
+          Subscriber { name '?' message 'geometry_msgs.PoseArray'},
+          Subscriber { name '?' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name '?' message 'sensor_msgs.JointState'},
+          Subscriber { name '?' message 'std_msgs.Empty'},
+          Subscriber { name '?' message 'std_msgs.String'},
+          Subscriber { name '?' message 'std_msgs.Empty'}}
+        Parameters {
+          Parameter { name 'server_name' type String },
+          Parameter { name 'use_dynamic_tf' type Boolean },
+          Parameter { name '?' type String }}}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage uuv_auv_control_allocator {
+    FromGitRepo "https://github.com/uuvsimulator/uuv_simulator.git" 
+    Artifact control_allocator {
+      Node { name control_allocator
+        Subscribers {
+          Subscriber { name 'control_input' message 'uuv_auv_control_allocator.AUVCommand'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage capabilities {
+    FromGitRepo "https://github.com/osrf/capabilities.git" 
+    Artifact capability_server {
+      Node { name capability_server}
+}}}

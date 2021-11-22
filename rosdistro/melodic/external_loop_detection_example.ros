@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage rtabmap_ros {
+    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
+    Artifact external_loop_detection_example {
+      Node { name external_loop_detection_example
+        ServiceClients {
+          ServiceClient { name '/rtabmap/add_link' service 'rtabmap_ros.AddLink'},
+          ServiceClient { name '/rtabmap/get_map_data' service 'rtabmap_ros.GetMap'}}
+        Parameters {
+          Parameter { name 'localization' type Boolean }}}
+}}}

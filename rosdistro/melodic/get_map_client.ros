@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage nav2d_navigator {
+    FromGitRepo "https://github.com/skasperski/navigation_2d.git" 
+    Artifact get_map_client {
+      Node { name get_map_client
+        ServiceServers {
+          ServiceServer { name 'StartMapping' service 'std_srvs.Trigger'}}}
+}}}

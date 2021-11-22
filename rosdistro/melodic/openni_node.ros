@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage openni_camera {
+    FromGitRepo "https://github.com/ros-drivers/openni_camera.git" 
+    Artifact openni_node {
+      Node { name openni_node}
+}}}

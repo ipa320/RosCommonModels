@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage static_transform_mux {
+    FromGitRepo "https://github.com/tradr-project/static_transform_mux.git" 
+    Artifact static_transform_mux {
+      Node { name static_transform_mux
+        Publishers {
+          Publisher { name '/tf_static' message 'tf2_msgs.TFMessage'},
+          Publisher { name 'static_transform_mux/ready' message 'std_msgs.Bool'}}
+        Subscribers {
+          Subscriber { name '/tf_static' message 'tf2_msgs.TFMessage'}}}
+}}}

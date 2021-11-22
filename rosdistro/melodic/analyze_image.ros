@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage apriltag_ros {
+    FromGitRepo "https://github.com/AprilRobotics/apriltag_ros.git" 
+    Artifact analyze_image {
+      Node { name analyze_image}
+}}}

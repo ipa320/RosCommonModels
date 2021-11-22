@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage force_torque_sensor {
+    FromGitRepo "https://github.com/KITrobotics/force_torque_sensor.git" 
+    Artifact force_torque_sensor_node {
+      Node { name force_torque_sensor_node}
+}}}

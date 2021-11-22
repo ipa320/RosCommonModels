@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage cloudwatch_logger {
+    FromGitRepo "https://github.com/aws-robotics/cloudwatchlogs-ros1.git" 
+    Artifact cloudwatch_logger {
+      Node { name cloudwatch_logger
+        ServiceServers {
+          ServiceServer { name 'cloudwatch_logger' service 'std_srvs.Trigger'}}}
+}}}

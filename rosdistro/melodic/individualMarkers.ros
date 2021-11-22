@@ -1,0 +1,26 @@
+PackageSet {
+  CatkinPackage ar_track_alvar {
+    FromGitRepo "https://github.com/ros-perception/ar_track_alvar.git" 
+    Artifact individualMarkers {
+      Node { name individualMarkers
+        Publishers {
+          Publisher { name 'ar_pose_marker' message 'ar_track_alvar_msgs.AlvarMarkers'},
+          Publisher { name 'ARmarker_points' message 'visualization_msgs.Marker'},
+          Publisher { name 'visualization_marker' message 'visualization_msgs.Marker'}}
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.PointCloud2'},
+          Subscriber { name '?' message 'sensor_msgs.PointCloud2'}}
+        Parameters {
+          Parameter { name 'marker_size' type Double },
+          Parameter { name 'max_new_marker_error' type Double },
+          Parameter { name 'marker_resolution' type Integer value 5},
+          Parameter { name 'max_track_error' type Double value 0.2},
+          Parameter { name 'marker_margin' type Integer value 2},
+          Parameter { name 'max_frequency' type Double },
+          Parameter { name 'max_frequency' type Double value 8.0},
+          Parameter { name 'max_frequency' type Double },
+          Parameter { name 'marker_size' type Double value 10.0},
+          Parameter { name 'max_track_error' type Double },
+          Parameter { name 'max_new_marker_error' type Double value 0.08},
+          Parameter { name 'output_frame_from_msg' type Boolean }}}
+}}}

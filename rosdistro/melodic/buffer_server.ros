@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage tf2_ros {
+    FromGitRepo "https://github.com/ros/geometry2.git" 
+    Artifact buffer_server {
+      Node { name buffer_server
+        Parameters {
+          Parameter { name 'use_node_namespace' type Boolean },
+          Parameter { name 'buffer_size' type Double value 120.0},
+          Parameter { name 'publish_frame_service' type Boolean }}}
+}}}

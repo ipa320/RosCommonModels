@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage swri_roscpp {
+    FromGitRepo "https://github.com/swri-robotics/marti_common.git" 
+    Artifact service_server_test {
+      Node { name service_server_test}
+}}}

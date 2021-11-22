@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage visualstates {
+    FromGitRepo "https://github.com/JdeRobot/VisualStates.git" 
+    Artifact main {
+      Node { name main}
+}}}

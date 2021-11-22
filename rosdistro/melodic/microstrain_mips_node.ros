@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact microstrain_mips_node {
+      Node { name microstrain_mips_node}
+}}}

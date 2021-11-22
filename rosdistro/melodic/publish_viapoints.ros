@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage teb_local_planner {
+    FromGitRepo "https://github.com/rst-tu-dortmund/teb_local_planner.git" 
+    Artifact publish_viapoints {
+      Node { name publish_viapoints
+        Publishers {
+          Publisher { name '/test_optim_node/via_points' message 'nav_msgs.Path'}}}
+}}}

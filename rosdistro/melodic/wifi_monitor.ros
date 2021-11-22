@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage cob_monitoring {
+    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
+    Artifact wifi_monitor {
+      Node { name wifi_monitor
+        Publishers {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Subscribers {
+          Subscriber { name 'ddwrt/accesspoint' message 'cob_msgs.AccessPoint'}}}
+}}}

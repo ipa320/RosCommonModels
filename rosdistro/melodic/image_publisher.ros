@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage grid_map_demos {
+    FromGitRepo "https://github.com/anybotics/grid_map.git" 
+    Artifact image_publisher {
+      Node { name image_publisher
+        Publishers {
+          Publisher { name '?' message '?'}}}
+}}}

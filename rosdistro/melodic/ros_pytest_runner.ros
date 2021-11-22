@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ros_pytest {
+    FromGitRepo "https://github.com/machinekoder/ros_pytest.git" 
+    Artifact ros_pytest_runner {
+      Node { name ros_pytest_runner}
+}}}

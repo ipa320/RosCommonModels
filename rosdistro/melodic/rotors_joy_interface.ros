@@ -1,0 +1,30 @@
+PackageSet {
+  CatkinPackage rotors_joy_interface {
+    FromGitRepo "https://github.com/ethz-asl/rotors_simulator.git" 
+    Artifact rotors_joy_interface {
+      Node { name rotors_joy_interface
+        Publishers {
+          Publisher { name '?' message 'mav_msgs.RollPitchYawrateThrust'}}
+        Subscribers {
+          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}
+        Parameters {
+          Parameter { name 'axis_direction_thrust' type Integer value 1},
+          Parameter { name 'button_yaw_right_' type Integer value 4},
+          Parameter { name 'button_land_' type Integer value 8},
+          Parameter { name 'axis_direction_roll' type Integer value -1},
+          Parameter { name 'max_yaw_rate' type Double },
+          Parameter { name 'max_v_xy' type Double value 1.0},
+          Parameter { name 'button_ctrl_enable_' type Integer value 5},
+          Parameter { name 'button_takeoff_' type Integer value 7},
+          Parameter { name 'max_pitch' type Double },
+          Parameter { name 'v_yaw_step' type Double value 0.05},
+          Parameter { name 'max_roll' type Double },
+          Parameter { name 'max_thrust' type Double value 30.0},
+          Parameter { name 'button_ctrl_mode_' type Integer value 10},
+          Parameter { name 'axis_pitch_' type Integer value 1},
+          Parameter { name 'button_yaw_left_' type Integer value 3},
+          Parameter { name 'axis_roll_' type Integer },
+          Parameter { name 'is_fixed_wing' type Boolean },
+          Parameter { name 'axis_thrust_' type Integer value 2},
+          Parameter { name 'axis_direction_pitch' type Integer value 1}}}
+}}}

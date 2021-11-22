@@ -1,0 +1,25 @@
+PackageSet {
+  CatkinPackage mavros_extras {
+    FromGitRepo "https://github.com/mavlink/mavros.git" 
+    Artifact visualization {
+      Node { name visualization
+        Publishers {
+          Publisher { name 'track_markers' message 'visualization_msgs.Marker'},
+          Publisher { name 'vehicle_marker' message 'visualization_msgs.MarkerArray'},
+          Publisher { name 'landing_target' message 'visualization_msgs.Marker'},
+          Publisher { name 'wp_markers' message 'visualization_msgs.Marker'}}
+        Subscribers {
+          Subscriber { name 'local_setpoint' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name 'local_position' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name 'lt_marker' message 'geometry_msgs.Vector3Stamped'}}
+        Parameters {
+          Parameter { name 'body_height' type Double value 0.1},
+          Parameter { name 'child_frame_id' type String value 'base_link'},
+          Parameter { name 'num_rotors' type Integer value 6},
+          Parameter { name 'arm_len' type Double value 0.22},
+          Parameter { name 'prop_direction' type Integer },
+          Parameter { name 'marker_scale' type Double value 1.0},
+          Parameter { name 'max_track_size' type Integer value 1000},
+          Parameter { name 'body_width' type Double value 0.15},
+          Parameter { name 'fixed_frame_id' type String value 'map'}}}
+}}}

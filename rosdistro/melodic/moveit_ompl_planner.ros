@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage moveit_planners_ompl {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact moveit_ompl_planner {
+      Node { name moveit_ompl_planner
+        ServiceServers {
+          ServiceServer { name 'plan_kinematic_path' service 'moveit_msgs.GetMotionPlan'}}
+        Publishers {
+          Publisher { name 'display_motion_plan' message 'moveit_msgs.DisplayTrajectory'},
+          Publisher { name 'motion_plan_request' message 'moveit_msgs.MotionPlanRequest'}}}
+}}}

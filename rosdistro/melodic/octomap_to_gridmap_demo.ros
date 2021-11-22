@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage grid_map_demos {
+    FromGitRepo "https://github.com/anybotics/grid_map.git" 
+    Artifact octomap_to_gridmap_demo {
+      Node { name octomap_to_gridmap_demo
+        ServiceClients {
+          ServiceClient { name '?' service 'octomap_msgs.GetOctomap'}}
+        Publishers {
+          Publisher { name 'grid_map' message 'grid_map_msgs.GridMap'},
+          Publisher { name 'octomap' message 'octomap_msgs.Octomap'}}
+        Parameters {
+          Parameter { name 'octomap_service_topic' type String value '/octomap_binary'}}}
+}}}

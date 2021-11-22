@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage fingertip_pressure {
+    FromGitRepo "https://github.com/pr2/pr2_ethercat_drivers.git" 
+    Artifact pressure_info_test {
+      Node { name pressure_info_test
+        Subscribers {
+          Subscriber { name 'pressure/r_gripper_motor_info' message 'fingertip_pressure.PressureInfo'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage abb_driver {
+    FromGitRepo "https://github.com/ros-industrial/abb_driver.git" 
+    Artifact robot_state {
+      Node { name robot_state}
+}}}

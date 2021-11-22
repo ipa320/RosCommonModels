@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage adi_driver {
+    FromGitRepo "https://github.com/tork-a/adi_driver.git" 
+    Artifact adxl345_node {
+      Node { name adxl345_node
+        Publishers {
+          Publisher { name 'data_raw' message 'sensor_msgs.Imu'}}
+        Parameters {
+          Parameter { name 'device' type String value '/dev/ttyACM0'},
+          Parameter { name 'frame_id' type String value 'imu'}}}
+}}}

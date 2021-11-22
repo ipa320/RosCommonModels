@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage cob_helper_tools {
+    FromGitRepo "https://github.com/ipa320/cob_command_tools.git" 
+    Artifact fake_diagnostics {
+      Node { name fake_diagnostics
+        Publishers {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
+}}}

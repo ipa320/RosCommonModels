@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage turtlebot3_autorace_control {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_autorace.git" 
+    Artifact control_parking {
+      Node { name control_parking
+        Publishers {
+          Publisher { name '/control/cmd_vel' message 'geometry_msgs.Twist'},
+          Publisher { name '/control/parking_finished' message 'std_msgs.UInt8'}}
+        Subscribers {
+          Subscriber { name '/odom' message 'nav_msgs.Odometry'},
+          Subscriber { name '/control/parking_start' message 'std_msgs.UInt8'}}}
+}}}

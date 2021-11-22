@@ -1,0 +1,36 @@
+PackageSet {
+  CatkinPackage rr_openrover_driver {
+    FromGitRepo "https://github.com/RoverRobotics/rr_openrover_stack.git" 
+    Artifact openrover_driver_node {
+      Node { name openrover_driver_node
+        Publishers {
+          Publisher { name 'charging' message 'std_msgs.Bool'},
+          Publisher { name 'raw_fast_rate_data' message 'rr_openrover_driver_msgs.RawRrOpenroverDriverFastRateData'},
+          Publisher { name 'battery_status_b' message 'rr_openrover_driver_msgs.SmartBatteryStatus'},
+          Publisher { name 'battery_status_a' message 'rr_openrover_driver_msgs.SmartBatteryStatus'},
+          Publisher { name 'odom_encoder' message 'nav_msgs.Odometry'},
+          Publisher { name 'wheel_velocities' message 'std_msgs.Float32MultiArray'},
+          Publisher { name 'battery_state_of_charge' message 'std_msgs.Int32'},
+          Publisher { name 'raw_slow_rate_data' message 'rr_openrover_driver_msgs.RawRrOpenroverDriverSlowRateData'},
+          Publisher { name 'motor_speeds_commanded' message 'std_msgs.Int32MultiArray'},
+          Publisher { name 'raw_med_rate_data' message 'rr_openrover_driver_msgs.RawRrOpenroverDriverMedRateData'}}
+        Subscribers {
+          Subscriber { name '/trim_increment' message 'std_msgs.Float32'},
+          Subscriber { name '/soft_estop/reset' message 'std_msgs.Bool'},
+          Subscriber { name '/cmd_vel/managed' message 'geometry_msgs.Twist'},
+          Subscriber { name '/soft_estop/enable' message 'std_msgs.Bool'},
+          Subscriber { name '/rr_openrover_driver/fan_speed' message 'std_msgs.Int32'}}
+        Parameters {
+          Parameter { name 'drive_type' type String },
+          Parameter { name 'slow_data_rate' type Double },
+          Parameter { name 'Kd' type Double },
+          Parameter { name 'port' type String },
+          Parameter { name 'left_motor_pid_csv' type String },
+          Parameter { name 'Kp' type Double },
+          Parameter { name 'closed_loop_control_on' type Boolean },
+          Parameter { name 'right_motor_pid_csv' type String },
+          Parameter { name 'use_legacy' type Boolean },
+          Parameter { name 'fast_data_rate' type Double },
+          Parameter { name 'medium_data_rate' type Double },
+          Parameter { name 'Ki' type Double }}}
+}}}

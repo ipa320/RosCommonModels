@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage axis_camera {
+    FromGitRepo "https://github.com/ros-drivers/axis_camera.git" 
+    Artifact publish_axis_tf {
+      Node { name publish_axis_tf}
+}}}

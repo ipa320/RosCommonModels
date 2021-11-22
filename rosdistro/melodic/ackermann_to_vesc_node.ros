@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage vesc_ackermann {
+    FromGitRepo "https://github.com/f1tenth/vesc.git" 
+    Artifact ackermann_to_vesc_node {
+      Node { name ackermann_to_vesc_node
+        Publishers {
+          Publisher { name 'commands/motor/speed' message 'std_msgs.Float64'},
+          Publisher { name 'commands/servo/position' message 'std_msgs.Float64'}}
+        Subscribers {
+          Subscriber { name 'ackermann_cmd' message 'ackermann_msgs.AckermannDriveStamped'}}}
+}}}

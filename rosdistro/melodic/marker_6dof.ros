@@ -1,0 +1,30 @@
+PackageSet {
+  CatkinPackage jsk_interactive_marker {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_visualization.git" 
+    Artifact marker_6dof {
+      Node { name marker_6dof
+        Publishers {
+          Publisher { name 'pose' message 'geometry_msgs.PoseStamped'}}
+        Subscribers {
+          Subscriber { name 'move_marker' message 'geometry_msgs.PoseStamped'}}
+        Parameters {
+          Parameter { name 'mesh_file' type String },
+          Parameter { name 'object_z' type Double value 1.0},
+          Parameter { name 'initial_z' type Double },
+          Parameter { name 'tf_frame' type String value 'object'},
+          Parameter { name 'object_b' type Double value 1.0},
+          Parameter { name 'publish_pose_periodically' type Boolean },
+          Parameter { name 'object_g' type Double value 1.0},
+          Parameter { name 'line_width' type Double value 0.007},
+          Parameter { name 'publish_tf' type Boolean },
+          Parameter { name 'object_a' type Double value 1.0},
+          Parameter { name 'object_type' type String value 'sphere'},
+          Parameter { name 'object_x' type Double value 1.0},
+          Parameter { name 'frame_id' type String value '/map'},
+          Parameter { name 'initial_x' type Double },
+          Parameter { name 'tf_duration' type Double value 0.1},
+          Parameter { name 'initial_y' type Double },
+          Parameter { name 'interactive_marker_scale' type Double value 1.0},
+          Parameter { name 'object_y' type Double value 1.0},
+          Parameter { name 'object_r' type Double value 1.0}}}
+}}}

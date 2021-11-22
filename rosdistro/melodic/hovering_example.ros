@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage rotors_gazebo {
+    FromGitRepo "https://github.com/ethz-asl/rotors_simulator.git" 
+    Artifact hovering_example {
+      Node { name hovering_example
+        Publishers {
+          Publisher { name '?' message 'trajectory_msgs.MultiDOFJointTrajectory'}}
+        Parameters {
+          Parameter { name 'yaw' type Double }}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage dynamic_edt_3d {
+    FromGitRepo "https://github.com/OctoMap/octomap.git" 
+    Artifact exampleEDTOctomapStamped {
+      Node { name exampleEDTOctomapStamped}
+}}}

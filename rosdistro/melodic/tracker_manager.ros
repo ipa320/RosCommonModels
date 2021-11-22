@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage yocs_localization_manager {
+    FromGitRepo "https://github.com/yujinrobot/yujin_ocs.git" 
+    Artifact tracker_manager {
+      Node { name tracker_manager}
+}}}

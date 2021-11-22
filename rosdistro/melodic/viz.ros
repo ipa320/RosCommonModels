@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage rosflight_utils {
+    FromGitRepo "https://github.com/rosflight/rosflight.git" 
+    Artifact viz {
+      Node { name viz
+        Publishers {
+          Publisher { name 'viz/attitude' message 'geometry_msgs.PoseStamped'},
+          Publisher { name 'viz/magnetometer' message 'geometry_msgs.PoseStamped'},
+          Publisher { name 'viz/cloud' message 'visualization_msgs.Marker'}}
+        Subscribers {
+          Subscriber { name '/attitude' message 'rosflight_msgs.Attitude'},
+          Subscriber { name '/magnetometer' message 'sensor_msgs.MagneticField'}}}
+}}}

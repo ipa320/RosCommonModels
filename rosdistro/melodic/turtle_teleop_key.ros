@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage turtlesim {
+    FromGitRepo "https://github.com/ros/ros_tutorials.git" 
+    Artifact turtle_teleop_key {
+      Node { name turtle_teleop_key
+        Publishers {
+          Publisher { name 'turtle1/cmd_vel' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'scale_angular' type Double value 2.0},
+          Parameter { name 'scale_linear' type Double value 2.0}}}
+}}}

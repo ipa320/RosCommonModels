@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage rr_control_input_manager {
+    FromGitRepo "https://github.com/RoverRobotics/rr_openrover_stack.git" 
+    Artifact ps4_mapper {
+      Node { name ps4_mapper
+        Publishers {
+          Publisher { name '/trim_increment' message 'std_msgs.Float32'},
+          Publisher { name 'cmd_vel/joystick' message '?'},
+          Publisher { name '/soft_estop/reset' message 'std_msgs.Bool'},
+          Publisher { name '/joystick/square' message 'std_msgs.Bool'},
+          Publisher { name '/joystick/triangle' message 'std_msgs.Bool'},
+          Publisher { name '/soft_estop/enable' message 'std_msgs.Bool'},
+          Publisher { name 'set_feedback' message 'ds4_driver.Feedback'}}
+        Subscribers {
+          Subscriber { name 'status' message 'ds4_driver.Status'}}}
+}}}

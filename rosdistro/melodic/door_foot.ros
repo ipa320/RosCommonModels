@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage jsk_interactive_marker {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_visualization.git" 
+    Artifact door_foot {
+      Node { name door_foot
+        Parameters {
+          Parameter { name 'size' type Double value 1.0},
+          Parameter { name 'use_color_knob' type Boolean value true},
+          Parameter { name 'server_name' type String },
+          Parameter { name 'push' type Boolean value true},
+          Parameter { name 'marker_name' type String value 'door_marker'}}}
+}}}

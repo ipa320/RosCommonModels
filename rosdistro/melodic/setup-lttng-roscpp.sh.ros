@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage tracetools {
+    FromGitRepo "https://github.com/boschresearch/ros1_tracetools.git" 
+    Artifact setup-lttng-roscpp.sh {
+      Node { name setup-lttng-roscpp.sh}
+}}}

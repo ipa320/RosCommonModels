@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage mrpt_rawlog {
+    FromGitRepo "https://github.com/mrpt-ros-pkg/mrpt_navigation.git" 
+    Artifact rawlog_play_node {
+      Node { name rawlog_play_node
+        Publishers {
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'},
+          Publisher { name 'landmark' message 'mrpt_msgs.ObservationRangeBearing'},
+          Publisher { name 'beacon' message 'mrpt_msgs.ObservationRangeBeacon'}}
+        Parameters {
+          Parameter { name 'tf_prefix' type String },
+          Parameter { name 'rawlog_file' type String },
+          Parameter { name 'odom_frame' type String value 'odom'},
+          Parameter { name 'debug' type Boolean },
+          Parameter { name 'base_frame' type String value 'base_link'},
+          Parameter { name 'parameter_update_skip' type Integer },
+          Parameter { name 'rate' type Double }}}
+}}}

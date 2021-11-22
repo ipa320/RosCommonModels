@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage dynamic_reconfigure {
+    FromGitRepo "https://github.com/ros/dynamic_reconfigure.git" 
+    Artifact dynparam {
+      Node { name dynparam}
+}}}

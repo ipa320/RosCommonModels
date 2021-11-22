@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage dynamixel_sdk {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/DynamixelSDK.git" 
+    Artifact robotis_def {
+      Node { name robotis_def}
+}}}

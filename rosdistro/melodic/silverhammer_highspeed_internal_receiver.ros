@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage jsk_network_tools {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common.git" 
+    Artifact silverhammer_highspeed_internal_receiver {
+      Node { name silverhammer_highspeed_internal_receiver
+        Publishers {
+          Publisher { name 'input' message 'SilverhammerInternalBuffer'}}
+        Parameters {
+          Parameter { name 'pesimistic' type Boolean value true},
+          Parameter { name 'expected_rate' type Double value 2.0},
+          Parameter { name 'receive_port' type Integer value 16484},
+          Parameter { name 'fragment_packets_tolerance' type Integer }}}
+}}}

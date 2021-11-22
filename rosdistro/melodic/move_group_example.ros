@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_moveit_interface {
+    FromGitRepo "https://github.com/ipa320/cob_manipulation.git" 
+    Artifact move_group_example {
+      Node { name move_group_example}
+}}}

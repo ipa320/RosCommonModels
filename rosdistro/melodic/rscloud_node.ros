@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rslidar_pointcloud {
+    FromGitRepo "https://github.com/CPFL/robosense.git" 
+    Artifact rscloud_node {
+      Node { name rscloud_node}
+}}}

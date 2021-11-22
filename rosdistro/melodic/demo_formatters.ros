@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ecl_formatters {
+    FromGitRepo "https://github.com/stonier/ecl_core.git" 
+    Artifact demo_formatters {
+      Node { name demo_formatters}
+}}}

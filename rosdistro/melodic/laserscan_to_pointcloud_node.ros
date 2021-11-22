@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage pointcloud_to_laserscan {
+    FromGitRepo "https://github.com/ros-perception/pointcloud_to_laserscan.git" 
+    Artifact laserscan_to_pointcloud_node {
+      Node { name laserscan_to_pointcloud_node
+        Parameters {
+          Parameter { name 'concurrency_level' type Integer }}}
+}}}

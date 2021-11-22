@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage trac_ik_python {
+    FromGitRepo "https://bitbucket.org/traclabs/trac_ik.git" 
+    Artifact test_pkg {
+      Node { name test_pkg}
+}}}

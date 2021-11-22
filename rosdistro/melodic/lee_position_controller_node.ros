@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage rotors_control {
+    FromGitRepo "https://github.com/ethz-asl/rotors_simulator.git" 
+    Artifact lee_position_controller_node {
+      Node { name lee_position_controller_node
+        Publishers {
+          Publisher { name '?' message 'mav_msgs.Actuators'}}
+        Subscribers {
+          Subscriber { name '?' message 'nav_msgs.Odometry'},
+          Subscriber { name '?' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name '?' message 'trajectory_msgs.MultiDOFJointTrajectory'}}
+        Parameters {
+          Parameter { name '?' type Double },
+          Parameter { name '?' type Integer },
+          Parameter { name '?' type Double },
+          Parameter { name '?' type Double },
+          Parameter { name '?' type Double }}}
+}}}

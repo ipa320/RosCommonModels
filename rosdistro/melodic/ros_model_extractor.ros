@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage kinesis_manager {
+    FromGitRepo "https://github.com/aws-robotics/kinesisvideo-common.git" 
+    Artifact ros_model_extractor {
+      Node { name ros_model_extractor}
+}}}

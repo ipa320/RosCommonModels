@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage dense_laser_assembler {
+    FromGitRepo "https://github.com/UNR-RoboticsResearchLab/pr2_calibration.git" 
+    Artifact laser_image_node {
+      Node { name laser_image_node
+        Publishers {
+          Publisher { name 'dense_tilt_scan/intensity_image' message 'sensor_msgs.Image'},
+          Publisher { name 'dense_tilt_scan/range_image' message 'sensor_msgs.Image'}}
+        Subscribers {
+          Subscriber { name 'dense_tilt_scan/intensity' message '?'},
+          Subscriber { name 'dense_tilt_scan/range' message '?'}}}
+}}}

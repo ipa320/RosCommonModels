@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage nextage_gazebo {
+    FromGitRepo "https://github.com/tork-a/rtmros_nextage.git" 
+    Artifact go_initial {
+      Node { name go_initial}
+}}}

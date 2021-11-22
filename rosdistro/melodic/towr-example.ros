@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage towr {
+    FromGitRepo "https://github.com/ethz-adrl/towr.git" 
+    Artifact towr-example {
+      Node { name towr-example}
+}}}

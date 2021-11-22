@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage rail_segmentation {
+    FromGitRepo "https://github.com/GT-RAIL/rail_segmentation.git" 
+    Artifact continuous_segmenter {
+      Node { name continuous_segmenter
+        ServiceClients {
+          ServiceClient { name 'rail_segmentation/segment' service 'std_srvs.Empty'}}
+        Parameters {
+          Parameter { name 'segmentation_rate' type Double value 0.5}}}
+}}}

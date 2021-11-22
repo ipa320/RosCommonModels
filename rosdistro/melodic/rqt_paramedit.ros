@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rqt_paramedit {
+    FromGitRepo "https://github.com/dornhege/rqt_paramedit.git" 
+    Artifact rqt_paramedit {
+      Node { name rqt_paramedit}
+}}}

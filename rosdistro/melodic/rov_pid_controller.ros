@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage uuv_trajectory_control {
+    FromGitRepo "https://github.com/uuvsimulator/uuv_simulator.git" 
+    Artifact rov_pid_controller {
+      Node { name rov_pid_controller}
+}}}

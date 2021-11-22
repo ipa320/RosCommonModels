@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cmd_vel_smoother {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_control.git" 
+    Artifact cmd_vel_smoother {
+      Node { name cmd_vel_smoother}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pilz_store_positions {
+    FromGitRepo "https://github.com/PilzDE/pilz_industrial_motion.git" 
+    Artifact store_current_pose {
+      Node { name store_current_pose}
+}}}

@@ -1,0 +1,25 @@
+PackageSet {
+  CatkinPackage mrpt_graphslam_2d {
+    FromGitRepo "https://github.com/mrpt-ros-pkg/mrpt_slam.git" 
+    Artifact mrpt_graphslam_2d_node {
+      Node { name mrpt_graphslam_2d_node
+        ServiceClients {
+          ServiceClient { name '/master_discovery/list_masters' service 'multimaster_msgs_fkie.DiscoverMasters'},
+          ServiceClient { name '?' service 'mrpt_msgs.GetCMGraph'}}
+        Publishers {
+          Publisher { name '?' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name '?' message 'mrpt_msgs.GraphSlamStats'},
+          Publisher { name '?' message 'nav_msgs.Path'},
+          Publisher { name '?' message 'nav_msgs.Path'},
+          Publisher { name '?' message 'geometry_msgs.PoseArray'},
+          Publisher { name '?' message 'geometry_msgs.PoseStamped'}}
+        Parameters {
+          Parameter { name '?' type String value 'CICPCriteriaERD'},
+          Parameter { name '?' type Boolean },
+          Parameter { name '?' type String value 'odom'},
+          Parameter { name '?' type String value 'map'},
+          Parameter { name '?' type String value 'CLevMarqGSO'},
+          Parameter { name '?' type String value 'base_link'},
+          Parameter { name '?' type String value 'CFixedIntervalsNRD'},
+          Parameter { name '?' type Integer }}}
+}}}

@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage ncd_parser {
+    FromGitRepo "https://github.com/ccny-ros-pkg/scan_tools.git" 
+    Artifact ncd_parser {
+      Node { name ncd_parser
+        Publishers {
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'},
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}
+        Parameters {
+          Parameter { name 'end' type Double },
+          Parameter { name 'start' type Double },
+          Parameter { name 'rate' type Double }}}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage grid_map_pcl {
+    FromGitRepo "https://github.com/anybotics/grid_map.git" 
+    Artifact grid_map_pcl_loader_node {
+      Node { name grid_map_pcl_loader_node
+        Publishers {
+          Publisher { name 'grid_map_from_raw_pointcloud' message 'grid_map_msgs.GridMap'}}}
+}}}

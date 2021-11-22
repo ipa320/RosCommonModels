@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rgbd_launch {
+    FromGitRepo "https://github.com/ros-drivers/rgbd_launch.git" 
+    Artifact hydro-upgrade-notice {
+      Node { name hydro-upgrade-notice}
+}}}

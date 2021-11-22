@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage hpp-fcl {
+    FromGitRepo "https://github.com/humanoid-path-planner/hpp-fcl.git" 
+    Artifact test-benchmark {
+      Node { name test-benchmark}
+}}}

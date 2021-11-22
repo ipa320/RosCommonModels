@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage mpc_local_planner {
+    FromGitRepo "https://github.com/rst-tu-dortmund/mpc_local_planner.git" 
+    Artifact test_mpc_optim_node {
+      Node { name test_mpc_optim_node
+        Subscribers {
+          Subscriber { name 'obstacles' message 'costmap_converter.ObstacleArrayMsg'},
+          Subscriber { name 'via_points' message 'nav_msgs.Path'},
+          Subscriber { name '/clicked_point' message 'geometry_msgs.PointStamped'}}}
+}}}

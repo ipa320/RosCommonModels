@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rc_genicam_camera {
+    FromGitRepo "https://github.com/roboception/rc_genicam_camera.git" 
+    Artifact rc_genicam_camera {
+      Node { name rc_genicam_camera}
+}}}

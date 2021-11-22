@@ -1,0 +1,45 @@
+PackageSet {
+  CatkinPackage image_view2 {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common.git" 
+    Artifact image_view2 {
+      Node { name image_view2
+        ServiceServers {
+          ServiceServer { name 'poly_mode' service 'std_srvs.Empty'},
+          ServiceServer { name 'change_mode' service 'image_view2.ChangeMode'},
+          ServiceServer { name 'line_mode' service 'std_srvs.Empty'},
+          ServiceServer { name 'grabcut_rect_mode' service 'std_srvs.Empty'},
+          ServiceServer { name 'none_mode' service 'std_srvs.Empty'},
+          ServiceServer { name 'grabcut_mode' service 'std_srvs.Empty'},
+          ServiceServer { name 'rectangle_mode' service 'std_srvs.Empty'}}
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.Image'},
+          Publisher { name '?' message 'sensor_msgs.Image'},
+          Publisher { name '?' message 'geometry_msgs.PolygonStamped'},
+          Publisher { name '?' message 'geometry_msgs.PolygonStamped'},
+          Publisher { name '?' message 'geometry_msgs.PointStamped'},
+          Publisher { name '?' message 'geometry_msgs.PolygonStamped'},
+          Publisher { name '?' message 'sensor_msgs.PointCloud2'},
+          Publisher { name '?' message 'geometry_msgs.PolygonStamped'},
+          Publisher { name '?' message 'sensor_msgs.Image'},
+          Publisher { name '?' message 'geometry_msgs.PointStamped'},
+          Publisher { name '?' message 'geometry_msgs.PolygonStamped'}}
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.CameraInfo'},
+          Subscriber { name 'image_marker' message 'image_view2.ImageMarker2'},
+          Subscriber { name '?' message 'image_view2.MouseEvent'}}
+        Parameters {
+          Parameter { name 'draw_grid' type Boolean },
+          Parameter { name 'interaction_mode' type String value 'rectangle'},
+          Parameter { name 'filename_format' type String value 'frame%04i.jpg'},
+          Parameter { name 'resize_scale_x' type Double value 1.0},
+          Parameter { name 'show_info' type Boolean },
+          Parameter { name 'resize_scale_y' type Double value 1.0},
+          Parameter { name 'window_name' type String },
+          Parameter { name 'skip_draw_rate' type Integer },
+          Parameter { name 'image_transport' type String value 'raw'},
+          Parameter { name 'blurry' type Boolean },
+          Parameter { name 'region_continuous_publish' type Boolean },
+          Parameter { name 'autosize' type Boolean },
+          Parameter { name 'use_window' type Boolean value true},
+          Parameter { name 'tf_timeout' type Double value 1.0}}}
+}}}

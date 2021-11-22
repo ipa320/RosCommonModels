@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_android_resource_server {
+    FromGitRepo "https://github.com/ipa320/cob_android.git" 
+    Artifact resource_server {
+      Node { name resource_server}
+}}}

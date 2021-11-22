@@ -1,0 +1,28 @@
+PackageSet {
+  CatkinPackage schunk_powercube_chain {
+    FromGitRepo "https://github.com/ipa320/schunk_modular_robotics.git" 
+    Artifact schunk_powercube_chain {
+      Node { name schunk_powercube_chain
+        ServiceServers {
+          ServiceServer { name 'driver/recover' service 'std_srvs.Trigger'},
+          ServiceServer { name 'driver/set_operation_mode' service 'cob_srvs.SetString'},
+          ServiceServer { name 'driver/init' service 'std_srvs.Trigger'},
+          ServiceServer { name 'driver/stop' service 'std_srvs.Trigger'}}
+        Publishers {
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'},
+          Publisher { name 'driver/current_operationmode' message 'std_msgs.String'},
+          Publisher { name 'joint_trajectory_controller/state' message 'control_msgs.JointTrajectoryControllerState'},
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Subscribers {
+          Subscriber { name 'joint_group_position_controller/command' message 'std_msgs.Float64MultiArray'},
+          Subscriber { name 'joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'}}
+        Parameters {
+          Parameter { name 'force_use_movevel' type Boolean },
+          Parameter { name 'can_baudrate' type Integer },
+          Parameter { name 'frequency' type Double },
+          Parameter { name 'horizon' type Double },
+          Parameter { name '/robot_description' type String },
+          Parameter { name 'can_module' type String },
+          Parameter { name 'min_publish_duration' type Double },
+          Parameter { name 'can_device' type String }}}
+}}}

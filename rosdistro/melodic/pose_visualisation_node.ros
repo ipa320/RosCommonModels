@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pilz_store_positions {
+    FromGitRepo "https://github.com/PilzDE/pilz_industrial_motion.git" 
+    Artifact pose_visualisation_node {
+      Node { name pose_visualisation_node}
+}}}

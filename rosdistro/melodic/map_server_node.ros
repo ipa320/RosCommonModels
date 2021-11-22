@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage mrpt_map {
+    FromGitRepo "https://github.com/mrpt-ros-pkg/mrpt_navigation.git" 
+    Artifact map_server_node {
+      Node { name map_server_node
+        ServiceServers {
+          ServiceServer { name 'static_map' service 'nav_msgs.GetMap'}}
+        Publishers {
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'},
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'}}
+        Parameters {
+          Parameter { name 'debug' type Boolean value true},
+          Parameter { name 'map_file' type String value 'map.simplemap'},
+          Parameter { name 'frequency' type Double value 0.1},
+          Parameter { name 'frame_id' type String value 'map'},
+          Parameter { name 'ini_file' type String value 'map.ini'}}}
+}}}

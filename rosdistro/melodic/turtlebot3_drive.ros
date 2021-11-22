@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage turtlebot3_gazebo {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git" 
+    Artifact turtlebot3_drive {
+      Node { name turtlebot3_drive
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'},
+          Subscriber { name 'scan' message 'sensor_msgs.LaserScan'}}
+        Parameters {
+          Parameter { name 'cmd_vel_topic_name' type String }}}
+}}}

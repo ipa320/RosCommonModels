@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage exotica_python {
+    FromGitRepo "https://github.com/ipab-slmc/exotica.git" 
+    Artifact convert_moveit_scene_to_sdf {
+      Node { name convert_moveit_scene_to_sdf}
+}}}

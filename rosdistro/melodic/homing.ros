@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage epos2_motor_controller {
+    FromGitRepo "https://github.com/uos/epos2_motor_controller.git" 
+    Artifact homing {
+      Node { name homing}
+}}}

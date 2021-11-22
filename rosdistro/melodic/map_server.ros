@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage map_server {
+    FromGitRepo "https://github.com/ros-planning/navigation.git" 
+    Artifact map_server {
+      Node { name map_server
+        ServiceServers {
+          ServiceServer { name 'static_map' service 'nav_msgs.GetMap'}}
+        Publishers {
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'}}
+        Parameters {
+          Parameter { name 'frame_id' type String value 'map'},
+          Parameter { name 'free_thresh' type Double value 0.196},
+          Parameter { name 'negate' type Integer },
+          Parameter { name 'occupied_thresh' type Double value 0.65}}}
+}}}

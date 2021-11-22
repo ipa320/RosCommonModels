@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage jsk_topic_tools {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_common.git" 
+    Artifact static_transform_pose_stamped {
+      Node { name static_transform_pose_stamped
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.PoseStamped'}}
+        Subscribers {
+          Subscriber { name '?' message 'geometry_msgs.PoseStamped'}}}
+}}}

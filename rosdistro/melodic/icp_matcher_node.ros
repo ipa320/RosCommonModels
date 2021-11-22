@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage rail_mesh_icp {
+    FromGitRepo "https://github.com/GT-RAIL/rail_mesh_icp.git" 
+    Artifact icp_matcher_node {
+      Node { name icp_matcher_node
+        ServiceServers {
+          ServiceServer { name 'icp_match_clouds' service 'rail_mesh_icp.ICPMatch'}}
+        Parameters {
+          Parameter { name '/icp_matcher_node/iterations' type Integer }}}
+}}}

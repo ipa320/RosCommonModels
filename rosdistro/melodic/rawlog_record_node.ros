@@ -1,0 +1,21 @@
+PackageSet {
+  CatkinPackage mrpt_rawlog {
+    FromGitRepo "https://github.com/mrpt-ros-pkg/mrpt_navigation.git" 
+    Artifact rawlog_record_node {
+      Node { name rawlog_record_node
+        Subscribers {
+          Subscriber { name 'marker' message 'marker_msgs.MarkerDetection'},
+          Subscriber { name 'scan' message 'sensor_msgs.LaserScan'},
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}
+        Parameters {
+          Parameter { name 'debug' type Boolean },
+          Parameter { name 'rate' type Double },
+          Parameter { name 'record_range_scan' type Boolean value true},
+          Parameter { name 'base_frame_id' type String value 'base_link'},
+          Parameter { name 'record_bearing_range' type Boolean },
+          Parameter { name 'odom_frame_id' type String value 'odom'},
+          Parameter { name 'parameter_update_skip' type Integer },
+          Parameter { name 'raw_log_folder' type String },
+          Parameter { name 'tf_prefix' type String },
+          Parameter { name 'record_beacon_range' type Boolean }}}
+}}}

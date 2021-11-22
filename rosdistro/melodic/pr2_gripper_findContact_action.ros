@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage pr2_gripper_sensor_action {
+    FromGitRepo "https://github.com/PR2/pr2_gripper_sensor.git" 
+    Artifact pr2_gripper_findContact_action {
+      Node { name pr2_gripper_findContact_action
+        Publishers {
+          Publisher { name 'find_contact' message 'pr2_gripper_sensor_msgs.PR2GripperFindContactCommand'}}
+        Subscribers {
+          Subscriber { name 'contact_state' message 'pr2_gripper_sensor_msgs.PR2GripperFindContactData'}}}
+}}}

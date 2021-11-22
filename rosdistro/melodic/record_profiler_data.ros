@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage swri_profiler {
+    FromGitRepo "https://github.com/swri-robotics/swri_profiler.git" 
+    Artifact record_profiler_data {
+      Node { name record_profiler_data
+        Publishers {
+          Publisher { name '/profiler/version_info' message '?'}}
+        Subscribers {
+          Subscriber { name '/profiler/data' message '?'}}}
+}}}

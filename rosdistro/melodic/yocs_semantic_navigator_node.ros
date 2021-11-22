@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage yocs_navigator {
+    FromGitRepo "https://github.com/yujinrobot/yujin_ocs.git" 
+    Artifact yocs_semantic_navigator_node {
+      Node { name yocs_semantic_navigator_node}
+}}}

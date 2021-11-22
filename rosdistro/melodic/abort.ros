@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rosmon_core {
+    FromGitRepo "https://github.com/xqms/rosmon.git" 
+    Artifact abort {
+      Node { name abort}
+}}}

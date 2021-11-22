@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage open_manipulator_with_tb3_tools {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3.git" 
+    Artifact open_manipulator_with_tb3_moveit_bridge {
+      Node { name open_manipulator_with_tb3_moveit_bridge
+        ServiceServers {
+          ServiceServer { name 'moveit/get_joint_position' service 'open_manipulator_msgs.GetJointPosition'},
+          ServiceServer { name 'moveit/set_kinematics_pose' service 'open_manipulator_msgs.SetKinematicsPose'},
+          ServiceServer { name 'moveit/get_kinematics_pose' service 'open_manipulator_msgs.GetKinematicsPose'},
+          ServiceServer { name 'moveit/set_joint_position' service 'open_manipulator_msgs.SetJointPosition'}}
+        Publishers {
+          Publisher { name 'joint_trajectory_point' message 'std_msgs.Float64MultiArray'}}
+        Subscribers {
+          Subscriber { name 'move_group/display_planned_path' message 'moveit_msgs.DisplayTrajectory'}}
+        Parameters {
+          Parameter { name 'planning_group' type String value 'manipulator'}}}
+}}}

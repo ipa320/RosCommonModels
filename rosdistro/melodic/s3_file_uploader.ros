@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage s3_file_uploader {
+    FromGitRepo "https://github.com/aws-robotics/rosbag-uploader-ros1.git" 
+    Artifact s3_file_uploader {
+      Node { name s3_file_uploader}
+}}}

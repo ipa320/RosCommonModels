@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage calibration_estimation {
+    FromGitRepo "https://github.com/ros-perception/calibration.git" 
+    Artifact opt_runner {
+      Node { name opt_runner
+        Publishers {
+          Publisher { name 'pose_guesses' message 'visualization_msgs.Marker'}}}
+}}}

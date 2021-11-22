@@ -1,0 +1,35 @@
+PackageSet {
+  CatkinPackage rsm_core {
+    FromGitRepo "https://github.com/MarcoStb1993/robot_statemachine.git" 
+    Artifact serviceProviderNode {
+      Node { name serviceProviderNode
+        ServiceServers {
+          ServiceServer { name 'moveWaypoint' service 'rsm_msgs.MoveWaypoint'},
+          ServiceServer { name 'getWaypointRoutines' service 'rsm_msgs.GetWaypointRoutines'},
+          ServiceServer { name 'setNavigationGoal' service 'rsm_msgs.SetNavigationGoal'},
+          ServiceServer { name 'resetWaypoints' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setExplorationMode' service 'std_srvs.SetBool'},
+          ServiceServer { name 'removeWaypoint' service 'rsm_msgs.RemoveWaypoint'},
+          ServiceServer { name 'setWaypointFollowingMode' service 'rsm_msgs.SetWaypointFollowingMode'},
+          ServiceServer { name 'navigationGoalCompleted' service 'rsm_msgs.GoalCompleted'},
+          ServiceServer { name 'getWaypoints' service 'rsm_msgs.GetWaypoints'},
+          ServiceServer { name 'getReverseMode' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setReverseMode' service 'std_srvs.SetBool'},
+          ServiceServer { name 'addWaypoint' service 'rsm_msgs.AddWaypoint'},
+          ServiceServer { name 'getExplorationMode' service 'std_srvs.Trigger'},
+          ServiceServer { name 'waypointVisited' service 'rsm_msgs.WaypointVisited'},
+          ServiceServer { name 'getRobotPose' service 'rsm_msgs.GetRobotPose'},
+          ServiceServer { name 'getNavigationGoal' service 'rsm_msgs.GetNavigationGoal'},
+          ServiceServer { name 'waypointUnreachable' service 'rsm_msgs.WaypointUnreachable'},
+          ServiceServer { name 'setWaypointRoutine' service 'rsm_msgs.SetWaypointRoutine'}}
+        ServiceClients {
+          ServiceClient { name 'setNavigationToReverse' service 'std_srvs.SetBool'}}
+        Publishers {
+          Publisher { name 'explorationMode' message 'std_msgs.Bool'},
+          Publisher { name 'reverseMode' message 'std_msgs.Bool'},
+          Publisher { name 'waypoints' message 'rsm_msgs.WaypointArray'},
+          Publisher { name 'explorationGoalStatus' message 'rsm_msgs.GoalStatus'}}
+        Parameters {
+          Parameter { name 'robot_frame' type String value '/base_link'},
+          Parameter { name 'update_frequency' type Double value 20.0}}}
+}}}

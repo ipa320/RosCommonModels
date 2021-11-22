@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage cob_frame_tracker {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact spacenav_commander {
+      Node { name spacenav_commander
+        Publishers {
+          Publisher { name 'twist_controller/command_twist_stamped' message 'geometry_msgs.TwistStamped'}}
+        Subscribers {
+          Subscriber { name '/spacenav/twist' message 'geometry_msgs.Twist'},
+          Subscriber { name '/spacenav/joy' message 'sensor_msgs.Joy'}}
+        Parameters {
+          Parameter { name 'chain_tip_link' type String },
+          Parameter { name 'root_frame' type String },
+          Parameter { name 'scaling_factor' type Double value 0.1}}}
+}}}

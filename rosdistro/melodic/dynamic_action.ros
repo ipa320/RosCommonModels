@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage actionlib {
+    FromGitRepo "https://github.com/ros/actionlib.git" 
+    Artifact dynamic_action {
+      Node { name dynamic_action}
+}}}

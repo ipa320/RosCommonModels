@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage prosilica_camera {
+    FromGitRepo "https://github.com/ros-drivers/prosilica_driver.git" 
+    Artifact prosilica_node {
+      Node { name prosilica_node}
+}}}

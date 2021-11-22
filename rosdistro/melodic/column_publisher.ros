@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage yocs_virtual_sensor {
+    FromGitRepo "https://github.com/yujinrobot/yujin_ocs.git" 
+    Artifact column_publisher {
+      Node { name column_publisher
+        Publishers {
+          Publisher { name 'column_marker' message '?'},
+          Publisher { name 'column_pose_list' message '?'}}}
+}}}

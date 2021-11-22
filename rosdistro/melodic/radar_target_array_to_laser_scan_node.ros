@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage ainstein_radar_filters {
+    FromGitRepo "https://github.com/AinsteinAI/ainstein_radar.git" 
+    Artifact radar_target_array_to_laser_scan_node {
+      Node { name radar_target_array_to_laser_scan_node
+        Publishers {
+          Publisher { name 'scan_out' message 'sensor_msgs.LaserScan'}}
+        Subscribers {
+          Subscriber { name 'radar_in' message 'ainstein_radar_msgs.RadarTargetArray'}}}
+}}}

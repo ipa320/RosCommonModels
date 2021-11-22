@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rotors_evaluation {
+    FromGitRepo "https://github.com/ethz-asl/rotors_simulator.git" 
+    Artifact disturbance_eval {
+      Node { name disturbance_eval}
+}}}

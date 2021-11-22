@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage jsk_pcl_ros {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_recognition.git" 
+    Artifact sample_cube_nearest_point {
+      Node { name sample_cube_nearest_point}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage grid_map_demos {
+    FromGitRepo "https://github.com/anybotics/grid_map.git" 
+    Artifact iterator_benchmark {
+      Node { name iterator_benchmark}
+}}}

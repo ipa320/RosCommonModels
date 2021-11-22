@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rqt_moveit {
+    FromGitRepo "https://github.com/ros-visualization/rqt_moveit.git" 
+    Artifact rqt_moveit {
+      Node { name rqt_moveit}
+}}}

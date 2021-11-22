@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage yocs_keyop {
+    FromGitRepo "https://github.com/yujinrobot/yujin_ocs.git" 
+    Artifact yocs_keyop {
+      Node { name yocs_keyop
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'},
+          Publisher { name 'disable_motors' message 'std_msgs.String'},
+          Publisher { name 'enable_motors' message 'std_msgs.String'}}
+        Parameters {
+          Parameter { name 'wait_for_connection' type Boolean },
+          Parameter { name 'linear_vel_step' type Double },
+          Parameter { name 'angular_vel_step' type Double },
+          Parameter { name 'angular_vel_max' type Double },
+          Parameter { name 'linear_vel_max' type Double }}}
+}}}

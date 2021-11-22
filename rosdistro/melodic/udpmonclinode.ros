@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage network_monitor_udp {
+    FromGitRepo "https://github.com/pr2/linux_networking.git" 
+    Artifact udpmonclinode {
+      Node { name udpmonclinode}
+}}}

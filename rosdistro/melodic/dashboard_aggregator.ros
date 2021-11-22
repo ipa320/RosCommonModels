@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage pr2_dashboard_aggregator {
+    FromGitRepo "https://github.com/pr2/pr2_common.git" 
+    Artifact dashboard_aggregator {
+      Node { name dashboard_aggregator
+        Publishers {
+          Publisher { name 'dashboard_agg' message 'pr2_msgs.DashboardState'}}
+        Subscribers {
+          Subscriber { name 'power_board/state' message 'pr2_msgs.PowerBoardState'},
+          Subscriber { name 'pr2_ethercat/motors_halted' message 'std_msgs.Bool'},
+          Subscriber { name 'power_state' message 'pr2_msgs.PowerState'},
+          Subscriber { name 'ddwrt/accesspoint' message 'pr2_msgs.AccessPoint'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage wiimote {
+    FromGitRepo "https://github.com/ros-drivers/joystick_drivers.git" 
+    Artifact teleop_wiimote {
+      Node { name teleop_wiimote}
+}}}

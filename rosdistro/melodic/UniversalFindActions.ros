@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage end_effector {
+    FromGitRepo "https://github.com/ADVRHumanoids/ROSEndEffector.git" 
+    Artifact UniversalFindActions {
+      Node { name UniversalFindActions}
+}}}

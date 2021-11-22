@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rqt_play_motion_builder {
+    FromGitRepo "https://github.com/pal-robotics/play_motion_builder.git" 
+    Artifact rqt_play_motion_builder {
+      Node { name rqt_play_motion_builder}
+}}}

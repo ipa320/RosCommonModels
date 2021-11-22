@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage joint_states_settler {
+    FromGitRepo "https://github.com/ros-perception/calibration.git" 
+    Artifact joint_states_settler_action {
+      Node { name joint_states_settler_action
+        Publishers {
+          Publisher { name 'settled_interval' message 'calibration_msgs.Interval'},
+          Publisher { name 'chain_state' message 'sensor_msgs.JointState'}}
+        Subscribers {
+          Subscriber { name 'joint_states' message 'sensor_msgs.JointState'}}
+        ActionServers {
+          ActionServer { name '?' action 'joint_states_settler.ConfigAction'}}}
+}}}

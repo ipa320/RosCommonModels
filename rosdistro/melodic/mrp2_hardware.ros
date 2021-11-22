@@ -1,0 +1,23 @@
+PackageSet {
+  CatkinPackage mrp2_hardware {
+    FromGitRepo "https://github.com/milvusrobotics/mrp2_robot.git" 
+    Artifact mrp2_hardware {
+      Node { name mrp2_hardware
+        ServiceServers {
+          ServiceServer { name 'start' service 'std_srvs.Empty'},
+          ServiceServer { name 'stop' service 'std_srvs.Empty'}}
+        Publishers {
+          Publisher { name 'hw_monitor/diagnostics/controller' message 'std_msgs.Bool'},
+          Publisher { name 'estop' message 'std_msgs.Bool'},
+          Publisher { name 'hw_monitor/diagnostics/motor_stall_l' message 'std_msgs.Bool'},
+          Publisher { name 'hw_monitor/diagnostics/batt_low' message 'std_msgs.Bool'},
+          Publisher { name 'estop_btn' message 'std_msgs.Bool'},
+          Publisher { name 'hw_monitor/diagnostics/batt_high' message 'std_msgs.Bool'},
+          Publisher { name 'motor_controller/sep_cmd_vel' message 'std_msgs.Float32MultiArray'},
+          Publisher { name 'hw_monitor/diagnostics/motor_stall_r' message 'std_msgs.Bool'},
+          Publisher { name 'bumpers' message 'std_msgs.Int32MultiArray'},
+          Publisher { name 'hw_monitor/diagnostics/aux_lights' message 'std_msgs.Bool'}}
+        Subscribers {
+          Subscriber { name 'positions_reset' message 'std_msgs.Empty'},
+          Subscriber { name 'estop_clear' message 'std_msgs.Empty'}}}
+}}}

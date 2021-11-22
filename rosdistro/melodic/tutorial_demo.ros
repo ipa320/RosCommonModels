@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage grid_map_demos {
+    FromGitRepo "https://github.com/anybotics/grid_map.git" 
+    Artifact tutorial_demo {
+      Node { name tutorial_demo
+        Publishers {
+          Publisher { name 'grid_map' message 'grid_map_msgs.GridMap'}}}
+}}}

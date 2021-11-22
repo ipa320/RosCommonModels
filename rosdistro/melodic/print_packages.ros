@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ros_introspection {
+    FromGitRepo "https://github.com/DLu/roscompile.git" 
+    Artifact print_packages {
+      Node { name print_packages}
+}}}

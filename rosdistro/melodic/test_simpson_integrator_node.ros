@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage cob_twist_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact test_simpson_integrator_node {
+      Node { name test_simpson_integrator_node
+        Publishers {
+          Publisher { name 'output_q' message 'std_msgs.Float64'},
+          Publisher { name 'output_q_dot' message 'std_msgs.Float64'}}
+        Subscribers {
+          Subscriber { name 'input' message 'std_msgs.Float64'}}}
+}}}

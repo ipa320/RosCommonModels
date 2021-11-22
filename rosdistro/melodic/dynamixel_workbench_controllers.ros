@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage dynamixel_workbench_controllers {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/dynamixel-workbench.git" 
+    Artifact dynamixel_workbench_controllers {
+      Node { name dynamixel_workbench_controllers
+        ServiceServers {
+          ServiceServer { name 'dynamixel_command' service 'dynamixel_workbench_msgs.DynamixelCommand'}}
+        Publishers {
+          Publisher { name 'dynamixel_state' message 'dynamixel_workbench_msgs.DynamixelStateList'},
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'}}
+        Subscribers {
+          Subscriber { name 'joint_trajectory' message 'trajectory_msgs.JointTrajectory'},
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'dynamixel_info' type String }}}
+}}}

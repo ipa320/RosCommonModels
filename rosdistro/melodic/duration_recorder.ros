@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rosbag_cloud_recorders {
+    FromGitRepo "https://github.com/aws-robotics/rosbag-uploader-ros1.git" 
+    Artifact duration_recorder {
+      Node { name duration_recorder}
+}}}

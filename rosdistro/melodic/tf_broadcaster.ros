@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage robot_setup_tf_tutorial {
+    FromGitRepo "https://github.com/ros-planning/navigation_tutorials.git" 
+    Artifact tf_broadcaster {
+      Node { name tf_broadcaster}
+}}}

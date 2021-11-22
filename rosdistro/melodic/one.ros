@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage teraranger {
+    FromGitRepo "https://github.com/Terabee/teraranger.git" 
+    Artifact one {
+      Node { name one
+        Publishers {
+          Publisher { name 'teraranger_one' message 'sensor_msgs.Range'}}
+        Parameters {
+          Parameter { name 'portname' type String value '/dev/ttyUSB0'},
+          Parameter { name 'frame_id' type String value 'base_range'}}}
+}}}

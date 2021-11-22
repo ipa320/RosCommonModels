@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage robot_nav_viz_demos {
+    FromGitRepo "https://github.com/locusrobotics/robot_navigation.git" 
+    Artifact polygon {
+      Node { name polygon
+        Publishers {
+          Publisher { name 'polygon' message 'nav_2d_msgs.Polygon2DStamped'},
+          Publisher { name 'polygons' message 'nav_2d_msgs.Polygon2DCollection'},
+          Publisher { name 'polygon3d' message 'geometry_msgs.PolygonStamped'}}}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact get_reference_position_client {
+      Node { name get_reference_position_client
+        ServiceClients {
+          ServiceClient { name 'GetReferencePosition' service 'std_srvs.Trigger'}}}
+}}}

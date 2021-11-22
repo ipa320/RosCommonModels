@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage ainstein_radar_drivers {
+    FromGitRepo "https://github.com/AinsteinAI/ainstein_radar.git" 
+    Artifact t79_bsd_node {
+      Node { name t79_bsd_node
+        Parameters {
+          Parameter { name 'frame_id' type String value 'map'},
+          Parameter { name 'radar_type' type Integer }}}
+}}}

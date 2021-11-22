@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage grid_map_demos {
+    FromGitRepo "https://github.com/anybotics/grid_map.git" 
+    Artifact interpolation_demo {
+      Node { name interpolation_demo
+        Publishers {
+          Publisher { name 'data_sparse' message 'grid_map_msgs.GridMap'},
+          Publisher { name 'ground_truth' message 'grid_map_msgs.GridMap'},
+          Publisher { name 'interpolated' message 'grid_map_msgs.GridMap'}}
+        Parameters {
+          Parameter { name 'interpolation/data_resolution' type Double value 0.1},
+          Parameter { name 'world' type String value 'Sine'},
+          Parameter { name 'groundtruth_resolution' type Double value 0.02},
+          Parameter { name 'world_size/width' type Double value 4.0},
+          Parameter { name 'interpolation_type' type String value 'Nearest'},
+          Parameter { name 'interpolation/interpolated_resolution' type Double value 0.02},
+          Parameter { name 'world_size/length' type Double value 4.0}}}
+}}}

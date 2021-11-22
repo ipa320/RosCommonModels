@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage pr2_gripper_sensor_action {
+    FromGitRepo "https://github.com/PR2/pr2_gripper_sensor.git" 
+    Artifact pr2_gripper_release_action {
+      Node { name pr2_gripper_release_action
+        ActionServers {
+          ActionServer { name 'release' action 'pr2_gripper_sensor_msgs.PR2GripperReleaseAction'}}
+        Parameters {
+          Parameter { name 'position_open' type Double }}}
+}}}

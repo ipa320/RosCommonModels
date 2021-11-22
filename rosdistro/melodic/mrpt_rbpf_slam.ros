@@ -1,0 +1,26 @@
+PackageSet {
+  CatkinPackage mrpt_rbpf_slam {
+    FromGitRepo "https://github.com/mrpt-ros-pkg/mrpt_slam.git" 
+    Artifact mrpt_rbpf_slam {
+      Node { name mrpt_rbpf_slam
+        Publishers {
+          Publisher { name '/beacons_viz' message 'visualization_msgs.MarkerArray'},
+          Publisher { name 'map' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name 'particlecloud_beacons' message 'geometry_msgs.PoseArray'},
+          Publisher { name 'map_metadata' message 'nav_msgs.MapMetaData'},
+          Publisher { name 'particlecloud' message 'geometry_msgs.PoseArray'}}
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.LaserScan'},
+          Subscriber { name '?' message 'mrpt_msgs.ObservationRangeBeacon'}}
+        Parameters {
+          Parameter { name 'base_frame_id' type String value 'base_link'},
+          Parameter { name 'update_loop_frequency' type Double value 100.0},
+          Parameter { name 'ini_filename' type String },
+          Parameter { name 'odom_frame_id' type String value 'odom'},
+          Parameter { name 'rawlog_play_delay' type Double value 0.1},
+          Parameter { name 'rawlog_filename' type String },
+          Parameter { name 'sensor_source' type String value 'scan'},
+          Parameter { name 'sensor_source' type String value 'scan'},
+          Parameter { name 'global_frame_id' type String value 'map'},
+          Parameter { name 'update_sensor_pose' type Boolean value true}}}
+}}}

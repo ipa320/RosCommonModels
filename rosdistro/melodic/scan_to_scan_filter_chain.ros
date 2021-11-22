@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage laser_filters {
+    FromGitRepo "https://github.com/ros-perception/laser_filters.git" 
+    Artifact scan_to_scan_filter_chain {
+      Node { name scan_to_scan_filter_chain
+        Publishers {
+          Publisher { name 'scan_filtered' message 'sensor_msgs.LaserScan'}}
+        Parameters {
+          Parameter { name 'tf_message_filter_target_frame' type String },
+          Parameter { name 'tf_message_filter_tolerance' type Double value 0.03}}}
+}}}

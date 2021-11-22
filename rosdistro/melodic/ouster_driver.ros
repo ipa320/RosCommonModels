@@ -1,0 +1,28 @@
+PackageSet {
+  CatkinPackage ouster_driver {
+    FromGitRepo "https://github.com/CPFL/ouster.git" 
+    Artifact ouster_driver {
+      Node { name ouster_driver
+        Publishers {
+          Publisher { name 'imu_packets' message 'PacketMsg'},
+          Publisher { name '?' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'lidar_packets' message 'PacketMsg'},
+          Publisher { name '?' message 'sensor_msgs.Imu'}}
+        Subscribers {
+          Subscriber { name 'lidar_packets' message 'PacketMsg'},
+          Subscriber { name 'imu_packets' message 'PacketMsg'}}
+        Parameters {
+          Parameter { name 'pulse_mode' type String value 'STANDARD'},
+          Parameter { name 'lidar_frame_name' type String value '/os1'},
+          Parameter { name 'pointcloud_mode' type String value 'NATIVE'},
+          Parameter { name 'pc_address' type String value '192.168.1.1'},
+          Parameter { name 'imu_topic_name' type String value '/imu_raw'},
+          Parameter { name 'replay' type Boolean value true},
+          Parameter { name 'imu_frame_name' type String value '/os1_imu'},
+          Parameter { name 'operation_mode' type String value '1024x10'},
+          Parameter { name 'points_topic_name' type String value '/points_raw'},
+          Parameter { name 'os1_imu_port' type Integer value -1},
+          Parameter { name 'os1_lidar_port' type Integer value -1},
+          Parameter { name 'os1_lidar_address' type String value 'localhost'},
+          Parameter { name 'window_rejection' type Boolean value true}}}
+}}}

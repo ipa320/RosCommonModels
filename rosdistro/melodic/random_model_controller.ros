@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage radial_menu_example {
+    FromGitRepo "https://github.com/yoshito-n-students/radial_menu_ros.git" 
+    Artifact random_model_controller {
+      Node { name random_model_controller
+        Publishers {
+          Publisher { name 'menu_state' message 'radial_menu_msgs.State'}}}
+}}}

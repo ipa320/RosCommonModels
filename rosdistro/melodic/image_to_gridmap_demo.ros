@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage grid_map_demos {
+    FromGitRepo "https://github.com/anybotics/grid_map.git" 
+    Artifact image_to_gridmap_demo {
+      Node { name image_to_gridmap_demo
+        Publishers {
+          Publisher { name 'grid_map' message 'grid_map_msgs.GridMap'}}
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.Image'}}
+        Parameters {
+          Parameter { name 'image_topic' type String value '/image'},
+          Parameter { name 'max_height' type Double value 1.0},
+          Parameter { name 'min_height' type Double },
+          Parameter { name 'resolution' type Double value 0.03}}}
+}}}

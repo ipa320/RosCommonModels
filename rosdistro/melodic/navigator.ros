@@ -1,0 +1,37 @@
+PackageSet {
+  CatkinPackage nav2d_navigator {
+    FromGitRepo "https://github.com/skasperski/navigation_2d.git" 
+    Artifact navigator {
+      Node { name navigator
+        ServiceServers {
+          ServiceServer { name 'Stop' service 'std_srvs.Trigger'},
+          ServiceServer { name 'Pause' service 'std_srvs.Trigger'}}
+        ServiceClients {
+          ServiceClient { name '?' service 'nav_msgs.GetMap'}}
+        Publishers {
+          Publisher { name 'cmd' message 'nav2d_operator.cmd'},
+          Publisher { name 'plan' message 'nav_msgs.GridCells'},
+          Publisher { name 'markers' message 'visualization_msgs.Marker'}}
+        Subscribers {
+          Subscriber { name 'others' message 'nav2d_msgs.RobotPose'}}
+        Parameters {
+          Parameter { name 'navigation_goal_angle' type Double value 1.0},
+          Parameter { name 'frequency' type Double value 10.0},
+          Parameter { name 'exploration_strategy' type String value 'NearestFrontierPlanner'},
+          Parameter { name 'map_frame' type String value 'map'},
+          Parameter { name 'exploration_goal_distance' type Double value 3.0},
+          Parameter { name 'getmap_action_topic' type String value 'GetFirstMap'},
+          Parameter { name 'navigation_goal_distance' type Double value 1.0},
+          Parameter { name 'move_action_topic' type String value 'MoveTo'},
+          Parameter { name 'max_replanning_period' type Double value 1.0},
+          Parameter { name 'robot_radius' type Double value 0.3},
+          Parameter { name 'robot_frame' type String value 'robot'},
+          Parameter { name 'explore_action_topic' type String value 'Explore'},
+          Parameter { name 'min_replanning_period' type Double value 3.0},
+          Parameter { name 'command_target_distance' type Double value 1.0},
+          Parameter { name 'map_service' type String value 'get_map'},
+          Parameter { name 'localize_action_topic' type String value 'Localize'},
+          Parameter { name 'map_inflation_radius' type Double value 1.0},
+          Parameter { name 'robot_id' type Integer value 1},
+          Parameter { name 'navigation_homing_distance' type Double value 3.0}}}
+}}}

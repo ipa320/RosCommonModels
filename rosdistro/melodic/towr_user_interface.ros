@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage towr_ros {
+    FromGitRepo "https://github.com/ethz-adrl/towr.git" 
+    Artifact towr_user_interface {
+      Node { name towr_user_interface}
+}}}

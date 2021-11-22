@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage axis_camera {
+    FromGitRepo "https://github.com/ros-drivers/axis_camera.git" 
+    Artifact axis_ptz {
+      Node { name axis_ptz
+        Publishers {
+          Publisher { name 'state' message 'axis_camera.Axis'}}
+        Subscribers {
+          Subscriber { name 'cmd' message 'axis_camera.Axis'},
+          Subscriber { name 'mirror' message 'std_msgs.Bool'}}}
+}}}

@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage network_monitor_udp {
+    FromGitRepo "https://github.com/pr2/linux_networking.git" 
+    Artifact network_watchdog {
+      Node { name network_watchdog
+        Publishers {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Subscribers {
+          Subscriber { name '?' message '?'}}}
+}}}

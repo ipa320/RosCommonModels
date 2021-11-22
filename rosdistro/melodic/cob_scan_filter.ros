@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage cob_sick_s300 {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact cob_scan_filter {
+      Node { name cob_scan_filter
+        Publishers {
+          Publisher { name 'scan_out' message 'sensor_msgs.LaserScan'}}
+        Subscribers {
+          Subscriber { name 'scan_in' message 'sensor_msgs.LaserScan'}}}
+}}}

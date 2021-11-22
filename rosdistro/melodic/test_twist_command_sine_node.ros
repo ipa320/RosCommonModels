@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage cob_twist_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact test_twist_command_sine_node {
+      Node { name test_twist_command_sine_node
+        Publishers {
+          Publisher { name 'command' message 'geometry_msgs.Twist'}}}
+}}}

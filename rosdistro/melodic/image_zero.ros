@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage imagezero {
+    FromGitRepo "https://github.com/swri-robotics/imagezero_transport.git" 
+    Artifact image_zero {
+      Node { name image_zero}
+}}}

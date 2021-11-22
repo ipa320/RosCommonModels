@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage tf {
+    FromGitRepo "https://github.com/ros/geometry.git" 
+    Artifact tf_change_notifier {
+      Node { name tf_change_notifier
+        Publishers {
+          Publisher { name 'tf_changes' message 'tf.tfMessage'}}
+        Parameters {
+          Parameter { name 'angular_update_distance' type Double value 0.1},
+          Parameter { name '?' type String },
+          Parameter { name 'translational_update_distance' type Double value 0.1},
+          Parameter { name 'polling_frequency' type Double value 10.0}}}
+}}}

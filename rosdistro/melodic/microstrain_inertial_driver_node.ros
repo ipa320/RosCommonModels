@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage microstrain_inertial_driver {
+    FromGitRepo "https://github.com/LORD-MicroStrain/microstrain_inertial.git" 
+    Artifact microstrain_inertial_driver_node {
+      Node { name microstrain_inertial_driver_node}
+}}}

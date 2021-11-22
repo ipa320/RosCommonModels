@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage map_laser {
+    FromGitRepo "https://github.com/DLu/laser_filtering.git" 
+    Artifact filter {
+      Node { name filter
+        Publishers {
+          Publisher { name '/base_scan_filter' message 'sensor_msgs.LaserScan'}}
+        Subscribers {
+          Subscriber { name '/map' message 'nav_msgs.OccupancyGrid'},
+          Subscriber { name '/scan_filtered' message 'sensor_msgs.LaserScan'}}}
+}}}

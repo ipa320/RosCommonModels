@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage wireless_watcher {
+    FromGitRepo "https://github.com/clearpathrobotics/wireless.git" 
+    Artifact watcher_node {
+      Node { name watcher_node
+        Publishers {
+          Publisher { name 'connected' message '?'},
+          Publisher { name 'connection' message '?'}}}
+}}}

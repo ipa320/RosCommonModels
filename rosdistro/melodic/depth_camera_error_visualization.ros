@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage jsk_pcl_ros {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_recognition.git" 
+    Artifact depth_camera_error_visualization {
+      Node { name depth_camera_error_visualization}
+}}}

@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage laptop_battery_monitor {
+    FromGitRepo "https://github.com/ros-drivers/linux_peripheral_interfaces.git" 
+    Artifact laptop_battery {
+      Node { name laptop_battery
+        Publishers {
+          Publisher { name 'laptop_charge' message 'sensor_msgs.BatteryState'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}
+}}}

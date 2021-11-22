@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage geneus {
+    FromGitRepo "https://github.com/jsk-ros-pkg/geneus.git" 
+    Artifact gen_eus {
+      Node { name gen_eus}
+}}}

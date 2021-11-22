@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage tf {
+    FromGitRepo "https://github.com/ros/geometry.git" 
+    Artifact tf_echo {
+      Node { name tf_echo
+        Parameters {
+          Parameter { name '?' type String },
+          Parameter { name 'precision' type Integer },
+          Parameter { name 'rate' type Double value 1.0}}}
+}}}

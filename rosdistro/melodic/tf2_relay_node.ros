@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage tf2_relay {
+    FromGitRepo "https://github.com/clearpathrobotics/cpr_multimaster_tools.git" 
+    Artifact tf2_relay_node {
+      Node { name tf2_relay_node
+        Parameters {
+          Parameter { name 'parameter_namespace' type String },
+          Parameter { name '?' type Double }}}
+}}}

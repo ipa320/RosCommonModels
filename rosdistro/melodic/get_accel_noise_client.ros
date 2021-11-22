@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact get_accel_noise_client {
+      Node { name get_accel_noise_client
+        ServiceClients {
+          ServiceClient { name 'GetAccelNoise' service 'std_srvs.Trigger'}}}
+}}}

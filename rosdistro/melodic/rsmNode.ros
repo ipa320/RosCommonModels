@@ -1,0 +1,29 @@
+PackageSet {
+  CatkinPackage rsm_core {
+    FromGitRepo "https://github.com/MarcoStb1993/robot_statemachine.git" 
+    Artifact rsmNode {
+      Node { name rsmNode
+        ServiceServers {
+          ServiceServer { name 'stateInfo' service 'std_srvs.Trigger'},
+          ServiceServer { name 'stop2DNavGoal' service 'std_srvs.Trigger'},
+          ServiceServer { name 'startStopExploration' service 'std_srvs.SetBool'},
+          ServiceServer { name 'startStopWaypointFollowing' service 'std_srvs.SetBool'}}
+        ServiceClients {
+          ServiceClient { name 'getWaypoints' service 'rsm_msgs.GetWaypoints'},
+          ServiceClient { name 'setNavigationGoal' service 'rsm_msgs.SetNavigationGoal'},
+          ServiceClient { name 'resetWaypoints' service 'std_srvs.Trigger'},
+          ServiceClient { name 'bootUpFinished' service 'std_srvs.SetBool'},
+          ServiceClient { name 'setWaypointFollowingMode' service 'rsm_msgs.SetWaypointFollowingMode'},
+          ServiceClient { name 'setNavigationGoal' service 'rsm_msgs.SetNavigationGoal'},
+          ServiceClient { name 'waypointVisited' service 'rsm_msgs.WaypointVisited'}}
+        Publishers {
+          Publisher { name 'stateInfo' message 'std_msgs.String'}}
+        Subscribers {
+          Subscriber { name 'operationMode' message 'rsm_msgs.OperationMode'},
+          Subscriber { name 'simpleGoal' message 'geometry_msgs.PoseStamped'}}
+        Parameters {
+          Parameter { name 'navigation_plugin' type String value 'rsm::NavigationState'},
+          Parameter { name 'mapping_plugin' type String value 'rsm::MappingDummyState'},
+          Parameter { name 'update_frequency' type Double value 20.0},
+          Parameter { name 'calculate_goal_plugin' type String value 'rsm::CalculateGoalState'}}}
+}}}

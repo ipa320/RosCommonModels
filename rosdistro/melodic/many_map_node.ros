@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage global_planner_tests {
+    FromGitRepo "https://github.com/locusrobotics/robot_navigation.git" 
+    Artifact many_map_node {
+      Node { name many_map_node
+        Parameters {
+          Parameter { name 'global_planner' type String value 'dlux_global_planner::DluxGlobalPlanner'}}}
+}}}

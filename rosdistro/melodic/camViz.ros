@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage jderobot_camviz {
+    FromGitRepo "https://github.com/JdeRobot/CamViz.git" 
+    Artifact camViz {
+      Node { name camViz}
+}}}

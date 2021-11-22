@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage openslam_gmapping {
+    FromGitRepo "https://github.com/ros-perception/openslam_gmapping.git" 
+    Artifact log_plot {
+      Node { name log_plot}
+}}}

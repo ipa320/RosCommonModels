@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage uuv_assistants {
+    FromGitRepo "https://github.com/uuvsimulator/uuv_simulator.git" 
+    Artifact set_simulation_timer {
+      Node { name set_simulation_timer}
+}}}

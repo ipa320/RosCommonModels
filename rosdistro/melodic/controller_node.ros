@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage omnibase_control {
+    FromGitRepo "https://github.com/ERC-BPGC/omnibase.git" 
+    Artifact controller_node {
+      Node { name controller_node}
+}}}

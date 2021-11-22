@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage toposens_pointcloud {
+    FromGitRepo "https://gitlab.com/toposens/public/ros-packages.git" 
+    Artifact toposens_pointcloud_node {
+      Node { name toposens_pointcloud_node}
+}}}

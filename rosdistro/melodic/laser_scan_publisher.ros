@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage laser_scan_publisher_tutorial {
+    FromGitRepo "https://github.com/ros-planning/navigation_tutorials.git" 
+    Artifact laser_scan_publisher {
+      Node { name laser_scan_publisher
+        Publishers {
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}}
+}}}

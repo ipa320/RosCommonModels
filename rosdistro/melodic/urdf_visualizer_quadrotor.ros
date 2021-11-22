@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage xpp_quadrotor {
+    FromGitRepo "https://github.com/leggedrobotics/xpp.git" 
+    Artifact urdf_visualizer_quadrotor {
+      Node { name urdf_visualizer_quadrotor
+        Publishers {
+          Publisher { name 'xpp/joint_quadrotor_des' message 'xpp_msgs.RobotStateJoint'}}
+        Subscribers {
+          Subscriber { name '/xpp/state_des' message 'xpp_msgs.RobotStateCartesian'}}}
+}}}

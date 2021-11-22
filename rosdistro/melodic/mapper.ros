@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage nav2d_karto {
+    FromGitRepo "https://github.com/skasperski/navigation_2d.git" 
+    Artifact mapper {
+      Node { name mapper}
+}}}

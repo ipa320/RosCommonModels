@@ -1,0 +1,41 @@
+PackageSet {
+  CatkinPackage heifu_mavros {
+    FromGitRepo "https://gitlab.pdmfc.com/drones/ros1/heifu.git" 
+    Artifact heifu_mavros_node {
+      Node { name heifu_mavros_node
+        ServiceClients {
+          ServiceClient { name '?' service 'mavros_msgs.CommandBool'},
+          ServiceClient { name '?' service 'mavros_msgs.CommandTOL'},
+          ServiceClient { name '?' service 'mavros_msgs.SetMode'}}
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.PoseStamped'},
+          Publisher { name '?' message 'geometry_msgs.Twist'},
+          Publisher { name '?' message 'std_msgs.Int8'},
+          Publisher { name '?' message 'std_msgs.Bool'},
+          Publisher { name '?' message 'geometry_msgs.Pose'},
+          Publisher { name '?' message 'geometry_msgs.TwistStamped'},
+          Publisher { name '?' message 'std_msgs.Bool'},
+          Publisher { name '?' message 'geometry_msgs.Twist'},
+          Publisher { name '?' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name '?' message 'std_msgs.Empty'},
+          Subscriber { name '?' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name '?' message 'std_msgs.Empty'},
+          Subscriber { name '?' message 'geometry_msgs.Twist'},
+          Subscriber { name '?' message 'std_msgs.Empty'},
+          Subscriber { name '?' message 'std_msgs.Empty'},
+          Subscriber { name '?' message 'geometry_msgs.Twist'},
+          Subscriber { name '?' message 'geographic_msgs.GeoPose'},
+          Subscriber { name '?' message 'geometry_msgs.Twist'},
+          Subscriber { name '?' message 'geometry_msgs.Twist'},
+          Subscriber { name '?' message 'std_msgs.Empty'},
+          Subscriber { name '?' message 'std_msgs.Empty'},
+          Subscriber { name '?' message 'geometry_msgs.Twist'},
+          Subscriber { name '?' message 'std_msgs.Empty'}}
+        Parameters {
+          Parameter { name 'paramTakeOffThreshold' type Double value 0.3},
+          Parameter { name 'paramSourceFrame' type String value 'odom'},
+          Parameter { name 'paramTargetFrame' type String value 'base_link'},
+          Parameter { name 'paramTakeOffAltitude' type Double value 10.0},
+          Parameter { name 'paramNodeRate' type Double value 100.0}}}
+}}}

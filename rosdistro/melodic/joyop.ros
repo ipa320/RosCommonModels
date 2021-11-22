@@ -1,0 +1,22 @@
+PackageSet {
+  CatkinPackage yocs_joyop {
+    FromGitRepo "https://github.com/yujinrobot/yujin_ocs.git" 
+    Artifact joyop {
+      Node { name joyop
+        Publishers {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'},
+          Publisher { name 'enable' message 'std_msgs.String'},
+          Publisher { name 'disable' message 'std_msgs.String'}}
+        Subscribers {
+          Subscriber { name 'joy' message 'sensor_msgs.Joy'}}
+        Parameters {
+          Parameter { name 'wait_for_connection' type Integer value -1},
+          Parameter { name 'linear_scale' type Double value 0.3},
+          Parameter { name 'disable_button' type Integer value 1},
+          Parameter { name 'angular_scale' type Double value 0.9},
+          Parameter { name 'angular_axis' type Integer },
+          Parameter { name 'linear_axis' type Integer value 1},
+          Parameter { name 'deadman_button' type Integer value 4},
+          Parameter { name 'spin_frequency' type Double value 10},
+          Parameter { name 'enable_button' type Integer }}}
+}}}

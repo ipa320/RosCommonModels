@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage epos2_motor_controller {
+    FromGitRepo "https://github.com/uos/epos2_motor_controller.git" 
+    Artifact test_epos2 {
+      Node { name test_epos2}
+}}}

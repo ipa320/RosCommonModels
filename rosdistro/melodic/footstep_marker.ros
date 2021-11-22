@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage jsk_footstep_planner {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_control.git" 
+    Artifact footstep_marker {
+      Node { name footstep_marker}
+}}}

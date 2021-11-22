@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage jsk_pcl_ros {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_recognition.git" 
+    Artifact bench_ransac_plane_estimation {
+      Node { name bench_ransac_plane_estimation}
+}}}

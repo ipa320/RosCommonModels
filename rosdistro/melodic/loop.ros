@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage turtlebot3_panorama {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_applications.git" 
+    Artifact loop {
+      Node { name loop}
+}}}

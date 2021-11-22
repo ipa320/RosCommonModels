@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage robot_localization {
+    FromGitRepo "https://github.com/cra-ros-pkg/robot_localization.git" 
+    Artifact ukf_localization_node {
+      Node { name ukf_localization_node
+        Parameters {
+          Parameter { name 'alpha' type Double value 0.001},
+          Parameter { name 'kappa' type Double },
+          Parameter { name 'beta' type Double value 2.0}}}
+}}}

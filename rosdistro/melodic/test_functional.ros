@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rr_control_input_manager {
+    FromGitRepo "https://github.com/RoverRobotics/rr_openrover_stack.git" 
+    Artifact test_functional {
+      Node { name test_functional}
+}}}

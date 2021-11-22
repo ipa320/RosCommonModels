@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage abb_driver {
+    FromGitRepo "https://github.com/ros-industrial/abb_driver.git" 
+    Artifact motion_download_interface {
+      Node { name motion_download_interface}
+}}}

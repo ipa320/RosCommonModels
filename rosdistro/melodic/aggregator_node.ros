@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage diagnostic_aggregator {
+    FromGitRepo "https://github.com/ros/diagnostics.git" 
+    Artifact aggregator_node {
+      Node { name aggregator_node}
+}}}

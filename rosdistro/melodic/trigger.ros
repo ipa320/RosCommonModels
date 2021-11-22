@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage remote_rosbag_record {
+    FromGitRepo "https://github.com/yoshito-n-students/remote_rosbag_record.git" 
+    Artifact trigger {
+      Node { name trigger
+        Parameters {
+          Parameter { name '~verbose' type Boolean value true}}}
+}}}

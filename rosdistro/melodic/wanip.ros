@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage wifi_ddwrt {
+    FromGitRepo "https://github.com/ros-drivers/wifi_ddwrt.git" 
+    Artifact wanip {
+      Node { name wanip}
+}}}

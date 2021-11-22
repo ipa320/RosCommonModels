@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rqt_controller_manager {
+    FromGitRepo "https://github.com/ros-controls/ros_control.git" 
+    Artifact rqt_controller_manager {
+      Node { name rqt_controller_manager}
+}}}

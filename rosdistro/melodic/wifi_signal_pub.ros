@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rtabmap_ros {
+    FromGitRepo "https://github.com/introlab/rtabmap_ros.git" 
+    Artifact wifi_signal_pub {
+      Node { name wifi_signal_pub
+        Publishers {
+          Publisher { name 'wifi_signal' message 'rtabmap_ros.UserData'}}}
+}}}

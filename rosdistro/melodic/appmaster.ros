@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage app_manager {
+    FromGitRepo "https://github.com/pr2/app_manager.git" 
+    Artifact appmaster {
+      Node { name appmaster}
+}}}

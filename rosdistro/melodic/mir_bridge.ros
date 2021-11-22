@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage mir_driver {
+    FromGitRepo "https://github.com/dfki-ric/mir_robot.git" 
+    Artifact mir_bridge {
+      Node { name mir_bridge
+        Subscribers {
+          Subscriber { name 'move_base_simple/goal' message '?'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage freenect_camera {
+    FromGitRepo "https://github.com/ros-drivers/freenect_stack.git" 
+    Artifact freenect_node {
+      Node { name freenect_node}
+}}}

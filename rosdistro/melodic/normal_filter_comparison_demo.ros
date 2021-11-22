@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage grid_map_demos {
+    FromGitRepo "https://github.com/anybotics/grid_map.git" 
+    Artifact normal_filter_comparison_demo {
+      Node { name normal_filter_comparison_demo}
+}}}

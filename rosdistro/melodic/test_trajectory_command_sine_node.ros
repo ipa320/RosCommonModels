@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage cob_twist_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact test_trajectory_command_sine_node {
+      Node { name test_trajectory_command_sine_node
+        Publishers {
+          Publisher { name 'joint_trajectory_controller/command' message 'trajectory_msgs.JointTrajectory'},
+          Publisher { name 'integrator_debug/q' message 'std_msgs.Float64'},
+          Publisher { name 'integrator_debug/derived_simpson_q_dot' message 'std_msgs.Float64'},
+          Publisher { name 'integrator_debug/simpson_q' message 'std_msgs.Float64'},
+          Publisher { name 'integrator_debug/q_dot' message 'std_msgs.Float64'},
+          Publisher { name 'integrator_debug/euler_q' message 'std_msgs.Float64'}}}
+}}}

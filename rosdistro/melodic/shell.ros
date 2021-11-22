@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage clover {
+    FromGitRepo "https://github.com/CopterExpress/clover.git" 
+    Artifact shell {
+      Node { name shell}
+}}}

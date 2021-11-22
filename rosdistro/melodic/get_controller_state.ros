@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage robot_controllers_interface {
+    FromGitRepo "https://github.com/fetchrobotics/robot_controllers.git" 
+    Artifact get_controller_state {
+      Node { name get_controller_state}
+}}}

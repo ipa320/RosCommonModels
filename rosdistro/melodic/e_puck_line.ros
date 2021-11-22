@@ -1,0 +1,20 @@
+PackageSet {
+  CatkinPackage webots_ros {
+    FromGitRepo "https://github.com/cyberbotics/webots_ros.git" 
+    Artifact e_puck_line {
+      Node { name e_puck_line
+        ServiceClients {
+          ServiceClient { name '?' service 'webots_ros.set_int'},
+          ServiceClient { name '?' service 'webots_ros.set_int'},
+          ServiceClient { name '?' service 'webots_ros.set_float'},
+          ServiceClient { name '?' service 'webots_ros.set_int'},
+          ServiceClient { name '?' service 'webots_ros.set_int'},
+          ServiceClient { name '?' service 'webots_ros.set_float'},
+          ServiceClient { name '?' service 'webots_ros.set_float'},
+          ServiceClient { name '?' service 'webots_ros.set_float'},
+          ServiceClient { name '?' service 'webots_ros.set_int'}}
+        Subscribers {
+          Subscriber { name 'model_name' message 'std_msgs.String'},
+          Subscriber { name '?' message 'sensor_msgs.Range'},
+          Subscriber { name '?' message 'sensor_msgs.Range'}}}
+}}}

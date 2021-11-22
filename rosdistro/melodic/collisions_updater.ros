@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage moveit_setup_assistant {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact collisions_updater {
+      Node { name collisions_updater}
+}}}

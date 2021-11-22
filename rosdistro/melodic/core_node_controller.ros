@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage turtlebot3_autorace_core {
+    FromGitRepo "https://github.com/ROBOTIS-GIT/turtlebot3_autorace.git" 
+    Artifact core_node_controller {
+      Node { name core_node_controller
+        Publishers {
+          Publisher { name '/detect/traffic_light_order' message 'std_msgs.UInt8'},
+          Publisher { name '/core/returned_mode' message 'std_msgs.UInt8'},
+          Publisher { name '/detect/parking_lot_order' message 'std_msgs.UInt8'},
+          Publisher { name '/detect/tunnel_order' message 'std_msgs.UInt8'},
+          Publisher { name '/detect/level_crossing_order' message 'std_msgs.UInt8'}}
+        Subscribers {
+          Subscriber { name '/core/decided_mode' message 'std_msgs.UInt8'},
+          Subscriber { name '/detect/tunnel_stamped' message 'std_msgs.UInt8'},
+          Subscriber { name '/detect/level_crossing_stamped' message 'std_msgs.UInt8'},
+          Subscriber { name '/detect/parking_lot_stamped' message 'std_msgs.UInt8'}}}
+}}}

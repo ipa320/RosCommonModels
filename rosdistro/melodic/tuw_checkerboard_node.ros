@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage tuw_checkerboard {
+    FromGitRepo "https://github.com/tuw-robotics/tuw_marker_detection.git" 
+    Artifact tuw_checkerboard_node {
+      Node { name tuw_checkerboard_node
+        Publishers {
+          Publisher { name 'pose' message 'geometry_msgs.PoseStamped'},
+          Publisher { name 'markers' message 'marker_msgs.MarkerDetection'},
+          Publisher { name 'fiducials' message 'marker_msgs.FiducialDetection'}}
+        Parameters {
+          Parameter { name 'frame_id' type String value 'checkerboard'}}}
+}}}

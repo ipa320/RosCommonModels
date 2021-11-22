@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact set_hard_iron_values_client {
+      Node { name set_hard_iron_values_client
+        ServiceClients {
+          ServiceClient { name 'SetHardIronValues' service 'microstrain_mips.SetHardIronValues'}}}
+}}}

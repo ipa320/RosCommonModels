@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage moveit_servo {
+    FromGitRepo "https://github.com/ros-planning/moveit.git" 
+    Artifact spacenav_to_twist {
+      Node { name spacenav_to_twist
+        Publishers {
+          Publisher { name 'servo_server/delta_joint_cmds' message 'control_msgs.JointJog'},
+          Publisher { name 'servo_server/delta_twist_cmds' message 'geometry_msgs.TwistStamped'}}
+        Subscribers {
+          Subscriber { name 'spacenav/joy' message 'sensor_msgs.Joy'}}}
+}}}

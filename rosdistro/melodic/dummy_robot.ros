@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage planner_cspace {
+    FromGitRepo "https://github.com/at-wat/neonavigation.git" 
+    Artifact dummy_robot {
+      Node { name dummy_robot
+        Publishers {
+          Publisher { name 'odom' message 'nav_msgs.Odometry'}}
+        Subscribers {
+          Subscriber { name 'cmd_vel' message 'geometry_msgs.Twist'},
+          Subscriber { name 'initialpose' message 'geometry_msgs.PoseWithCovarianceStamped'}}
+        Parameters {
+          Parameter { name 'neonavigation_compatible' type Integer },
+          Parameter { name 'initial_y' type Double },
+          Parameter { name 'initial_yaw' type Double },
+          Parameter { name 'initial_x' type Double }}}
+}}}

@@ -1,0 +1,20 @@
+PackageSet {
+  CatkinPackage md49_base_controller {
+    FromGitRepo "https://github.com/Scheik/md49_base_controller.git" 
+    Artifact md49_base_controller {
+      Node { name md49_base_controller
+        Publishers {
+          Publisher { name 'md49_data' message 'md49_messages.md49_data'},
+          Publisher { name 'md49_encoders' message 'md49_messages.md49_encoders'}}
+        Subscribers {
+          Subscriber { name '/cmd_vel' message 'geometry_msgs.Twist'}}
+        Parameters {
+          Parameter { name 'md49/speed_r' type Integer value 128},
+          Parameter { name 'md49/acceleration' type Integer value 5},
+          Parameter { name 'md49/mode' type Integer },
+          Parameter { name 'serialport/bps' type Integer value 38400},
+          Parameter { name 'md49/regulator' type Boolean value true},
+          Parameter { name 'serialport/name' type String value '/dev/ttyS0'},
+          Parameter { name 'md49/timeout' type Boolean value true},
+          Parameter { name 'md49/speed_l' type Integer value 128}}}
+}}}

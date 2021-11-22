@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage ainstein_radar_filters {
+    FromGitRepo "https://github.com/AinsteinAI/ainstein_radar.git" 
+    Artifact tracking_filter_node {
+      Node { name tracking_filter_node
+        Publishers {
+          Publisher { name 'tracked' message 'ainstein_radar_msgs.RadarTargetArray'},
+          Publisher { name 'boxes' message 'ainstein_radar_msgs.BoundingBoxArray'}}
+        Subscribers {
+          Subscriber { name 'cloud_in' message 'sensor_msgs.PointCloud2'},
+          Subscriber { name 'radar_in' message 'ainstein_radar_msgs.RadarTargetArray'}}
+        Parameters {
+          Parameter { name 'publish_freq' type Double value 20.0},
+          Parameter { name 'use_speed_filter' type Boolean },
+          Parameter { name 'filter_speed_diff' type Double value 1.0}}}
+}}}

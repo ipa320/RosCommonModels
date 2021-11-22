@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage tf2_ros {
+    FromGitRepo "https://github.com/ros/geometry2.git" 
+    Artifact static_transform_publisher {
+      Node { name static_transform_publisher}
+}}}

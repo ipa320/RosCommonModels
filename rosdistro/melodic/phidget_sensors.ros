@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage cob_phidgets {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact phidget_sensors {
+      Node { name phidget_sensors
+        ServiceServers {
+          ServiceServer { name 'set_trigger_value' service '?'},
+          ServiceServer { name 'set_digital' service '?'},
+          ServiceServer { name 'set_data_rate' service '?'}}
+        Publishers {
+          Publisher { name 'analog_sensors' message 'cob_phidgets.AnalogSensor'},
+          Publisher { name 'digital_sensors' message 'cob_phidgets.DigitalSensor'}}
+        Subscribers {
+          Subscriber { name 'set_digital_sensor' message '?'}}
+        Parameters {
+          Parameter { name 'frequency' type Integer value 30},
+          Parameter { name 'update_mode' type String value 'polling'}}}
+}}}

@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage mrpt_bridge {
+    FromGitRepo "https://github.com/mrpt-ros-pkg/mrpt_bridge.git" 
+    Artifact test_Bridge {
+      Node { name test_Bridge
+        Publishers {
+          Publisher { name 'image_publisher' message 'sensor_msgs.Image'},
+          Publisher { name 'imu_publisher' message 'sensor_msgs.Imu'},
+          Publisher { name '?' message 'sensor_msgs.Range'},
+          Publisher { name 'left_image_publisher' message 'sensor_msgs.Image'},
+          Publisher { name 'navSatFix_publisher' message 'sensor_msgs.NavSatFix'},
+          Publisher { name 'right_image_publisher' message 'sensor_msgs.Image'}}}
+}}}

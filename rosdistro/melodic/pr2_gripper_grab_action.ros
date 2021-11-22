@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage pr2_gripper_sensor_action {
+    FromGitRepo "https://github.com/PR2/pr2_gripper_sensor.git" 
+    Artifact pr2_gripper_grab_action {
+      Node { name pr2_gripper_grab_action
+        ActionServers {
+          ActionServer { name 'grab' action 'pr2_gripper_sensor_msgs.PR2GripperGrabAction'}}
+        Parameters {
+          Parameter { name 'position_open' type Double },
+          Parameter { name 'close_speed' type Double },
+          Parameter { name 'fingertip_force_limit' type Double }}}
+}}}

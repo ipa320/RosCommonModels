@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage mrpt_graphslam_2d {
+    FromGitRepo "https://github.com/mrpt-ros-pkg/mrpt_slam.git" 
+    Artifact map_merger_node {
+      Node { name map_merger_node
+        ServiceClients {
+          ServiceClient { name '/master_discovery/list_masters' service 'multimaster_msgs_fkie.DiscoverMasters'}}
+        Subscribers {
+          Subscriber { name '?' message 'nav_msgs.OccupancyGrid'},
+          Subscriber { name '?' message 'nav_msgs.Path'}}}
+}}}

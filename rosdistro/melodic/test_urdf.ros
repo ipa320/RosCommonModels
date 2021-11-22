@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage cob_description {
+    FromGitRepo "https://github.com/ipa320/cob_common.git" 
+    Artifact test_urdf {
+      Node { name test_urdf}
+}}}

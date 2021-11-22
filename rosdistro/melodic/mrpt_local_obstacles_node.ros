@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage mrpt_local_obstacles {
+    FromGitRepo "https://github.com/mrpt-ros-pkg/mrpt_navigation.git" 
+    Artifact mrpt_local_obstacles_node {
+      Node { name mrpt_local_obstacles_node
+        Publishers {
+          Publisher { name 'local_map_pointcloud' message 'sensor_msgs.PointCloud'}}
+        Parameters {
+          Parameter { name 'frameid_reference' type String value 'odom'},
+          Parameter { name 'show_gui' type Boolean value true},
+          Parameter { name 'publish_period' type Double value 0.05},
+          Parameter { name 'frameid_robot' type String value 'base_link'},
+          Parameter { name 'topic_local_map_pointcloud' type String value 'local_map_pointcloud'},
+          Parameter { name 'time_window' type Double value 0.2},
+          Parameter { name 'source_topics_2dscan' type String value 'scan,laser1'}}}
+}}}

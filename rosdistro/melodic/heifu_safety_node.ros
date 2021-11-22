@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage heifu_safety {
+    FromGitRepo "https://gitlab.pdmfc.com/drones/ros1/heifu.git" 
+    Artifact heifu_safety_node {
+      Node { name heifu_safety_node
+        ServiceServers {
+          ServiceServer { name '?' service 'heifu_msgs.EnableSafety'}}
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.Twist'}}
+        Subscribers {
+          Subscriber { name '?' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name '?' message 'geometry_msgs.Twist'}}}
+}}}

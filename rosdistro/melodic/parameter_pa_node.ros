@@ -1,0 +1,9 @@
+PackageSet {
+  CatkinPackage parameter_pa {
+    FromGitRepo "https://github.com/tuc-proaut/ros_parameter.git" 
+    Artifact parameter_pa_node {
+      Node { name parameter_pa_node
+        ServiceServers {
+          ServiceServer { name '?' service 'parameter_pa.ParameterPaString'},
+          ServiceServer { name '?' service 'parameter_pa.ParameterPaString'}}}
+}}}

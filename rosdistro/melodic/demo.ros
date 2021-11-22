@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rviz_visual_tools {
+    FromGitRepo "https://github.com/PickNikRobotics/rviz_visual_tools.git" 
+    Artifact demo {
+      Node { name demo}
+}}}

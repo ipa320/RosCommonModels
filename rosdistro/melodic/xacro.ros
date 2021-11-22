@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage xacro {
+    FromGitRepo "https://github.com/ros/xacro.git" 
+    Artifact xacro {
+      Node { name xacro}
+}}}

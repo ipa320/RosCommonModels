@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage moose_gazebo {
+    FromGitRepo "https://github.com/moose-cpr/moose_simulator.git" 
+    Artifact dummy_keyswitch {
+      Node { name dummy_keyswitch
+        Publishers {
+          Publisher { name '/teleop/manned' message 'std_msgs.Bool'},
+          Publisher { name '/teleop/unmanned' message 'std_msgs.Bool'}}
+        Subscribers {
+          Subscriber { name 'set_unmanned' message 'std_msgs.Bool'}}}
+}}}

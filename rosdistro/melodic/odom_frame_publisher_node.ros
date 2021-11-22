@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage odom_frame_publisher {
+    FromGitRepo "https://github.com/OUXT-Polaris/odom_frame_publisher.git" 
+    Artifact odom_frame_publisher_node {
+      Node { name odom_frame_publisher_node
+        Publishers {
+          Publisher { name 'odom_pose' message 'geometry_msgs.PoseStamped'}}
+        Subscribers {
+          Subscriber { name '?' message 'geometry_msgs.TwistStamped'},
+          Subscriber { name '?' message 'geometry_msgs.PoseStamped'}}
+        Parameters {
+          Parameter { name 'current_pose_topic' type String value 'current_pose'},
+          Parameter { name 'map_frame_id' type String value 'map'},
+          Parameter { name 'robot_frame_id' type String value 'base_link'},
+          Parameter { name 'current_twist_topic' type String value 'current_twist'},
+          Parameter { name 'odom_frame_id' type String value 'odom'}}}
+}}}

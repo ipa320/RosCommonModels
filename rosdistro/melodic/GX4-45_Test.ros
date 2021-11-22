@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact GX4-45_Test {
+      Node { name GX4-45_Test}
+}}}

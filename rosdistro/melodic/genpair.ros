@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage rocon_service_pair_msgs {
+    FromGitRepo "https://github.com/robotics-in-concert/rocon_msgs.git" 
+    Artifact genpair {
+      Node { name genpair}
+}}}

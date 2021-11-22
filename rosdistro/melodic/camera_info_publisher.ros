@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage jsk_interactive_marker {
+    FromGitRepo "https://github.com/jsk-ros-pkg/jsk_visualization.git" 
+    Artifact camera_info_publisher {
+      Node { name camera_info_publisher
+        Publishers {
+          Publisher { name 'camera_info' message 'sensor_msgs.CameraInfo'}}
+        Subscribers {
+          Subscriber { name 'input' message 'sensor_msgs.Image'},
+          Subscriber { name 'input' message 'sensor_msgs.PointCloud2'}}
+        Parameters {
+          Parameter { name 'sync_image' type Boolean },
+          Parameter { name 'static_rate' type Double value 30.0},
+          Parameter { name 'parent_frame_id' type String },
+          Parameter { name 'yaml_filename' type String },
+          Parameter { name 'frame_id' type String },
+          Parameter { name 'sync_pointcloud' type Boolean }}}
+}}}

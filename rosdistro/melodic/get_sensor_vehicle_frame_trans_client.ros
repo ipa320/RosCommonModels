@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage microstrain_mips {
+    FromGitRepo "https://github.com/ros-drivers/microstrain_mips.git" 
+    Artifact get_sensor_vehicle_frame_trans_client {
+      Node { name get_sensor_vehicle_frame_trans_client
+        ServiceClients {
+          ServiceClient { name 'GetSensorVehicleFrameTrans' service 'std_srvs.Trigger'}}}
+}}}

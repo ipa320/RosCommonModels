@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage simple_grasping {
+    FromGitRepo "https://github.com/mikeferguson/simple_grasping.git" 
+    Artifact grasp_planner_node {
+      Node { name grasp_planner_node
+        ActionServers {
+          ActionServer { name 'plan' action 'grasping_msgs.GraspPlanningAction'}}}
+}}}

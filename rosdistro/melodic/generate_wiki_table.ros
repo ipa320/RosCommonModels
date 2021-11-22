@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ieee80211_channels {
+    FromGitRepo "https://github.com/pr2/linux_networking.git" 
+    Artifact generate_wiki_table {
+      Node { name generate_wiki_table}
+}}}

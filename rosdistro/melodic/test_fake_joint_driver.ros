@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage fake_joint_driver {
+    FromGitRepo "https://github.com/tork-a/fake_joint.git" 
+    Artifact test_fake_joint_driver {
+      Node { name test_fake_joint_driver
+        Publishers {
+          Publisher { name 'joint_trajectory_controller/command' message 'trajectory_msgs.JointTrajectory'}}
+        Subscribers {
+          Subscriber { name 'joint_states' message 'sensor_msgs.JointState'}}}
+}}}

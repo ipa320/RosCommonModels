@@ -1,0 +1,18 @@
+PackageSet {
+  CatkinPackage cob_sick_lms1xx {
+    FromGitRepo "https://github.com/ipa320/cob_driver.git" 
+    Artifact lms100 {
+      Node { name lms100
+        Publishers {
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Parameters {
+          Parameter { name 'scan_frequency' type Double value 25},
+          Parameter { name 'inverted' type Boolean },
+          Parameter { name 'frame_id' type String value 'base_laser_link'},
+          Parameter { name 'host' type String value '192.168.1.2'},
+          Parameter { name 'max_range' type Double value 20.0},
+          Parameter { name 'set_config' type Boolean },
+          Parameter { name 'min_range' type Double value 0.01},
+          Parameter { name 'angle_resolution' type Double value 0.5}}}
+}}}

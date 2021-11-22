@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage omron_os32c_driver {
+    FromGitRepo "https://github.com/ros-drivers/omron.git" 
+    Artifact scanner_node {
+      Node { name scanner_node}
+}}}

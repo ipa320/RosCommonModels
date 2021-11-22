@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage uwsim {
+    FromGitRepo "https://github.com/uji-ros-pkg/underwater_simulation.git" 
+    Artifact setVehicleVelocity {
+      Node { name setVehicleVelocity
+        Publishers {
+          Publisher { name '?' message 'nav_msgs.Odometry'}}}
+}}}

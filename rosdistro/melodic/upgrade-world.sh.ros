@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage stage_ros {
+    FromGitRepo "https://github.com/ros-simulation/stage_ros.git" 
+    Artifact upgrade-world.sh {
+      Node { name upgrade-world.sh}
+}}}

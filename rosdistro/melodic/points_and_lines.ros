@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage visualization_marker_tutorials {
+    FromGitRepo "https://github.com/ros-visualization/visualization_tutorials.git" 
+    Artifact points_and_lines {
+      Node { name points_and_lines
+        Publishers {
+          Publisher { name 'visualization_marker' message 'visualization_msgs.Marker'}}}
+}}}

@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage ps3joy {
+    FromGitRepo "https://github.com/ros-drivers/joystick_drivers.git" 
+    Artifact ps3joysim {
+      Node { name ps3joysim}
+}}}

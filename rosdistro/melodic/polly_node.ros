@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage tts {
+    FromGitRepo "https://github.com/aws-robotics/tts-ros1.git" 
+    Artifact polly_node {
+      Node { name polly_node}
+}}}

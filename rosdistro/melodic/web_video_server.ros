@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage web_video_server {
+    FromGitRepo "https://github.com/RobotWebTools/web_video_server.git" 
+    Artifact web_video_server {
+      Node { name web_video_server
+        Subscribers {
+          Subscriber { name '?' message 'sensor_msgs.CompressedImage'}}
+        Parameters {
+          Parameter { name 'ros_threads' type Integer value 2},
+          Parameter { name 'address' type String value '0.0.0.0'},
+          Parameter { name 'verbose' type Boolean value true},
+          Parameter { name 'port' type Integer value 8080},
+          Parameter { name 'server_threads' type Integer value 1},
+          Parameter { name 'publish_rate' type Double value -1.0},
+          Parameter { name 'default_stream_type' type String value 'mjpeg'}}}
+}}}

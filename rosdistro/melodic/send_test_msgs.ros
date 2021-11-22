@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage rviz_plugin_tutorials {
+    FromGitRepo "https://github.com/ros-visualization/visualization_tutorials.git" 
+    Artifact send_test_msgs {
+      Node { name send_test_msgs
+        Publishers {
+          Publisher { name '?' message 'sensor_msgs.Imu'}}}
+}}}

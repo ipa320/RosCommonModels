@@ -1,0 +1,6 @@
+PackageSet {
+  CatkinPackage pr2_gripper_sensor_action {
+    FromGitRepo "https://github.com/PR2/pr2_gripper_sensor.git" 
+    Artifact forceServoActionTest {
+      Node { name forceServoActionTest}
+}}}

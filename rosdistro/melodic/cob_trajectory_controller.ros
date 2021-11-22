@@ -1,0 +1,26 @@
+PackageSet {
+  CatkinPackage cob_trajectory_controller {
+    FromGitRepo "https://github.com/ipa320/cob_control.git" 
+    Artifact cob_trajectory_controller {
+      Node { name cob_trajectory_controller
+        ServiceServers {
+          ServiceServer { name 'driver/stop' service 'std_srvs.Trigger'},
+          ServiceServer { name 'driver/set_joint_velocity' service 'cob_srvs.SetFloat'},
+          ServiceServer { name 'driver/set_joint_acceleration' service 'cob_srvs.SetFloat'}}
+        ServiceClients {
+          ServiceClient { name 'driver/set_operation_mode' service 'cob_srvs.SetString'}}
+        Publishers {
+          Publisher { name 'joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'}}
+        Subscribers {
+          Subscriber { name 'joint_trajectory_controller/state' message 'control_msgs.JointTrajectoryControllerStatePtr'},
+          Subscriber { name 'driver/current_operationmode' message 'std_msgs.StringPtr'}}
+        ActionServers {
+          ActionServer { name 'joint_trajectory_controller/follow_joint_trajectory' action 'control_msgs.FollowJointTrajectoryAction'}}
+        Parameters {
+          Parameter { name 'operation_mode' type String },
+          Parameter { name 'overlap_time' type Double },
+          Parameter { name 'frequency' type Double },
+          Parameter { name 'ptp_vel' type Double },
+          Parameter { name 'ptp_acc' type Double },
+          Parameter { name 'max_error' type Double }}}
+}}}
