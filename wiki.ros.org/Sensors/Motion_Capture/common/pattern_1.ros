@@ -1,0 +1,7 @@
+PackageSet {
+  CatkinPackage pattern_1 {
+    Artifact pattern_1 {
+      Node { name pattern_1
+        Subscribers {
+          Subscriber { name 'leap_device' message 'leap_motion.Human'}}}
+}}}
