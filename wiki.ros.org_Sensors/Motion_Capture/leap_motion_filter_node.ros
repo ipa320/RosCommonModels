@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage leap_motion {
+    FromGitRepo "https://github.com/ros-drivers/leap_motion.git" 
+    Artifact leap_motion_filter_node {
+      Node { name leap_motion_filter_node
+        Publishers {
+          Publisher { name 'leap_filtered' message 'leap_motion.Human'}}
+        Subscribers {
+          Subscriber { name 'leap_device' message 'leap_motion.Human'}}
+        Parameters {
+          Parameter { name '/enable_filter' type Boolean },
+          Parameter { name '/filter_cutoff' type Double }}}
+}}}

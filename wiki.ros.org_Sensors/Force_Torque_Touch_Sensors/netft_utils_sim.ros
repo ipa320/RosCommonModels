@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage netft_utils {
+    FromGitRepo "https://github.com/UTNuclearRoboticsPublic/netft_utils.git" 
+    Artifact netft_utils_sim {
+      Node { name netft_utils_sim
+        ServiceServers {
+          ServiceServer { name 'start_sim' service 'netft_utils.StartSim'},
+          ServiceServer { name 'stop_sim' service 'netft_utils.StopSim'}}
+        Publishers {
+          Publisher { name 'netft_data' message 'geometry_msgs.WrenchStamped'}}}
+}}}

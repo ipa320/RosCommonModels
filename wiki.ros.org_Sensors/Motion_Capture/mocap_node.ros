@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage mocap_optitrack {
+    FromGitRepo "https://github.com/ros-drivers/mocap_optitrack.git" 
+    Artifact mocap_node {
+      Node { name mocap_node
+        Publishers {
+          Publisher { name '?' message 'geometry_msgs.PoseStamped'},
+          Publisher { name '?' message 'nav_msgs.Odometry'},
+          Publisher { name '?' message 'geometry_msgs.Pose2D'}}
+        Parameters {
+          Parameter { name 'optitrack_config/data_port' type Integer },
+          Parameter { name 'optitrack_config/command_port' type Integer },
+          Parameter { name 'optitrack_config/multicast_address' type String },
+          Parameter { name 'optitrack_config/enable_optitrack' type Boolean }}}
+}}}

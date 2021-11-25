@@ -1,0 +1,14 @@
+PackageSet {
+  CatkinPackage leap_motion {
+    FromGitRepo "https://github.com/ros-drivers/leap_motion.git" 
+    Artifact leap_motion_camera_node {
+      Node { name leap_motion_camera_node
+        Publishers {
+          Publisher { name 'image_raw' message 'sensor_msgs.Image'},
+          Publisher { name 'camera_info' message 'sensor_msgs.CameraInfo'},
+          Publisher { name 'camera_info' message 'sensor_msgs.CameraInfo'},
+          Publisher { name 'image_raw' message 'sensor_msgs.Image'}}
+        Parameters {
+          Parameter { name 'template_filename_left' type String },
+          Parameter { name 'template_filename_right' type String }}}
+}}}

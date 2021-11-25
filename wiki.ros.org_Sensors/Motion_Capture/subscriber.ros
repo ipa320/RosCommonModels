@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage leap_motion {
+    FromGitRepo "https://github.com/ros-drivers/leap_motion.git" 
+    Artifact subscriber {
+      Node { name subscriber
+        Subscribers {
+          Subscriber { name 'leapmotion/data' message 'leap_motion.leapros'}}}
+}}}

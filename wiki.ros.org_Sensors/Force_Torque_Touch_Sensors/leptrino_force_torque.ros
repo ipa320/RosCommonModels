@@ -1,0 +1,12 @@
+PackageSet {
+  CatkinPackage leptrino_force_torque {
+    FromGitRepo "https://github.com/hiveground-ros-package/leptrino_force_torque.git" 
+    Artifact leptrino_force_torque {
+      Node { name leptrino_force_torque
+        Publishers {
+          Publisher { name 'force_torque' message 'geometry_msgs.WrenchStamped'}}
+        Parameters {
+          Parameter { name 'com_port' type String },
+          Parameter { name 'frame_id' type String },
+          Parameter { name 'rate' type Integer }}}
+}}}

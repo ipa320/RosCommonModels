@@ -1,0 +1,21 @@
+PackageSet {
+  CatkinPackage netft_utils {
+    FromGitRepo "https://github.com/UTNuclearRoboticsPublic/netft_utils.git" 
+    Artifact netft_utils {
+      Node { name netft_utils
+        ServiceServers {
+          ServiceServer { name 'filter' service 'netft_utils.SetFilter'},
+          ServiceServer { name 'set_max_values' service 'netft_utils.SetMax'},
+          ServiceServer { name 'set_threshold' service 'netft_utils.SetThreshold'},
+          ServiceServer { name 'gravity_comp' service 'netft_utils.SetBias'},
+          ServiceServer { name 'bias' service 'netft_utils.SetBias'},
+          ServiceServer { name 'get_weight' service 'netft_utils.GetDouble'},
+          ServiceServer { name 'set_weight_bias' service 'netft_utils.SetBias'}}
+        Publishers {
+          Publisher { name 'cancel' message 'netft_utils.Cancel'},
+          Publisher { name 'transformed_world' message 'geometry_msgs.WrenchStamped'},
+          Publisher { name 'raw_world' message 'geometry_msgs.WrenchStamped'},
+          Publisher { name 'transformed_tool' message 'geometry_msgs.WrenchStamped'}}
+        Subscribers {
+          Subscriber { name 'netft_data' message 'geometry_msgs.WrenchStamped'}}}
+}}}

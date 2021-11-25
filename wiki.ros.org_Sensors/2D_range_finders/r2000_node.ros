@@ -1,0 +1,15 @@
+PackageSet {
+  CatkinPackage pepperl_fuchs_r2000 {
+    FromGitRepo "https://github.com/dillenberger/pepperl_fuchs.git" 
+    Artifact r2000_node {
+      Node { name r2000_node
+        Publishers {
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}
+        Subscribers {
+          Subscriber { name 'control_command' message 'std_msgs.String'}}
+        Parameters {
+          Parameter { name 'samples_per_scan' type Integer value 3600},
+          Parameter { name 'frame_id' type String value '/scan'},
+          Parameter { name 'scanner_ip' type String },
+          Parameter { name 'scan_frequency' type Integer value 35}}}
+}}}

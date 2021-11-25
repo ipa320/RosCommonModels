@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage dummy_slam_broadcaster {
+    FromGitRepo "https://github.com/dillenberger/pepperl_fuchs.git" 
+    Artifact dummy_slam_broadcaster_node {
+      Node { name dummy_slam_broadcaster_node
+        Publishers {
+          Publisher { name '/map' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name '/slam_out_pose' message 'geometry_msgs.PoseStamped'}}
+        Parameters {
+          Parameter { name 'broadcast_zero_pose_enabled' type Integer value 1}}}
+}}}
