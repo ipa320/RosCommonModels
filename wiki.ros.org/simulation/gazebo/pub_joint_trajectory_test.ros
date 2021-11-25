@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage gazebo_plugins {
+    FromGitRepo "https://github.com/ros-simulation/gazebo_ros_pkgs" 
+    Artifact pub_joint_trajectory_test {
+      Node { name pub_joint_trajectory_test
+        ServiceClients {
+          ServiceClient { name 'set_joint_trajectory' service 'gazebo_msgs.SetJointTrajectory'}}
+        Publishers {
+          Publisher { name 'set_joint_trajectory' message 'trajectory_msgs.JointTrajectory'}}}
+}}}
