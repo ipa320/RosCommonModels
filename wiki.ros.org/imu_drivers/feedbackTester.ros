@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage wiimote {
+    FromGitRepo "https://github.com/ros-drivers/joystick_drivers.git" 
+    Artifact feedbackTester {
+      Node { name feedbackTester
+        Publishers {
+          Publisher { name '/joy/set_feedback' message 'sensor_msgs.JoyFeedbackArray'}}}
+}}}

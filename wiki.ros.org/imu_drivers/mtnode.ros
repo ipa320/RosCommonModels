@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage xsens_driver {
+    FromGitRepo "https://github.com/ethz-asl/ethzasl_xsens_driver.git" 
+    Artifact mtnode {
+      Node { name mtnode
+        Publishers {
+          Publisher { name 'imu_data_str' message 'std_msgs.String'}}}
+}}}
