@@ -1,0 +1,17 @@
+PackageSet {
+  CatkinPackage uvc_camera {
+    FromGitRepo "https://github.com/dilipkumar25/see3cam" 
+    Artifact tara_node {
+      Node { name tara_node
+        Parameters {
+          Parameter { name 'device' type String },
+          Parameter { name 'time_topic' type String },
+          Parameter { name 'cameraRight_info_url' type String },
+          Parameter { name 'exposureValue' type Integer },
+          Parameter { name 'height' type Integer },
+          Parameter { name 'cameraLeft_info_url' type String },
+          Parameter { name 'fps' type Integer },
+          Parameter { name 'width' type Integer },
+          Parameter { name 'skip_frames' type Integer },
+          Parameter { name 'frame_id' type String }}}
+}}}

@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage sick_visionary_t_driver {
+    FromGitRepo "https://github.com/SICKAG/sick_visionary_t.git" 
+    Artifact sick_visionary_t_driver_node {
+      Node { name sick_visionary_t_driver_node
+        Publishers {
+          Publisher { name 'points' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'camera_info' message 'sensor_msgs.CameraInfo'},
+          Publisher { name 'ios' message 'std_msgs.ByteMultiArray'}}}
+}}}
