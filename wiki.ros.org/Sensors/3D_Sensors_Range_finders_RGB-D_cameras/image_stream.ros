@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage ensenso_camera {
+    FromGitRepo "https://github.com/ensenso/ros_driver.git" 
+    Artifact image_stream {
+      Node { name image_stream
+        Publishers {
+          Publisher { name 'image' message 'sensor_msgs.Image'}}}
+}}}

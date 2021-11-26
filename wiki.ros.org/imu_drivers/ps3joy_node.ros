@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage ps3joy {
+    FromGitRepo "https://github.com/ros-drivers/joystick_drivers.git" 
+    Artifact ps3joy_node {
+      Node { name ps3joy_node
+        Publishers {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        Subscribers {
+          Subscriber { name 'joy/set_feedback' message '?'}}}
+}}}

@@ -1,0 +1,8 @@
+PackageSet {
+  CatkinPackage ensenso_camera {
+    FromGitRepo "https://github.com/ensenso/ros_driver.git" 
+    Artifact pattern_marker {
+      Node { name pattern_marker
+        Publishers {
+          Publisher { name 'pattern_marker' message 'visualization_msgs.Marker'}}}
+}}}

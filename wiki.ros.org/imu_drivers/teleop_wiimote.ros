@@ -1,0 +1,28 @@
+PackageSet {
+  CatkinPackage wiimote {
+    FromGitRepo "https://github.com/ros-drivers/joystick_drivers.git" 
+    Artifact teleop_wiimote {
+      Node { name teleop_wiimote
+        Publishers {
+          Publisher { name '/cmd_vel' message 'geometry_msgs.Twist'},
+          Publisher { name 'joy/set_feedback' message 'sensor_msgs.JoyFeedbackArray'}}
+        Subscribers {
+          Subscriber { name 'wiimote/nunchuk' message 'sensor_msgs.Joy'},
+          Subscriber { name 'wiimote/state' message 'wiimote.State'}}
+        Parameters {
+          Parameter { name '?' type Double },
+          Parameter { name 'angular/x/throttle_percent' type Double },
+          Parameter { name 'base' type String },
+          Parameter { name '?' type Double },
+          Parameter { name 'linear/x/throttle_percent' type Double },
+          Parameter { name '?' type Double },
+          Parameter { name 'angular/x/throttle_percent' type Double },
+          Parameter { name 'linear/x/throttle_percent' type Double },
+          Parameter { name 'linear/x/throttle_percent' type Double },
+          Parameter { name 'linear/x/throttle_percent' type Double },
+          Parameter { name 'angular/x/throttle_percent' type Double },
+          Parameter { name 'angular/z/throttle_percent' type Double },
+          Parameter { name 'linear/x/throttle_percent' type Double },
+          Parameter { name 'angular/x/throttle_percent' type Double },
+          Parameter { name '?' type Double }}}
+}}}

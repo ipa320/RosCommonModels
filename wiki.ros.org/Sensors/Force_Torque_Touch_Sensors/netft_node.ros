@@ -1,0 +1,11 @@
+PackageSet {
+  CatkinPackage netft_utils {
+    FromGitRepo "https://github.com/UTNuclearRoboticsPublic/netft_utils.git" 
+    Artifact netft_node {
+      Node { name netft_node
+        Publishers {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name 'netft_ready' message 'std_msgs.Bool'},
+          Publisher { name 'netft_data' message 'geometry_msgs.Wrench'},
+          Publisher { name 'netft_data' message 'geometry_msgs.WrenchStamped'}}}
+}}}

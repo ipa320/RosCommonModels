@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage adi_driver {
+    FromGitRepo "https://github.com/tork-a/adi_driver.git" 
+    Artifact adis16495_node {
+      Node { name adis16495_node
+        Publishers {
+          Publisher { name 'data_raw' message 'sensor_msgs.Imu'}}
+        Parameters {
+          Parameter { name 'rate' type Double value 100.0},
+          Parameter { name 'device' type String value '/dev/ttyACM0'},
+          Parameter { name 'frame_id' type String value 'imu'},
+          Parameter { name 'burst_mode' type Boolean value true}}}
+}}}

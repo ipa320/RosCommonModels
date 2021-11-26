@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage velodyne_pointcloud {
+    FromGitRepo "https://github.com/ros-drivers/velodyne.git" 
+    Artifact cloud_node {
+      Node { name cloud_node
+        Publishers {
+          Publisher { name 'velodyne_points' message 'sensor_msgs.PointCloud2'}}
+        Subscribers {
+          Subscriber { name 'velodyne_packets' message 'velodyne_msgs.VelodyneScan'}}
+        Parameters {
+          Parameter { name 'organize_cloud' type Boolean },
+          Parameter { name 'fixed_frame' type String value 'velodyne'},
+          Parameter { name 'max_range' type Double value 200.0},
+          Parameter { name 'target_Frame' type String value 'velodyne'},
+          Parameter { name 'min_range' type Double value 10.0}}}
+}}}

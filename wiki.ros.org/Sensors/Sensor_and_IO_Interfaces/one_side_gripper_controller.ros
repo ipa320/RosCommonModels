@@ -1,0 +1,10 @@
+PackageSet {
+  CatkinPackage arbotix_controllers {
+    FromGitRepo "https://github.com/vanadiumlabs/arbotix_ros.git" 
+    Artifact one_side_gripper_controller {
+      Node { name one_side_gripper_controller
+        Publishers {
+          Publisher { name 'gripper_joint/command' message 'std_msgs.Float64'}}
+        Subscribers {
+          Subscriber { name '~command' message 'std_msgs.Float64'}}}
+}}}

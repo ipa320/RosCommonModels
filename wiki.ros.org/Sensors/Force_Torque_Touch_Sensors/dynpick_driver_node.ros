@@ -1,0 +1,16 @@
+PackageSet {
+  CatkinPackage dynpick_driver {
+    FromGitRepo "https://github.com/tork-a/dynpick_driver.git" 
+    Artifact dynpick_driver_node {
+      Node { name dynpick_driver_node
+        ServiceServers {
+          ServiceServer { name 'tare' service 'std_srvs.Trigger'}}
+        Publishers {
+          Publisher { name 'force' message 'geometry_msgs.WrenchStamped'}}
+        Parameters {
+          Parameter { name 'rate' type Double value 1000},
+          Parameter { name 'device' type String value '/dev/ttyUSB0'},
+          Parameter { name 'acquire_calibration' type Boolean value 1},
+          Parameter { name 'frequency_div' type Integer value 1},
+          Parameter { name 'frame_id' type String value '/sensor'}}}
+}}}

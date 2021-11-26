@@ -1,0 +1,13 @@
+PackageSet {
+  CatkinPackage leap_motion {
+    FromGitRepo "https://github.com/ros-drivers/leap_motion.git" 
+    Artifact leap_motion_visualizer_node {
+      Node { name leap_motion_visualizer_node
+        Publishers {
+          Publisher { name 'visualization_marker_array' message 'visualization_msgs.MarkerArray'}}
+        Subscribers {
+          Subscriber { name 'leap_device' message 'leap_motion.Human'},
+          Subscriber { name 'leap_filtered' message 'leap_motion.Human'}}
+        Parameters {
+          Parameter { name '/enable_filter' type Boolean }}}
+}}}
