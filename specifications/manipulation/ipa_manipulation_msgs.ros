@@ -1,0 +1,12 @@
+PackageSet{
+    Package ipa_manipulation_msgs{ Specs { 
+      TopicSpec CollisionBox{ message { string object_id string id "geometry_msgs.PoseStamped" pose "geometry_msgs.Vector3" bounding_box_lwh string label }},
+      ServiceSpec AddCollisionObject{ request { "ipa_manipulation_msgs.CollisionBox"[] collision_objects string loading_method } response { string msg bool success } },
+      ServiceSpec GenerateGrasps{ request { "cob_object_detection_msgs.Detection" object string external_reference_frame_id int32 gripper_type float64 min_gripping_size float64 min_gripping_size2 float64 max_gripping_size "geometry_msgs.Pose"[] template_grasp_poses } response { "moveit_msgs.Grasp"[] grasps } },
+      ServiceSpec PointTo{ request { string object_id string arm_name float64 workspace "geometry_msgs.PoseStamped" object_pose } response { bool pointing } },
+      ServiceSpec RemoveCollisionObject{ request { string object_id string label string loading_method string[] object_ids bool all } response { string msg bool success } },
+      ServiceSpec SafisfyTrajectoryTolerance{ request { "moveit_msgs.RobotTrajectory" trajectory string eef_frame string tf_goal_frame float64 trajectory_tolerance } response { bool satisfy_traj_tolerance string message } },
+      ServiceSpec SwitchPlanningGroup{ request { string planning_group_name } response { bool planning_group_reset } },
+      ServiceSpec TrajectoryPostProcess{ request { "moveit_msgs.RobotTrajectory" trajectory string group_name } response { float64 plan_time float64 traj_length_cartesian_space float64 traj_length_joint_space float64 smoothness "geometry_msgs.PoseStamped"[] cart_trajectory } }
+    }}
+  }

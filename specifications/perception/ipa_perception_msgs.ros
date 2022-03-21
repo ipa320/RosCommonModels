@@ -1,0 +1,14 @@
+PackageSet{
+    Package ipa_perception_msgs{ Specs { 
+      TopicSpec BoundingBox2D{ message { uint16 x_min uint16 y_min uint16 x_max uint16 y_max }},
+      TopicSpec Detection{ message { Header header "ipa_perception_msgs.ObjectHypothesis" hypothesis "geometry_msgs.Pose"[] poses "ipa_perception_msgs.BoundingBox2D" bbox_2d "sensor_msgs.Image" masked_image "vision_msgs.BoundingBox3D" bbox_3d "sensor_msgs.Image" source_img "sensor_msgs.PointCloud2" key_points }},
+      TopicSpec DetectionArray{ message { "ipa_perception_msgs.Detection"[] detections }},
+      TopicSpec Object3D{ message { Header header string type string uuid string[] key int64 robot_pose_id "ipa_perception_msgs.ObjectHypothesis" fused_hypothesis "vision_msgs.BoundingBox3D" bounding_box string[] detections string[] parents string[] children "trajectory_msgs.MultiDOFJointTrajectoryPoint" trajectory float32[] meta uint8 TENTATIVE=1 uint8 ACTIVE=2 uint8 LOST=3 uint8 state "sensor_msgs.PointCloud2" pointcloud "sensor_msgs.PointCloud2" contour }},
+      TopicSpec Object3DArray{ message { "ipa_perception_msgs.Object3D"[] objects }},
+      TopicSpec ObjectHypothesis{ message { string object_class float32 probability }},
+      TopicSpec RTABMapData{ message { "std_msgs.Header" header "sensor_msgs.PointCloud2" pointcloud int32[] posesId "geometry_msgs.Pose"[] poses "geometry_msgs.Transform" cam_base_transform }},
+      TopicSpec SceneUpdates{ message { "std_msgs.Header" header "ipa_perception_msgs.Object3D"[] added_objects "ipa_perception_msgs.Object3D"[] updated_objects "ipa_perception_msgs.Object3D"[] deleted_objects }},
+      ServiceSpec GetGeometry{ request { "std_msgs.Header" header "vision_msgs.BoundingBox3D" roi bool activation } response { bool success } },
+      ServiceSpec GetObjects{ request { string object uint8 ALL=0 uint8 CLOSEST=1 uint8 LATEST=2 uint8 FOV=3 uint8 MOST_PROBABLE=4 uint8 MAX_RANGE=5 uint8[] criteria float32 criteria_meta string source } response { "ipa_perception_msgs.Object3D"[] objects } }
+    }}
+  }
