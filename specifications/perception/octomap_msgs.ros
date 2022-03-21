@@ -1,0 +1,8 @@
+PackageSet{
+    Package octomap_msgs{ Specs { 
+      TopicSpec Octomap{ message { Header header bool binary string id float64 resolution int8[] data }},
+      TopicSpec OctomapWithPose{ message { Header header "geometry_msgs.Pose" origin "octomap_msgs.Octomap" octomap }},
+      ServiceSpec BoundingBoxQuery{ request { "geometry_msgs.Point" min "geometry_msgs.Point" max } response {  } },
+      ServiceSpec GetOctomap{ request {  } response { "octomap_msgs.Octomap" map } }
+    }}
+  }

@@ -1,0 +1,20 @@
+PackageSet{
+    Package object_recognition_msgs{ Specs { 
+      TopicSpec ObjectInformation{ message { string name "shape_msgs.Mesh" ground_truth_mesh "sensor_msgs.PointCloud2" ground_truth_point_cloud }},
+      TopicSpec ObjectRecognitionAction{ message { ObjectRecognitionActionGoal action_goal ObjectRecognitionActionResult action_result ObjectRecognitionActionFeedback action_feedback }},
+      TopicSpec ObjectRecognitionActionFeedback{ message { Header header "actionlib_msgs.GoalStatus" status ObjectRecognitionFeedback feedback }},
+      TopicSpec ObjectRecognitionActionGoal{ message { Header header "actionlib_msgs.GoalID" goal_id ObjectRecognitionGoal goal }},
+      TopicSpec ObjectRecognitionActionResult{ message { Header header "actionlib_msgs.GoalStatus" status ObjectRecognitionResult result }},
+      TopicSpec ObjectRecognitionFeedback{ message {  }},
+      TopicSpec ObjectRecognitionGoal{ message { bool use_roi float32[] filter_limits }},
+      TopicSpec ObjectRecognitionResult{ message { "object_recognition_msgs.RecognizedObjectArray" recognized_objects }},
+      TopicSpec ObjectType{ message { string key string db }},
+      TopicSpec RecognizedObject{ message { Header header "object_recognition_msgs.ObjectType" type float32 confidence "sensor_msgs.PointCloud2"[] point_clouds "shape_msgs.Mesh" bounding_mesh "geometry_msgs.Point"[] bounding_contours "geometry_msgs.PoseWithCovarianceStamped" pose }},
+      TopicSpec RecognizedObjectArray{ message { Header header "object_recognition_msgs.RecognizedObject"[] objects float32[] cooccurrence }},
+      TopicSpec Table{ message { Header header "geometry_msgs.Pose" pose "geometry_msgs.Point"[] convex_hull }},
+      TopicSpec TableArray{ message { Header header "object_recognition_msgs.Table"[] tables }},
+      ServiceSpec GetObjectInformation{ request { "object_recognition_msgs.ObjectType" type } response { "object_recognition_msgs.ObjectInformation" information } },
+      ActionSpec ObjectRecognition{ goal { ObjectRecognitionActionGoal action_goal} result {ObjectRecognitionActionResult action_result} feedback {ObjectRecognitionActionFeedback action_feedback}}
+
+    }}
+  }

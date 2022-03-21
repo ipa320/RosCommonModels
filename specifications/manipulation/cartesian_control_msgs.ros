@@ -1,0 +1,17 @@
+PackageSet{
+    Package cartesian_control_msgs{ Specs { 
+      TopicSpec CartesianPosture{ message { string[] posture_joint_names float64[] posture_joint_values }},
+      TopicSpec CartesianTolerance{ message { "geometry_msgs.Vector3" position_error "geometry_msgs.Vector3" orientation_error "geometry_msgs.Twist" twist_error "geometry_msgs.Accel" acceleration_error }},
+      TopicSpec CartesianTrajectory{ message { Header header CartesianTrajectoryPoint[] points string controlled_frame }},
+      TopicSpec CartesianTrajectoryPoint{ message { duration time_from_start "geometry_msgs.Pose" pose "geometry_msgs.Twist" twist "geometry_msgs.Accel" acceleration "geometry_msgs.Accel" jerk CartesianPosture posture }},
+      TopicSpec FollowCartesianTrajectoryAction{ message { FollowCartesianTrajectoryActionGoal action_goal FollowCartesianTrajectoryActionResult action_result FollowCartesianTrajectoryActionFeedback action_feedback }},
+      TopicSpec FollowCartesianTrajectoryActionFeedback{ message { Header header "actionlib_msgs.GoalStatus" status FollowCartesianTrajectoryFeedback feedback }},
+      TopicSpec FollowCartesianTrajectoryActionGoal{ message { Header header "actionlib_msgs.GoalID" goal_id FollowCartesianTrajectoryGoal goal }},
+      TopicSpec FollowCartesianTrajectoryActionResult{ message { Header header "actionlib_msgs.GoalStatus" status FollowCartesianTrajectoryResult result }},
+      TopicSpec FollowCartesianTrajectoryFeedback{ message { Header header string tcp_frame CartesianTrajectoryPoint desired CartesianTrajectoryPoint actual CartesianTrajectoryPoint error }},
+      TopicSpec FollowCartesianTrajectoryGoal{ message { CartesianTrajectory trajectory CartesianTolerance path_tolerance CartesianTolerance goal_tolerance duration goal_time_tolerance }},
+      TopicSpec FollowCartesianTrajectoryResult{ message { int32 error_code int32 SUCCESSFUL=0 int32 INVALID_GOAL=-1 int32 INVALID_JOINTS=-2 int32 OLD_HEADER_TIMESTAMP=-3 int32 PATH_TOLERANCE_VIOLATED=-4 int32 GOAL_TOLERANCE_VIOLATED=-5 int32 INVALID_POSTURE=-6 string error_string }},
+      ActionSpec FollowCartesianTrajectory{ goal { FollowCartesianTrajectoryActionGoal action_goal} result {FollowCartesianTrajectoryActionResult action_result} feedback {FollowCartesianTrajectoryActionFeedback action_feedback}}
+
+    }}
+  }

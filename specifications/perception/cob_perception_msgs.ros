@@ -1,0 +1,18 @@
+PackageSet{
+    Package cob_perception_msgs{ Specs { 
+      TopicSpec ColorDepthImage{ message { Rect head_detection "sensor_msgs.Image" color_image "sensor_msgs.Image" depth_image Rect[] face_detections }},
+      TopicSpec ColorDepthImageArray{ message { Header header ColorDepthImage[] head_detections }},
+      TopicSpec Detection{ message { Header header string label int32 id string detector float32 score Mask mask "geometry_msgs.PoseStamped" pose "geometry_msgs.Point" bounding_box_lwh }},
+      TopicSpec DetectionArray{ message { Header header Detection[] detections }},
+      TopicSpec Float64ArrayStamped{ message { Header header float64[] data }},
+      TopicSpec Mask{ message { Rect roi "sensor_msgs.Image" mask }},
+      TopicSpec People{ message { Header header "cob_perception_msgs.Person"[] people }},
+      TopicSpec Person{ message { string name string detector "geometry_msgs.Pose" position "geometry_msgs.Point" velocity "cob_perception_msgs.Skeleton" skeleton }},
+      TopicSpec PersonStamped{ message { Header header "cob_perception_msgs.Person" person }},
+      TopicSpec PointCloud2Array{ message { Header header "sensor_msgs.PointCloud2"[] segments }},
+      TopicSpec PositionMeasurement{ message { Header header string name string object_id "geometry_msgs.Point" pos "geometry_msgs.Vector3" vel float64 reliability float64[] covariance byte initialization }},
+      TopicSpec PositionMeasurementArray{ message { Header header "cob_perception_msgs.PositionMeasurement"[] people float32[] cooccurrence }},
+      TopicSpec Rect{ message { int32 x int32 y int32 width int32 height }},
+      TopicSpec Skeleton{ message { uint8 JOINT_HEAD=0 uint8 JOINT_NECK=1 uint8 JOINT_LEFT_SHOULDER=2 uint8 JOINT_RIGHT_SHOULDER=3 uint8 JOINT_LEFT_ELBOW=4 uint8 JOINT_RIGHT_ELBOW=5 uint8 JOINT_LEFT_HAND=6 uint8 JOINT_RIGHT_HAND=7 uint8 JOINT_TORSO=8 uint8 JOINT_LEFT_HIP=9 uint8 JOINT_RIGHT_HIP=10 uint8 JOINT_LEFT_KNEE=11 uint8 JOINT_RIGHT_KNEE=12 uint8 JOINT_LEFT_FOOT=13 uint8 JOINT_RIGHT_FOOT=14 uint8 JOINT_NUMBER=15 "geometry_msgs.Pose"[] joints }}
+    }}
+  }
