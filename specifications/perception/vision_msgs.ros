@@ -1,0 +1,15 @@
+PackageSet{
+    Package vision_msgs{ Specs { 
+      TopicSpec BoundingBox2D{ message { "geometry_msgs.Pose2D" center float64 size_x float64 size_y }},
+      TopicSpec BoundingBox3D{ message { "geometry_msgs.Pose" center "geometry_msgs.Vector3" size }},
+      TopicSpec Classification2D{ message { Header header ObjectHypothesis[] results "sensor_msgs.Image" source_img }},
+      TopicSpec Classification3D{ message { Header header ObjectHypothesis[] results "sensor_msgs.PointCloud2" source_cloud }},
+      TopicSpec Detection2D{ message { Header header ObjectHypothesisWithPose[] results BoundingBox2D bbox "sensor_msgs.Image" source_img }},
+      TopicSpec Detection2DArray{ message { Header header Detection2D[] detections }},
+      TopicSpec Detection3D{ message { Header header ObjectHypothesisWithPose[] results BoundingBox3D bbox "sensor_msgs.PointCloud2" source_cloud }},
+      TopicSpec Detection3DArray{ message { Header header Detection3D[] detections }},
+      TopicSpec ObjectHypothesis{ message { int64 id float64 score }},
+      TopicSpec ObjectHypothesisWithPose{ message { int64 id float64 score "geometry_msgs.PoseWithCovariance" pose }},
+      TopicSpec VisionInfo{ message { Header header string method string database_location int32 database_version }}
+    }}
+  }
